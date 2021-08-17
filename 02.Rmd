@@ -1,0 +1,64 @@
+# (PART) Probabilidades {-}
+# Experimento aleatorio
+
+```{definition,name="Experimento aleatorio"}
+En experiento aleatorio es un fenomeno que genera un evento 
+```
+
+
+# Álgebra de eventos
+
+Sean $A$, $B$ y $C$ eventos entonces 
+1. e
+
+# Técnicas de conteo
+
+$P_n^m$
+$C_n^m$
+
+$$\binom{m}{n}=\frac{m}{n!(n-m)}$$
+
+# Definición de probabilidad
+
+
+
+# Probabilidad condicional
+
+\[P(A|B)= \frac{P(B\cap A)}{P(B)}\]
+
+# Teorema de Bayes
+```{theorem,name="Teorema de Bayes"}
+Sea $\{A_{1},A_{2},...,A_{i},...,A_{n}\}$ un conjunto de sucesos mutuamente excluyentes y exhaustivos, y tales que la probabilidad de cada uno de ellos es distinta de cero (0). Sea $B$ un suceso cualquiera del que se conocen las probabilidades condicionales $P(B|A_i )$. Entonces, la probabilidad $P(A_i|B)$  viene dada por la expresión:
+\[P(A_i|B)=\frac{P(B|A_i)P(A_i)}{P(B)}\]
+donde:
+
+1.    $P(A_i)$ son las probabilidades a priori,
+2.    $P(B|A_i)$ es la probabilidad de B en la hipótesis $A_i$,
+3.    $P(A_i|B)$ son las probabilidades a posteriori.
+
+```
+# Eventos independientes y secuencias de experimentos
+
+
+# Probabilidad en espacio
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

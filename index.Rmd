@@ -1,0 +1,52 @@
+--- 
+title: "Elementos  de la estadística"
+subtitle: "estadística descriptiva y probabilidades"
+author: "Ricardo Michel MALLQUI BAÑOS"
+affiliation: "Universidad Nacional San Cristóbal De Huamanga"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: krantz
+link-citations: yes
+subparagraph: yes
+colorlinks: yes
+fontsize: 10pt
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+lot: yes
+lof: yes
+monofont: "Source Code Pro"
+monofontoptions: "Scale=0.7"
+toc_appendix: yes
+description: ""
+always_allow_html: true
+---
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\f}{\mathbb{f}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\seq}[1]{\left<#1\right>}
+\newcommand{\co}[1]{\left[#1\right]}
+\newcommand{\cc}[1]{\left(#1\right)}
+\newcommand{\J}{\mathcal{J}}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\F}{\mathcal{F}}
+
+# Resumen {-}
+
+La estadística es la ciencia que manipula datos las analiza e interpreta para poder sacar concluciones razonables de ciertos fenomenos naturales. Esta ciencia puede ser dividido en dos: **estadística descirptiva** y  **estadística inferencial**. En la estadística descriptiva se procesan datos de una manera teórica y utilitaria. Estos métodos consisten en la recolección, organización, resumen, descripcion y presenatacion de la información. Si la poblacion está disponible entonces la estadística descriptiva es suficiente para describir ciertos fenomenos. No obstante generalmente no se dispone de toda la población si no de una muestra de ella, es en este caso que se requieren usar técnicas más sofisticadas para tomar decisiones y generalizaciones acerca de la poblacion, desde una pequeña muestra de información. Es cuando entra en el juego la estadística inferencial.
+
+La base teórica de la estadística son las matemáticas 
+
+
+
+Este libro se compone de dos partes, la primera parte trata sobre la **estadística descirptiva** y la segunda  **estadística inferencial**. Cada una de ellas divididas en capítulos.
+

@@ -1,0 +1,63 @@
+`r if (knitr::is_html_output()) '
+# Referencias {-}
+'`
+
+
+
+```{r nice1-fig, eval=F,fig.cap='Here is a nice figure!', fig.asp=0.6, fig.width = 5, fig.align='center', echo=FALSE}
+library(ggplot2)
+set.seed(1234)
+dat <- data.frame(cond = factor(rep(c("A","B"), each=200)), rating = c(rnorm(200),rnorm(200, mean=.8)))
+plot <- ggplot(dat, aes(x = rating))
+plot <- plot + geom_histogram(aes(y = ..density..), color = "black", fill = "steelblue", binwidth = 0.5, alpha = 0.2)
+plot <- plot + geom_density(aes(color = "Simulated"))
+plot <- plot + stat_function(aes(color = "Normal"), fun = dnorm, args = list(mean = 0.3, sd = 1))
+plot <- plot + scale_colour_manual("Density", values = c("red", "black"))
+plot  +  theme_classic() + theme(text=element_text(family="Times New Roman", size=10))
+```
+
+
+```{r nice-fig, eval=F,fig.cap='Here is a nice figure!', fig.asp=0.6, fig.width = 5, fig.align='center', echo=FALSE,warning = FALSE,message = FALSE}
+library(extrafont)
+library(tidyverse)
+library(ggplot2)
+
+set.seed(1234)
+df <- data.frame(
+  sex=factor(rep(c("F", "M"), each=200)),
+  weight=round(c(rnorm(200, mean=55, sd=5), rnorm(200, mean=65, sd=5)))
+  )
+head(df)
+
+p <- ggplot(df, aes(x=weight)) + geom_histogram(color="black", fill="white", bins = 7) +
+       stat_bin(aes(x=weight),geom="line",color="blue",bins=7) +
+  ggtitle("Fuel Efficiency of 32 Cars") +
+  xlab("Weight (x1000 lb)") + ylab("Miles per Gallon") +
+  theme_classic() +
+  theme(text=element_text(family="Times New Roman", size=10))
+p
+```
+
+
+```{r nice3-fig, eval=F,fig.cap='Here is a nice figure!', fig.asp=0.6, fig.width = 5, fig.align='center', echo=FALSE,warning = FALSE,message = FALSE}
+library(extrafont)
+library(tidyverse)
+library(ggplot2)
+
+set.seed(1234)
+df <- data.frame(
+  sex=factor(rep(c("F", "M"), each=200)),
+  weight=round(c(rnorm(200, mean=55, sd=5), rnorm(200, mean=65, sd=5)))
+  )
+head(df)
+
+p <- ggplot(df, aes(x=weight)) + geom_histogram(aes(y=cumsum(..count..)),bins=7, fill = 'white', color = 'black')+
+       stat_bin(aes(y=cumsum(..count..)),geom="line",color="blue",bins=7) +
+  ggtitle("Fuel Efficiency of 32 Cars") +
+  xlab("Weight (x1000 lb)") + ylab("Miles per Gallon") +
+  theme_classic() +
+  theme(text=element_text(family="Times New Roman", size=10))
+p
+```
+
+

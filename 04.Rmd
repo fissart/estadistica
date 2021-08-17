@@ -1,0 +1,71 @@
+# (APPENDIX) Apendice {-}
+# Sumatorias
+
+Una suma de números representados por $x_1, x_2, \ldots, x_n$ se simboliza en forma compacta mediante el simbolo $\sum$ (sigma) es decir la suma de los números anteriores se puede escribir del siguiente modo $$x_1+x_2+\dots+x_n=\sum_{i=1}^nx_i.$$
+Algunas propiedades son 
+
+1. $k\sum_{i=1}^nx_i=\sum_{i=1}^nkx_i$
+2. $\sum_{i=1}^n\left(x_i+y_i\right)=\sum_{i=1}^nx_i+\sum_{i=1}^ny_i$
+3. $\sum_{i=1}^nx_i$
+$$\int_1^3=\lim_{n\to \infty}\sum_{i=0}^{n}f^i(x)$$
+citado por [@xie2015]
+Variable estadística variable estadística   
+## ee
+
+## eeeee
+
+# Matrices
+
+Una matriz es un arreglo de números distribuidos en filas y columnas por ejemplo la siguiente matriz
+$$A=\begin{pmatrix}
+a_{11}&a_{12}&\ldots&a_{1n}\\
+a_{21}&a_{22}&\ldots&a_{2n}\\
+\vdots & \vdots & \ddots &\vdots \\
+a_{11}&a_{11}&\ldots&a_{nm}
+\end{pmatrix}_{n\times n}$$
+de **orden** $n\times m$ tiene **entradas** $a_{ij}$ donde el primer subindice indica la fila y el segundo la columna; es usual representar por simplicidad una matriz por $A=[a_{ij}]_{n\times m}$. Si en el orden $n=m$  entonces la matriz recibe el nombre de **matriz cuadrada**  la suma de los elementos de la diagonal de una matriz cuadrada $\sum_{i=1}^na_{ii}$ se llama **traza**\index{traza}. Si todas las $a_{ij}$ son cero entonces la matriz $A=0$ recibe el nombre matriz **nula**.
+
+Dos matrices son iguales si tienen el **mismo orden** y cada una de las entradas respectivas son iguales es decir $A=[a_{ij}]_{n\times m}$ y $B=[b_{ij}]_{n\times m}$ son iguales si $a_{ij}=b_{ij}$, $i=1,2,\ldots n$ y $j=1,2,\ldots m$
+
+## Algebra de matrices
+Sean las matrices $A=[a_{ij}]_{n\times m}$ y $B=[b_{ij}]_{p\times q}$ entonces la suma y producto de matrices se definen
+
+1. Sea $k$ un escalar entonces se verifica que $kA=[ka_{ij}]$, $i=1,2,\ldots n$ y $j=1,2,\ldots m$ es decir el escalar $k$ multiplica a cada una de las entradas de la matriz.
+
+2. La suma o diferencia es posible si $n=p$ y $m=q$ es decir los ordenes de $A$ y $B$ son iguales, entonces la suma o diferencia resulta $A\pm B=[a_{ij}+b_{ij}]_{n\times m}$, $i=1,2,\ldots n$ y $j=1,2,\ldots m$ 
+
+3. El producto es posible si $m=p$ es decir el número columnas de la primera matriz es igual al número de filas de la segunda matriz, el orden de la matriz resultante es $n\times q$ además 
+\begin{align*}
+A\cdot B&=\left[\sum_{k=1}^pa_{ik}b_{kj}\right]_{n\times q}\\
+&=\begin{pmatrix}
+\sum_{k=1}^ma_{1k}b_{k1}&\sum_{k=1}^ma_{1k}b_{k2}&\ldots&\sum_{k=1}^ma_{1k}b_{kq}\\
+\sum_{k=1}^ma_{2k}b_{k1}&\sum_{k=1}^ma_{2k}b_{k2}&\ldots&\sum_{k=1}^ma_{2k}b_{kq}\\
+\vdots & \vdots & \ddots &\vdots \\
+\sum_{k=1}^ma_{nk}b_{k1}&\sum_{k=1}^ma_{nk}b_{k2}&\ldots&\sum_{k=1}^ma_{nk}b_{kq}\\
+\end{pmatrix}_{n\times q}
+\end{align*}
+
+donde $i=1,2,\ldots n$ y $j=1,2,\ldots m$
+
+```{example}
+Sean $\begin{pmatrix}
+3&-1&2\\
+2&-1&2\\
+1&-1&0\\
+5&0&0\\
+\end{pmatrix}_{4\times 3}$ y $\begin{pmatrix}
+0&-1&2&2&0\\
+1&-1&-2&1&1\\
+3&-1&-3&5&2\\
+\end{pmatrix}_{3\times 5}$ entonces $A\cdot B=\begin{pmatrix}
+5&-4&2&15&3\\
+5&-3&0&13&3\\
+-1&0&4&1&-1\\
+0&-5&10&10&0\\
+\end{pmatrix}_{4\times 5}$
+```
+En caso de ser posible la multiplicación entre $A$, $B$ y $C$ entonces se verfican las siguientes propiedades
+
+* $A(B+C)=AB+AC$
+* $(A+B)C$
+* $A(BC)=(AB)C$

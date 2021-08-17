@@ -1,0 +1,51 @@
+\usepackage[spanish,es-lcroman,es-tabla]{babel}
+\usepackage{booktabs}
+\usepackage{graphicx} 
+\usepackage{amsmath}
+\usepackage{makeidx}
+\makeindex
+
+\makeatletter\@addtoreset{chapter}{part}\makeatother%
+
+%\usepackage{showframe}
+%\usepackage[a4paper]{geometry}
+%\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3.5cm,rmargin=3cm}
+\renewcommand{\arraystretch}{1.1}
+
+\usepackage{times}
+\renewcommand{\rmdefault}{ptm}
+%\usepackage[lite,subscriptcorrection,nofontinfo,zswash]{mtpro2}
+
+\usepackage{graphicx}
+
+% Determine if the image is too wide for the page.
+\makeatletter
+\def\ScaleIfNeeded{%
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+% Resize figures that are too wide for the page.
+\let\oldincludegraphics\includegraphics
+\renewcommand\includegraphics[2][]{%
+  \oldincludegraphics[scale=0.85]{#2}
+}
+
+\usepackage{amsthm}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+
+
+
+\flushbottom 
+
+\frontmatter
+
