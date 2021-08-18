@@ -165,8 +165,7 @@ Sea la Tabla \@ref(tab:2w3) Figures and tables with captions will be placed in `
 
 ```{r 2w3, echo=FALSE, warning = FALSE, message = FALSE, tidy=FALSE}
 library(openxlsx)
-opts <- options(knitr.kable.NA = "")
-opts <- options(ggrepel.max.overlaps = Inf)
+opts <- options(knitr.kable.NA = "",ggrepel.max.overlaps = Inf)
 new <-read.xlsx(xlsxFile="levene.xlsx", sheet=11, cols=c(5:14), rows=c(1:18), colNames=T)
 knitr::kable(new, escape = FALSE, digits = 2, booktabs=T, caption='Figures and tables with captions will be placed in `figure` ', linesep = "", longtable=T, align = "c")
 ```
