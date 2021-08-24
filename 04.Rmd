@@ -69,3 +69,142 @@ En caso de ser posible la multiplicación entre $A$, $B$ y $C$ entonces se verfi
 * $A(B+C)=AB+AC$
 * $(A+B)C$
 * $A(BC)=(AB)C$
+
+
+
+```{r}
+xw = 'Es decir los elementos son demagogos y déspotas' 
+x1 = 'Es decir los elementos son demagogos y déspotas' 
+
+```
+
+```{r  99w,eval=F,fig.cap='Regresión lineal',  fig.width = 5, fig.asp=.75, fig.align='center', echo=FALSE,warning = FALSE,message = FALSE,tidy=FALSE}
+
+x <- seq(-20,20,0.01)
+plot(x, 1/(5*sqrt(2*pi))*exp(-0.5*((x-3)/5)^2), family = "serif", type="l",ylab="",xlab="")
+lines(x,1/(10*sqrt(2*pi))*exp(-0.5*((x-10)/10)^2), col="red")
+lines(x,1/(20*sqrt(2*pi))*exp(-0.5*((x-3)/20)^2), col="blue")
+legend(
+  "topleft",
+  c("sin(x)","cos(x)"),
+  fill=c("blue","red")
+      )
+```
+
+$$
+\frac{\sin x}{x^3}
+= `r integrate(function(x) {sin(x)/(x^3)}, lower = 1, upper = 10)$value`
+$$
+
+$$
+\Phi_{\mu , \sigma ^{2}}(x)=\frac {1}{\sigma {\sqrt {2\pi }}}e^{-{\frac {(u-\mu )^{2}}{2\sigma ^{2}}}}du
+$$
+* $$\frac{1}{20\sqrt{2\pi }}\int_{-\infty }^{`r r1<-300` `r r1`}e^{- \frac{1}{2}\left(\frac{z-200}{20}\right)^2}dz=`r integrate(dnorm, mean=200, sd=20, lower= -Inf, upper= r1, abs.tol = 0)$value`$$
+* `r integrate(dnorm, -1.96, 1.96)$ value` also `r xw`
+* `r x1`
+Tabla \@ref(tab:ww1)
+
+Table: (\#tab:ww1) Caption
+
+|     Option     |   N   |  w  |          Observation           |                              Description                               |
+| -------------: | :---: | --- | -----------------------------: | :--------------------------------------------------------------------- |
+| `r x1`  `r x1` |   1   | w   |                         `r x1` | `r x1`  `r x1`                                                         |
+|         Engine |   2   | w   | `r x1` \(\sum^{n}_{i=1}{f_i}\) | Engine to be used for processing templates. Handlebars is the default. |
+|         `r x1` |   3   | w   |       \( \sum^{n}_{i=1}{f_i}\) | extension to be used for dest files.                                   |
+
+variable aleatoria Variable aleatoria entonces 
+
+`r exp(1)`  `r pnorm(1.96)`  `r pnorm(81, 85, 5, lower.tail = FALSE)`
+
+ `r 2281+280`
+
+The value of `x` in the Python session is `r xw` .
+It is not the same `x` as the one in R.
+
+```{r ww1w, fig.cap='Regresión lineal', fig.width = 5, fig.asp=.75, fig.align='center', echo=FALSE, warning = FALSE, message = FALSE, tidy=FALSE}
+w <- c(1, 2, 3, 4, 5 , 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33)
+ww <- c(1, 1, 6, 7, 11, 11, 15, 28, 38, 43, 86, 117, 145, 234, 234, 318, 363, 395, 416, 480, 580, 635, 671, 852, 950, 1065, 1323, 1414, 1595, 1746, 2281, 2561, 2954)
+f <- lm(ww ~ poly(w, 3, raw=TRUE))
+#str(f)
+#coef(f)
+#summary(f)
+library(ggplot2)
+library(ggthemes)
+library(ggrepel)
+
+ggplot(, aes(x = w, y = ww)) + theme(text=element_text(family="serif", size=12)) +
+  geom_point(color = "red", size = 2) + labs(x = "Número de días desde 5/3/20:1", y="Número de casos")+geom_label_repel(aes(label = ww, family="serif"), size = 5, 
+
+                  box.padding   = 0.5,
+                  point.padding = 0.1,
+                  segment.color = 'grey50') + geom_smooth(method = "lm", fullrange=TRUE, formula = y ~ poly(x, 3, raw=TRUE), se = TRUE)+theme_tufte(ticks = TRUE)
+
+w=function(x) f$coefficients[1]+f$coefficients[2]*x+f$coefficients[3]*x^2+f$coefficients[4]*x^3
+w(50)
+
+```
+
+```{r,echo=F,eval=F}
+\[f(x)=`r round(f$coefficients[1],3)`+`r round(f$coefficients[2],3)`x+`r round(f$coefficients[3],3)`x^2+`r round(f$coefficients[4],3)`x^3\]
+
+| | | |
+| :--------------------: | :------------------------: | :---------------------: |
+|\(f(30)_{\text{04 abril}}=`r round(w(30),0)`\) | \(f(31)_{\text{05 abril}}=`r round(w(31),0)`\) | \(f(32)=`r round(w(32),0)`\) |
+|\(f(33)=`r round(w(33),0)`\) | \(f(34)=`r round(w(34),0)`\) | \(f(35)=`r round(w(35),0)`\) |
+|\(f(36)=`r round(w(36),0)`\) | \(f(37)=`r round(w(37),0)`\) | \(f(38)=`r round(w(38),0)`\) |
+|**\(f(39)_{\text{-}}=`r round(w(39),0)`\)** | \(f(40)=`r round(w(40),0)`\) | \(f(41)=`r round(w(41),0)`\) |
+|\(f(100)=`r round(w(100),0)`\) |\(f(360)=`r round(w(360),0)`\) | \(f(370)=`r round(w(370),0)`\) |
+```
+
+Sea la Tabla \@ref(tab:2w3) Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+
+```{r 2w3, echo=FALSE, warning = FALSE, message = FALSE, tidy=FALSE}
+library(openxlsx)
+opts <- options(knitr.kable.NA = "",ggrepel.max.overlaps = Inf)
+new <-read.xlsx(xlsxFile="levene.xlsx", sheet=11, cols=c(5:14), rows=c(1:18), colNames=T)
+knitr::kable(new, escape = FALSE, digits = 2, booktabs=T, caption='Figures and tables with captions will be placed in `figure` ', linesep = "", longtable=T, align = "c")
+```
+
+```{r,echo = F}
+library(openxlsx)
+#library(kableExtra)
+new <-read.xlsx(xlsxFile="levene.xlsx",sheet=10,cols=c(1:7),rows=c(1:39),colNames=T)
+rownames(new)[7:9] = c('$\\beta_0$', '$\\beta_1$', '$\\beta_3$')
+colnames(new)[2:3] = c('$\\alpha$','$\\sum^{n}_{i=1}{x_i}$')
+rownames(new)[35] = '$\\sum^{n}_{i=1}{x_i}$'
+knitr::kable(new, escape = FALSE,booktabs=T,caption='Figures and tables with captions will be placed in `figure`',linesep = "",longtable=T)
+#footnote(knitr::kable(new, "html"z), alphabet = c("Note a", "Note b"))
+```
+
+```{r www, eval=F, fig.cap='Here is a nice figure 100!', fig.width = 5, fig.asp=.75, fig.align='center', echo=FALSE, warning = FALSE, message = FALSE, tidy=FALSE}
+library(extrafont)
+library(tidyverse)
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 9, family = "serif", ylab="", xlab="")
+text(200, 200, "Sans Italic text", font = 3)
+text(80, 80, "Serif text", family = "Times New Roman")
+title(ylab="Withinwww-cluster variance", line=2.2, family="serif")
+title(xlab="Within-cluster variancewwww", line=2.2, family="serif")
+
+```
+
+<!-- ctrl shift c -->
+```{r wwwww, eval=F, fig.cap='Here is a nice figure 100!',  fig.width = 5, fig.asp=.75, fig.align='center', echo=FALSE,warning = FALSE,message = FALSE,tidy=FALSE}
+library(extrafont)
+library(tidyverse)
+new <-read.xlsx(xlsxFile="levene.xlsx",sheet=11,cols=c(1:3),rows=c(2:33),colNames=FALSE)
+Temperature <- new$X2
+h <- hist(Temperature, xlab="", ylab="",
+          #yaxt='n',lab=c(6,5,7), # no ticks on y axis, all ticks on x
+          ylim=c(0,12),
+          breaks=5,
+          family = "serif",
+          main=NULL,
+          xlim=c(4,8),
+col="magenta",plot.margin = margin(0, 0, -0.5, -0.3, "cm"),
+)
+text(h$mids,h$counts,labels=h$counts, adj=c(0.5, -0.5), family = "serif")# top frecuencia.
+title(ylab="Within-cluster variance", line=2.2, family="serif")
+title(xlab="Within-cluster variance", line=2.2, family="serif")
+```
+
