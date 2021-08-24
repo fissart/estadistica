@@ -311,14 +311,15 @@ A veces llamada _promedio aritmético_, es la medida de tendencia central que po
 ### Media de datos no agrupados
 
 Los datos no están agrupados cuando no están ordenados sobre una tabla de distribución de frecuencias. Sean los $n$ datos $x_1, x_2, \ldots, x_n$ entonces la media o promedio aritmético se define como 
-\begin{equation}
-\overline{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum_{i=1}^nx_i
-(\#eq:w1)
-\end{equation}
-\begin{equation}
-\frac{d\left[P; F_1\right]}{d\left[P; \mathcal{L}_1\right]}=e=\frac{d\left[P; F_2\right]}{d\left[P; \mathcal{L}_2\right]}
+$$ (\#eq:w1) 
+\overline{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum_{i=1}^nx_i 
+$$
+
+
+$$ 
 (\#eq:ww)
-\end{equation}
+\frac{d\left[P; F_1\right]}{d\left[P; \mathcal{L}_1\right]}=e=\frac{d\left[P; F_2\right]}{d\left[P; \mathcal{L}_2\right]}
+$$
 
 1. $\overline{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum_{i=1}^nx_i$
 2. $\overline{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum_{i=1}^nx_i$ 
@@ -351,6 +352,8 @@ En efecto sea el promedio
 
 ## La moda (Mo)
 
+El dato que mas se prepite
+
 ### Moda de datos no tabulados
 
 En este caso es dato que más repite en un conjunto de datos dados. 
@@ -369,7 +372,7 @@ La moda es el dato que más se repite por ejemplo sea el conjunto de datos $x_1,
 |    $\vdots$     | $\vdots$ | $\vdots$ | $\vdots$ | $\vdots$ |    $\vdots$     |    $\vdots$     |     $\vdots$      | $\vdots$ | $\vdots$ | $\vdots$  |
 | $<y_{r-1}-y_r]$ |  $y_r$   |  $f_r$   |  $F_r$   | $F_r^*$  | $\frac{f_r}{n}$ | $\frac{F_r}{n}$ | $\frac{F_r^*}{n}$ |  $...$   | $H_r$    | $H_1^*$   |
 
-## la mediana (Me)
+## La mediana (Me)
 
 ### Mediana de datos no tabulados
 

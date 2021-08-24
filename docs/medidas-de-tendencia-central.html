@@ -24,7 +24,7 @@
 <meta name="author" content="Ricardo Michel MALLQUI BAÑOS" />
 
 
-<meta name="date" content="2021-08-18" />
+<meta name="date" content="2021-08-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -166,7 +166,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#moda-de-datos-no-tabulados"><i class="fa fa-check"></i><b>5.2.1</b> Moda de datos no tabulados</a></li>
 <li class="chapter" data-level="5.2.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#moda-de-datos-tabulados"><i class="fa fa-check"></i><b>5.2.2</b> Moda de datos tabulados</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#la-mediana-me"><i class="fa fa-check"></i><b>5.3</b> la mediana (Me)</a><ul>
+<li class="chapter" data-level="5.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#la-mediana-me"><i class="fa fa-check"></i><b>5.3</b> La mediana (Me)</a><ul>
 <li class="chapter" data-level="5.3.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#mediana-de-datos-no-tabulados"><i class="fa fa-check"></i><b>5.3.1</b> Mediana de datos no tabulados</a></li>
 <li class="chapter" data-level="5.3.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#mediana-de-datos-tabulados"><i class="fa fa-check"></i><b>5.3.2</b> Mediana de datos tabulados</a></li>
 </ul></li>
@@ -257,14 +257,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="media-de-datos-no-agrupados" class="section level3">
 <h3><span class="header-section-number">5.1.1</span> Media de datos no agrupados</h3>
 <p>Los datos no están agrupados cuando no están ordenados sobre una tabla de distribución de frecuencias. Sean los <span class="math inline">\(n\)</span> datos <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span> entonces la media o promedio aritmético se define como
-<span class="math display" id="eq:w1">\[\begin{equation}
-\overline{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum_{i=1}^nx_i
-\tag{5.1}
-\end{equation}\]</span>
-<span class="math display" id="eq:ww">\[\begin{equation}
-\frac{d\left[P; F_1\right]}{d\left[P; \mathcal{L}_1\right]}=e=\frac{d\left[P; F_2\right]}{d\left[P; \mathcal{L}_2\right]}
+<span class="math display" id=\tag{5.1}\[ (#eq:w1) 
+\overline{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum_{i=1}^nx_i 
+\]</span></p>
+<p><span class="math display" id="eq:ww">\[ 
 \tag{5.2}
-\end{equation}\]</span></p>
+\frac{d\left[P; F_1\right]}{d\left[P; \mathcal{L}_1\right]}=e=\frac{d\left[P; F_2\right]}{d\left[P; \mathcal{L}_2\right]}
+\]</span></p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(\overline{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum_{i=1}^nx_i\)</span></li>
 <li><span class="math inline">\(\overline{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum_{i=1}^nx_i\)</span></li>
@@ -389,6 +388,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="la-moda-mo" class="section level2">
 <h2><span class="header-section-number">5.2</span> La moda (Mo)</h2>
+<p>El dato que mas se prepite</p>
 <div id="moda-de-datos-no-tabulados" class="section level3">
 <h3><span class="header-section-number">5.2.1</span> Moda de datos no tabulados</h3>
 <p>En este caso es dato que más repite en un conjunto de datos dados.</p>
@@ -497,7 +497,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <div id="la-mediana-me" class="section level2">
-<h2><span class="header-section-number">5.3</span> la mediana (Me)</h2>
+<h2><span class="header-section-number">5.3</span> La mediana (Me)</h2>
 <div id="mediana-de-datos-no-tabulados" class="section level3">
 <h3><span class="header-section-number">5.3.1</span> Mediana de datos no tabulados</h3>
 <p>Obtener la mediana consiste en ordenar los datos de menor a mayor y considerar dos casos: El prmero si el numero de datos s impar entonces el dato <span class="math inline">\(x_{\frac{n+1}{2}}\)</span> del conjunto ordenado será la mediana es decir <span class="math inline">\(\text{Me}=x_{\frac{n+1}{2}}\)</span> de otro lado si el número de datos es par entonces la mediana es la semisuma de los dos datos intermedios es decir <span class="math inline">\(\text{Me}=\frac{x_{\frac{n}{2}}+x_{\frac{n}{2}+1}}{2}\)</span></p>
