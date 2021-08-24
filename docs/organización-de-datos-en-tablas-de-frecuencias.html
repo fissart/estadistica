@@ -157,6 +157,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html"><i class="fa fa-check"></i><b>3</b> Organización de datos en tablas de frecuencias</a><ul>
 <li class="chapter" data-level="3.1" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html#distribución-de-frecuencias"><i class="fa fa-check"></i><b>3.1</b> Distribución de frecuencias</a></li>
+<li class="chapter" data-level="3.2" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html#ejemplo-sin-intervalos"><i class="fa fa-check"></i><b>3.2</b> Ejemplo sin intervalos</a></li>
+<li class="chapter" data-level="3.3" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html#example-intervalos"><i class="fa fa-check"></i><b>3.3</b> Example intervalos</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="gráficos-estadísticos.html"><a href="gráficos-estadísticos.html"><i class="fa fa-check"></i><b>4</b> Gráficos estadísticos</a></li>
 <li class="chapter" data-level="5" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html"><i class="fa fa-check"></i><b>5</b> Medidas de tendencia central</a><ul>
@@ -343,16 +345,16 @@ Una vez establecido el número de particiones se procede a generar los límites 
 </ol>
 <table style="width:100%;">
 <colgroup>
-<col width="12%" />
-<col width="6%" />
-<col width="6%" />
-<col width="6%" />
-<col width="6%" />
-<col width="12%" />
-<col width="12%" />
-<col width="14%" />
-<col width="6%" />
-<col width="6%" />
+<col width="22%" />
+<col width="11%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
 <col width="7%" />
 </colgroup>
 <thead>
@@ -365,9 +367,9 @@ Una vez establecido el número de particiones se procede a generar los límites 
 <th align="center"><span class="math inline">\(h_i\)</span></th>
 <th align="center"><span class="math inline">\(H_i\)</span></th>
 <th align="center"><span class="math inline">\(H_i^*\)</span></th>
-<th align="center"><span class="math inline">\(\ldots\)</span></th>
-<th><span class="math inline">\(H_i\%\)</span></th>
-<th><span class="math inline">\(H_i^*\%\)</span></th>
+<th align="center"><span class="math inline">\(h_i\%\)</span></th>
+<th align="center"><span class="math inline">\(H_i\%\)</span></th>
+<th align="center"><span class="math inline">\(H_i^*\%\)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -380,12 +382,12 @@ Una vez establecido el número de particiones se procede a generar los límites 
 <td align="center"><span class="math inline">\(\frac{f_1}{n}\)</span></td>
 <td align="center"><span class="math inline">\(\frac{F_1}{n}\)</span></td>
 <td align="center"><span class="math inline">\(\frac{F_1^*}{n}\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td><span class="math inline">\(H_1\)</span></td>
-<td><span class="math inline">\(H_1^*\)</span></td>
+<td align="center"><span class="math inline">\(h_1\%\)</span></td>
+<td align="center"><span class="math inline">\(H_1\%\)</span></td>
+<td align="center"><span class="math inline">\(H_1^*\%\)</span></td>
 </tr>
 <tr class="even">
-<td align="center"><span class="math inline">\(&lt;y_1-y_2&gt;\)</span></td>
+<td align="center"><span class="math inline">\([y_1-y_2&gt;\)</span></td>
 <td align="center"><span class="math inline">\(y_2\)</span></td>
 <td align="center"><span class="math inline">\(f_2\)</span></td>
 <td align="center"><span class="math inline">\(F_2\)</span></td>
@@ -393,12 +395,12 @@ Una vez establecido el número de particiones se procede a generar los límites 
 <td align="center"><span class="math inline">\(\frac{f_2}{n}\)</span></td>
 <td align="center"><span class="math inline">\(\frac{F_2}{n}\)</span></td>
 <td align="center"><span class="math inline">\(\frac{F_2^*}{n}\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td><span class="math inline">\(H_2\)</span></td>
-<td><span class="math inline">\(H_1^*\)</span></td>
+<td align="center"><span class="math inline">\(h_2\%\)</span></td>
+<td align="center"><span class="math inline">\(H_2\%\)</span></td>
+<td align="center"><span class="math inline">\(H_1^*\%\)</span></td>
 </tr>
 <tr class="odd">
-<td align="center"><span class="math inline">\(&lt;y_{r}-y_r&gt;\)</span></td>
+<td align="center"><span class="math inline">\([y_{r}-y_r&gt;\)</span></td>
 <td align="center"><span class="math inline">\(y_3\)</span></td>
 <td align="center"><span class="math inline">\(f_3\)</span></td>
 <td align="center"><span class="math inline">\(F_3\)</span></td>
@@ -406,9 +408,9 @@ Una vez establecido el número de particiones se procede a generar los límites 
 <td align="center"><span class="math inline">\(\frac{f_3}{n}\)</span></td>
 <td align="center"><span class="math inline">\(\frac{F_3}{n}\)</span></td>
 <td align="center"><span class="math inline">\(\frac{F_3^*}{n}\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td><span class="math inline">\(H_3\)</span></td>
-<td><span class="math inline">\(H_1^*\)</span></td>
+<td align="center"><span class="math inline">\(h_3\%\)</span></td>
+<td align="center"><span class="math inline">\(H_3\%\)</span></td>
+<td align="center"><span class="math inline">\(H_1^*\%\)</span></td>
 </tr>
 <tr class="even">
 <td align="center"><span class="math inline">\(\vdots\)</span></td>
@@ -420,11 +422,11 @@ Una vez establecido el número de particiones se procede a generar los límites 
 <td align="center"><span class="math inline">\(\vdots\)</span></td>
 <td align="center"><span class="math inline">\(\vdots\)</span></td>
 <td align="center"><span class="math inline">\(\vdots\)</span></td>
-<td><span class="math inline">\(\vdots\)</span></td>
-<td><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
+<td align="center"><span class="math inline">\(\vdots\)</span></td>
 </tr>
 <tr class="odd">
-<td align="center"><span class="math inline">\(&lt;y_{r-1}-y_r]\)</span></td>
+<td align="center"><span class="math inline">\([ y_{r-1}-y_r]\)</span></td>
 <td align="center"><span class="math inline">\(y_r\)</span></td>
 <td align="center"><span class="math inline">\(f_r\)</span></td>
 <td align="center"><span class="math inline">\(F_r\)</span></td>
@@ -432,9 +434,9 @@ Una vez establecido el número de particiones se procede a generar los límites 
 <td align="center"><span class="math inline">\(\frac{f_r}{n}\)</span></td>
 <td align="center"><span class="math inline">\(\frac{F_r}{n}\)</span></td>
 <td align="center"><span class="math inline">\(\frac{F_r^*}{n}\)</span></td>
-<td align="center"><span class="math inline">\(...\)</span></td>
-<td><span class="math inline">\(H_r\)</span></td>
-<td><span class="math inline">\(H_1^*\)</span></td>
+<td align="center"><span class="math inline">\(h_r\%\)</span></td>
+<td align="center"><span class="math inline">\(H_r\%\)</span></td>
+<td align="center"><span class="math inline">\(H_1^*\%\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -458,16 +460,557 @@ Una vez establecido el número de particiones se procede a generar los límites 
 <li><p>Las <strong>frecuencias absolutas relativas mayor que porcentuales</strong> obedecen a la fórmula
 <span class="math inline">\(H_i^*\%=100\cdot H_i^*\)</span></p></li>
 </ol>
+</div>
+<div id="ejemplo-sin-intervalos" class="section level2">
+<h2><span class="header-section-number">3.2</span> Ejemplo sin intervalos</h2>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-1" class="exercise"><strong>Ejercicio 3.1  </strong></span>Sean los datos</p>
+<p><span id="exr:unnamed-chunk-1" class="exercise"><strong>Ejercicio 3.1  </strong></span>Sean Los 16 tipos de personalidad en un grupo social encuestado.</p>
+<ol style="list-style-type: decimal">
+<li><p>ESTJ (Extraverted Sensing Thinking Judging)
+Personas a las que les gusta tener el control sobre lo que ocurre a su alrededor, siempre buscan la manera de que todo funcione como debe y, si es necesario, la implementan ellos mismos.</p></li>
+<li><p>ESTP ((Extraverted Sensing Thinking Perceiving)
+Las personas que pertenecen a esta categoría son espontáneas, alegres y activas, pero al igual que lo que ocurre con los ESTJ, tienden a ejercer dominio sobre los demás, en este caso a través de su capacidad de observación y su carisma.</p></li>
+<li><p>ESFJ (Extraverted Sensing Feeling Judging)
+Se trata de personas muy volcadas en la atención de las necesidad de los demás, especialmente si forman parte de su círculo cercano: familia y amistades. Por eso siempre que pueden prestan su ayuda y procuran que sus círculos sociales cercanos permanezcan siempre estables y con buena salud. Por eso tienden a evitar que aparezcan conflictos fuertes y se muestran diplomáticas cuando hay choques de intereses.</p></li>
+<li><p>ESFP (Extraverted Sensing Feeling Perceiving)
+Se trata de personas alegres y espontáneas que disfrutan entreteniéndose y entreteniendo a los demás. La diversión es uno de los pilares más importantes de sus vidas, y son de trato cercano y temperamento cálido. Aman la novedad y hablar acerca de experiencias personales.</p></li>
+<li><p>ISTJ (Introverted Sensing Thinking Perceiving)
+Un tipo de personalidad definido por su fuerte sentido de la moralidad y del deber. Les gusta planear e implementar sistemas de reglas que permitan que equipos y organizaciones funcionen con una clara lógica y orden. Dan un gran valor a las normas y a la necesidad de que la realidad se corresponda con cómo deberían ser las cosas. Aunque son personas introvertidas, no rehuyen la interacción con los demás.</p></li>
+<li><p>ISTP (Introverted Sensing Thinking Perceiving)
+Se trata de personas reservadas, orientadas a la acción y a las soluciones prácticas ante problemas del día a día. También son definidas por su tendencia hacia el pensamiento lógico y su espontaneidad y autonomía. Les gusta explorar entornos y descubrir modos en los que se puede interactuar con ellos.</p></li>
+<li><p>ISFJ (Introverted Sensing Feeling Judging)
+Son personas definidas principalmente por sus ganas de proteger y ayudar a los demás y, en definitiva, de resultar confiables para los otros.Se esfuerzan por hacer todo lo que se espera de ellas, pero no tienen grandes aspiraciones ni se muestran muy ambiciosas. Tienden a pensar que es malo pedir compensaciones o aumentos a cambio de los sacrificios que realizan a la hora de trabajar, ya que este debería ser una meta en sí.</p></li>
+<li><p>ISFP (Introverted Sensing Feeling Perceiving)
+Personas que viven totalmente en el aquí y el ahora, en constante búsqueda de la novedad y de las situaciones sensorialmente estimulantes. Son reservadas, pero también alegres, espontáneas y cálidas con sus amistades.Tienen un especial talento en el mundo de las artes.</p></li>
+<li><p>ENTJ (Extraverted Intuitive Thinking Judging)
+Este es uno de los 16 tipos de personalidad más relacionados con el liderazgo y la asertividad. Las personas descritas por esta categoría son comunicativas, de pensamiento ágil y analítico y predispuestas a encabezar equipos y organizaciones. Se adaptan bien al cambio y hacen que sus estrategias también se amolden cada vez que el entorno varía. Además, casi siempre saben cómo explicar sus proyectos o historias de manera que resulten de interés para el resto, lo cual los convierte en comerciales muy aptos.</p></li>
+<li><p>ENTP (Extraverted Intuitive Thinking Perceiving)
+Personas especialmente movidas por la curiosidad y por los retos que para ser resueltos requieren afrontar preguntas intelectualmente estimulantes. Su agilidad mental y su facilidad para detectar inconsistencias lógicas hace de ellas personas predispuestas a interesarse por la ciencia o la filosofía. Además, su tendencia a mostrarse competitivas las vuelve personas muy activas durante el día, siempre intentando llegar a soluciones innovadoras a problemas complejos.</p></li>
+<li><p>ENFJ (Extraverted Intuitive Feeling Judging)
+Personas que aprenden constantemente acerca de todos los ámbitos del conocimiento (o una buena parte de ellas) y ayudan a aprender a las demás, guiándolas en su propia evolución. Les gusta ofrecer tutela y consejo, y son muy buenas influyendo en la conducta de los demás. Se centran en sus valores e ideales y hacen lo posible por mejorar el bienestar del mayor número de personas a través de sus ideas y sus acciones.</p></li>
+<li><p>ENFP (Extraverted Intuitive Feeling Perceiving)
+Uno de los 16 tipos de personalidad con mayor propensión al pensamiento creativo, las artes y a la sociabilidad. Son alegres, disfrutan de la interacción con otras personas, y actúan teniendo en mente su posición como parte de un “todo” formado por la humanidad, y no se muestran individualistas. De hecho, suelen involucrarse en tareas colectivas para ayudar a los demás, pensando en el impacto social de sus acciones. Sin embargo, también se distraen fácilmente y es frecuente que posterguen tareas que consideran aburridas o demasiado simples y rutinarias.</p></li>
+<li><p>INTJ (Introverted Intuitive Thinking Judging)
+Un tipo de personalidad orientado hacia la resolución de problemas específicos a partir del razonamiento analítico. Las descritas por esta categoría son personas muy centradas en sus propias ideas y teorías acerca del funcionamiento del mundo, lo cual significa que analizan su entorno centrándose en sus ideas sobre cómo opera este. Son conocedoras de sus propias capacidades y confían en su propio criterio, aunque este vaya en contra de algunos superiores.</p></li>
+</ol>
+<p>Es muy frecuente que lleguen a ser expertas en un ámbito de conocimiento muy específico, ya que les gusta tener el suficiente conocimiento sobre algo como para poder tener en cuenta todos los factores que entran en juego en su funcionamiento y, a partir de ahí, saber lo que se puede hacer o lo que pasará en el futuro.</p>
+<ol start="14" style="list-style-type: decimal">
+<li><p>INTP (Introverted Intuitive Thinking Perceiving)
+Uno de los 16 tipos de personalidad más definido por la propensión a la reflexión. A estas personas les gustan las teorías con capacidad para explicar todo lo que puede ocurrir en un sistema, y su tendencia hacia el perfeccionismo hace que corrijan a los demás en múltiples ocasiones. Valoran más la exactitud en términos teóricos que el pragmatismo y la resolución de problemas concretos.</p></li>
+<li><p>INFJ (Introverted Intuitive Feeling Judging)
+Personas muy sensibles, reservadas y movidas por unos ideales muy definidos y que, además, sienten la necesidad de hacer que los demás también se beneficien de estos ideales. Esto hace que sean propensas tanto a la reflexión como a la acción, lo cual puede llegar a suponer tanto trabajo que se sobrecargan por tener demasiadas responsabilidades. Muestran una gran capacidad para interpretar exitosamente los estados mentales de los demás y tratan de utilizar esta información para ayudarlas antes de que la otra persona se lo pida.</p></li>
+<li>INFP (Introverted Intuitive Feeling Perceiving)
+Menos moralistas que los INFJ, los INFP también se preocupan mucho por ayudar a los demás desde su posición de personas reservadas. Muestran una sensibilidad estética y artística que las vuelve creativas.</li>
+</ol>
 </div>
 
 
 <div class="solution">
- <span class="solution"><em>Solución. </em></span> Entonces
+<p> <span class="solution"><em>Solución. </em></span> 
+Se tiene 16 características con los siguientes datos</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Personalidad</th>
+<th align="center">Cantidad</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">ESTJ</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">ESTJ</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">ESTP</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center">ESFJ</td>
+<td align="center">4</td>
+</tr>
+<tr class="odd">
+<td align="center">ESFP</td>
+<td align="center">5</td>
+</tr>
+<tr class="even">
+<td align="center">ISTJ</td>
+<td align="center">6</td>
+</tr>
+<tr class="odd">
+<td align="center">ISTP</td>
+<td align="center">7</td>
+</tr>
+<tr class="even">
+<td align="center">ISFJ</td>
+<td align="center">8</td>
+</tr>
+<tr class="odd">
+<td align="center">ISFP</td>
+<td align="center">9</td>
+</tr>
+<tr class="even">
+<td align="center">ENTJ</td>
+<td align="center">10</td>
+</tr>
+<tr class="odd">
+<td align="center">ENTP</td>
+<td align="center">6</td>
+</tr>
+<tr class="even">
+<td align="center">ENFJ</td>
+<td align="center">5</td>
+</tr>
+<tr class="odd">
+<td align="center">ENFP</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center">INTJ</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">INTP</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">INFJ</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="center">INFP</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
 </div>
 
+<table>
+<caption><span id="tab:cualitativa">Tabla 3.2: </span>Datos cualitativos</caption>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(Y_i\)</span></th>
+<th align="center"><span class="math inline">\(f_i\)</span></th>
+<th align="center"><span class="math inline">\(F_i\)</span></th>
+<th align="center"><span class="math inline">\(F_i^*\)</span></th>
+<th align="center"><span class="math inline">\(h_i\)</span></th>
+<th align="center"><span class="math inline">\(H_i\)</span></th>
+<th align="center"><span class="math inline">\(H_i^*\)</span></th>
+<th align="center"><span class="math inline">\(h_i\%\)</span></th>
+<th align="center"><span class="math inline">\(H_i\%\)</span></th>
+<th align="center"><span class="math inline">\(H_i^*\%\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">ESTJ</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">74</td>
+<td align="center">0.01</td>
+<td align="center">0.01</td>
+<td align="center">1.00</td>
+<td align="center">1.35</td>
+<td align="center">1.35</td>
+<td align="center">100.00</td>
+</tr>
+<tr class="even">
+<td align="center">ESTJ</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">73</td>
+<td align="center">0.03</td>
+<td align="center">0.04</td>
+<td align="center">0.99</td>
+<td align="center">2.70</td>
+<td align="center">4.05</td>
+<td align="center">98.65</td>
+</tr>
+<tr class="odd">
+<td align="center">ESTP</td>
+<td align="center">3</td>
+<td align="center">6</td>
+<td align="center">71</td>
+<td align="center">0.04</td>
+<td align="center">0.08</td>
+<td align="center">0.96</td>
+<td align="center">4.05</td>
+<td align="center">8.11</td>
+<td align="center">95.95</td>
+</tr>
+<tr class="even">
+<td align="center">ESFJ</td>
+<td align="center">4</td>
+<td align="center">10</td>
+<td align="center">68</td>
+<td align="center">0.05</td>
+<td align="center">0.14</td>
+<td align="center">0.92</td>
+<td align="center">5.41</td>
+<td align="center">13.51</td>
+<td align="center">91.89</td>
+</tr>
+<tr class="odd">
+<td align="center">ESFP</td>
+<td align="center">5</td>
+<td align="center">15</td>
+<td align="center">64</td>
+<td align="center">0.07</td>
+<td align="center">0.20</td>
+<td align="center">0.86</td>
+<td align="center">6.76</td>
+<td align="center">20.27</td>
+<td align="center">86.49</td>
+</tr>
+<tr class="even">
+<td align="center">ISTJ</td>
+<td align="center">6</td>
+<td align="center">21</td>
+<td align="center">59</td>
+<td align="center">0.08</td>
+<td align="center">0.28</td>
+<td align="center">0.80</td>
+<td align="center">8.11</td>
+<td align="center">28.38</td>
+<td align="center">79.73</td>
+</tr>
+<tr class="odd">
+<td align="center">ISTP</td>
+<td align="center">7</td>
+<td align="center">28</td>
+<td align="center">53</td>
+<td align="center">0.09</td>
+<td align="center">0.38</td>
+<td align="center">0.72</td>
+<td align="center">9.46</td>
+<td align="center">37.84</td>
+<td align="center">71.62</td>
+</tr>
+<tr class="even">
+<td align="center">ISFJ</td>
+<td align="center">8</td>
+<td align="center">36</td>
+<td align="center">46</td>
+<td align="center">0.11</td>
+<td align="center">0.49</td>
+<td align="center">0.62</td>
+<td align="center">10.81</td>
+<td align="center">48.65</td>
+<td align="center">62.16</td>
+</tr>
+<tr class="odd">
+<td align="center">ISFP</td>
+<td align="center">9</td>
+<td align="center">45</td>
+<td align="center">38</td>
+<td align="center">0.12</td>
+<td align="center">0.61</td>
+<td align="center">0.51</td>
+<td align="center">12.16</td>
+<td align="center">60.81</td>
+<td align="center">51.35</td>
+</tr>
+<tr class="even">
+<td align="center">ENTJ</td>
+<td align="center">10</td>
+<td align="center">55</td>
+<td align="center">29</td>
+<td align="center">0.14</td>
+<td align="center">0.74</td>
+<td align="center">0.39</td>
+<td align="center">13.51</td>
+<td align="center">74.32</td>
+<td align="center">39.19</td>
+</tr>
+<tr class="odd">
+<td align="center">ENTP</td>
+<td align="center">6</td>
+<td align="center">61</td>
+<td align="center">19</td>
+<td align="center">0.08</td>
+<td align="center">0.82</td>
+<td align="center">0.26</td>
+<td align="center">8.11</td>
+<td align="center">82.43</td>
+<td align="center">25.68</td>
+</tr>
+<tr class="even">
+<td align="center">ENFJ</td>
+<td align="center">5</td>
+<td align="center">66</td>
+<td align="center">13</td>
+<td align="center">0.07</td>
+<td align="center">0.89</td>
+<td align="center">0.18</td>
+<td align="center">6.76</td>
+<td align="center">89.19</td>
+<td align="center">17.57</td>
+</tr>
+<tr class="odd">
+<td align="center">ENFP</td>
+<td align="center">3</td>
+<td align="center">69</td>
+<td align="center">8</td>
+<td align="center">0.04</td>
+<td align="center">0.93</td>
+<td align="center">0.11</td>
+<td align="center">4.05</td>
+<td align="center">93.24</td>
+<td align="center">10.81</td>
+</tr>
+<tr class="even">
+<td align="center">INTJ</td>
+<td align="center">2</td>
+<td align="center">71</td>
+<td align="center">5</td>
+<td align="center">0.03</td>
+<td align="center">0.96</td>
+<td align="center">0.07</td>
+<td align="center">2.70</td>
+<td align="center">95.95</td>
+<td align="center">6.76</td>
+</tr>
+<tr class="odd">
+<td align="center">INTP</td>
+<td align="center">1</td>
+<td align="center">72</td>
+<td align="center">3</td>
+<td align="center">0.01</td>
+<td align="center">0.97</td>
+<td align="center">0.04</td>
+<td align="center">1.35</td>
+<td align="center">97.30</td>
+<td align="center">4.05</td>
+</tr>
+<tr class="even">
+<td align="center">INFJ</td>
+<td align="center">1</td>
+<td align="center">73</td>
+<td align="center">2</td>
+<td align="center">0.01</td>
+<td align="center">0.99</td>
+<td align="center">0.03</td>
+<td align="center">1.35</td>
+<td align="center">98.65</td>
+<td align="center">2.70</td>
+</tr>
+<tr class="odd">
+<td align="center">INFP</td>
+<td align="center">1</td>
+<td align="center">74</td>
+<td align="center">1</td>
+<td align="center">0.01</td>
+<td align="center">1.00</td>
+<td align="center">0.01</td>
+<td align="center">1.35</td>
+<td align="center">100.00</td>
+<td align="center">1.35</td>
+</tr>
+<tr class="even">
+<td align="center">TOTAL</td>
+<td align="center">74</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">100.00</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="example-intervalos" class="section level2">
+<h2><span class="header-section-number">3.3</span> Example intervalos</h2>
+
+<div class="solution">
+<p> <span class="solution"><em>Solución. </em></span> 
+Edades de cierta comunidad</p>
+<p>25
+35 38
+45 47 48
+51 52 53 55
+60 62 63 66 67
+70 71 72 75 77 78
+81 88 89
+90 99</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Clase</th>
+<th align="center"><span class="math inline">\(f_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\([20-30&gt;\)</span></td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([30-40&gt;\)</span></td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\([40-50&gt;\)</span></td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([50-60&gt;\)</span></td>
+<td align="center">4</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\([60-70&gt;\)</span></td>
+<td align="center">5</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([70-80&gt;\)</span></td>
+<td align="center">6</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\([80-90&gt;\)</span></td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([90-100]\)</span></td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>Tabulando</p>
+<table>
+<caption><span id="tab:cuantitativa">Tabla 3.3: </span>Datos cuantitativos (intervalos)</caption>
+<thead>
+<tr class="header">
+<th align="center">Clase</th>
+<th align="center"><span class="math inline">\(f_i\)</span></th>
+<th align="center"><span class="math inline">\(F_i\)</span></th>
+<th align="center"><span class="math inline">\(F_i^*\)</span></th>
+<th align="center"><span class="math inline">\(h_i\)</span></th>
+<th align="center"><span class="math inline">\(H_i\)</span></th>
+<th align="center"><span class="math inline">\(H_i^*\)</span></th>
+<th align="center"><span class="math inline">\(h_i\%\)</span></th>
+<th align="center"><span class="math inline">\(H_i\%\)</span></th>
+<th align="center"><span class="math inline">\(H_i^*\%\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\([20-30&gt;\)</span></td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">26</td>
+<td align="center">0.04</td>
+<td align="center">0.01</td>
+<td align="center">0.35</td>
+<td align="center">3.85</td>
+<td align="center">1.35</td>
+<td align="center">35.14</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(&lt;30-40&gt;\)</span></td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">25</td>
+<td align="center">0.08</td>
+<td align="center">0.04</td>
+<td align="center">0.34</td>
+<td align="center">7.69</td>
+<td align="center">4.05</td>
+<td align="center">33.78</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(&lt;40-50&gt;\)</span></td>
+<td align="center">3</td>
+<td align="center">6</td>
+<td align="center">23</td>
+<td align="center">0.12</td>
+<td align="center">0.08</td>
+<td align="center">0.31</td>
+<td align="center">11.54</td>
+<td align="center">8.11</td>
+<td align="center">31.08</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(&lt;50-60&gt;\)</span></td>
+<td align="center">4</td>
+<td align="center">10</td>
+<td align="center">20</td>
+<td align="center">0.15</td>
+<td align="center">0.14</td>
+<td align="center">0.27</td>
+<td align="center">15.38</td>
+<td align="center">13.51</td>
+<td align="center">27.03</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(&lt;60-70&gt;\)</span></td>
+<td align="center">5</td>
+<td align="center">15</td>
+<td align="center">16</td>
+<td align="center">0.19</td>
+<td align="center">0.20</td>
+<td align="center">0.22</td>
+<td align="center">19.23</td>
+<td align="center">20.27</td>
+<td align="center">21.62</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(&lt;70-80&gt;\)</span></td>
+<td align="center">6</td>
+<td align="center">21</td>
+<td align="center">11</td>
+<td align="center">0.23</td>
+<td align="center">0.28</td>
+<td align="center">0.15</td>
+<td align="center">23.08</td>
+<td align="center">28.38</td>
+<td align="center">14.86</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(&lt;80-90&gt;\)</span></td>
+<td align="center">3</td>
+<td align="center">24</td>
+<td align="center">5</td>
+<td align="center">0.12</td>
+<td align="center">0.32</td>
+<td align="center">0.07</td>
+<td align="center">11.54</td>
+<td align="center">32.43</td>
+<td align="center">6.76</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(&lt;90-100]\)</span></td>
+<td align="center">2</td>
+<td align="center">26</td>
+<td align="center">2</td>
+<td align="center">0.08</td>
+<td align="center">0.35</td>
+<td align="center">0.03</td>
+<td align="center">7.69</td>
+<td align="center">35.14</td>
+<td align="center">2.70</td>
+</tr>
+<tr class="odd">
+<td align="center">TOTAL</td>
+<td align="center">26</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">100.00</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
             </section>
