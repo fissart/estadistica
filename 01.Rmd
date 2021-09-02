@@ -108,7 +108,7 @@ Una vez establecido el número  de particiones se procede a generar los límites
 |  $[y_{r}-y_r>$  |  $y_3$   |  $f_3$   |  $F_3$   | $F_3^*$  | $\frac{f_3}{n}$ | $\frac{F_3}{n}$ | $\frac{F_3^*}{n}$ | $h_3\%$  | $H_3\%$    | $H_1^*\%$   |
 |    $\vdots$     | $\vdots$ | $\vdots$ | $\vdots$ | $\vdots$ |    $\vdots$     |    $\vdots$     |     $\vdots$      | $\vdots$ | $\vdots$ | $\vdots$  |
 | $[ y_{r-1}-y_r]$ |  $y_r$   |  $f_r$   |  $F_r$   | $F_r^*$  | $\frac{f_r}{n}$ | $\frac{F_r}{n}$ | $\frac{F_r^*}{n}$ | $h_r\%$  | $H_r\%$    | $H_1^*\%$   |
-
+  
 Tenga en cuenta que  $n$ es el número de datos, es decir $n=f_1+f_2+\ldots+f_r=\sum_{i=1}^r$ donde $f_i$ es número de datos en la partición $X_i$, una de las $r$ particiones del conjunto total de datos.
 
 1. Las **frecuencias absolutas**\index{frecuencias absolutas} $f_i$ indican el número de datos con la característica $X_i$.
