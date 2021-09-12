@@ -1,46 +1,53 @@
-\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
 %
-\documentclass[10pt,]{krantz}
+\documentclass[
+  10pt,
+]{krantz}
+\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
-\usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provides euro and other symbols
-\else % if luatex or xelatex
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
   \usepackage{unicode-math}
-  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-    \setmonofont[Mapping=tex-ansi,Scale=0.7]{Source Code Pro}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \setmonofont[Scale=0.7]{Source Code Pro}
 \fi
-% use upquote if available, for straight quotes in verbatim environments
+% Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-% use microtype if available
-\IfFileExists{microtype.sty}{%
-\usepackage[]{microtype}
-\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
 \usepackage{xcolor}
-\usepackage{hyperref}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-            pdftitle={Elementos de la estadística},
-            pdfauthor={Ricardo Michel MALLQUI BAÑOS},
-            colorlinks=true,
-            linkcolor=Maroon,
-            filecolor=Maroon,
-            citecolor=Blue,
-            urlcolor=Blue,
-            breaklinks=true}
-\urlstyle{same}  % don't use monospace font for urls
+  pdftitle={Elementos de la estadística},
+  pdfauthor={Ricardo Michel MALLQUI BAÑOS},
+  colorlinks=true,
+  linkcolor=Maroon,
+  filecolor=Maroon,
+  citecolor=Blue,
+  urlcolor=Blue,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
@@ -81,19 +88,20 @@
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\usepackage{longtable,booktabs}
-% Fix footnotes in tables (requires footnote package)
-\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
-\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
-
-% set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
-
 \usepackage[spanish,es-lcroman,es-tabla]{babel}
 \usepackage{booktabs}
 \usepackage{graphicx} 
@@ -144,14 +152,23 @@
 \flushbottom 
 
 \frontmatter
+
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
 \title{Elementos de la estadística}
-\providecommand{\subtitle}[1]{}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
 \subtitle{estadística descriptiva y probabilidades}
 \author{Ricardo Michel MALLQUI BAÑOS}
-\date{2021-09-01}
+\date{2021-09-11}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Teorema}[chapter]
@@ -390,18 +407,18 @@ La tabulación es un proceso en el cual los datos son ordenados en grupos llamad
 \begin{longtable}[]{@{}cccccccccc@{}}
 \caption{\label{tab:ww} Caption}\tabularnewline
 \toprule
-\(Y_i\) & \(f_i\) & \(F_i\) & \(F_i^*\) & \(h_i\) & \(H_i\) & \(H_i^*\) & \(h_i\%\) & \(H_i\%\) & \(H_i^*\%\)\tabularnewline
+\(Y_i\) & \(f_i\) & \(F_i\) & \(F_i^*\) & \(h_i\) & \(H_i\) & \(H_i^*\) & \(h_i\%\) & \(H_i\%\) & \(H_i^*\%\) \\
 \midrule
 \endfirsthead
 \toprule
-\(Y_i\) & \(f_i\) & \(F_i\) & \(F_i^*\) & \(h_i\) & \(H_i\) & \(H_i^*\) & \(h_i\%\) & \(H_i\%\) & \(H_i^*\%\)\tabularnewline
+\(Y_i\) & \(f_i\) & \(F_i\) & \(F_i^*\) & \(h_i\) & \(H_i\) & \(H_i^*\) & \(h_i\%\) & \(H_i\%\) & \(H_i^*\%\) \\
 \midrule
 \endhead
-\(Y_1\) & \(f_1\) & \(F_1\) & \(F_1^*\) & \(\frac{f_1}{n}\) & \(\frac{F_1}{n}\) & \(\frac{F_1^*}{n}\) & \(h_1\) & \(H_1\) & \(H_1^*\)\tabularnewline
-\(Y_2\) & \(f_2\) & \(F_2\) & \(F_2^*\) & \(\frac{f_2}{n}\) & \(\frac{F_2}{n}\) & \(\frac{F_2^*}{n}\) & \(h_2\) & \(H_2\) & \(H_1^*\)\tabularnewline
-\(Y_3\) & \(f_3\) & \(F_3\) & \(F_3^*\) & \(\frac{f_3}{n}\) & \(\frac{F_3}{n}\) & \(\frac{F_3^*}{n}\) & \(h_3\) & \(H_3\) & \(H_1^*\)\tabularnewline
-\(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\)\tabularnewline
-\(Y_r\) & \(f_r\) & \(F_r\) & \(F_r^*\) & \(\frac{f_r}{n}\) & \(\frac{F_r}{n}\) & \(\frac{F_r^*}{n}\) & \(h_r\) & \(H_r\) & \(H_1^*\)\tabularnewline
+\(Y_1\) & \(f_1\) & \(F_1\) & \(F_1^*\) & \(\frac{f_1}{n}\) & \(\frac{F_1}{n}\) & \(\frac{F_1^*}{n}\) & \(h_1\) & \(H_1\) & \(H_1^*\) \\
+\(Y_2\) & \(f_2\) & \(F_2\) & \(F_2^*\) & \(\frac{f_2}{n}\) & \(\frac{F_2}{n}\) & \(\frac{F_2^*}{n}\) & \(h_2\) & \(H_2\) & \(H_1^*\) \\
+\(Y_3\) & \(f_3\) & \(F_3\) & \(F_3^*\) & \(\frac{f_3}{n}\) & \(\frac{F_3}{n}\) & \(\frac{F_3^*}{n}\) & \(h_3\) & \(H_3\) & \(H_1^*\) \\
+\(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) \\
+\(Y_r\) & \(f_r\) & \(F_r\) & \(F_r^*\) & \(\frac{f_r}{n}\) & \(\frac{F_r}{n}\) & \(\frac{F_r^*}{n}\) & \(h_r\) & \(H_r\) & \(H_1^*\) \\
 \bottomrule
 \end{longtable}
 
@@ -418,148 +435,27 @@ En el caso de variables cuantitativas ademas si los datos son muy variados, que 
   Una vez establecido el número de particiones se procede a generar los límites laterales de cada una de las particiones, sea \(L\) la longitud de todo el conjunto es decir \(L=x_{\text{max}}-x_{\text{min}}\) entonces la longitud de las particiones o amplitud interválica se obtiene con \(l=\frac{L}{r}\)
 \end{enumerate}
 
-\begin{longtable}[]{@{}ccccccccccc@{}}
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.22}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.12}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}@{}}
 \toprule
-\begin{minipage}[b]{0.16\columnwidth}\centering
-Clase\strut
-\end{minipage} & \begin{minipage}[b]{0.08\columnwidth}\centering
-Clase\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(f_i\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(F_i\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(F_i^*\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(h_i\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(H_i\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(H_i^*\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(h_i\%\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(H_i\%\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(H_i^*\%\)\strut
-\end{minipage}\tabularnewline
+Clase & Clase & \(f_i\) & \(F_i\) & \(F_i^*\) & \(h_i\) & \(H_i\) & \(H_i^*\) & \(h_i\%\) & \(H_i\%\) & \(H_i^*\%\) \\
 \midrule
 \endhead
-\begin{minipage}[t]{0.16\columnwidth}\centering
-\([y_1-y_2>\)\strut
-\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
-\(y_1\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(f_1\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_1\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_1^*\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\frac{f_1}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\frac{F_1}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\frac{F_1^*}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(h_1\%\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(H_1\%\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(H_1^*\%\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.16\columnwidth}\centering
-\([y_1-y_2>\)\strut
-\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
-\(y_2\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(f_2\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_2\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_2^*\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\frac{f_2}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\frac{F_2}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\frac{F_2^*}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(h_2\%\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(H_2\%\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(H_1^*\%\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.16\columnwidth}\centering
-\([y_{r}-y_r>\)\strut
-\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
-\(y_3\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(f_3\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_3\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_3^*\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\frac{f_3}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\frac{F_3}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\frac{F_3^*}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(h_3\%\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(H_3\%\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(H_1^*\%\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.16\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.16\columnwidth}\centering
-\([ y_{r-1}-y_r]\)\strut
-\end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\centering
-\(y_r\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(f_r\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_r\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_r^*\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\frac{f_r}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\frac{F_r}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\frac{F_r^*}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(h_r\%\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(H_r\%\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(H_1^*\%\)\strut
-\end{minipage}\tabularnewline
+\([y_1-y_2>\) & \(y_1\) & \(f_1\) & \(F_1\) & \(F_1^*\) & \(\frac{f_1}{n}\) & \(\frac{F_1}{n}\) & \(\frac{F_1^*}{n}\) & \(h_1\%\) & \(H_1\%\) & \(H_1^*\%\) \\
+\([y_1-y_2>\) & \(y_2\) & \(f_2\) & \(F_2\) & \(F_2^*\) & \(\frac{f_2}{n}\) & \(\frac{F_2}{n}\) & \(\frac{F_2^*}{n}\) & \(h_2\%\) & \(H_2\%\) & \(H_1^*\%\) \\
+\([y_{r}-y_r>\) & \(y_3\) & \(f_3\) & \(F_3\) & \(F_3^*\) & \(\frac{f_3}{n}\) & \(\frac{F_3}{n}\) & \(\frac{F_3^*}{n}\) & \(h_3\%\) & \(H_3\%\) & \(H_1^*\%\) \\
+\(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) \\
+\([ y_{r-1}-y_r]\) & \(y_r\) & \(f_r\) & \(F_r\) & \(F_r^*\) & \(\frac{f_r}{n}\) & \(\frac{F_r}{n}\) & \(\frac{F_r^*}{n}\) & \(h_r\%\) & \(H_r\%\) & \(H_1^*\%\) \\
 \bottomrule
 \end{longtable}
 
@@ -667,26 +563,26 @@ Se tiene 16 características con los siguientes datos
 
 \begin{longtable}[]{@{}cc@{}}
 \toprule
-Personalidad & Cantidad\tabularnewline
+Personalidad & Cantidad \\
 \midrule
 \endhead
-ESTJ & 1\tabularnewline
-ESTJ & 2\tabularnewline
-ESTP & 3\tabularnewline
-ESFJ & 4\tabularnewline
-ESFP & 5\tabularnewline
-ISTJ & 6\tabularnewline
-ISTP & 7\tabularnewline
-ISFJ & 8\tabularnewline
-ISFP & 9\tabularnewline
-ENTJ & 10\tabularnewline
-ENTP & 6\tabularnewline
-ENFJ & 5\tabularnewline
-ENFP & 3\tabularnewline
-INTJ & 2\tabularnewline
-INTP & 1\tabularnewline
-INFJ & 1\tabularnewline
-INFP & 1\tabularnewline
+ESTJ & 1 \\
+ESTJ & 2 \\
+ESTP & 3 \\
+ESFJ & 4 \\
+ESFP & 5 \\
+ISTJ & 6 \\
+ISTP & 7 \\
+ISFJ & 8 \\
+ISFP & 9 \\
+ENTJ & 10 \\
+ENTP & 6 \\
+ENFJ & 5 \\
+ENFP & 3 \\
+INTJ & 2 \\
+INTP & 1 \\
+INFJ & 1 \\
+INFP & 1 \\
 \bottomrule
 \end{longtable}
 \end{solution}
@@ -735,17 +631,17 @@ Edades de cierta comunidad
 
 \begin{longtable}[]{@{}cc@{}}
 \toprule
-Clase & \(f_i\)\tabularnewline
+Clase & \(f_i\) \\
 \midrule
 \endhead
-\([20-30>\) & 1\tabularnewline
-\([30-40>\) & 2\tabularnewline
-\([40-50>\) & 3\tabularnewline
-\([50-60>\) & 4\tabularnewline
-\([60-70>\) & 5\tabularnewline
-\([70-80>\) & 6\tabularnewline
-\([80-90>\) & 3\tabularnewline
-\([90-100]\) & 2\tabularnewline
+\([20-30>\) & 1 \\
+\([30-40>\) & 2 \\
+\([40-50>\) & 3 \\
+\([50-60>\) & 4 \\
+\([60-70>\) & 5 \\
+\([70-80>\) & 6 \\
+\([80-90>\) & 3 \\
+\([90-100]\) & 2 \\
 \bottomrule
 \end{longtable}
 \end{solution}
@@ -778,7 +674,7 @@ TOTAL & 42 &  &  &  &  &  & 61.90 &  & \\
 Son aquellas medidas que buscan un dato representtivo central de un conjunto de datos tales como la media, la moda y la mediana.
 
 \hypertarget{la-media-overlinex}{%
-\section{\texorpdfstring{La media (\(\overline{x}\))}{La media (\textbackslash{}overline\{x\})}}\label{la-media-overlinex}}
+\section{\texorpdfstring{La media (\(\overline{x}\))}{La media (\textbackslash overline\{x\})}}\label{la-media-overlinex}}
 
 A veces llamada \emph{promedio aritmético}, es la medida de tendencia central que pondera los datos.
 
@@ -809,148 +705,27 @@ Los datos no están agrupados cuando no están ordenados sobre una tabla de dist
 
 Considérese la siguiente tabla de distribucion de frecuencias entonces el promedio es \[\overline{x}=\frac{y_1f_1+y_2f_2+\cdots+y_nf_n}{n}=\frac{1}{n}\sum_{i=1}^ny_if_i\]
 
-\begin{longtable}[]{@{}cccccccccll@{}}
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.13}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.13}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.13}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.14}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.08}}@{}}
 \toprule
-\begin{minipage}[b]{0.09\columnwidth}\centering
-Clase\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-Clase\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(f_i\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(F_i\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(F_i^*\)\strut
-\end{minipage} & \begin{minipage}[b]{0.09\columnwidth}\centering
-\(h_i\)\strut
-\end{minipage} & \begin{minipage}[b]{0.09\columnwidth}\centering
-\(H_i\)\strut
-\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\centering
-\(H_i^*\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(\ldots\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright
-\(H_i\%\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright
-\(H_i^*\%\)\strut
-\end{minipage}\tabularnewline
+Clase & Clase & \(f_i\) & \(F_i\) & \(F_i^*\) & \(h_i\) & \(H_i\) & \(H_i^*\) & \(\ldots\) & \(H_i\%\) & \(H_i^*\%\) \\
 \midrule
 \endhead
-\begin{minipage}[t]{0.09\columnwidth}\centering
-\(<y_1-y_2>\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(y_1\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(f_1\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_1\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_1^*\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{f_1}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{F_1}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-\(\frac{F_1^*}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\ldots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_1\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_1^*\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.09\columnwidth}\centering
-\(<y_2-y_3>\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(y_2\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(f_2\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_2\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_2^*\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{f_2}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{F_2}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-\(\frac{F_2^*}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\ldots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_2\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_1^*\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.09\columnwidth}\centering
-\(<y_3-y_4>\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(y_3\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(f_3\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_3\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_3^*\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{f_3}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{F_3}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-\(\frac{F_3^*}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\ldots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_3\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_1^*\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.09\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(\vdots\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.09\columnwidth}\centering
-\(<y_{r-1}-y_r]\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(y_r\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(f_r\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_r\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_r^*\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{f_r}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{F_r}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-\(\frac{F_r^*}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(...\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_r\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_1^*\)\strut
-\end{minipage}\tabularnewline
+\(<y_1-y_2>\) & \(y_1\) & \(f_1\) & \(F_1\) & \(F_1^*\) & \(\frac{f_1}{n}\) & \(\frac{F_1}{n}\) & \(\frac{F_1^*}{n}\) & \(\ldots\) & \(H_1\) & \(H_1^*\) \\
+\(<y_2-y_3>\) & \(y_2\) & \(f_2\) & \(F_2\) & \(F_2^*\) & \(\frac{f_2}{n}\) & \(\frac{F_2}{n}\) & \(\frac{F_2^*}{n}\) & \(\ldots\) & \(H_2\) & \(H_1^*\) \\
+\(<y_3-y_4>\) & \(y_3\) & \(f_3\) & \(F_3\) & \(F_3^*\) & \(\frac{f_3}{n}\) & \(\frac{F_3}{n}\) & \(\frac{F_3^*}{n}\) & \(\ldots\) & \(H_3\) & \(H_1^*\) \\
+\(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) \\
+\(<y_{r-1}-y_r]\) & \(y_r\) & \(f_r\) & \(F_r\) & \(F_r^*\) & \(\frac{f_r}{n}\) & \(\frac{F_r}{n}\) & \(\frac{F_r^*}{n}\) & \(...\) & \(H_r\) & \(H_1^*\) \\
 \bottomrule
 \end{longtable}
 
@@ -984,148 +759,27 @@ La moda es el dato que más se repite por ejemplo sea el conjunto de datos \$x\_
 
 La moda es el dato que más se repite por ejemplo sea el conjunto de datos \$x\_1, \$ \$x\_2, \$ \$x\_2, \$ \$x\_2, \$ \(x_3\) entonces la moda \(\text{Mo}=Li+\frac{Li-Ls}{Li+Ls}r\)
 
-\begin{longtable}[]{@{}cccccccccll@{}}
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.13}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.13}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.13}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.14}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.08}}@{}}
 \toprule
-\begin{minipage}[b]{0.09\columnwidth}\centering
-Clase\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-Clase\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(f_i\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(F_i\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(F_i^*\)\strut
-\end{minipage} & \begin{minipage}[b]{0.09\columnwidth}\centering
-\(h_i\)\strut
-\end{minipage} & \begin{minipage}[b]{0.09\columnwidth}\centering
-\(H_i\)\strut
-\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\centering
-\(H_i^*\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(\ldots\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright
-\(H_i\%\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright
-\(H_i^*\%\)\strut
-\end{minipage}\tabularnewline
+Clase & Clase & \(f_i\) & \(F_i\) & \(F_i^*\) & \(h_i\) & \(H_i\) & \(H_i^*\) & \(\ldots\) & \(H_i\%\) & \(H_i^*\%\) \\
 \midrule
 \endhead
-\begin{minipage}[t]{0.09\columnwidth}\centering
-\([y_1-y_2>\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(y_1\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(f_1\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_1\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_1^*\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{f_1}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{F_1}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-\(\frac{F_1^*}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\ldots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_1\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_1^*\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.09\columnwidth}\centering
-\(<y_1-y_2>\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(y_2\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(f_2\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_2\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_2^*\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{f_2}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{F_2}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-\(\frac{F_2^*}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\ldots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_2\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_1^*\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.09\columnwidth}\centering
-\(<y_{r}-y_r>\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(y_3\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(f_3\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_3\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_3^*\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{f_3}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{F_3}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-\(\frac{F_3^*}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\ldots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_3\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_1^*\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.09\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(\vdots\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.09\columnwidth}\centering
-\(<y_{r-1}-y_r]\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(y_r\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(f_r\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_r\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_r^*\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{f_r}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{F_r}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-\(\frac{F_r^*}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(...\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_r\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_1^*\)\strut
-\end{minipage}\tabularnewline
+\([y_1-y_2>\) & \(y_1\) & \(f_1\) & \(F_1\) & \(F_1^*\) & \(\frac{f_1}{n}\) & \(\frac{F_1}{n}\) & \(\frac{F_1^*}{n}\) & \(\ldots\) & \(H_1\) & \(H_1^*\) \\
+\(<y_1-y_2>\) & \(y_2\) & \(f_2\) & \(F_2\) & \(F_2^*\) & \(\frac{f_2}{n}\) & \(\frac{F_2}{n}\) & \(\frac{F_2^*}{n}\) & \(\ldots\) & \(H_2\) & \(H_1^*\) \\
+\(<y_{r}-y_r>\) & \(y_3\) & \(f_3\) & \(F_3\) & \(F_3^*\) & \(\frac{f_3}{n}\) & \(\frac{F_3}{n}\) & \(\frac{F_3^*}{n}\) & \(\ldots\) & \(H_3\) & \(H_1^*\) \\
+\(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) \\
+\(<y_{r-1}-y_r]\) & \(y_r\) & \(f_r\) & \(F_r\) & \(F_r^*\) & \(\frac{f_r}{n}\) & \(\frac{F_r}{n}\) & \(\frac{F_r^*}{n}\) & \(...\) & \(H_r\) & \(H_1^*\) \\
 \bottomrule
 \end{longtable}
 
@@ -1148,148 +802,27 @@ Obtener la mediana consiste en ordenar los datos de menor a mayor y considerar d
 \hypertarget{mediana-de-datos-tabulados}{%
 \subsection{Mediana de datos tabulados}\label{mediana-de-datos-tabulados}}
 
-\begin{longtable}[]{@{}cccccccccll@{}}
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.13}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.13}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.13}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.14}}
+  >{\centering\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.07}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 20\tabcolsep) * \real{0.08}}@{}}
 \toprule
-\begin{minipage}[b]{0.09\columnwidth}\centering
-Clase\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-Clase\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(f_i\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(F_i\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(F_i^*\)\strut
-\end{minipage} & \begin{minipage}[b]{0.09\columnwidth}\centering
-\(h_i\)\strut
-\end{minipage} & \begin{minipage}[b]{0.09\columnwidth}\centering
-\(H_i\)\strut
-\end{minipage} & \begin{minipage}[b]{0.10\columnwidth}\centering
-\(H_i^*\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\centering
-\(\ldots\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright
-\(H_i\%\)\strut
-\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright
-\(H_i^*\%\)\strut
-\end{minipage}\tabularnewline
+Clase & Clase & \(f_i\) & \(F_i\) & \(F_i^*\) & \(h_i\) & \(H_i\) & \(H_i^*\) & \(\ldots\) & \(H_i\%\) & \(H_i^*\%\) \\
 \midrule
 \endhead
-\begin{minipage}[t]{0.09\columnwidth}\centering
-\([y_1-y_2>\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(y_1\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(f_1\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_1\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_1^*\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{f_1}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{F_1}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-\(\frac{F_1^*}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\ldots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_1\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_1^*\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.09\columnwidth}\centering
-\(<y_1-y_2>\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(y_2\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(f_2\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_2\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_2^*\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{f_2}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{F_2}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-\(\frac{F_2^*}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\ldots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_2\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_1^*\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.09\columnwidth}\centering
-\(<y_{r}-y_r>\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(y_3\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(f_3\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_3\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_3^*\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{f_3}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{F_3}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-\(\frac{F_3^*}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\ldots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_3\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_1^*\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.09\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(\vdots\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(\vdots\)\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.09\columnwidth}\centering
-\(<y_{r-1}-y_r]\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(y_r\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(f_r\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_r\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(F_r^*\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{f_r}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\centering
-\(\frac{F_r}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.10\columnwidth}\centering
-\(\frac{F_r^*}{n}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\centering
-\(...\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_r\)\strut
-\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
-\(H_1^*\)\strut
-\end{minipage}\tabularnewline
+\([y_1-y_2>\) & \(y_1\) & \(f_1\) & \(F_1\) & \(F_1^*\) & \(\frac{f_1}{n}\) & \(\frac{F_1}{n}\) & \(\frac{F_1^*}{n}\) & \(\ldots\) & \(H_1\) & \(H_1^*\) \\
+\(<y_1-y_2>\) & \(y_2\) & \(f_2\) & \(F_2\) & \(F_2^*\) & \(\frac{f_2}{n}\) & \(\frac{F_2}{n}\) & \(\frac{F_2^*}{n}\) & \(\ldots\) & \(H_2\) & \(H_1^*\) \\
+\(<y_{r}-y_r>\) & \(y_3\) & \(f_3\) & \(F_3\) & \(F_3^*\) & \(\frac{f_3}{n}\) & \(\frac{F_3}{n}\) & \(\frac{F_3^*}{n}\) & \(\ldots\) & \(H_3\) & \(H_1^*\) \\
+\(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) \\
+\(<y_{r-1}-y_r]\) & \(y_r\) & \(f_r\) & \(F_r\) & \(F_r^*\) & \(\frac{f_r}{n}\) & \(\frac{F_r}{n}\) & \(\frac{F_r^*}{n}\) & \(...\) & \(H_r\) & \(H_1^*\) \\
 \bottomrule
 \end{longtable}
 
@@ -1861,8 +1394,8 @@ En caso de ser posible la multiplicación entre \(A\), \(B\) y \(C\) entonces se
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{xw =}\StringTok{ 'Es decir los elementos son demagogos y déspotas'} 
-\NormalTok{x1 =}\StringTok{ 'Es decir los elementos son demagogos y déspotas'} 
+\NormalTok{xw }\OtherTok{=} \StringTok{\textquotesingle{}Es decir los elementos son demagogos y déspotas\textquotesingle{}} 
+\NormalTok{x1 }\OtherTok{=} \StringTok{\textquotesingle{}Es decir los elementos son demagogos y déspotas\textquotesingle{}} 
 \end{Highlighting}
 \end{Shaded}
 
@@ -1879,69 +1412,24 @@ En caso de ser posible la multiplicación entre \(A\), \(B\) y \(C\) entonces se
 * Es decir los elementos son demagogos y déspotas
 Tabla \ref{tab:ww1}
 
-\begin{longtable}[]{@{}rclrl@{}}
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.11}}
+  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.04}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.02}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.25}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.57}}@{}}
 \caption{\label{tab:ww1} Caption}\tabularnewline
 \toprule
-\begin{minipage}[b]{0.10\columnwidth}\raggedleft
-Option\strut
-\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\centering
-N\strut
-\end{minipage} & \begin{minipage}[b]{0.02\columnwidth}\raggedright
-w\strut
-\end{minipage} & \begin{minipage}[b]{0.21\columnwidth}\raggedleft
-Observation\strut
-\end{minipage} & \begin{minipage}[b]{0.49\columnwidth}\raggedright
-Description\strut
-\end{minipage}\tabularnewline
+Option & N & w & Observation & Description \\
 \midrule
 \endfirsthead
 \toprule
-\begin{minipage}[b]{0.10\columnwidth}\raggedleft
-Option\strut
-\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\centering
-N\strut
-\end{minipage} & \begin{minipage}[b]{0.02\columnwidth}\raggedright
-w\strut
-\end{minipage} & \begin{minipage}[b]{0.21\columnwidth}\raggedleft
-Observation\strut
-\end{minipage} & \begin{minipage}[b]{0.49\columnwidth}\raggedright
-Description\strut
-\end{minipage}\tabularnewline
+Option & N & w & Observation & Description \\
 \midrule
 \endhead
-\begin{minipage}[t]{0.10\columnwidth}\raggedleft
-Es decir los elementos son demagogos y déspotas Es decir los elementos son demagogos y déspotas\strut
-\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\centering
-1\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-w\strut
-\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedleft
-Es decir los elementos son demagogos y déspotas\strut
-\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright
-Es decir los elementos son demagogos y déspotas Es decir los elementos son demagogos y déspotas\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.10\columnwidth}\raggedleft
-Engine\strut
-\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\centering
-2\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-w\strut
-\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedleft
-Es decir los elementos son demagogos y déspotas \(\sum^{n}_{i=1}{f_i}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright
-Engine to be used for processing templates. Handlebars is the default.\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.10\columnwidth}\raggedleft
-Es decir los elementos son demagogos y déspotas\strut
-\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\centering
-3\strut
-\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
-w\strut
-\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedleft
-\(\sum^{n}_{i=1}{f_i}\)\strut
-\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright
-extension to be used for dest files.\strut
-\end{minipage}\tabularnewline
+Es decir los elementos son demagogos y déspotas Es decir los elementos son demagogos y déspotas & 1 & w & Es decir los elementos son demagogos y déspotas & Es decir los elementos son demagogos y déspotas Es decir los elementos son demagogos y déspotas \\
+Engine & 2 & w & Es decir los elementos son demagogos y déspotas \(\sum^{n}_{i=1}{f_i}\) & Engine to be used for processing templates. Handlebars is the default. \\
+Es decir los elementos son demagogos y déspotas & 3 & w & \(\sum^{n}_{i=1}{f_i}\) & extension to be used for dest files. \\
 \bottomrule
 \end{longtable}
 
@@ -2040,7 +1528,7 @@ $\sum^{n}_{i=1}{x_i}$ & 34 & 2 & 1 & 2 & 2 & 2 & 2\\
 \bottomrule
 \end{longtable}
 
-\bibliography{book.bib,packages.bib}
+  \bibliography{book.bib,packages.bib}
 
 \printindex
 
