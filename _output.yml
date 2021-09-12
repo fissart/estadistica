@@ -6,7 +6,7 @@ bookdown::gitbook:
     fontsettings:
       theme: sepia
       family: serif
-      size: 2
+      size: 3
     toc:
       collapse: section
       scroll_highlight: yes
