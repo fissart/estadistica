@@ -1,10 +1,13 @@
 tab:ww
+tab:cuantitativaw
 exr:unnamed-chunk-1
 tab:cualitativa
 tab:cuantitativa
-eq:ww
+tab:www
 exr:unnamed-chunk-4
+tab:wwwww
 exr:unnamed-chunk-6
+tab:mediana
 def:unnamed-chunk-8
 thm:unnamed-chunk-9
 def:unnamed-chunk-10
@@ -44,7 +47,6 @@ exm:unnamed-chunk-43
 tab:ww1
 fig:ww1w
 tab:2w3
-tab:unnamed-chunk-46
 prerrequisitos
 variables
 variables-cualitativas
@@ -59,6 +61,9 @@ distribución-de-frecuencias
 ejemplo-sin-intervalos
 example-intervalos
 gráficos-estadísticos
+histograma-de-frecuencias
+circulares
+histograma-de-frecuencias-1
 medidas-de-tendencia-central
 la-media-overlinex
 media-de-datos-no-agrupados
@@ -70,6 +75,7 @@ la-mediana-me
 mediana-de-datos-no-tabulados
 mediana-de-datos-tabulados
 medidas-de-dispersión
+varianza
 medidas-de-asimetría
 experimento-aleatorio
 álgebra-de-eventos

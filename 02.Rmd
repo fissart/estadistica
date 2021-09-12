@@ -10,6 +10,10 @@ En experiento aleatorio es un fenomeno que genera un evento
 
 Sean $A$, $B$ y $C$ eventos entonces 
 1. e
+2. wwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+
+$$ \int_{1}^{2}=\sum_{2}^{2}x_1 $$
+
 
 # Técnicas de conteo
 

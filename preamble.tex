@@ -3,6 +3,7 @@
 \usepackage{graphicx} 
 \usepackage{amsmath}
 \usepackage{makeidx}
+\usepackage{array}% http://ctan.org/pkg/array
 \makeindex
 
 \makeatletter\@addtoreset{chapter}{part}\makeatother%
@@ -10,7 +11,8 @@
 %\usepackage{showframe}
 %\usepackage[a4paper]{geometry}
 %\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=3.5cm,rmargin=3cm}
-\renewcommand{\arraystretch}{1.1}
+\setlength{\tabcolsep}{0.38em}
+%\renewcommand{\arraystretch}{1.5}
 
 \usepackage{times}
 \renewcommand{\rmdefault}{ptm}
@@ -45,7 +47,7 @@
 
 
 
-\flushbottom 
+%\flushbottom 
 
 \frontmatter
 
