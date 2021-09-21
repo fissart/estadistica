@@ -24,58 +24,63 @@
 \contentsline {section}{\numberline {5.1}La media (\(\overline {x}\))}{19}{section.1.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Media de datos no agrupados}{19}{subsection.1.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}Media de datos agrupados}{19}{subsection.1.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Ejemplo}{20}{subsection.1.5.1.3}%
 \contentsline {section}{\numberline {5.2}La moda (Mo)}{20}{section.1.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Moda de datos no tabulados}{21}{subsection.1.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}Moda de datos tabulados}{21}{subsection.1.5.2.2}%
-\contentsline {section}{\numberline {5.3}La mediana (Me)}{21}{section.1.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Mediana de datos no tabulados}{21}{subsection.1.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Mediana de datos tabulados}{22}{subsection.1.5.3.2}%
-\contentsline {chapter}{\numberline {6}Medidas de dispersión}{25}{chapter.1.6}%
-\contentsline {section}{\numberline {6.1}Varianza}{25}{section.1.6.1}%
-\contentsline {chapter}{\numberline {7}Medidas de asimetría}{27}{chapter.1.7}%
-\contentsline {part}{II\hspace {1em}Probabilidades}{29}{part.2}%
-\contentsline {chapter}{\numberline {1}Experimento aleatorio}{31}{chapter.2.1}%
-\contentsline {chapter}{\numberline {2}Álgebra de eventos}{33}{chapter.2.2}%
-\contentsline {chapter}{\numberline {3}Técnicas de conteo}{35}{chapter.2.3}%
-\contentsline {chapter}{\numberline {4}Definición de probabilidad}{37}{chapter.2.4}%
-\contentsline {chapter}{\numberline {5}Probabilidad condicional}{39}{chapter.2.5}%
-\contentsline {chapter}{\numberline {6}Teorema de Bayes}{41}{chapter.2.6}%
-\contentsline {chapter}{\numberline {7}Eventos independientes y secuencias de experimentos}{43}{chapter.2.7}%
-\contentsline {chapter}{\numberline {8}Probabilidad en espacio}{45}{chapter.2.8}%
-\contentsline {part}{III\hspace {1em}Inferencia estadística}{47}{part.3}%
-\contentsline {chapter}{\numberline {1}Variables aleatorias}{49}{chapter.3.1}%
-\contentsline {subsection}{\numberline {1.0.1}Variable aleatoria continua}{50}{subsection.3.1.0.1}%
-\contentsline {subsection}{\numberline {1.0.2}Variable aleatoria mixta}{50}{subsection.3.1.0.2}%
-\contentsline {section}{\numberline {1.1}Función de probabilidad de una variable aleatoria}{51}{section.3.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Función de probabilidad de una variable aleatorias discreta}{51}{subsection.3.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Función de probabilidad de una variable aleatoria continua}{52}{subsection.3.1.1.2}%
-\contentsline {section}{\numberline {1.2}Función de distribución de una variable aleatoria}{52}{section.3.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Función de distribución de una variable aleatoria discreta}{52}{subsection.3.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Función de distribución de una variable aleatoria continua}{53}{subsection.3.1.2.2}%
-\contentsline {chapter}{\numberline {2}Parámetros de una variable aleatoria}{55}{chapter.3.2}%
-\contentsline {section}{\numberline {2.1}Esperanza matemática}{55}{section.3.2.1}%
-\contentsline {section}{\numberline {2.2}Medidas de variación}{55}{section.3.2.2}%
-\contentsline {section}{\numberline {2.3}Medidas de posición}{56}{section.3.2.3}%
-\contentsline {section}{\numberline {2.4}Medidas de curtosis}{56}{section.3.2.4}%
-\contentsline {chapter}{\numberline {3}Variables aleatorias bidimensionales}{57}{chapter.3.3}%
-\contentsline {subsection}{\numberline {3.0.1}Distribuciones marginales}{58}{subsection.3.3.0.1}%
-\contentsline {subsection}{\numberline {3.0.2}Variables aleatorias independientes}{58}{subsection.3.3.0.2}%
-\contentsline {subsection}{\numberline {3.0.3}Distribuciones de probabilidad condicional}{58}{subsection.3.3.0.3}%
-\contentsline {section}{\numberline {3.1}Distribución bidimensional continua}{58}{section.3.3.1}%
-\contentsline {chapter}{\numberline {4}Distribuciones discreta importantes}{59}{chapter.3.4}%
-\contentsline {section}{\numberline {4.1}Variable aleatoria discreta binomial}{59}{section.3.4.1}%
-\contentsline {section}{\numberline {4.2}Variable aleatoria discreta Poisson}{59}{section.3.4.2}%
-\contentsline {chapter}{\numberline {5}Distribuciones continuas importantes}{61}{chapter.3.5}%
-\contentsline {section}{\numberline {5.1}Variable aleatoria continua normal}{61}{section.3.5.1}%
-\contentsline {section}{\numberline {5.2}Variable aleatoria continua gamma}{61}{section.3.5.2}%
-\contentsline {chapter}{\numberline {6}Distribuciones muestrales}{63}{chapter.3.6}%
-\contentsline {chapter}{\numberline {7}Estimación}{65}{chapter.3.7}%
-\contentsline {chapter}{\numberline {8}Prueba de hipótesis}{67}{chapter.3.8}%
-\contentsline {chapter}{Apéndice}{67}{chapter.3.8}%
-\contentsline {chapter}{\numberline {A}Sumatorias}{69}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}eeeee}{69}{section.Alph1.1}%
-\contentsline {chapter}{\numberline {B}Matrices}{71}{appendix.Alph2}%
-\contentsline {section}{\numberline {B.1}Algebra de matrices}{71}{section.Alph2.1}%
-\contentsline {fm}{Bibliografía}{77}{appendix*.4}%
-\contentsline {chapter}{Índice alfabético}{79}{appendix*.4}%
-\contentsline {section}{}{79}{appendix*.4}%
+\contentsline {subsection}{\numberline {5.2.3}Ejemplo}{22}{subsection.1.5.2.3}%
+\contentsline {section}{\numberline {5.3}La mediana (Me)}{22}{section.1.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Mediana de datos no tabulados}{22}{subsection.1.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Mediana de datos tabulados}{23}{subsection.1.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Ejemplo}{24}{subsection.1.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Asignación}{24}{subsection.1.5.3.4}%
+\contentsline {chapter}{\numberline {6}Medidas de dispersión}{27}{chapter.1.6}%
+\contentsline {section}{\numberline {6.1}Varianza}{27}{section.1.6.1}%
+\contentsline {section}{\numberline {6.2}Desviación típica}{27}{section.1.6.2}%
+\contentsline {chapter}{\numberline {7}Medidas de asimetría}{29}{chapter.1.7}%
+\contentsline {part}{II\hspace {1em}Probabilidades}{31}{part.2}%
+\contentsline {chapter}{\numberline {1}Experimento aleatorio}{33}{chapter.2.1}%
+\contentsline {chapter}{\numberline {2}Álgebra de eventos}{35}{chapter.2.2}%
+\contentsline {chapter}{\numberline {3}Técnicas de conteo}{37}{chapter.2.3}%
+\contentsline {chapter}{\numberline {4}Definición de probabilidad}{39}{chapter.2.4}%
+\contentsline {chapter}{\numberline {5}Probabilidad condicional}{41}{chapter.2.5}%
+\contentsline {chapter}{\numberline {6}Teorema de Bayes}{43}{chapter.2.6}%
+\contentsline {chapter}{\numberline {7}Eventos independientes y secuencias de experimentos}{45}{chapter.2.7}%
+\contentsline {chapter}{\numberline {8}Probabilidad en espacio}{47}{chapter.2.8}%
+\contentsline {part}{III\hspace {1em}Inferencia estadística}{49}{part.3}%
+\contentsline {chapter}{\numberline {1}Variables aleatorias}{51}{chapter.3.1}%
+\contentsline {subsection}{\numberline {1.0.1}Variable aleatoria continua}{52}{subsection.3.1.0.1}%
+\contentsline {subsection}{\numberline {1.0.2}Variable aleatoria mixta}{52}{subsection.3.1.0.2}%
+\contentsline {section}{\numberline {1.1}Función de probabilidad de una variable aleatoria}{53}{section.3.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Función de probabilidad de una variable aleatorias discreta}{53}{subsection.3.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Función de probabilidad de una variable aleatoria continua}{54}{subsection.3.1.1.2}%
+\contentsline {section}{\numberline {1.2}Función de distribución de una variable aleatoria}{54}{section.3.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Función de distribución de una variable aleatoria discreta}{54}{subsection.3.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Función de distribución de una variable aleatoria continua}{55}{subsection.3.1.2.2}%
+\contentsline {chapter}{\numberline {2}Parámetros de una variable aleatoria}{57}{chapter.3.2}%
+\contentsline {section}{\numberline {2.1}Esperanza matemática}{57}{section.3.2.1}%
+\contentsline {section}{\numberline {2.2}Medidas de variación}{57}{section.3.2.2}%
+\contentsline {section}{\numberline {2.3}Medidas de posición}{58}{section.3.2.3}%
+\contentsline {section}{\numberline {2.4}Medidas de curtosis}{58}{section.3.2.4}%
+\contentsline {chapter}{\numberline {3}Variables aleatorias bidimensionales}{59}{chapter.3.3}%
+\contentsline {subsection}{\numberline {3.0.1}Distribuciones marginales}{60}{subsection.3.3.0.1}%
+\contentsline {subsection}{\numberline {3.0.2}Variables aleatorias independientes}{60}{subsection.3.3.0.2}%
+\contentsline {subsection}{\numberline {3.0.3}Distribuciones de probabilidad condicional}{60}{subsection.3.3.0.3}%
+\contentsline {section}{\numberline {3.1}Distribución bidimensional continua}{60}{section.3.3.1}%
+\contentsline {chapter}{\numberline {4}Distribuciones discreta importantes}{61}{chapter.3.4}%
+\contentsline {section}{\numberline {4.1}Variable aleatoria discreta binomial}{61}{section.3.4.1}%
+\contentsline {section}{\numberline {4.2}Variable aleatoria discreta Poisson}{61}{section.3.4.2}%
+\contentsline {chapter}{\numberline {5}Distribuciones continuas importantes}{63}{chapter.3.5}%
+\contentsline {section}{\numberline {5.1}Variable aleatoria continua normal}{63}{section.3.5.1}%
+\contentsline {section}{\numberline {5.2}Variable aleatoria continua gamma}{63}{section.3.5.2}%
+\contentsline {chapter}{\numberline {6}Distribuciones muestrales}{65}{chapter.3.6}%
+\contentsline {chapter}{\numberline {7}Estimación}{67}{chapter.3.7}%
+\contentsline {chapter}{\numberline {8}Prueba de hipótesis}{69}{chapter.3.8}%
+\contentsline {chapter}{Apéndice}{69}{chapter.3.8}%
+\contentsline {chapter}{\numberline {A}Sumatorias}{71}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}eeeee}{71}{section.Alph1.1}%
+\contentsline {chapter}{\numberline {B}Matrices}{73}{appendix.Alph2}%
+\contentsline {section}{\numberline {B.1}Algebra de matrices}{73}{section.Alph2.1}%
+\contentsline {fm}{Bibliografía}{79}{appendix*.4}%
+\contentsline {chapter}{Índice alfabético}{81}{appendix*.4}%
+\contentsline {section}{}{81}{appendix*.4}%
