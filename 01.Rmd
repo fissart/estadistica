@@ -338,7 +338,8 @@ La moda es el dato que más se repite por ejemplo sea el conjunto de datos $x_1$
 
 ### Moda de datos tabulados
 
-La moda es el dato que más se repite por ejemplo sea el conjunto de datos tabulados entonces la moda es $$\text{Mo}=Li+\frac{Li-Ls}{Li+Ls}r$$ 
+La moda es el dato que más se repite por ejemplo sea el conjunto de datos tabulados entonces la moda es 
+$$\text{Mo}=Li+\frac{Li-Ls}{\left(Li+Ls\right) -\left(L_{}+Ls\right)}r$$ 
 
 Table: (\#tab:wwwww) wwwww
 
@@ -368,6 +369,7 @@ Al ordenarlos  se obtiene el siguiente arreglo 0, 1, 2, 5, 5, 6, 6, 7, 8, 10, 14
 ### Mediana de datos tabulados
 
 Table: (\#tab:mediana) Mediana
+$$Me=$$
 
 |      Clase      |  $Y_i$   |  $f_i$   |  $F_i$   | $\ldots$ | $H_i^*\%$ |
 | :-------------: | :------: | :------: | :------: | :------: | :-------: |
