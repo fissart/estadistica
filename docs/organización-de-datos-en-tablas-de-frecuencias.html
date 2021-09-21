@@ -382,8 +382,7 @@ div.csl-indent {
 <ol style="list-style-type: decimal">
 <li><p>Criterio del investigador <span class="math inline">\(r\)</span> no puede ser más de 20 ni menos de 5</p></li>
 <li><p><span class="math inline">\(r=\sqrt{n}\)</span> donde <span class="math inline">\(n\)</span> es el número de datos</p></li>
-<li><p>La regla de Starges que consiste en considerar la fórmula <span class="math inline">\(r=3.322\cdot\log_{10} n\)</span>
-Una vez establecido el número de particiones se procede a generar los límites laterales de cada una de las particiones, sea <span class="math inline">\(L\)</span> la longitud de todo el conjunto es decir <span class="math inline">\(L=x_{\text{max}}-x_{\text{min}}\)</span> entonces la longitud de las particiones o amplitud interválica se obtiene con <span class="math inline">\(l=\frac{L}{r}\)</span></p></li>
+<li><p>La regla de Starges que consiste en considerar la fórmula <span class="math inline">\(r=3.322\cdot\log_{10} n\)</span> Una vez establecido el número de particiones se procede a generar los límites laterales de cada una de las particiones, sea <span class="math inline">\(L\)</span> la longitud de todo el conjunto es decir <span class="math inline">\(L=x_{\text{max}}-x_{\text{min}}\)</span> entonces la longitud de las particiones o amplitud interválica se obtiene con <span class="math inline">\(l=\frac{L}{r}\)</span></p></li>
 </ol>
 <table style="width:100%;">
 <caption><span id="tab:cuantitativaw">Tabla 3.2: </span>Datos cuantitativos (intervalos)</caption>
@@ -473,10 +472,8 @@ Una vez establecido el número de particiones se procede a generar los límites 
 <p>Tenga en cuenta que <span class="math inline">\(n\)</span> es el número de datos, es decir <span class="math inline">\(n=f_1+f_2+\ldots+f_r=\sum_{i=1}^r\)</span> donde <span class="math inline">\(f_i\)</span> es número de datos en la partición <span class="math inline">\(X_i\)</span>, una de las <span class="math inline">\(r\)</span> particiones del conjunto total de datos.</p>
 <ol style="list-style-type: decimal">
 <li><p>Las <strong>frecuencias absolutas</strong> <span class="math inline">\(f_i\)</span> indican el número de datos con la característica <span class="math inline">\(X_i\)</span>.</p></li>
-<li><p>Las <strong>frecuencias absolutas acumuladas menor que</strong> <span class="math inline">\(F_i\)</span> obedecen a la fórmula
-<span class="math display">\[F_m=f_1+f_2+\ldots+f_m=\sum_{i=1}^mf_i\]</span></p></li>
-<li><p>Las <strong>frecuencias absolutas acumuladas mayor que</strong> <span class="math inline">\(F_i^*\)</span> obedecen a la fórmula
-<span class="math display">\[
+<li><p>Las <strong>frecuencias absolutas acumuladas menor que</strong> <span class="math inline">\(F_i\)</span> obedecen a la fórmula <span class="math display">\[F_m=f_1+f_2+\ldots+f_m=\sum_{i=1}^mf_i\]</span></p></li>
+<li><p>Las <strong>frecuencias absolutas acumuladas mayor que</strong> <span class="math inline">\(F_i^*\)</span> obedecen a la fórmula <span class="math display">\[
 \begin{aligned}
 F_m^*&amp;=f_m+f_{m+1}+\ldots+f_r\\
 &amp;=\sum_{i=m}^rf_i\\
@@ -484,18 +481,12 @@ F_m^*&amp;=f_m+f_{m+1}+\ldots+f_r\\
 &amp;=n-\left(f_1+f_{2}+\ldots+f_{m-1}\right)
 \end{aligned} 
 \]</span></p></li>
-<li><p>Las <strong>frecuencias absolutas relativas</strong> obedecen a la fórmula
-<span class="math display">\[h_m=\frac{f_m}{n}\]</span></p></li>
-<li><p>Las <strong>frecuencias absolutas relativas menor que</strong> obedecen a la fórmula
-<span class="math display">\[H_m=\frac{f_m}{n}\]</span></p></li>
-<li><p>Las <strong>frecuencias absolutas relativas mayor que</strong> obedecen a la fórmula
-<span class="math display">\[H_m^*=\frac{F_m}{n}\]</span></p></li>
-<li><p>Las <strong>frecuencias absolutas relativas porcentuales</strong> obedecen a la fórmula
-<span class="math inline">\(h_i\%=100\cdot h_i\)</span></p></li>
-<li><p>Las <strong>frecuencias absolutas relativas menor que porcentuales</strong> obedecen a la fórmula
-<span class="math inline">\(H_i\%=100\cdot H_i\)</span></p></li>
-<li><p>Las <strong>frecuencias absolutas relativas mayor que porcentuales</strong> obedecen a la fórmula
-<span class="math inline">\(H_i^*\%=100\cdot H_i^*\)</span></p></li>
+<li><p>Las <strong>frecuencias absolutas relativas</strong> obedecen a la fórmula <span class="math display">\[h_m=\frac{f_m}{n}\]</span></p></li>
+<li><p>Las <strong>frecuencias absolutas relativas menor que</strong> obedecen a la fórmula <span class="math display">\[H_m=\frac{f_m}{n}\]</span></p></li>
+<li><p>Las <strong>frecuencias absolutas relativas mayor que</strong> obedecen a la fórmula <span class="math display">\[H_m^*=\frac{F_m}{n}\]</span></p></li>
+<li><p>Las <strong>frecuencias absolutas relativas porcentuales</strong> obedecen a la fórmula <span class="math inline">\(h_i\%=100\cdot h_i\)</span></p></li>
+<li><p>Las <strong>frecuencias absolutas relativas menor que porcentuales</strong> obedecen a la fórmula <span class="math inline">\(H_i\%=100\cdot H_i\)</span></p></li>
+<li><p>Las <strong>frecuencias absolutas relativas mayor que porcentuales</strong> obedecen a la fórmula <span class="math inline">\(H_i^*\%=100\cdot H_i^*\)</span></p></li>
 </ol>
 </div>
 <div id="ejemplo-sin-intervalos" class="section level2" number="3.2">
