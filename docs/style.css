@@ -18,6 +18,7 @@
 .rmdwarning {
   background-image: url("../images/warning.png");
 }
+/*
 p.caption {
   color: #777;
   margin-top: 10px;
@@ -35,21 +36,13 @@ pre code {
 p.flushright {
   text-align: right;
 }
-p{
-    text-align:justify;
-    -ms-word-break: break-all; 
-    word-break: break-all; 
-    word-break: break-word; 
-   -webkit-hyphens: auto; 
-   -moz-hyphens: auto; 
-   hyphens: auto;
-}
 blockquote > p:last-child {
   text-align: right;
 }
 blockquote > p:first-child {
   text-align: inherit;
 }
+*/
 h1 {
   border-top-style: 2px solid;
 }
@@ -66,7 +59,7 @@ h1 {
   border-bottom: none;
 }
 .level1 h1 {
-  border-bottom: 2px solid;
+  border-bottom: 3px solid;
 }
 .level1 h2 {
   border-bottom: 2px solid;
@@ -85,4 +78,26 @@ h1.title {
 }
 .book .book-body .page-wrapper .page-inner section.normal strong {
   font-weight: 600;
+}
+  iframe {
+  border: none;
+}
+
+/* If you like the first line of your paragraphs to be indented, you can add the option to make them so in Bookdown */
+/* Just add the below code to your Bookdown style.css file */
+/*
+p {
+  text-indent: 3em;
+}
+*/
+.book .book-body .page-wrapper .page-inner section.normal p{
+  margin-top:  0.85em
+}
+/* You can change the extent of the indentation by changing the amount. 3em is provided as an example */
+
+/* If you don't wish to indent the 1st paragraph of each section, but only the 2nd, 3rd, 4th etc.  */
+/* To do this, you can use teh below code instead */
+
+p:not(:first-of-type) {
+  text-indent: 3em;
 }
