@@ -523,13 +523,20 @@ $$  M_e=L_{i}+\frac{\frac{N}{2}-F_{i-1}}{f_{i}}\cdot a_{i}$$
 ## Rango 
 
 $R=x_{max}-x_{min}$
+Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
 
 ## Varianza
+
 $$s^2=\frac{\sum\left(x_i-\overline{x}\right )^2}{n-1}$$
+
+
 ### Datos no tabulados
+
 $$s^2=\frac{\sum n_i\left(y_i-\overline{x}\right )^2}{n-1}$$
 
 Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
+
+
 
 ### Datos tabulados
 
@@ -597,6 +604,8 @@ Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
 
 
 $$DMe=\frac{1}{n}\sum n_i \left \vert x_i-Me\right\vert$$
+
+
 |   Clase   | $Y_i$ | $f_i$ | $F_i$ |
 |:---------:|:-----:|:-----:|:-----:|
 | $[5,10)$  |  7.5  |   1   |   1   |
@@ -606,6 +615,8 @@ $$DMe=\frac{1}{n}\sum n_i \left \vert x_i-Me\right\vert$$
 | $[25,30]$ |       |  10   |       |
 | $[30,35]$ |       |   6   |       |
 |  $\sum$   |       |   2   |       |
+
+: (\#tab:ww) Caption
 
 
 ## Coeficiente de variacion 

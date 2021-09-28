@@ -949,12 +949,16 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
 \section{Rango}\label{rango}}
 
 \(R=x_{max}-x_{min}\)
+Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
 
 \hypertarget{varianza}{%
 \section{Varianza}\label{varianza}}
 
 \[s^2=\frac{\sum\left(x_i-\overline{x}\right )^2}{n-1}\]
-\#\#\# Datos no tabulados
+
+\hypertarget{datos-no-tabulados}{%
+\subsection{Datos no tabulados}\label{datos-no-tabulados}}
+
 \[s^2=\frac{\sum n_i\left(y_i-\overline{x}\right )^2}{n-1}\]
 
 Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
@@ -1000,8 +1004,8 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
 \hypertarget{desviaciuxf3n-media-absoluta}{%
 \section{Desviación media absoluta}\label{desviaciuxf3n-media-absoluta}}
 
-\hypertarget{datos-no-tabulados}{%
-\subsection{Datos no tabulados}\label{datos-no-tabulados}}
+\hypertarget{datos-no-tabulados-1}{%
+\subsection{Datos no tabulados}\label{datos-no-tabulados-1}}
 
 \[DM=\frac{1}{n}\sum \left\vert x_i-\overline{x}\right\vert\]
 
@@ -1034,8 +1038,8 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
 \hypertarget{desviaciuxf3n-mediana-absoluta}{%
 \section{Desviación mediana absoluta}\label{desviaciuxf3n-mediana-absoluta}}
 
-\hypertarget{datos-no-tabulados-1}{%
-\subsection{Datos no tabulados}\label{datos-no-tabulados-1}}
+\hypertarget{datos-no-tabulados-2}{%
+\subsection{Datos no tabulados}\label{datos-no-tabulados-2}}
 
 \[DMe=\frac{1}{n}\sum \left\vert x_i-Me\right\vert\]
 
@@ -1045,15 +1049,26 @@ Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
 \subsection{Datos tabulados}\label{datos-tabulados-2}}
 
 \[DMe=\frac{1}{n}\sum n_i \left \vert x_i-Me\right\vert\]
-\textbar{} Clase \textbar{} \(Y_i\) \textbar{} \(f_i\) \textbar{} \(F_i\) \textbar{}
-\textbar:---------:\textbar:-----:\textbar:-----:\textbar:-----:\textbar{}
-\textbar{} \([5,10)\) \textbar{} 7.5 \textbar{} 1 \textbar{} 1 \textbar{}
-\textbar{} \([10,15)\) \textbar{} 12.5 \textbar{} 2 \textbar{} 3 \textbar{}
-\textbar{} \([15,20)\) \textbar{} 17.5 \textbar{} 5 \textbar{} \textbar{}
-\textbar{} \([20,25)\) \textbar{} 22.5 \textbar{} 7 \textbar{} \textbar{}
-\textbar{} \([25,30]\) \textbar{} \textbar{} 10 \textbar{} \textbar{}
-\textbar{} \([30,35]\) \textbar{} \textbar{} 6 \textbar{} \textbar{}
-\textbar{} \(\sum\) \textbar{} \textbar{} 2 \textbar{} \textbar{}
+
+\begin{longtable}[]{@{}cccc@{}}
+\caption{\label{tab:ww} Caption}\tabularnewline
+\toprule
+Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+\midrule
+\endfirsthead
+\toprule
+Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+\midrule
+\endhead
+\([5,10)\) & 7.5 & 1 & 1 \\
+\([10,15)\) & 12.5 & 2 & 3 \\
+\([15,20)\) & 17.5 & 5 & \\
+\([20,25)\) & 22.5 & 7 & \\
+\([25,30]\) & & 10 & \\
+\([30,35]\) & & 6 & \\
+\(\sum\) & & 2 & \\
+\bottomrule
+\end{longtable}
 
 \hypertarget{coeficiente-de-variacion}{%
 \section{Coeficiente de variacion}\label{coeficiente-de-variacion}}

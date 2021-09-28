@@ -81,13 +81,14 @@ asignación-1
 medidas-de-dispersión
 rango
 varianza
+datos-no-tabulados
 datos-tabulados
 desviación-típica
 desviación-media-absoluta
-datos-no-tabulados
+datos-no-tabulados-1
 datos-tabulados-1
 desviación-mediana-absoluta
-datos-no-tabulados-1
+datos-no-tabulados-2
 datos-tabulados-2
 coeficiente-de-variacion
 medidas-de-posicion-cuantiles
