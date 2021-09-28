@@ -146,6 +146,8 @@ Tenga en cuenta que $n$ es el número de datos, es decir $n=f_1+f_2+\ldots+f_r=\
 
 9.  Las **frecuencias absolutas relativas mayor que porcentuales** obedecen a la fórmula $H_i^*\%=100\cdot H_i^*$
 
+10. $Y_i$ marca de clase o punto medio de la clase $i$
+
 ## Ejemplo sin intervalos
 
 ```{exercise}
@@ -518,15 +520,221 @@ $$  M_e=L_{i}+\frac{\frac{N}{2}-F_{i-1}}{f_{i}}\cdot a_{i}$$
 
 # Medidas de dispersión
 
-## Rango
-## Varianza
-## Desviación típica
-## Desviación media
+## Rango 
 
-# Medidas de posicion
-## Cuartiles
+$R=x_{max}-x_{min}$
+
+## Varianza
+$$s^2=\frac{\sum\left(x_i-\overline{x}\right )^2}{n-1}$$
+### Datos no tabulados
+$$s^2=\frac{\sum n_i\left(y_i-\overline{x}\right )^2}{n-1}$$
+
+Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
+
+### Datos tabulados
+
+|   Clase   | $Y_i$ | $f_i$ | $F_i$ |
+|:---------:|:-----:|:-----:|:-----:|
+| $[5,10)$  |  7.5  |   1   |   1   |
+| $[10,15)$ | 12.5  |   2   |   3   |
+| $[15,20)$ | 17.5  |   5   |       |
+| $[20,25)$ | 22.5  |   7   |       |
+| $[25,30]$ |       |  10   |       |
+| $[30,35]$ |       |   6   |       |
+|  $\sum$   |       |   2   |       |
+
+## Desviación típica
+
+
+$$s=\sqrt{s^2}$$
+
+
+
+|   Clase   | $Y_i$ | $f_i$ | $F_i$ |
+|:---------:|:-----:|:-----:|:-----:|
+| $[5,10)$  |  7.5  |   1   |   1   |
+| $[10,15)$ | 12.5  |   2   |   3   |
+| $[15,20)$ | 17.5  |   5   |       |
+| $[20,25)$ | 22.5  |   7   |       |
+| $[25,30]$ |       |  10   |       |
+| $[30,35]$ |       |   6   |       |
+|  $\sum$   |       |   2   |       |
+
+## Desviación media absoluta
+
+### Datos no tabulados
+$$DM=\frac{1}{n}\sum \left\vert x_i-\overline{x}\right\vert$$
+
+Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
+
+### Datos tabulados
+
+$$DM=\frac{1}{n}\sum n_i \left \vert x_i-\overline{x}\right\vert$$
+
+$y_i$ marca de clase o punto medio de la clase $i$
+
+
+|   Clase   | $Y_i$ | $f_i$ | $F_i$ |
+|:---------:|:-----:|:-----:|:-----:|
+| $[5,10)$  |  7.5  |   1   |   1   |
+| $[10,15)$ | 12.5  |   2   |   3   |
+| $[15,20)$ | 17.5  |   5   |       |
+| $[20,25)$ | 22.5  |   7   |       |
+| $[25,30]$ |       |  10   |       |
+| $[30,35]$ |       |   6   |       |
+| $[35,40]$ |       |   5   |       |
+| $[40,45]$ |       |   3   |       |
+|  $\sum$   |       |   2   |       |
+
+## Desviación mediana absoluta
+
+### Datos no tabulados
+$$DMe=\frac{1}{n}\sum \left\vert x_i-Me\right\vert$$
+
+Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
+
+### Datos tabulados
+
+
+$$DMe=\frac{1}{n}\sum n_i \left \vert x_i-Me\right\vert$$
+|   Clase   | $Y_i$ | $f_i$ | $F_i$ |
+|:---------:|:-----:|:-----:|:-----:|
+| $[5,10)$  |  7.5  |   1   |   1   |
+| $[10,15)$ | 12.5  |   2   |   3   |
+| $[15,20)$ | 17.5  |   5   |       |
+| $[20,25)$ | 22.5  |   7   |       |
+| $[25,30]$ |       |  10   |       |
+| $[30,35]$ |       |   6   |       |
+|  $\sum$   |       |   2   |       |
+
+
+## Coeficiente de variacion 
+
+$$Cv=\frac{s}{\overline{x}}\cdot 100$$
+
+
+
+
+
+
+
+
+# Medidas de posicion (cuantiles)
+
+- Los deciles, que dividen a la distribución en diez partes;
+- Los percentiles, que dividen a la distribución en cien partes.
+
+## Cuartiles 
+
+Los cuartiles, que dividen a la distribución en cuatro partes (corresponden a los cuantiles 0,25; 0,50 y 0,75);  $Q_1, Q_2, Q_3$
+
+### Datos no agrupados 
+Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 Ordenar de menor a mayor (creciente)
+
+Si $$Q_k=\frac{k(n+1)}{4}$$  es entero entonces el cuartil es el dato de la posicion $Q_k=x_\frac{k(n+1)}{4}$ 
+Si $$Q_k=\frac{k(n+1)}{4}$$ no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra $Q_k=\frac{k(n+1)}{4}$ 
+
+* Ejemplo 
+1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
+
+
+### Datos agrupados
+
+$$Q_k=L_i+ A\left(\frac{\frac{kn}{4}-F_{i-1}}{F_i-F_{i-1}}\right)$$
+
+* $L_i$ limite inferior del intervalo que contiene al decil
+* $F_{i-1}$ frecuencia acumulada  en la clase anterior al decil
+* $F_i$ frecuencia acumulada  en la clase al decil
+* $A$ amplitud intervalica
+* $n$ numero de datos
+* $k$ indice del cuartil correspondiente
+
+
+|   Clase   | $Y_i$ | $f_i$ | $F_i$ |
+|:---------:|:-----:|:-----:|:-----:|
+| $[5,10)$  |  7.5  |   1   |   1   |
+| $[10,15)$ | 12.5  |   2   |   3   |
+| $[15,20)$ | 17.5  |   5   |       |
+| $[20,25)$ | 22.5  |   7   |       |
+| $[25,30]$ |       |  10   |       |
+| $[30,35]$ |       |   6   |       |
+| $[35,40]$ |       |   5   |       |
+| $[40,45]$ |       |   3   |       |
+|  $\sum$   |       |   2   |       |
+
 ## Deciles
+Los deciles, que dividen a la distribución en diez partes es decir $D_1, D_2,\ldots, D_9$
+
+### Datos no agrupados 
+Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 Ordenar de menor a mayor (creciente)
+
+Si $$D_k=\frac{k(n+1)}{10}$$  es entero entonces el cuartil es el dato de la posicion $D_k=x_\frac{k(n+1)}{10}$ 
+Si $$D_k=\frac{k(n+1)}{10}$$ no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra $D_k=\frac{k(n+1)}{10}$ 
+
+* Ejemplo 
+1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
+
+
+
+### Datos agrupados
+
+$$D_k=L_i+ A\left(\frac{\frac{kn}{10}-F_{i-1}}{F_i-F_{i-1}}\right)$$
+
+|   Clase   | $Y_i$ | $f_i$ | $F_i$ |
+|:---------:|:-----:|:-----:|:-----:|
+| $[5,10)$  |  7.5  |   1   |   1   |
+| $[10,15)$ | 12.5  |   2   |   3   |
+| $[15,20)$ | 17.5  |   5   |       |
+| $[20,25)$ | 22.5  |   7   |       |
+| $[25,30]$ |       |  10   |       |
+| $[30,35]$ |       |   6   |       |
+| $[35,40]$ |       |   5   |       |
+| $[40,45]$ |       |   3   |       |
+|  $\sum$   |       |   2   |       |
+
 ## Percentiles
+Los percentiles, que dividen a la distribución en diez partes es decir $P_1, P_2,\ldots, P_{99}$
+
+
+### Datos no agrupados 
+
+
+Si $$P_k=\frac{k(n+1)}{100}$$  es entero entonces el cuartil es el dato de la posicion $P_k=x_\frac{k(n+1)}{100}$ 
+Si $$P_k=\frac{k(n+1)}{100}$$ no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra $Q_k=\frac{k(n+1)}{100}$ 
+
+* Ejemplo 
+1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
+Al ordenar de manera creciente
+1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
+y
+$$P_k=\frac{k(18+1)}{100}$$
+
+
+
+### Datos agrupados
+
+
+$$P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)$$
+
+|   Clase   | $Y_i$ | $f_i$ | $F_i$ |
+|:---------:|:-----:|:-----:|:-----:|
+| $[5,10)$  |  7.5  |   1   |   1   |
+| $[10,15)$ | 12.5  |   2   |   3   |
+| $[15,20)$ | 17.5  |   5   |       |
+| $[20,25)$ | 22.5  |   7   |       |
+| $[25,30]$ |       |  10   |       |
+| $[30,35]$ |       |   6   |       |
+| $[35,40]$ |       |   5   |       |
+| $[40,45]$ |       |   3   |       |
+|  $\sum$   |       |   2   |       |
+
+
+
+
+
+
+
+
 
 # Medidas de asimetria
 

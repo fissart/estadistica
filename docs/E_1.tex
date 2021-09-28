@@ -171,7 +171,7 @@
 \makeatother
 \subtitle{estadística descriptiva y probabilidades}
 \author{Ricardo Michel MALLQUI BAÑOS}
-\date{2021-09-25}
+\date{2021-09-28}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Teorema}[chapter]
@@ -478,6 +478,8 @@ Tenga en cuenta que \(n\) es el número de datos, es decir \(n=f_1+f_2+\ldots+f_
   Las \textbf{frecuencias absolutas relativas menor que porcentuales} obedecen a la fórmula \(H_i\%=100\cdot H_i\)
 \item
   Las \textbf{frecuencias absolutas relativas mayor que porcentuales} obedecen a la fórmula \(H_i^*\%=100\cdot H_i^*\)
+\item
+  \(Y_i\) marca de clase o punto medio de la clase \(i\)
 \end{enumerate}
 
 \hypertarget{ejemplo-sin-intervalos}{%
@@ -946,26 +948,272 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
 \hypertarget{rango}{%
 \section{Rango}\label{rango}}
 
+\(R=x_{max}-x_{min}\)
+
 \hypertarget{varianza}{%
 \section{Varianza}\label{varianza}}
+
+\[s^2=\frac{\sum\left(x_i-\overline{x}\right )^2}{n-1}\]
+\#\#\# Datos no tabulados
+\[s^2=\frac{\sum n_i\left(y_i-\overline{x}\right )^2}{n-1}\]
+
+Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
+
+\hypertarget{datos-tabulados}{%
+\subsection{Datos tabulados}\label{datos-tabulados}}
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule
+Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+\midrule
+\endhead
+\([5,10)\) & 7.5 & 1 & 1 \\
+\([10,15)\) & 12.5 & 2 & 3 \\
+\([15,20)\) & 17.5 & 5 & \\
+\([20,25)\) & 22.5 & 7 & \\
+\([25,30]\) & & 10 & \\
+\([30,35]\) & & 6 & \\
+\(\sum\) & & 2 & \\
+\bottomrule
+\end{longtable}
 
 \hypertarget{desviaciuxf3n-tuxedpica}{%
 \section{Desviación típica}\label{desviaciuxf3n-tuxedpica}}
 
-\hypertarget{desviaciuxf3n-media}{%
-\section{Desviación media}\label{desviaciuxf3n-media}}
+\[s=\sqrt{s^2}\]
 
-\hypertarget{medidas-de-posicion}{%
-\chapter{Medidas de posicion}\label{medidas-de-posicion}}
+\begin{longtable}[]{@{}cccc@{}}
+\toprule
+Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+\midrule
+\endhead
+\([5,10)\) & 7.5 & 1 & 1 \\
+\([10,15)\) & 12.5 & 2 & 3 \\
+\([15,20)\) & 17.5 & 5 & \\
+\([20,25)\) & 22.5 & 7 & \\
+\([25,30]\) & & 10 & \\
+\([30,35]\) & & 6 & \\
+\(\sum\) & & 2 & \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{desviaciuxf3n-media-absoluta}{%
+\section{Desviación media absoluta}\label{desviaciuxf3n-media-absoluta}}
+
+\hypertarget{datos-no-tabulados}{%
+\subsection{Datos no tabulados}\label{datos-no-tabulados}}
+
+\[DM=\frac{1}{n}\sum \left\vert x_i-\overline{x}\right\vert\]
+
+Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
+
+\hypertarget{datos-tabulados-1}{%
+\subsection{Datos tabulados}\label{datos-tabulados-1}}
+
+\[DM=\frac{1}{n}\sum n_i \left \vert x_i-\overline{x}\right\vert\]
+
+\(y_i\) marca de clase o punto medio de la clase \(i\)
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule
+Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+\midrule
+\endhead
+\([5,10)\) & 7.5 & 1 & 1 \\
+\([10,15)\) & 12.5 & 2 & 3 \\
+\([15,20)\) & 17.5 & 5 & \\
+\([20,25)\) & 22.5 & 7 & \\
+\([25,30]\) & & 10 & \\
+\([30,35]\) & & 6 & \\
+\([35,40]\) & & 5 & \\
+\([40,45]\) & & 3 & \\
+\(\sum\) & & 2 & \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{desviaciuxf3n-mediana-absoluta}{%
+\section{Desviación mediana absoluta}\label{desviaciuxf3n-mediana-absoluta}}
+
+\hypertarget{datos-no-tabulados-1}{%
+\subsection{Datos no tabulados}\label{datos-no-tabulados-1}}
+
+\[DMe=\frac{1}{n}\sum \left\vert x_i-Me\right\vert\]
+
+Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
+
+\hypertarget{datos-tabulados-2}{%
+\subsection{Datos tabulados}\label{datos-tabulados-2}}
+
+\[DMe=\frac{1}{n}\sum n_i \left \vert x_i-Me\right\vert\]
+\textbar{} Clase \textbar{} \(Y_i\) \textbar{} \(f_i\) \textbar{} \(F_i\) \textbar{}
+\textbar:---------:\textbar:-----:\textbar:-----:\textbar:-----:\textbar{}
+\textbar{} \([5,10)\) \textbar{} 7.5 \textbar{} 1 \textbar{} 1 \textbar{}
+\textbar{} \([10,15)\) \textbar{} 12.5 \textbar{} 2 \textbar{} 3 \textbar{}
+\textbar{} \([15,20)\) \textbar{} 17.5 \textbar{} 5 \textbar{} \textbar{}
+\textbar{} \([20,25)\) \textbar{} 22.5 \textbar{} 7 \textbar{} \textbar{}
+\textbar{} \([25,30]\) \textbar{} \textbar{} 10 \textbar{} \textbar{}
+\textbar{} \([30,35]\) \textbar{} \textbar{} 6 \textbar{} \textbar{}
+\textbar{} \(\sum\) \textbar{} \textbar{} 2 \textbar{} \textbar{}
+
+\hypertarget{coeficiente-de-variacion}{%
+\section{Coeficiente de variacion}\label{coeficiente-de-variacion}}
+
+\[Cv=\frac{s}{\overline{x}}\cdot 100\]
+
+\hypertarget{medidas-de-posicion-cuantiles}{%
+\chapter{Medidas de posicion (cuantiles)}\label{medidas-de-posicion-cuantiles}}
+
+\begin{itemize}
+\tightlist
+\item
+  Los deciles, que dividen a la distribución en diez partes;
+\item
+  Los percentiles, que dividen a la distribución en cien partes.
+\end{itemize}
 
 \hypertarget{cuartiles}{%
 \section{Cuartiles}\label{cuartiles}}
 
+Los cuartiles, que dividen a la distribución en cuatro partes (corresponden a los cuantiles 0,25; 0,50 y 0,75); \(Q_1, Q_2, Q_3\)
+
+\hypertarget{datos-no-agrupados}{%
+\subsection{Datos no agrupados}\label{datos-no-agrupados}}
+
+Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 Ordenar de menor a mayor (creciente)
+
+Si \[Q_k=\frac{k(n+1)}{4}\] es entero entonces el cuartil es el dato de la posicion \(Q_k=x_\frac{k(n+1)}{4}\)
+Si \[Q_k=\frac{k(n+1)}{4}\] no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra \(Q_k=\frac{k(n+1)}{4}\)
+
+\begin{itemize}
+\tightlist
+\item
+  Ejemplo
+  1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
+\end{itemize}
+
+\hypertarget{datos-agrupados}{%
+\subsection{Datos agrupados}\label{datos-agrupados}}
+
+\[Q_k=L_i+ A\left(\frac{\frac{kn}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\]
+
+\begin{itemize}
+\tightlist
+\item
+  \(L_i\) limite inferior del intervalo que contiene al decil
+\item
+  \(F_{i-1}\) frecuencia acumulada en la clase anterior al decil
+\item
+  \(F_i\) frecuencia acumulada en la clase al decil
+\item
+  \(A\) amplitud intervalica
+\item
+  \(n\) numero de datos
+\item
+  \(k\) indice del cuartil correspondiente
+\end{itemize}
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule
+Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+\midrule
+\endhead
+\([5,10)\) & 7.5 & 1 & 1 \\
+\([10,15)\) & 12.5 & 2 & 3 \\
+\([15,20)\) & 17.5 & 5 & \\
+\([20,25)\) & 22.5 & 7 & \\
+\([25,30]\) & & 10 & \\
+\([30,35]\) & & 6 & \\
+\([35,40]\) & & 5 & \\
+\([40,45]\) & & 3 & \\
+\(\sum\) & & 2 & \\
+\bottomrule
+\end{longtable}
+
 \hypertarget{deciles}{%
 \section{Deciles}\label{deciles}}
 
+Los deciles, que dividen a la distribución en diez partes es decir \(D_1, D_2,\ldots, D_9\)
+
+\hypertarget{datos-no-agrupados-1}{%
+\subsection{Datos no agrupados}\label{datos-no-agrupados-1}}
+
+Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 Ordenar de menor a mayor (creciente)
+
+Si \[D_k=\frac{k(n+1)}{10}\] es entero entonces el cuartil es el dato de la posicion \(D_k=x_\frac{k(n+1)}{10}\)
+Si \[D_k=\frac{k(n+1)}{10}\] no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra \(D_k=\frac{k(n+1)}{10}\)
+
+\begin{itemize}
+\tightlist
+\item
+  Ejemplo
+  1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
+\end{itemize}
+
+\hypertarget{datos-agrupados-1}{%
+\subsection{Datos agrupados}\label{datos-agrupados-1}}
+
+\[D_k=L_i+ A\left(\frac{\frac{kn}{10}-F_{i-1}}{F_i-F_{i-1}}\right)\]
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule
+Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+\midrule
+\endhead
+\([5,10)\) & 7.5 & 1 & 1 \\
+\([10,15)\) & 12.5 & 2 & 3 \\
+\([15,20)\) & 17.5 & 5 & \\
+\([20,25)\) & 22.5 & 7 & \\
+\([25,30]\) & & 10 & \\
+\([30,35]\) & & 6 & \\
+\([35,40]\) & & 5 & \\
+\([40,45]\) & & 3 & \\
+\(\sum\) & & 2 & \\
+\bottomrule
+\end{longtable}
+
 \hypertarget{percentiles}{%
 \section{Percentiles}\label{percentiles}}
+
+Los percentiles, que dividen a la distribución en diez partes es decir \(P_1, P_2,\ldots, P_{99}\)
+
+\hypertarget{datos-no-agrupados-2}{%
+\subsection{Datos no agrupados}\label{datos-no-agrupados-2}}
+
+Si \[P_k=\frac{k(n+1)}{100}\] es entero entonces el cuartil es el dato de la posicion \(P_k=x_\frac{k(n+1)}{100}\)
+Si \[P_k=\frac{k(n+1)}{100}\] no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra \(Q_k=\frac{k(n+1)}{100}\)
+
+\begin{itemize}
+\tightlist
+\item
+  Ejemplo
+  1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
+  Al ordenar de manera creciente
+  1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
+  y
+  \[P_k=\frac{k(18+1)}{100}\]
+\end{itemize}
+
+\hypertarget{datos-agrupados-2}{%
+\subsection{Datos agrupados}\label{datos-agrupados-2}}
+
+\[P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)\]
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule
+Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+\midrule
+\endhead
+\([5,10)\) & 7.5 & 1 & 1 \\
+\([10,15)\) & 12.5 & 2 & 3 \\
+\([15,20)\) & 17.5 & 5 & \\
+\([20,25)\) & 22.5 & 7 & \\
+\([25,30]\) & & 10 & \\
+\([30,35]\) & & 6 & \\
+\([35,40]\) & & 5 & \\
+\([40,45]\) & & 3 & \\
+\(\sum\) & & 2 & \\
+\bottomrule
+\end{longtable}
 
 \hypertarget{medidas-de-asimetria}{%
 \chapter{Medidas de asimetria}\label{medidas-de-asimetria}}
