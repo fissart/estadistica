@@ -171,7 +171,7 @@
 \makeatother
 \subtitle{estadística descriptiva y probabilidades}
 \author{Ricardo Michel MALLQUI BAÑOS}
-\date{2021-09-28}
+\date{2021-10-03}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Teorema}[chapter]
@@ -666,11 +666,78 @@ TOTAL & 42 &  &  &  &  &  & 61.90 &  & \\
 \hypertarget{histograma-de-frecuencias}{%
 \section{Histograma de frecuencias}\label{histograma-de-frecuencias}}
 
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mtcars}\SpecialCharTok{$}\NormalTok{am }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(mtcars}\SpecialCharTok{$}\NormalTok{am)}
+\FunctionTok{levels}\NormalTok{(mtcars}\SpecialCharTok{$}\NormalTok{am) }\OtherTok{\textless{}{-}}\FunctionTok{c}\NormalTok{(}\StringTok{"Automatic"}\NormalTok{, }\StringTok{"Manual"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Some text
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{hist}\NormalTok{(mtcars}\SpecialCharTok{$}\NormalTok{mpg[mtcars}\SpecialCharTok{$}\NormalTok{am}\SpecialCharTok{==}\StringTok{"Automatic"}\NormalTok{], }\AttributeTok{breaks=}\DecValTok{12}\NormalTok{, }\AttributeTok{main=}\StringTok{"mpg for automatic vehicles"}\NormalTok{, }\AttributeTok{xlab=}\StringTok{"mpg"}\NormalTok{, }\AttributeTok{xlim=}\FunctionTok{c}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{35}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-5-1} \end{center}
+
 \hypertarget{circulares}{%
 \section{Circulares}\label{circulares}}
 
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{))}
+\FunctionTok{pie}\NormalTok{(}
+  \FunctionTok{c}\NormalTok{(}\DecValTok{280}\NormalTok{, }\DecValTok{60}\NormalTok{, }\DecValTok{20}\NormalTok{),}
+  \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Sky\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Sunny side of pyramid\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Shady side of pyramid\textquotesingle{}}\NormalTok{),}
+  \AttributeTok{col =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}\#0292D8\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}\#F7EA39\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}\#C4B632\textquotesingle{}}\NormalTok{),}
+  \AttributeTok{init.angle =} \SpecialCharTok{{-}}\DecValTok{50}\NormalTok{, }\AttributeTok{border =} \ConstantTok{NA}
+\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-6-1} \end{center}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{plot}\NormalTok{(cars)}
+\FunctionTok{lines}\NormalTok{(}\FunctionTok{lowess}\NormalTok{(cars))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-7-1} \end{center}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+
+\CommentTok{\# Create data}
+\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}
+  \AttributeTok{name=}\FunctionTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{,}\StringTok{"B"}\NormalTok{,}\StringTok{"C"}\NormalTok{,}\StringTok{"D"}\NormalTok{,}\StringTok{"E"}\NormalTok{) ,  }
+  \AttributeTok{value=}\FunctionTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{,}\DecValTok{12}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{18}\NormalTok{,}\DecValTok{45}\NormalTok{)}
+\NormalTok{  )}
+
+\CommentTok{\# Barplot}
+\FunctionTok{ggplot}\NormalTok{(data, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{name, }\AttributeTok{y=}\NormalTok{value)) }\SpecialCharTok{+} 
+  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{, }\AttributeTok{width=}\FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{coord\_flip}\NormalTok{()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-8-1} \end{center}
+
 \hypertarget{histograma-de-frecuencias-1}{%
 \section{Histograma de frecuencias}\label{histograma-de-frecuencias-1}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{hist}\NormalTok{(mtcars}\SpecialCharTok{$}\NormalTok{mpg[mtcars}\SpecialCharTok{$}\NormalTok{am}\SpecialCharTok{==}\StringTok{"Automatic"}\NormalTok{], }\AttributeTok{breaks=}\DecValTok{12}\NormalTok{, }\AttributeTok{main=}\StringTok{"mpg for automatic vehicles"}\NormalTok{, }\AttributeTok{xlab=}\StringTok{"mpg"}\NormalTok{, }\AttributeTok{xlim=}\FunctionTok{c}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{35}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-9-1} \end{center}
 
 \hypertarget{medidas-de-tendencia-central}{%
 \chapter{Medidas de tendencia central}\label{medidas-de-tendencia-central}}
@@ -733,7 +800,7 @@ Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
 
 \[\overline{x}=\frac{12.5+35++112.5+82.5+65}{13}=\frac{307.5}{13}=23.65\]
 \begin{exercise}
-\protect\hypertarget{exr:unnamed-chunk-4}{}{\label{exr:unnamed-chunk-4} }Si el promedio de \(n\) datos es \(\overline{x}\) entonces el promedio del conjunto inicial más un dato adicional \(x_{n+1}\) es \[\overline{x}'=\frac{n\overline{x}+x_{n+1}}{n+1}\] en general si se adicionan \(r\) datos \(y_1, y_2, \ldots y_r\) entonces el nuevo promedio será \[\overline{x}'=\frac{n\overline{x}+y_{1}+y_2+\ldots+y_r}{n+r}\]
+\protect\hypertarget{exr:unnamed-chunk-10}{}{\label{exr:unnamed-chunk-10} }Si el promedio de \(n\) datos es \(\overline{x}\) entonces el promedio del conjunto inicial más un dato adicional \(x_{n+1}\) es \[\overline{x}'=\frac{n\overline{x}+x_{n+1}}{n+1}\] en general si se adicionan \(r\) datos \(y_1, y_2, \ldots y_r\) entonces el nuevo promedio será \[\overline{x}'=\frac{n\overline{x}+y_{1}+y_2+\ldots+y_r}{n+r}\]
 \end{exercise}
 
 \begin{solution}
@@ -844,7 +911,7 @@ Primeramente la mayor frecuencia absoluta es 10 y corresponde \(f_3=10\) por tan
 Obtener la mediana consiste en ordenar los datos de menor a mayor y considerar dos casos: El primero si el número de datos es impar entonces el dato \(x_{\frac{n+1}{2}}\) del conjunto ordenado será la mediana es decir \[\text{Me}=x_{\frac{n+1}{2}}\] de otro lado si el número de datos es par entonces la mediana es la semisuma de los dos datos intermedios es decir \[\text{Me}=\frac{x_{\frac{n}{2}}+x_{\frac{n}{2}+1}}{2}\]
 
 \begin{exercise}
-\protect\hypertarget{exr:unnamed-chunk-6}{}{\label{exr:unnamed-chunk-6} }Sean los conjuntos de datos 5, 6, 8, 2, 1, 5, 6, 7, 10, 0, 14 y 20, 25, 6, 5, 19, 5 obtener la mediana de estos conjuntos de datos.
+\protect\hypertarget{exr:unnamed-chunk-12}{}{\label{exr:unnamed-chunk-12} }Sean los conjuntos de datos 5, 6, 8, 2, 1, 5, 6, 7, 10, 0, 14 y 20, 25, 6, 5, 19, 5 obtener la mediana de estos conjuntos de datos.
 \end{exercise}
 
 \begin{solution}
@@ -949,57 +1016,97 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
 \section{Rango}\label{rango}}
 
 \(R=x_{max}-x_{min}\)
+
 Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
+
+\(x_{max}=8\)
+\(x_{min}=1\)
+
+por lo tanto \(R=x_{max}-x_{min}=8-1=7\)
 
 \hypertarget{varianza}{%
 \section{Varianza}\label{varianza}}
 
-\[s^2=\frac{\sum\left(x_i-\overline{x}\right )^2}{n-1}\]
-
 \hypertarget{datos-no-tabulados}{%
 \subsection{Datos no tabulados}\label{datos-no-tabulados}}
 
-\[s^2=\frac{\sum n_i\left(y_i-\overline{x}\right )^2}{n-1}\]
+\[s^2=\frac{\sum\left(x_i-\overline{x}\right )^2}{n-1}\]
 
 Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
+
+\[\overline{x}=40/8=5\]
+
+\[
+\begin{aligned}
+s^2&=\frac{\sum\left(x_i-\overline{x}\right )^2}{n-1}\\
+&=\frac{\left(x_1-\overline{x}\right )^2+\left(x_2-\overline{x}\right )^2+\left(x_3-\overline{x}\right )^2+\left(x_4-\overline{x}\right )^2+\left(x_5-\overline{x}\right )^2+\left(x_6-\overline{x}\right )^2+\left(x_7-\overline{x}\right )^2+\left(x_8-\overline{x}\right )^2}{8-1}\\
+&=\frac{\left(2-5\right )^2+\left(5-5\right )^2+\left(6-5\right )^2+\left(1-5\right )^2+\left(7-5\right )^2+\left(5-5\right )^2+\left(8-5\right )^2+\left(6-5\right )^2}{8-1}\\
+&=\frac{9+0+1+16+4+0+9+1}{7}\\
+&=\frac{40}{7}=5.71
+\end{aligned}
+\]
 
 \hypertarget{datos-tabulados}{%
 \subsection{Datos tabulados}\label{datos-tabulados}}
 
+\[s^2=\frac{\sum f_i\left(Y_i-\overline{x}\right )^2}{n-1}\]
+
+\(\overline{x}=\frac{\sum Y_i*f_i}{n}=747.5/31=24.11\)
+
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
 \midrule
 \endhead
-\([5,10)\) & 7.5 & 1 & 1 \\
-\([10,15)\) & 12.5 & 2 & 3 \\
-\([15,20)\) & 17.5 & 5 & \\
-\([20,25)\) & 22.5 & 7 & \\
-\([25,30]\) & & 10 & \\
-\([30,35]\) & & 6 & \\
-\(\sum\) & & 2 & \\
+\([5,10)\) & 7.5 & 1 & 7.5 \\
+\([10,15)\) & 12.5 & 2 & 25 \\
+\([15,20)\) & 17.5 & 5 & 87.5 \\
+\([20,25)\) & 22.5 & 7 & 157.5 \\
+\([25,30]\) & 27.5 & 10 & 275 \\
+\([30,35]\) & 32.5 & 6 & 195 \\
+\(\sum\) & & 31 & \\
 \bottomrule
 \end{longtable}
 
-\hypertarget{desviaciuxf3n-tuxedpica}{%
-\section{Desviación típica}\label{desviaciuxf3n-tuxedpica}}
+Por lo tanto la varianza para dotos agrupados es
+
+\[
+\begin{aligned}
+s^2&=\frac{\sum f_i\left(Y_i-\overline{x}\right )^2}{n-1}\\
+&=\frac{f_1\left(Y_1-\overline{x}\right )^2+f_2\left(Y_2-\overline{x}\right )^2+f_3\left(Y_3-\overline{x}\right )^2+f_4\left(Y_4-\overline{x}\right )^2+f_5\left(Y_5-\overline{x}\right )^2+f_6\left(Y_6-\overline{x}\right )^2}{31-1}\\
+&=\frac{1\left(7.5-24.11\right )^2+2\left(12.5-24.11\right )^2+5\left(17.5-24.11\right )^2+7\left(22.5-24.11\right )^2+10\left(27.5-24.11\right )^2+6\left(32.5-24.11\right )^2}{31-1}
+\\
+&=\frac{1*275.89+2*134.79+5*43.69+7*2.59+10*11.49+6*7.39}{31-1}
+\\
+&=\frac{275.89+269.58+218.45+18.13+114.9+44.34}{30}\\
+&=\frac{941.29}{30}=31.38
+\end{aligned}
+\]
+
+Por lo tanto \[s^2=  31.38\]
+\#\# Desviación típica
 
 \[s=\sqrt{s^2}\]
 
+La desviacion típica o estandar del siguiente conjunto de datos tabulados
+
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
 \midrule
 \endhead
-\([5,10)\) & 7.5 & 1 & 1 \\
-\([10,15)\) & 12.5 & 2 & 3 \\
-\([15,20)\) & 17.5 & 5 & \\
-\([20,25)\) & 22.5 & 7 & \\
-\([25,30]\) & & 10 & \\
-\([30,35]\) & & 6 & \\
-\(\sum\) & & 2 & \\
+\([5,10)\) & 7.5 & 1 & 7.5 \\
+\([10,15)\) & 12.5 & 2 & 25 \\
+\([15,20)\) & 17.5 & 5 & 87.5 \\
+\([20,25)\) & 22.5 & 7 & 157.5 \\
+\([25,30]\) & 27.5 & 10 & 275 \\
+\([30,35]\) & 32.5 & 6 & 195 \\
+\(\sum\) & & 31 & \\
 \bottomrule
 \end{longtable}
+
+es
+\[s=\sqrt{s^2}=\sqrt{31.38}=5.60\]
 
 \hypertarget{desviaciuxf3n-media-absoluta}{%
 \section{Desviación media absoluta}\label{desviaciuxf3n-media-absoluta}}
@@ -1011,29 +1118,55 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
 
 Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
 
+\[\overline{x}=40/8=5\]
+
+Entonces
+
+\[
+\begin{aligned}
+DM&=\frac{\sum\left\vert x_i-\overline{x}\right \vert}{n}\\
+&=... Resolver
+\end{aligned}
+\]
+
 \hypertarget{datos-tabulados-1}{%
 \subsection{Datos tabulados}\label{datos-tabulados-1}}
 
-\[DM=\frac{1}{n}\sum n_i \left \vert x_i-\overline{x}\right\vert\]
+\[DM=\frac{1}{n}\sum f_i \left \vert Y_i-\overline{x}\right\vert\]
 
 \(y_i\) marca de clase o punto medio de la clase \(i\)
 
+\(\overline{x}=\frac{\sum Y_i*f_i}{n}=747.5/31=24.11\)
+
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
 \midrule
 \endhead
-\([5,10)\) & 7.5 & 1 & 1 \\
-\([10,15)\) & 12.5 & 2 & 3 \\
-\([15,20)\) & 17.5 & 5 & \\
-\([20,25)\) & 22.5 & 7 & \\
-\([25,30]\) & & 10 & \\
-\([30,35]\) & & 6 & \\
-\([35,40]\) & & 5 & \\
-\([40,45]\) & & 3 & \\
-\(\sum\) & & 2 & \\
+\([5,10)\) & 7.5 & 1 & 7.5 \\
+\([10,15)\) & 12.5 & 2 & 25 \\
+\([15,20)\) & 17.5 & 5 & 87.5 \\
+\([20,25)\) & 22.5 & 7 & 157.5 \\
+\([25,30]\) & 27.5 & 10 & 275 \\
+\([30,35]\) & 32.5 & 6 & 195 \\
+\(\sum\) & & 31 & \\
 \bottomrule
 \end{longtable}
+
+Por lo tanto la desviación media absoluta es
+
+\[
+\begin{aligned}
+DM&=\frac{\sum f_i\left \vert Y_i-\overline{x}\right \vert}{n}\\
+&=\frac{f_1\left\vert Y_1-\overline{x}\right \vert +f_2\left\vert Y_2-\overline{x}\right \vert +f_3\left\vert Y_3-\overline{x}\right \vert +f_4\left\vert Y_4-\overline{x}\right \vert +f_5\left\vert Y_5-\overline{x}\right \vert +f_6\left\vert Y_6-\overline{x}\right \vert }{31}\\
+&=\frac{1\left\vert 7.5-24.11\right \vert +2\left\vert 12.5-24.11\right \vert +5\left\vert 17.5-24.11\right \vert +7\left\vert 22.5-24.11\right \vert +10\left\vert 27.5-24.11\right \vert +6\left\vert 32.5-24.11\right \vert }{31}\\
+&=\frac{1*16.61 +2*11.61 +5*6.61 +7*1.61 +10*3.39 +6*8.39 }{31}\\
+\\
+&=\frac{277.33}{31}=8.94\\
+\end{aligned}
+\]
+
+por lo tanto \[DM=8.94\]
 
 \hypertarget{desviaciuxf3n-mediana-absoluta}{%
 \section{Desviación mediana absoluta}\label{desviaciuxf3n-mediana-absoluta}}
@@ -1041,39 +1174,89 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
 \hypertarget{datos-no-tabulados-2}{%
 \subsection{Datos no tabulados}\label{datos-no-tabulados-2}}
 
-\[DMe=\frac{1}{n}\sum \left\vert x_i-Me\right\vert\]
+\[DMe=\frac{1}{n}\sum \left\vert Y_i-Me\right\vert\]
 
-Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
+Sean los datos 2, 5, 6, 1, 7, 5, 8, 6 (Ejercicio)
 
 \hypertarget{datos-tabulados-2}{%
 \subsection{Datos tabulados}\label{datos-tabulados-2}}
 
-\[DMe=\frac{1}{n}\sum n_i \left \vert x_i-Me\right\vert\]
+\[DMe=\frac{1}{n}\sum f_i \left \vert Y_i-Me\right\vert\]
+
+\(Me=?\) (Ejercicio)
 
 \begin{longtable}[]{@{}cccc@{}}
-\caption{\label{tab:ww} Caption}\tabularnewline
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
-\midrule
-\endfirsthead
-\toprule
-Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
 \midrule
 \endhead
-\([5,10)\) & 7.5 & 1 & 1 \\
-\([10,15)\) & 12.5 & 2 & 3 \\
-\([15,20)\) & 17.5 & 5 & \\
-\([20,25)\) & 22.5 & 7 & \\
-\([25,30]\) & & 10 & \\
-\([30,35]\) & & 6 & \\
-\(\sum\) & & 2 & \\
+\([5,10)\) & 7.5 & 1 & 7.5 \\
+\([10,15)\) & 12.5 & 2 & 25 \\
+\([15,20)\) & 17.5 & 5 & 87.5 \\
+\([20,25)\) & 22.5 & 7 & 157.5 \\
+\([25,30]\) & 27.5 & 10 & 275 \\
+\([30,35]\) & 32.5 & 6 & 195 \\
+\(\sum\) & & 31 & \\
 \bottomrule
 \end{longtable}
+
+Por lo tanto la desviacion de la mediana absoluta es
+
+(Ejercicio)
+
+\[
+\begin{aligned}
+s^2&=\frac{\sum f_i\left \vert Y_i-Me\right \vert}{n}\\
+&=\frac{f_1\left(Y_1-Me\right )^2+f_2\left(Y_2-Me\right )^2+f_3\left(Y_3-Me\right )^2+f_4\left(Y_4-Me\right )^2+f_5\left(Y_5-Me\right )^2+f_6\left(Y_6-Me\right )^2}{31}\\
+&=complete
+\end{aligned}
+\]
 
 \hypertarget{coeficiente-de-variacion}{%
 \section{Coeficiente de variacion}\label{coeficiente-de-variacion}}
 
 \[Cv=\frac{s}{\overline{x}}\cdot 100\]
+Si \(Cv>25\%\) se dice que los datos estan muy dispersos
+Si \(Cv<25\%\) se dice que los datos estan muy juntos
+
+Para el conjunto de datos
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule
+Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
+\midrule
+\endhead
+\([5,10)\) & 7.5 & 1 & 7.5 \\
+\([10,15)\) & 12.5 & 2 & 25 \\
+\([15,20)\) & 17.5 & 5 & 87.5 \\
+\([20,25)\) & 22.5 & 7 & 157.5 \\
+\([25,30]\) & 27.5 & 10 & 275 \\
+\([30,35]\) & 32.5 & 6 & 195 \\
+\(\sum\) & & 31 & \\
+\bottomrule
+\end{longtable}
+
+\[Cv=\frac{5.60}{24.11}\cdot 100=0.23\cdot 100=23\%\]
+
+\hypertarget{asignaciuxf3n-2}{%
+\section{Asignación}\label{asignaciuxf3n-2}}
+
+Halle el rango, la varianza, la desviación típica, desviación media, desviación mediana absoluta y el coeficiente de variación. Grafique el hstograma y ubique estos estadigrafos
+
+\begin{longtable}[]{@{}cccc@{}}
+\toprule
+Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+\midrule
+\endhead
+\([50,100)\) & & 8 & 1 \\
+\([100,150)\) & & 20 & 3 \\
+\([150,200)\) & & 50 & \\
+\([200,250)\) & & 70 & \\
+\([250,300]\) & & 100 & \\
+\([300,350]\) & & 60 & \\
+\(\sum\) & & 20 & \\
+\bottomrule
+\end{longtable}
 
 \hypertarget{medidas-de-posicion-cuantiles}{%
 \chapter{Medidas de posicion (cuantiles)}\label{medidas-de-posicion-cuantiles}}
@@ -1264,7 +1447,7 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
 \chapter{Experimento aleatorio}\label{experimento-aleatorio}}
 
 \begin{definition}[Experimento aleatorio]
-\protect\hypertarget{def:unnamed-chunk-8}{}{\label{def:unnamed-chunk-8} \iffalse (Experimento aleatorio) \fi{} }En experiento aleatorio es un fenomeno que genera un evento
+\protect\hypertarget{def:unnamed-chunk-14}{}{\label{def:unnamed-chunk-14} \iffalse (Experimento aleatorio) \fi{} }En experiento aleatorio es un fenomeno que genera un evento
 \end{definition}
 
 \hypertarget{uxe1lgebra-de-eventos}{%
@@ -1296,7 +1479,7 @@ Sean \(A\), \(B\) y \(C\) eventos entonces
 \chapter{Teorema de Bayes}\label{teorema-de-bayes}}
 
 \begin{theorem}[Teorema de Bayes]
-\protect\hypertarget{thm:unnamed-chunk-9}{}{\label{thm:unnamed-chunk-9} \iffalse (Teorema de Bayes) \fi{} }Sea \(\{A_{1},A_{2},...,A_{i},...,A_{n}\}\) un conjunto de sucesos mutuamente excluyentes y exhaustivos, y tales que la probabilidad de cada uno de ellos es distinta de cero (0). Sea \(B\) un suceso cualquiera del que se conocen las probabilidades condicionales \(P(B|A_i )\). Entonces, la probabilidad \(P(A_i|B)\) viene dada por la expresión:
+\protect\hypertarget{thm:unnamed-chunk-15}{}{\label{thm:unnamed-chunk-15} \iffalse (Teorema de Bayes) \fi{} }Sea \(\{A_{1},A_{2},...,A_{i},...,A_{n}\}\) un conjunto de sucesos mutuamente excluyentes y exhaustivos, y tales que la probabilidad de cada uno de ellos es distinta de cero (0). Sea \(B\) un suceso cualquiera del que se conocen las probabilidades condicionales \(P(B|A_i )\). Entonces, la probabilidad \(P(A_i|B)\) viene dada por la expresión:
 \[P(A_i|B)=\frac{P(B|A_i)P(A_i)}{P(B)}\]
 donde:
 
@@ -1325,7 +1508,7 @@ donde:
 \chapter{Variables aleatorias}\label{variables-aleatorias}}
 
 \begin{definition}[Variable aleatoria]
-\protect\hypertarget{def:unnamed-chunk-10}{}{\label{def:unnamed-chunk-10} \iffalse (Variable aleatoria) \fi{} }Sea \(\Omega\) un espacio muestral asociado a una experimento aleatorio \(\epsilon\) y \(\omega\in\Omega\), entonces se genera la función \textbf{variable aleatoria}
+\protect\hypertarget{def:unnamed-chunk-16}{}{\label{def:unnamed-chunk-16} \iffalse (Variable aleatoria) \fi{} }Sea \(\Omega\) un espacio muestral asociado a una experimento aleatorio \(\epsilon\) y \(\omega\in\Omega\), entonces se genera la función \textbf{variable aleatoria}
 \begin{align*}
   X:\Omega&\longrightarrow \mathbb{R}\\
   \omega&\longmapsto X(\omega)
@@ -1335,7 +1518,7 @@ donde:
 es decir a cada elemento de \(\Omega\) se le asocia un número real \(\mathbb{R}\), además la probabilidad de \(x\in \mathbb{R}\) es \(P[x]= \sum^{n}_{i=1}P\left[\omega_i\right]\) donde \(\omega_i\in X^{-1}(x)\). La definición indica por otro lado que un espacio muestral \(\Omega\) puede genera diferentes variables aleatorias.
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-11}{}{\label{exm:unnamed-chunk-11} }El espacio muestral de lanzar una monedas tres veces es \[\omega= \left\{ccc,ccs,csc,scc,css,scs,ssc,sss\right\}\] además sea \(n_c\) es número de caras y \(n_s\) el número de sellos, es posibles generar dos o mas variables aleatorias por ejemplo:
+\protect\hypertarget{exm:unnamed-chunk-17}{}{\label{exm:unnamed-chunk-17} }El espacio muestral de lanzar una monedas tres veces es \[\omega= \left\{ccc,ccs,csc,scc,css,scs,ssc,sss\right\}\] además sea \(n_c\) es número de caras y \(n_s\) el número de sellos, es posibles generar dos o mas variables aleatorias por ejemplo:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1369,7 +1552,7 @@ que es lo mismo para el segundo caso \(X(\omega)=n_c-n_s\).
 \end{example}
 
 \begin{definition}[Eventos equivalentes]
-\protect\hypertarget{def:unnamed-chunk-12}{}{\label{def:unnamed-chunk-12} \iffalse (Eventos equivalentes) \fi{} }Sea \(\Omega\) un espacio muestral asociado a una experimento aleatorio \(\epsilon\) y \(X\) una variable aleatoria con rango \(R_X\) definida sobre \(\Omega\). Dos eventos \(W\in\Omega\) y \(E_X\in R_X\) son \textbf{eventos equivalentes} si existe la relación
+\protect\hypertarget{def:unnamed-chunk-18}{}{\label{def:unnamed-chunk-18} \iffalse (Eventos equivalentes) \fi{} }Sea \(\Omega\) un espacio muestral asociado a una experimento aleatorio \(\epsilon\) y \(X\) una variable aleatoria con rango \(R_X\) definida sobre \(\Omega\). Dos eventos \(W\in\Omega\) y \(E_X\in R_X\) son \textbf{eventos equivalentes} si existe la relación
 \[W= \left\{\omega\in\Omega/X(\omega)=E_X\right\}\] es decir \(E_X\) consta de todos los elementos en \(\Omega\) para los cuales \(X(\omega)\in W\)
 \end{definition}
 \#\# Clases de variables aleatorias
@@ -1394,7 +1577,7 @@ Discreta y continua
 \subsection{Función de probabilidad de una variable aleatorias discreta}\label{funciuxf3n-de-probabilidad-de-una-variable-aleatorias-discreta}}
 
 \begin{definition}[Función o ley de probabilidad]
-\protect\hypertarget{def:unnamed-chunk-13}{}{\label{def:unnamed-chunk-13} \iffalse (Función o ley de probabilidad) \fi{} }Sea \(X\) una variable aleatoria con rango \(R_X\). Una función definida por \[p(x)=P[X=x]= \sum^{}_{ \left\{\omega \in \Omega:X(\omega)=x\right\}}P\left[\left\{\omega\right\}\right]\]
+\protect\hypertarget{def:unnamed-chunk-19}{}{\label{def:unnamed-chunk-19} \iffalse (Función o ley de probabilidad) \fi{} }Sea \(X\) una variable aleatoria con rango \(R_X\). Una función definida por \[p(x)=P[X=x]= \sum^{}_{ \left\{\omega \in \Omega:X(\omega)=x\right\}}P\left[\left\{\omega\right\}\right]\]
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1409,21 +1592,21 @@ Discreta y continua
 El conjunto de pares ordenados \(\left(x,p(x)\right)\), \(x\in R_X\) recibe el nombre de \emph{distribución de probabildiad de \(X\)}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-14}{}{\label{exm:unnamed-chunk-14} }La variable aleatoria discreta
+\protect\hypertarget{exm:unnamed-chunk-20}{}{\label{exm:unnamed-chunk-20} }La variable aleatoria discreta
 \[p_X(x)=p(1-p)^{x-1}, \text{ $x\in \mathbb{Z}^+$ y $p\in[0,1]$}\]
 
 en efecto \[p(1-p)^{i-1}>0, \text{ $\forall x\in \mathbb{Z}^+$}\] además \[ \sum^{\infty}_{i=1}p(1-p)^{i-1}=p \lim_{n\to\infty}\frac{1-(1-p)^{n+1}}{1-(1-p)}=1\]
 \end{example}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-15}{}{\label{exm:unnamed-chunk-15} }La variable aleatoria discreta
+\protect\hypertarget{exm:unnamed-chunk-21}{}{\label{exm:unnamed-chunk-21} }La variable aleatoria discreta
 \[p_X(x)=p(1-p), \text{ $x\in \mathbb{Z}^+$ y $p\in[0,1]$}\]
 
 en efecto \[p(1-p)^{i-1}>0, \text{ $\forall x\in \mathbb{Z}^+$}\] además \[ \sum^{\infty}_{i=1}p(1-p)^{i-1}=p \lim_{n\to\infty}\frac{1-(1-p)^{n+1}}{1-(1-p)}=1\]
 \end{example}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-16}{}{\label{exm:unnamed-chunk-16} }La variable aleatoria discreta
+\protect\hypertarget{exm:unnamed-chunk-22}{}{\label{exm:unnamed-chunk-22} }La variable aleatoria discreta
 \[p_X(x)=(1-p)^{x-1}, \text{ $x\in \mathbb{Z}^+$ y $p\in[0,1]$}\]
 
 en efecto \[p(1-p)^{i-1}>0, \text{ $\forall x\in \mathbb{Z}^+$}\] además \[ \sum^{\infty}_{i=1}p(1-p)^{i-1}=p \lim_{n\to\infty}\frac{1-(1-p)^{n+1}}{1-(1-p)}=1\]
@@ -1433,7 +1616,7 @@ en efecto \[p(1-p)^{i-1}>0, \text{ $\forall x\in \mathbb{Z}^+$}\] además \[ \su
 \subsection{Función de probabilidad de una variable aleatoria continua}\label{funciuxf3n-de-probabilidad-de-una-variable-aleatoria-continua}}
 
 \begin{definition}[Función de densidad de probabilidad]
-\protect\hypertarget{def:unnamed-chunk-17}{}{\label{def:unnamed-chunk-17} \iffalse (Función de densidad de probabilidad) \fi{} }Sea \(X\) una variable aleatoria con rango \(R_X\). La función \(f(x)\) definida sobre \(R_X\)
+\protect\hypertarget{def:unnamed-chunk-23}{}{\label{def:unnamed-chunk-23} \iffalse (Función de densidad de probabilidad) \fi{} }Sea \(X\) una variable aleatoria con rango \(R_X\). La función \(f(x)\) definida sobre \(R_X\)
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1446,7 +1629,7 @@ en efecto \[p(1-p)^{i-1}>0, \text{ $\forall x\in \mathbb{Z}^+$}\] además \[ \su
 \end{definition}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-18}{}{\label{exm:unnamed-chunk-18} }For a circle with the radius \texttt{r\ x},
+\protect\hypertarget{exm:unnamed-chunk-24}{}{\label{exm:unnamed-chunk-24} }For a circle with the radius \texttt{r\ x},
 its area is \texttt{r\ pi\ *\ x\^{}2}.
 Sea la función
 \end{example}
@@ -1463,13 +1646,13 @@ Sea la función
 \]
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-19}{}{\label{exm:unnamed-chunk-19} }Sea \(f(x)= \frac{\alpha}{\rho}\) es una funcion de densidad pues
+\protect\hypertarget{exm:unnamed-chunk-25}{}{\label{exm:unnamed-chunk-25} }Sea \(f(x)= \frac{\alpha}{\rho}\) es una funcion de densidad pues
 \[f(x)>0,~ x\in R_X\] además
 \[\int_{R_X}f(x)dx=1\]
 \end{example}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-20}{}{\label{exm:unnamed-chunk-20} }Sea \(f(x)= \frac{\sigma}{\rho}\) es una funcion de densidad pues
+\protect\hypertarget{exm:unnamed-chunk-26}{}{\label{exm:unnamed-chunk-26} }Sea \(f(x)= \frac{\sigma}{\rho}\) es una funcion de densidad pues
 \[f(x)>0,~ x\in R_X\] además
 \[\int_{R_X}f(x)dx=1\]
 \end{example}
@@ -1481,7 +1664,7 @@ Sea la función
 \subsection{Función de distribución de una variable aleatoria discreta}\label{funciuxf3n-de-distribuciuxf3n-de-una-variable-aleatoria-discreta}}
 
 \begin{definition}[Función de distribución]
-\protect\hypertarget{def:unnamed-chunk-21}{}{\label{def:unnamed-chunk-21} \iffalse (Función de distribución) \fi{} }Sea \(X\) una variable aleatoria con rango \[R_X= \left\{x_1,x_2,\ldots x_n,\ldots\right\}.\] Con función de probabilidad \(p(x_i)=P[X=x_i]\), sea \(x\) cualquier número, real la función definida por \[F(x)=P[X\leq x]= \sum^{}_{x_i\leq x}p(x_i)= \sum^{}_{x_i\leq x}P[X= x_i]  \]
+\protect\hypertarget{def:unnamed-chunk-27}{}{\label{def:unnamed-chunk-27} \iffalse (Función de distribución) \fi{} }Sea \(X\) una variable aleatoria con rango \[R_X= \left\{x_1,x_2,\ldots x_n,\ldots\right\}.\] Con función de probabilidad \(p(x_i)=P[X=x_i]\), sea \(x\) cualquier número, real la función definida por \[F(x)=P[X\leq x]= \sum^{}_{x_i\leq x}p(x_i)= \sum^{}_{x_i\leq x}P[X= x_i]  \]
 recie el nombre de función de distribución de \(X\). Cuyas propiedades son:
 
 \begin{enumerate}
@@ -1501,22 +1684,22 @@ recie el nombre de función de distribución de \(X\). Cuyas propiedades son:
 \end{definition}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-22}{}{\label{exm:unnamed-chunk-22} }wwwwwww
+\protect\hypertarget{exm:unnamed-chunk-28}{}{\label{exm:unnamed-chunk-28} }wwwwwww
 \end{example}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-23}{}{\label{exm:unnamed-chunk-23} }wwwwwww
+\protect\hypertarget{exm:unnamed-chunk-29}{}{\label{exm:unnamed-chunk-29} }wwwwwww
 \end{example}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-24}{}{\label{exm:unnamed-chunk-24} }wwwwwww
+\protect\hypertarget{exm:unnamed-chunk-30}{}{\label{exm:unnamed-chunk-30} }wwwwwww
 \end{example}
 
 \hypertarget{funciuxf3n-de-distribuciuxf3n-de-una-variable-aleatoria-continua}{%
 \subsection{Función de distribución de una variable aleatoria continua}\label{funciuxf3n-de-distribuciuxf3n-de-una-variable-aleatoria-continua}}
 
 \begin{definition}[Función de distribución]
-\protect\hypertarget{def:unnamed-chunk-25}{}{\label{def:unnamed-chunk-25} \iffalse (Función de distribución) \fi{} }Sea \(X\) una variable aleatoria con función de densidad \(f(x)\). La función
+\protect\hypertarget{def:unnamed-chunk-31}{}{\label{def:unnamed-chunk-31} \iffalse (Función de distribución) \fi{} }Sea \(X\) una variable aleatoria con función de densidad \(f(x)\). La función
 \[F_X(x)=F(x)=P[X\leq x]=\int_{-\infty}^{x}f(t)dt, \text{ $\forall x\in R_X$}\]
 
 Cuyas propiedades son:
@@ -1534,15 +1717,15 @@ Cuyas propiedades son:
 \end{definition}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-26}{}{\label{exm:unnamed-chunk-26} }wwwwwww
+\protect\hypertarget{exm:unnamed-chunk-32}{}{\label{exm:unnamed-chunk-32} }wwwwwww
 \end{example}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-27}{}{\label{exm:unnamed-chunk-27} }wwwwwww
+\protect\hypertarget{exm:unnamed-chunk-33}{}{\label{exm:unnamed-chunk-33} }wwwwwww
 \end{example}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-28}{}{\label{exm:unnamed-chunk-28} }wwwwwww
+\protect\hypertarget{exm:unnamed-chunk-34}{}{\label{exm:unnamed-chunk-34} }wwwwwww
 \end{example}
 
 \hypertarget{paruxe1metros-de-una-variable-aleatoria}{%
@@ -1552,11 +1735,11 @@ Cuyas propiedades son:
 \section{Esperanza matemática}\label{esperanza-matemuxe1tica}}
 
 \begin{definition}[Esperanza matemática de una variable aleatoria discreta]
-\protect\hypertarget{def:unnamed-chunk-29}{}{\label{def:unnamed-chunk-29} \iffalse (Esperanza matemática de una variable aleatoria discreta) \fi{} }\[\mathbb{E}[X]=\sum _{i=1}^{n}x_{i}p(x_{i})\]
+\protect\hypertarget{def:unnamed-chunk-35}{}{\label{def:unnamed-chunk-35} \iffalse (Esperanza matemática de una variable aleatoria discreta) \fi{} }\[\mathbb{E}[X]=\sum _{i=1}^{n}x_{i}p(x_{i})\]
 \end{definition}
 
 \begin{definition}[Esperanza matemática de una variable aleatoria continua]
-\protect\hypertarget{def:unnamed-chunk-30}{}{\label{def:unnamed-chunk-30} \iffalse (Esperanza matemática de una variable aleatoria continua) \fi{} }\[\mathbb{E}[X]=\int_{-\infty }^{\infty}xf(x)dx \text{ equivalentemente }\mathbb {E}[X]=\int_{\Omega }X\,{\text{d}}P\]
+\protect\hypertarget{def:unnamed-chunk-36}{}{\label{def:unnamed-chunk-36} \iffalse (Esperanza matemática de una variable aleatoria continua) \fi{} }\[\mathbb{E}[X]=\int_{-\infty }^{\infty}xf(x)dx \text{ equivalentemente }\mathbb {E}[X]=\int_{\Omega }X\,{\text{d}}P\]
 \end{definition}
 el valor esperado a veces se representa por \(\mu =\mathbb {E} [X]\) que es el promedio o la media poblacional.
 
@@ -1568,33 +1751,33 @@ La varianza es una medida de dispersión de una variable aleatoria \(X\) respect
 \[\sigma =\sqrt{\text{Var}(X)}\] o bien \[\sigma^{2}=\text{Var}(X)\]
 
 \begin{definition}[Varianza de una variable aleatoria discreta]
-\protect\hypertarget{def:unnamed-chunk-31}{}{\label{def:unnamed-chunk-31} \iffalse (Varianza de una variable aleatoria discreta) \fi{} }Sea
+\protect\hypertarget{def:unnamed-chunk-37}{}{\label{def:unnamed-chunk-37} \iffalse (Varianza de una variable aleatoria discreta) \fi{} }Sea
 \end{definition}
 
 \begin{definition}[Varianza matemática de una variable aleatoria continua]
-\protect\hypertarget{def:unnamed-chunk-32}{}{\label{def:unnamed-chunk-32} \iffalse (Varianza matemática de una variable aleatoria continua) \fi{} }Sea
+\protect\hypertarget{def:unnamed-chunk-38}{}{\label{def:unnamed-chunk-38} \iffalse (Varianza matemática de una variable aleatoria continua) \fi{} }Sea
 \end{definition}
 
 \hypertarget{medidas-de-posiciuxf3n}{%
 \section{Medidas de posición}\label{medidas-de-posiciuxf3n}}
 
 \begin{definition}[Cuantiles de una variable aleatoria discreta]
-\protect\hypertarget{def:unnamed-chunk-33}{}{\label{def:unnamed-chunk-33} \iffalse (Cuantiles de una variable aleatoria discreta) \fi{} }Sea
+\protect\hypertarget{def:unnamed-chunk-39}{}{\label{def:unnamed-chunk-39} \iffalse (Cuantiles de una variable aleatoria discreta) \fi{} }Sea
 \end{definition}
 
 \begin{definition}[Cuantiles matemática de una variable aleatoria continua]
-\protect\hypertarget{def:unnamed-chunk-34}{}{\label{def:unnamed-chunk-34} \iffalse (Cuantiles matemática de una variable aleatoria continua) \fi{} }Sea
+\protect\hypertarget{def:unnamed-chunk-40}{}{\label{def:unnamed-chunk-40} \iffalse (Cuantiles matemática de una variable aleatoria continua) \fi{} }Sea
 \end{definition}
 
 \hypertarget{medidas-de-curtosis-1}{%
 \section{Medidas de curtosis}\label{medidas-de-curtosis-1}}
 
 \begin{definition}[Curtosis de una variable aleatoria discreta]
-\protect\hypertarget{def:unnamed-chunk-35}{}{\label{def:unnamed-chunk-35} \iffalse (Curtosis de una variable aleatoria discreta) \fi{} }Sea
+\protect\hypertarget{def:unnamed-chunk-41}{}{\label{def:unnamed-chunk-41} \iffalse (Curtosis de una variable aleatoria discreta) \fi{} }Sea
 \end{definition}
 
 \begin{definition}[Curtosis de una variable aleatoria continua]
-\protect\hypertarget{def:unnamed-chunk-36}{}{\label{def:unnamed-chunk-36} \iffalse (Curtosis de una variable aleatoria continua) \fi{} }Sea
+\protect\hypertarget{def:unnamed-chunk-42}{}{\label{def:unnamed-chunk-42} \iffalse (Curtosis de una variable aleatoria continua) \fi{} }Sea
 \end{definition}
 momento de orden superior
 \[{\displaystyle M_{X}^{(n)}=\mathbb {E} [X^{n}]=\int _{\mathbb {R} }x^{n}f_{X}(x)\ {\text{d}}x}\]
@@ -1603,24 +1786,24 @@ momento de orden superior
 \chapter{Variables aleatorias bidimensionales}\label{variables-aleatorias-bidimensionales}}
 
 \begin{definition}[Variable aleatoria bidmensional discreta]
-\protect\hypertarget{def:unnamed-chunk-37}{}{\label{def:unnamed-chunk-37} \iffalse (Variable aleatoria bidmensional discreta) \fi{} }\[F(x,y)=P[X\leq x,Y\leq y]= \sum^{x}_{u=-\infty}\sum^{y}_{v=-\infty}=p(u,v)\]
+\protect\hypertarget{def:unnamed-chunk-43}{}{\label{def:unnamed-chunk-43} \iffalse (Variable aleatoria bidmensional discreta) \fi{} }\[F(x,y)=P[X\leq x,Y\leq y]= \sum^{x}_{u=-\infty}\sum^{y}_{v=-\infty}=p(u,v)\]
 \end{definition}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-38}{}{\label{exm:unnamed-chunk-38} }
+\protect\hypertarget{exm:unnamed-chunk-44}{}{\label{exm:unnamed-chunk-44} }
 \end{example}
 
 \begin{definition}[Variable aleatoria bidmensional contínua]
-\protect\hypertarget{def:unnamed-chunk-39}{}{\label{def:unnamed-chunk-39} \iffalse (Variable aleatoria bidmensional contínua) \fi{} }\[F(x,y)=P[X\leq x,Y\leq y]= \sum^{x}_{u=-\infty}\sum^{y}_{v=-\infty}=p(u,v)\]
+\protect\hypertarget{def:unnamed-chunk-45}{}{\label{def:unnamed-chunk-45} \iffalse (Variable aleatoria bidmensional contínua) \fi{} }\[F(x,y)=P[X\leq x,Y\leq y]= \sum^{x}_{u=-\infty}\sum^{y}_{v=-\infty}=p(u,v)\]
 \end{definition}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-40}{}{\label{exm:unnamed-chunk-40} }
+\protect\hypertarget{exm:unnamed-chunk-46}{}{\label{exm:unnamed-chunk-46} }
 \end{example}
 \#\# Distribución bidimensional discreta
 
 \begin{definition}[Función de probabilidad conjunta]
-\protect\hypertarget{def:unnamed-chunk-41}{}{\label{def:unnamed-chunk-41} \iffalse (Función de probabilidad conjunta) \fi{} }Sea \((X,Y)\) una variable bidimensinal discreta con rango \(R_{X\times Y}\). A cada posible resultado le asociamos un numero \[p(x,y)=P[X=x, Y=y]\] que cumple la siguientes condiciones
+\protect\hypertarget{def:unnamed-chunk-47}{}{\label{def:unnamed-chunk-47} \iffalse (Función de probabilidad conjunta) \fi{} }Sea \((X,Y)\) una variable bidimensinal discreta con rango \(R_{X\times Y}\). A cada posible resultado le asociamos un numero \[p(x,y)=P[X=x, Y=y]\] que cumple la siguientes condiciones
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1635,7 +1818,7 @@ Alos pares ordenados \(\left((x,y),p(x,y)\right)\) se le llama \textbf{distribuc
 \end{definition}
 
 \begin{definition}[Función de distribución acumulada]
-\protect\hypertarget{def:unnamed-chunk-42}{}{\label{def:unnamed-chunk-42} \iffalse (Función de distribución acumulada) \fi{} }\[F(x,y)=P[X\leq x,Y\leq y]= \sum^{x}_{u=-\infty}\sum^{y}_{v=-\infty}=p(u,v)\]
+\protect\hypertarget{def:unnamed-chunk-48}{}{\label{def:unnamed-chunk-48} \iffalse (Función de distribución acumulada) \fi{} }\[F(x,y)=P[X\leq x,Y\leq y]= \sum^{x}_{u=-\infty}\sum^{y}_{v=-\infty}=p(u,v)\]
 \end{definition}
 
 \hypertarget{distribuciones-marginales}{%
@@ -1746,7 +1929,7 @@ Sean las matrices \(A=[a_{ij}]_{n\times m}\) y \(B=[b_{ij}]_{p\times q}\) entonc
 donde \(i=1,2,\ldots n\) y \(j=1,2,\ldots m\)
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-43}{}{\label{exm:unnamed-chunk-43} }Sean \(\begin{pmatrix} 3&-1&2\\ 2&-1&2\\ 1&-1&0\\ 5&0&0\\ \end{pmatrix}_{4\times 3}\) y \(\begin{pmatrix} 0&-1&2&2&0\\ 1&-1&-2&1&1\\ 3&-1&-3&5&2\\ \end{pmatrix}_{3\times 5}\) entonces \(A\cdot B=\begin{pmatrix} 5&-4&2&15&3\\ 5&-3&0&13&3\\ -1&0&4&1&-1\\ 0&-5&10&10&0\\ \end{pmatrix}_{4\times 5}\)
+\protect\hypertarget{exm:unnamed-chunk-49}{}{\label{exm:unnamed-chunk-49} }Sean \(\begin{pmatrix} 3&-1&2\\ 2&-1&2\\ 1&-1&0\\ 5&0&0\\ \end{pmatrix}_{4\times 3}\) y \(\begin{pmatrix} 0&-1&2&2&0\\ 1&-1&-2&1&1\\ 3&-1&-3&5&2\\ \end{pmatrix}_{3\times 5}\) entonces \(A\cdot B=\begin{pmatrix} 5&-4&2&15&3\\ 5&-3&0&13&3\\ -1&0&4&1&-1\\ 0&-5&10&10&0\\ \end{pmatrix}_{4\times 5}\)
 \end{example}
 En caso de ser posible la multiplicación entre \(A\), \(B\) y \(C\) entonces se verfican las siguientes propiedades
 

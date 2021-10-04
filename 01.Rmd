@@ -299,10 +299,56 @@ knitr::kable(new, escape = FALSE, digits = 2, booktabs=T, caption='Datos cuantit
 
 ## Histograma de frecuencias
 
+```{r}
+mtcars$am <- as.factor(mtcars$am)
+levels(mtcars$am) <-c("Automatic", "Manual")
+```
+
+Some text
+
+```{r fig.align='center', fig.height=4}
+hist(mtcars$mpg[mtcars$am=="Automatic"], breaks=12, main="mpg for automatic vehicles", xlab="mpg", xlim=c(10, 35))
+```
+
 ## Circulares
 
+```{r fig.align='center', fig.height=4}
+
+par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
+  col = c('#0292D8', '#F7EA39', '#C4B632'),
+  init.angle = -50, border = NA
+)
+```
+
+
+```{r fig.align='center', fig.height=4}
+
+plot(cars)
+lines(lowess(cars))
+```
+
+```{r fig.align='center', fig.height=4}
+library(ggplot2)
+
+# Create data
+data <- data.frame(
+  name=c("A","B","C","D","E") ,  
+  value=c(3,12,5,18,45)
+  )
+
+# Barplot
+ggplot(data, aes(x=name, y=value)) + 
+  geom_bar(stat = "identity", width=0.5) +
+  coord_flip()
+```
 ## Histograma de frecuencias
 
+```{r fig.align='center', fig.height=4}
+hist(mtcars$mpg[mtcars$am=="Automatic"], breaks=12, main="mpg for automatic vehicles", xlab="mpg", xlim=c(10, 35))
+```
 # Medidas de tendencia central
 
 Son aquellas medidas que buscan un dato representivo central de un conjunto de datos tales como la media, la moda y la mediana.
@@ -523,49 +569,90 @@ $$  M_e=L_{i}+\frac{\frac{N}{2}-F_{i-1}}{f_{i}}\cdot a_{i}$$
 ## Rango 
 
 $R=x_{max}-x_{min}$
+
 Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
+
+$x_{max}=8$
+$x_{min}=1$
+
+por lo tanto $R=x_{max}-x_{min}=8-1=7$
 
 ## Varianza
 
+### Datos no tabulados
 $$s^2=\frac{\sum\left(x_i-\overline{x}\right )^2}{n-1}$$
 
 
-### Datos no tabulados
-
-$$s^2=\frac{\sum n_i\left(y_i-\overline{x}\right )^2}{n-1}$$
-
 Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
 
+$$\overline{x}=40/8=5$$
+
+$$
+\begin{aligned}
+s^2&=\frac{\sum\left(x_i-\overline{x}\right )^2}{n-1}\\
+&=\frac{\left(x_1-\overline{x}\right )^2+\left(x_2-\overline{x}\right )^2+\left(x_3-\overline{x}\right )^2+\left(x_4-\overline{x}\right )^2+\left(x_5-\overline{x}\right )^2+\left(x_6-\overline{x}\right )^2+\left(x_7-\overline{x}\right )^2+\left(x_8-\overline{x}\right )^2}{8-1}\\
+&=\frac{\left(2-5\right )^2+\left(5-5\right )^2+\left(6-5\right )^2+\left(1-5\right )^2+\left(7-5\right )^2+\left(5-5\right )^2+\left(8-5\right )^2+\left(6-5\right )^2}{8-1}\\
+&=\frac{9+0+1+16+4+0+9+1}{7}\\
+&=\frac{40}{7}=5.71
+\end{aligned}
+$$
 
 
 ### Datos tabulados
 
-|   Clase   | $Y_i$ | $f_i$ | $F_i$ |
-|:---------:|:-----:|:-----:|:-----:|
-| $[5,10)$  |  7.5  |   1   |   1   |
-| $[10,15)$ | 12.5  |   2   |   3   |
-| $[15,20)$ | 17.5  |   5   |       |
-| $[20,25)$ | 22.5  |   7   |       |
-| $[25,30]$ |       |  10   |       |
-| $[30,35]$ |       |   6   |       |
-|  $\sum$   |       |   2   |       |
+$$s^2=\frac{\sum f_i\left(Y_i-\overline{x}\right )^2}{n-1}$$
 
+$\overline{x}=\frac{\sum Y_i*f_i}{n}=747.5/31=24.11$
+
+
+|   Clase   | $Y_i$ | $f_i$ | $Y_i*f_i$ |
+|:---------:|:-----:|:-----:|:---------:|
+| $[5,10)$  |  7.5  |   1   |    7.5    |
+| $[10,15)$ | 12.5  |   2   |    25     |
+| $[15,20)$ | 17.5  |   5   |   87.5    |
+| $[20,25)$ | 22.5  |   7   |   157.5   |
+| $[25,30]$ | 27.5  |  10   |    275    |
+| $[30,35]$ | 32.5  |   6   |    195    |
+|  $\sum$   |       |  31   |           |
+
+
+Por lo tanto la varianza para dotos agrupados es 
+
+
+$$
+\begin{aligned}
+s^2&=\frac{\sum f_i\left(Y_i-\overline{x}\right )^2}{n-1}\\
+&=\frac{f_1\left(Y_1-\overline{x}\right )^2+f_2\left(Y_2-\overline{x}\right )^2+f_3\left(Y_3-\overline{x}\right )^2+f_4\left(Y_4-\overline{x}\right )^2+f_5\left(Y_5-\overline{x}\right )^2+f_6\left(Y_6-\overline{x}\right )^2}{31-1}\\
+&=\frac{1\left(7.5-24.11\right )^2+2\left(12.5-24.11\right )^2+5\left(17.5-24.11\right )^2+7\left(22.5-24.11\right )^2+10\left(27.5-24.11\right )^2+6\left(32.5-24.11\right )^2}{31-1}
+\\
+&=\frac{1*275.89+2*134.79+5*43.69+7*2.59+10*11.49+6*7.39}{31-1}
+\\
+&=\frac{275.89+269.58+218.45+18.13+114.9+44.34}{30}\\
+&=\frac{941.29}{30}=31.38
+\end{aligned}
+$$
+
+Por lo tanto $$s^2=  31.38$$
 ## Desviación típica
 
 
 $$s=\sqrt{s^2}$$
 
+La desviacion típica o estandar del siguiente conjunto de datos tabulados
 
+|   Clase   | $Y_i$ | $f_i$ | $Y_i*f_i$ |
+|:---------:|:-----:|:-----:|:---------:|
+| $[5,10)$  |  7.5  |   1   |    7.5    |
+| $[10,15)$ | 12.5  |   2   |    25     |
+| $[15,20)$ | 17.5  |   5   |   87.5    |
+| $[20,25)$ | 22.5  |   7   |   157.5   |
+| $[25,30]$ | 27.5  |  10   |    275    |
+| $[30,35]$ | 32.5  |   6   |    195    |
+|  $\sum$   |       |  31   |           |
 
-|   Clase   | $Y_i$ | $f_i$ | $F_i$ |
-|:---------:|:-----:|:-----:|:-----:|
-| $[5,10)$  |  7.5  |   1   |   1   |
-| $[10,15)$ | 12.5  |   2   |   3   |
-| $[15,20)$ | 17.5  |   5   |       |
-| $[20,25)$ | 22.5  |   7   |       |
-| $[25,30]$ |       |  10   |       |
-| $[30,35]$ |       |   6   |       |
-|  $\sum$   |       |   2   |       |
+es
+$$s=\sqrt{s^2}=\sqrt{31.38}=5.60$$
+
 
 ## Desviación media absoluta
 
@@ -574,60 +661,128 @@ $$DM=\frac{1}{n}\sum \left\vert x_i-\overline{x}\right\vert$$
 
 Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
 
+$$\overline{x}=40/8=5$$
+
+Entonces 
+
+$$
+\begin{aligned}
+DM&=\frac{\sum\left\vert x_i-\overline{x}\right \vert}{n}\\
+&=... Resolver
+\end{aligned}
+$$
+
 ### Datos tabulados
 
-$$DM=\frac{1}{n}\sum n_i \left \vert x_i-\overline{x}\right\vert$$
+$$DM=\frac{1}{n}\sum f_i \left \vert Y_i-\overline{x}\right\vert$$
 
 $y_i$ marca de clase o punto medio de la clase $i$
 
 
-|   Clase   | $Y_i$ | $f_i$ | $F_i$ |
-|:---------:|:-----:|:-----:|:-----:|
-| $[5,10)$  |  7.5  |   1   |   1   |
-| $[10,15)$ | 12.5  |   2   |   3   |
-| $[15,20)$ | 17.5  |   5   |       |
-| $[20,25)$ | 22.5  |   7   |       |
-| $[25,30]$ |       |  10   |       |
-| $[30,35]$ |       |   6   |       |
-| $[35,40]$ |       |   5   |       |
-| $[40,45]$ |       |   3   |       |
-|  $\sum$   |       |   2   |       |
+$\overline{x}=\frac{\sum Y_i*f_i}{n}=747.5/31=24.11$
+
+
+|   Clase   | $Y_i$ | $f_i$ | $Y_i*f_i$ |
+|:---------:|:-----:|:-----:|:---------:|
+| $[5,10)$  |  7.5  |   1   |    7.5    |
+| $[10,15)$ | 12.5  |   2   |    25     |
+| $[15,20)$ | 17.5  |   5   |   87.5    |
+| $[20,25)$ | 22.5  |   7   |   157.5   |
+| $[25,30]$ | 27.5  |  10   |    275    |
+| $[30,35]$ | 32.5  |   6   |    195    |
+|  $\sum$   |       |  31   |           |
+
+Por lo tanto la desviación media absoluta es
+
+$$
+\begin{aligned}
+DM&=\frac{\sum f_i\left \vert Y_i-\overline{x}\right \vert}{n}\\
+&=\frac{f_1\left\vert Y_1-\overline{x}\right \vert +f_2\left\vert Y_2-\overline{x}\right \vert +f_3\left\vert Y_3-\overline{x}\right \vert +f_4\left\vert Y_4-\overline{x}\right \vert +f_5\left\vert Y_5-\overline{x}\right \vert +f_6\left\vert Y_6-\overline{x}\right \vert }{31}\\
+&=\frac{1\left\vert 7.5-24.11\right \vert +2\left\vert 12.5-24.11\right \vert +5\left\vert 17.5-24.11\right \vert +7\left\vert 22.5-24.11\right \vert +10\left\vert 27.5-24.11\right \vert +6\left\vert 32.5-24.11\right \vert }{31}\\
+&=\frac{1*16.61 +2*11.61 +5*6.61 +7*1.61 +10*3.39 +6*8.39 }{31}\\
+\\
+&=\frac{277.33}{31}=8.94\\
+\end{aligned}
+$$
+
+por lo tanto $$DM=8.94$$
+
 
 ## Desviación mediana absoluta
 
 ### Datos no tabulados
-$$DMe=\frac{1}{n}\sum \left\vert x_i-Me\right\vert$$
+$$DMe=\frac{1}{n}\sum \left\vert Y_i-Me\right\vert$$
 
-Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
+Sean los datos 2, 5, 6, 1, 7, 5, 8, 6 (Ejercicio)
+
+
 
 ### Datos tabulados
 
 
-$$DMe=\frac{1}{n}\sum n_i \left \vert x_i-Me\right\vert$$
+$$DMe=\frac{1}{n}\sum f_i \left \vert Y_i-Me\right\vert$$
+
+$Me=?$ (Ejercicio)
 
 
-|   Clase   | $Y_i$ | $f_i$ | $F_i$ |
-|:---------:|:-----:|:-----:|:-----:|
-| $[5,10)$  |  7.5  |   1   |   1   |
-| $[10,15)$ | 12.5  |   2   |   3   |
-| $[15,20)$ | 17.5  |   5   |       |
-| $[20,25)$ | 22.5  |   7   |       |
-| $[25,30]$ |       |  10   |       |
-| $[30,35]$ |       |   6   |       |
-|  $\sum$   |       |   2   |       |
+|   Clase   | $Y_i$ | $f_i$ | $Y_i*f_i$ |
+|:---------:|:-----:|:-----:|:---------:|
+| $[5,10)$  |  7.5  |   1   |    7.5    |
+| $[10,15)$ | 12.5  |   2   |    25     |
+| $[15,20)$ | 17.5  |   5   |   87.5    |
+| $[20,25)$ | 22.5  |   7   |   157.5   |
+| $[25,30]$ | 27.5  |  10   |    275    |
+| $[30,35]$ | 32.5  |   6   |    195    |
+|  $\sum$   |       |  31   |           |
 
-: (\#tab:ww) Caption
+Por lo tanto la desviacion de la mediana absoluta es
 
+(Ejercicio)
+
+$$
+\begin{aligned}
+s^2&=\frac{\sum f_i\left \vert Y_i-Me\right \vert}{n}\\
+&=\frac{f_1\left(Y_1-Me\right )^2+f_2\left(Y_2-Me\right )^2+f_3\left(Y_3-Me\right )^2+f_4\left(Y_4-Me\right )^2+f_5\left(Y_5-Me\right )^2+f_6\left(Y_6-Me\right )^2}{31}\\
+&=complete
+\end{aligned}
+$$
 
 ## Coeficiente de variacion 
 
 $$Cv=\frac{s}{\overline{x}}\cdot 100$$
+Si $Cv>25\%$ se dice que los datos estan muy dispersos
+Si $Cv<25\%$ se dice que los datos estan muy juntos
 
 
+Para el conjunto de datos 
 
 
+|   Clase   | $Y_i$ | $f_i$ | $Y_i*f_i$ |
+|:---------:|:-----:|:-----:|:---------:|
+| $[5,10)$  |  7.5  |   1   |    7.5    |
+| $[10,15)$ | 12.5  |   2   |    25     |
+| $[15,20)$ | 17.5  |   5   |   87.5    |
+| $[20,25)$ | 22.5  |   7   |   157.5   |
+| $[25,30]$ | 27.5  |  10   |    275    |
+| $[30,35]$ | 32.5  |   6   |    195    |
+|  $\sum$   |       |  31   |           |
+
+$$Cv=\frac{5.60}{24.11}\cdot 100=0.23\cdot 100=23\%$$
+
+## Asignación
 
 
+Halle el rango, la varianza, la desviación típica, desviación media, desviación mediana absoluta y el coeficiente de variación. Grafique el hstograma y ubique estos estadigrafos
+
+|    Clase    | $Y_i$ | $f_i$ | $F_i$ |
+|:-----------:|:-----:|:-----:|:-----:|
+| $[50,100)$  |       |   8   |   1   |
+| $[100,150)$ |       |  20   |   3   |
+| $[150,200)$ |       |  50   |       |
+| $[200,250)$ |       |  70   |       |
+| $[250,300]$ |       |  100  |       |
+| $[300,350]$ |       |  60   |       |
+|   $\sum$    |       |  20   |       |
 
 
 # Medidas de posicion (cuantiles)
