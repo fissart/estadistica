@@ -81,6 +81,7 @@ rango
 varianza
 datos-no-tabulados
 datos-tabulados
+desviación-típica
 desviación-media-absoluta
 datos-no-tabulados-1
 datos-tabulados-1

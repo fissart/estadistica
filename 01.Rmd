@@ -633,6 +633,8 @@ s^2&=\frac{\sum f_i\left(Y_i-\overline{x}\right )^2}{n-1}\\
 $$
 
 Por lo tanto $$s^2=  31.38$$
+
+
 ## Desviación típica
 
 
