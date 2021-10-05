@@ -349,6 +349,7 @@ ggplot(data, aes(x=name, y=value)) +
 ```{r fig.align='center', fig.height=4}
 hist(mtcars$mpg[mtcars$am=="Automatic"], breaks=12, main="mpg for automatic vehicles", xlab="mpg", xlim=c(10, 35))
 ```
+
 # Medidas de tendencia central
 
 Son aquellas medidas que buscan un dato representivo central de un conjunto de datos tales como la media, la moda y la mediana.
