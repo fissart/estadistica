@@ -63,6 +63,7 @@ example-intervalos
 gráficos-estadísticos
 histograma-de-frecuencias
 circulares
+medidas-de-tendencia-central
 la-media
 media-de-datos-no-agrupados
 media-de-datos-agrupados
@@ -94,6 +95,7 @@ medidas-de-posicion-cuantiles
 cuartiles
 datos-no-agrupados
 datos-agrupados
+quintiles
 deciles
 datos-no-agrupados-1
 datos-agrupados-1

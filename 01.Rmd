@@ -804,8 +804,8 @@ Si $$Q_k=\frac{k(n+1)}{4}$$  es entero entonces el cuartil es el dato de la posi
 Si $$Q_k=\frac{k(n+1)}{4}$$ no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra $Q_k=\frac{k(n+1)}{4}$ 
 
 * Ejemplo 
-1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
-
+1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor
+1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9
 
 ### Datos agrupados
 
@@ -830,6 +830,11 @@ $$Q_k=L_i+ A\left(\frac{\frac{kn}{4}-F_{i-1}}{F_i-F_{i-1}}\right)$$
 | $[35,40]$ |       |   5   |       |
 | $[40,45]$ |       |   3   |       |
 |  $\sum$   |       |   2   |       |
+
+
+## Quintiles 
+
+wwwwwwwww
 
 ## Deciles
 Los deciles, que dividen a la distribución en diez partes es decir $D_1, D_2,\ldots, D_9$
