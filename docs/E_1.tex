@@ -1264,8 +1264,7 @@ Los cuartiles, que dividen a la distribución en cuatro partes (corresponden a l
 
 Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 Ordenar de menor a mayor (creciente)
 
-Si \[Q_k=\frac{k(n+1)}{4}\] es entero entonces el cuartil es el dato de la posicion \(Q_k=x_\frac{k(n+1)}{4}\)
-Si \[Q_k=\frac{k(n+1)}{4}\] no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra \(Q_k=\frac{k(n+1)}{4}\)
+Si \[Q_k=\frac{k(n+1)}{4}\] es entero entonces el cuartil es el dato de la posicion \(Q_k=x_\frac{k(n+1)}{4}\) en caso contrario se interpola los datos extremos donde se encuentra el valor \(Q_k\)
 
 \begin{itemize}
 \tightlist
@@ -1275,10 +1274,16 @@ Si \[Q_k=\frac{k(n+1)}{4}\] no es entero entonces el cuartil es la interpolacion
   1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9
 \end{itemize}
 
+\(Q_1=\frac{1(18+1)}{4}=4.75\) interpolando \(Q_1=2+(2-2)\cdot 0.75=2\)
+
+\(Q_2=\frac{2(18+1)}{4}=9.5\) interpolando \(Q_2=5+(5-5)\cdot 0.5=5\)
+
+\(Q_3=\frac{3(18+1)}{4}=14.25\) interpolando \(Q_3=6+(7-6)\cdot 0.25=6.25\)
+
 \hypertarget{datos-agrupados}{%
 \subsection{Datos agrupados}\label{datos-agrupados}}
 
-\[Q_k=L_i+ A\left(\frac{\frac{kn}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\]
+\[Q_k=L_i+ A\left(\frac{\frac{kn}{4}-F_{i-1}}{F_i-F_{i-1}}\right);k=1,2,3\]
 
 \begin{itemize}
 \tightlist
@@ -1296,6 +1301,33 @@ Si \[Q_k=\frac{k(n+1)}{4}\] no es entero entonces el cuartil es la interpolacion
   \(k\) indice del cuartil correspondiente
 \end{itemize}
 
+\[
+\begin{aligned}
+Q_1&=L_i+ A\left(\frac{\frac{1n}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&=L_i+ A\left(\frac{\frac{1*39}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&=20+ 5\cdot\left(\frac{9.75 -8}{15-8}\right)\\
+&=21.5
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+Q_2&=L_i+ A\left(\frac{\frac{2n}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&=L_i+ A\left(\frac{\frac{2*39}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&=25+ 5\cdot\left(\frac{19.5 -15}{25-15}\right)\\
+&= 27.5
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+Q_3&=L_i+ A\left(\frac{\frac{3n}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&=L_i+ A\left(\frac{\frac{2*39}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&=30+ 5\cdot\left(\frac{29.25 -25}{31-25}\right)\\
+&= 33.542
+\end{aligned}
+\]
+
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
 Clase & \(Y_i\) & \(f_i\) & \(F_i\)\tabularnewline
@@ -1303,13 +1335,13 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\)\tabularnewline
 \endhead
 \([5,10)\) & 7.5 & 1 & 1\tabularnewline
 \([10,15)\) & 12.5 & 2 & 3\tabularnewline
-\([15,20)\) & 17.5 & 5 &\tabularnewline
-\([20,25)\) & 22.5 & 7 &\tabularnewline
-\([25,30]\) & & 10 &\tabularnewline
-\([30,35]\) & & 6 &\tabularnewline
-\([35,40]\) & & 5 &\tabularnewline
-\([40,45]\) & & 3 &\tabularnewline
-\(\sum\) & & 2 &\tabularnewline
+\([15,20)\) & 17.5 & 5 & 8\tabularnewline
+\([20,25)\) & 22.5 & 7 & 15\tabularnewline
+\([25,30]\) & 27.5 & 10 & 25\tabularnewline
+\([30,35]\) & 32.5 & 6 & 31\tabularnewline
+\([35,40]\) & 37.5 & 5 & 36\tabularnewline
+\([40,45]\) & 42.5 & 3 & 39\tabularnewline
+\(\sum\) & & 39 &\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -1328,15 +1360,19 @@ Los deciles, que dividen a la distribución en diez partes es decir \(D_1, D_2,\
 
 Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 Ordenar de menor a mayor (creciente)
 
-Si \[D_k=\frac{k(n+1)}{10}\] es entero entonces el cuartil es el dato de la posicion \(D_k=x_\frac{k(n+1)}{10}\)
-Si \[D_k=\frac{k(n+1)}{10}\] no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra \(D_k=\frac{k(n+1)}{10}\)
+Si \[D_k=\frac{k(n+1)}{10}\] es entero entonces el decil es el dato de la posicion \(D_k=x_\frac{k(n+1)}{10}; k=1, 2, 3, \ldots, 9\)
+Si \[D_k=\frac{k(n+1)}{10}\] no es entero entonces el decil es la interpolacion lineal de de los dos valores entre las cuales se encuentra \(D_k=\frac{k(n+1)}{10}\)
 
 \begin{itemize}
 \tightlist
 \item
   Ejemplo
-  1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
+  1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor
+  1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9
+  entonces
 \end{itemize}
+
+\[D_9=\frac{9(18+1)}{10}=17.1\] interpolando el decil 9 es \(D_9=8+(9-8)\cdot 0.1=8.1\)
 
 \hypertarget{datos-agrupados-1}{%
 \subsection{Datos agrupados}\label{datos-agrupados-1}}
@@ -1350,15 +1386,21 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\)\tabularnewline
 \endhead
 \([5,10)\) & 7.5 & 1 & 1\tabularnewline
 \([10,15)\) & 12.5 & 2 & 3\tabularnewline
-\([15,20)\) & 17.5 & 5 &\tabularnewline
-\([20,25)\) & 22.5 & 7 &\tabularnewline
-\([25,30]\) & & 10 &\tabularnewline
-\([30,35]\) & & 6 &\tabularnewline
-\([35,40]\) & & 5 &\tabularnewline
-\([40,45]\) & & 3 &\tabularnewline
-\(\sum\) & & 2 &\tabularnewline
+\([15,20)\) & 17.5 & 5 & 8\tabularnewline
+\([20,25)\) & 22.5 & 7 & 15\tabularnewline
+\([25,30]\) & 27.5 & 10 & 25\tabularnewline
+\([30,35]\) & 32.5 & 6 & 31\tabularnewline
+\([35,40]\) & 37.5 & 5 & 36\tabularnewline
+\([40,45]\) & 42.5 & 3 & 39\tabularnewline
+\(\sum\) & & 39 &\tabularnewline
 \bottomrule
 \end{longtable}
+
+\[D_9=L_i+ A\left(\frac{\frac{9\cdot 39}{10}-F_{i-1}}{F_i-F_{i-1}}\right)\]
+
+Entonces \(\frac{9\cdot 39}{10}=35.1\)
+
+\[D_9=35+ 5\left(\frac{35.1-31}{36-31}\right)=39.1\]
 
 \hypertarget{percentiles}{%
 \section{Percentiles}\label{percentiles}}
@@ -1368,7 +1410,7 @@ Los percentiles, que dividen a la distribución en diez partes es decir \(P_1, P
 \hypertarget{datos-no-agrupados-2}{%
 \subsection{Datos no agrupados}\label{datos-no-agrupados-2}}
 
-Si \[P_k=\frac{k(n+1)}{100}\] es entero entonces el cuartil es el dato de la posicion \(P_k=x_\frac{k(n+1)}{100}\)
+Si \[P_k=\frac{k(n+1)}{100}; k=1, 2,  \ldots, 99\] es entero entonces el cuartil es el dato de la posicion \(P_k=x_\frac{k(n+1)}{100}\)
 Si \[P_k=\frac{k(n+1)}{100}\] no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra \(Q_k=\frac{k(n+1)}{100}\)
 
 \begin{itemize}

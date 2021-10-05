@@ -303,17 +303,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="datos-no-agrupados" class="section level3">
 <h3><span class="header-section-number">7.1.1</span> Datos no agrupados</h3>
 <p>Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 Ordenar de menor a mayor (creciente)</p>
-<p>Si <span class="math display">\[Q_k=\frac{k(n+1)}{4}\]</span> es entero entonces el cuartil es el dato de la posicion <span class="math inline">\(Q_k=x_\frac{k(n+1)}{4}\)</span>
-Si <span class="math display">\[Q_k=\frac{k(n+1)}{4}\]</span> no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra <span class="math inline">\(Q_k=\frac{k(n+1)}{4}\)</span></p>
+<p>Si <span class="math display">\[Q_k=\frac{k(n+1)}{4}\]</span> es entero entonces el cuartil es el dato de la posicion <span class="math inline">\(Q_k=x_\frac{k(n+1)}{4}\)</span> en caso contrario se interpola los datos extremos donde se encuentra el valor <span class="math inline">\(Q_k\)</span></p>
 <ul>
 <li>Ejemplo
 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor
 1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9</li>
 </ul>
+<p><span class="math inline">\(Q_1=\frac{1(18+1)}{4}=4.75\)</span> interpolando <span class="math inline">\(Q_1=2+(2-2)\cdot 0.75=2\)</span></p>
+<p><span class="math inline">\(Q_2=\frac{2(18+1)}{4}=9.5\)</span> interpolando <span class="math inline">\(Q_2=5+(5-5)\cdot 0.5=5\)</span></p>
+<p><span class="math inline">\(Q_3=\frac{3(18+1)}{4}=14.25\)</span> interpolando <span class="math inline">\(Q_3=6+(7-6)\cdot 0.25=6.25\)</span></p>
 </div>
 <div id="datos-agrupados" class="section level3">
 <h3><span class="header-section-number">7.1.2</span> Datos agrupados</h3>
-<p><span class="math display">\[Q_k=L_i+ A\left(\frac{\frac{kn}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\]</span></p>
+<p><span class="math display">\[Q_k=L_i+ A\left(\frac{\frac{kn}{4}-F_{i-1}}{F_i-F_{i-1}}\right);k=1,2,3\]</span></p>
 <ul>
 <li><span class="math inline">\(L_i\)</span> limite inferior del intervalo que contiene al decil</li>
 <li><span class="math inline">\(F_{i-1}\)</span> frecuencia acumulada en la clase anterior al decil</li>
@@ -322,6 +324,30 @@ Si <span class="math display">\[Q_k=\frac{k(n+1)}{4}\]</span> no es entero enton
 <li><span class="math inline">\(n\)</span> numero de datos</li>
 <li><span class="math inline">\(k\)</span> indice del cuartil correspondiente</li>
 </ul>
+<p><span class="math display">\[
+\begin{aligned}
+Q_1&amp;=L_i+ A\left(\frac{\frac{1n}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&amp;=L_i+ A\left(\frac{\frac{1*39}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&amp;=20+ 5\cdot\left(\frac{9.75 -8}{15-8}\right)\\
+&amp;=21.5
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+Q_2&amp;=L_i+ A\left(\frac{\frac{2n}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&amp;=L_i+ A\left(\frac{\frac{2*39}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&amp;=25+ 5\cdot\left(\frac{19.5 -15}{25-15}\right)\\
+&amp;= 27.5
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+Q_3&amp;=L_i+ A\left(\frac{\frac{3n}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&amp;=L_i+ A\left(\frac{\frac{2*39}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&amp;=30+ 5\cdot\left(\frac{29.25 -25}{31-25}\right)\\
+&amp;= 33.542
+\end{aligned}
+\]</span></p>
 <table>
 <thead>
 <tr class="header">
@@ -348,42 +374,42 @@ Si <span class="math display">\[Q_k=\frac{k(n+1)}{4}\]</span> no es entero enton
 <td align="center"><span class="math inline">\([15,20)\)</span></td>
 <td align="center">17.5</td>
 <td align="center">5</td>
-<td align="center"></td>
+<td align="center">8</td>
 </tr>
 <tr class="even">
 <td align="center"><span class="math inline">\([20,25)\)</span></td>
 <td align="center">22.5</td>
 <td align="center">7</td>
-<td align="center"></td>
+<td align="center">15</td>
 </tr>
 <tr class="odd">
 <td align="center"><span class="math inline">\([25,30]\)</span></td>
-<td align="center"></td>
+<td align="center">27.5</td>
 <td align="center">10</td>
-<td align="center"></td>
+<td align="center">25</td>
 </tr>
 <tr class="even">
 <td align="center"><span class="math inline">\([30,35]\)</span></td>
-<td align="center"></td>
+<td align="center">32.5</td>
 <td align="center">6</td>
-<td align="center"></td>
+<td align="center">31</td>
 </tr>
 <tr class="odd">
 <td align="center"><span class="math inline">\([35,40]\)</span></td>
-<td align="center"></td>
+<td align="center">37.5</td>
 <td align="center">5</td>
-<td align="center"></td>
+<td align="center">36</td>
 </tr>
 <tr class="even">
 <td align="center"><span class="math inline">\([40,45]\)</span></td>
-<td align="center"></td>
+<td align="center">42.5</td>
 <td align="center">3</td>
-<td align="center"></td>
+<td align="center">39</td>
 </tr>
 <tr class="odd">
 <td align="center"><span class="math inline">\(\sum\)</span></td>
 <td align="center"></td>
-<td align="center">2</td>
+<td align="center">39</td>
 <td align="center"></td>
 </tr>
 </tbody>
@@ -400,12 +426,15 @@ Si <span class="math display">\[Q_k=\frac{k(n+1)}{4}\]</span> no es entero enton
 <div id="datos-no-agrupados-1" class="section level3">
 <h3><span class="header-section-number">7.3.1</span> Datos no agrupados</h3>
 <p>Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 Ordenar de menor a mayor (creciente)</p>
-<p>Si <span class="math display">\[D_k=\frac{k(n+1)}{10}\]</span> es entero entonces el cuartil es el dato de la posicion <span class="math inline">\(D_k=x_\frac{k(n+1)}{10}\)</span>
-Si <span class="math display">\[D_k=\frac{k(n+1)}{10}\]</span> no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra <span class="math inline">\(D_k=\frac{k(n+1)}{10}\)</span></p>
+<p>Si <span class="math display">\[D_k=\frac{k(n+1)}{10}\]</span> es entero entonces el decil es el dato de la posicion <span class="math inline">\(D_k=x_\frac{k(n+1)}{10}; k=1, 2, 3, \ldots, 9\)</span>
+Si <span class="math display">\[D_k=\frac{k(n+1)}{10}\]</span> no es entero entonces el decil es la interpolacion lineal de de los dos valores entre las cuales se encuentra <span class="math inline">\(D_k=\frac{k(n+1)}{10}\)</span></p>
 <ul>
 <li>Ejemplo
-1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7</li>
+1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor
+1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9
+entonces</li>
 </ul>
+<p><span class="math display">\[D_9=\frac{9(18+1)}{10}=17.1\]</span> interpolando el decil 9 es <span class="math inline">\(D_9=8+(9-8)\cdot 0.1=8.1\)</span></p>
 </div>
 <div id="datos-agrupados-1" class="section level3">
 <h3><span class="header-section-number">7.3.2</span> Datos agrupados</h3>
@@ -436,46 +465,49 @@ Si <span class="math display">\[D_k=\frac{k(n+1)}{10}\]</span> no es entero ento
 <td align="center"><span class="math inline">\([15,20)\)</span></td>
 <td align="center">17.5</td>
 <td align="center">5</td>
-<td align="center"></td>
+<td align="center">8</td>
 </tr>
 <tr class="even">
 <td align="center"><span class="math inline">\([20,25)\)</span></td>
 <td align="center">22.5</td>
 <td align="center">7</td>
-<td align="center"></td>
+<td align="center">15</td>
 </tr>
 <tr class="odd">
 <td align="center"><span class="math inline">\([25,30]\)</span></td>
-<td align="center"></td>
+<td align="center">27.5</td>
 <td align="center">10</td>
-<td align="center"></td>
+<td align="center">25</td>
 </tr>
 <tr class="even">
 <td align="center"><span class="math inline">\([30,35]\)</span></td>
-<td align="center"></td>
+<td align="center">32.5</td>
 <td align="center">6</td>
-<td align="center"></td>
+<td align="center">31</td>
 </tr>
 <tr class="odd">
 <td align="center"><span class="math inline">\([35,40]\)</span></td>
-<td align="center"></td>
+<td align="center">37.5</td>
 <td align="center">5</td>
-<td align="center"></td>
+<td align="center">36</td>
 </tr>
 <tr class="even">
 <td align="center"><span class="math inline">\([40,45]\)</span></td>
-<td align="center"></td>
+<td align="center">42.5</td>
 <td align="center">3</td>
-<td align="center"></td>
+<td align="center">39</td>
 </tr>
 <tr class="odd">
 <td align="center"><span class="math inline">\(\sum\)</span></td>
 <td align="center"></td>
-<td align="center">2</td>
+<td align="center">39</td>
 <td align="center"></td>
 </tr>
 </tbody>
 </table>
+<p><span class="math display">\[D_9=L_i+ A\left(\frac{\frac{9\cdot 39}{10}-F_{i-1}}{F_i-F_{i-1}}\right)\]</span></p>
+<p>Entonces <span class="math inline">\(\frac{9\cdot 39}{10}=35.1\)</span></p>
+<p><span class="math display">\[D_9=35+ 5\left(\frac{35.1-31}{36-31}\right)=39.1\]</span></p>
 </div>
 </div>
 <div id="percentiles" class="section level2">
@@ -483,7 +515,7 @@ Si <span class="math display">\[D_k=\frac{k(n+1)}{10}\]</span> no es entero ento
 <p>Los percentiles, que dividen a la distribución en diez partes es decir <span class="math inline">\(P_1, P_2,\ldots, P_{99}\)</span></p>
 <div id="datos-no-agrupados-2" class="section level3">
 <h3><span class="header-section-number">7.4.1</span> Datos no agrupados</h3>
-<p>Si <span class="math display">\[P_k=\frac{k(n+1)}{100}\]</span> es entero entonces el cuartil es el dato de la posicion <span class="math inline">\(P_k=x_\frac{k(n+1)}{100}\)</span>
+<p>Si <span class="math display">\[P_k=\frac{k(n+1)}{100}; k=1, 2,  \ldots, 99\]</span> es entero entonces el cuartil es el dato de la posicion <span class="math inline">\(P_k=x_\frac{k(n+1)}{100}\)</span>
 Si <span class="math display">\[P_k=\frac{k(n+1)}{100}\]</span> no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra <span class="math inline">\(Q_k=\frac{k(n+1)}{100}\)</span></p>
 <ul>
 <li>Ejemplo
