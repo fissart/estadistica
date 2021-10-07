@@ -6,6 +6,8 @@
 
 WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 
+<!--
+
 # Variables
 
 Es una **característica** de personas cosas u objetos que son propensos a ser medidas o cualificadas
@@ -930,10 +932,57 @@ $$P_k=\frac{k(18+1)}{100}$$
 
 
 
+
 ### Datos agrupados
 
 
-$$P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)$$
+$$  $$ $ww$ 
+
+$$P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)=\int_1^3f(x)$$
+
+|   Clase   | $Y_i$ | $f_i$ | $F_i$ |
+|:---------:|:-----:|:-----:|:-----:|
+| $[5,10)$  |  7.5  |   1   |   1   |
+| $[10,15)$ | 12.5  |   2   |   3   |
+| $[15,20)$ | 17.5  |   5   |       |
+| $[20,25)$ | 22.5  |   7   |       |
+| $[25,30]$ |       |  10   |       |
+| $[30,35]$ |       |   6   |       |
+| $[35,40]$ |       |   5   |       |
+| $[40,45]$ |       |   3   |       |
+|  $\sum$   |       |   2   |       |
+
+
+
+
+
+
+
+-->
+
+
+# Medidas de asimetria
+
+
+
+### Datos no agrupados 
+
+
+Si $$P_k=\frac{k(n+1)}{100}; k=1, 2,  \ldots, 99$$  es entero entonces el cuartil es el dato de la posicion $P_k=x_\frac{k(n+1)}{100}$ 
+Si $$P_k=\frac{k(n+1)}{100}$$ no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra $Q_k=\frac{k(n+1)}{100}$ 
+
+* Ejemplo 
+1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
+Al ordenar de manera creciente
+1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
+y
+$$P_k=\frac{k(18+1)}{100}$$
+
+
+### Datos agrupados
+
+
+$$P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)=\int_1^3f(x)$$
 
 |   Clase   | $Y_i$ | $f_i$ | $F_i$ |
 |:---------:|:-----:|:-----:|:-----:|
@@ -954,17 +1003,115 @@ $$P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)$$
 
 
 
+### Datos no agrupados 
 
-# Medidas de asimetria
+
+Si $$P_k=\frac{k(n+1)}{100}; k=1, 2,  \ldots, 99$$  es entero entonces el cuartil es el dato de la posicion $P_k=x_\frac{k(n+1)}{100}$ 
+Si $$P_k=\frac{k(n+1)}{100}$$ no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra $Q_k=\frac{k(n+1)}{100}$ 
+
+* Ejemplo 
+1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
+Al ordenar de manera creciente
+1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
+y
+$$P_k=\frac{k(18+1)}{100}$$
+
+
+
+
+### Datos agrupados
+
+
+$$P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)=\int_1^3f(x)$$
+
+|   Clase   | $Y_i$ | $f_i$ | $F_i$ |
+|:---------:|:-----:|:-----:|:-----:|
+| $[5,10)$  |  7.5  |   1   |   1   |
+| $[10,15)$ | 12.5  |   2   |   3   |
+| $[15,20)$ | 17.5  |   5   |       |
+| $[20,25)$ | 22.5  |   7   |       |
+| $[25,30]$ |       |  10   |       |
+| $[30,35]$ |       |   6   |       |
+| $[35,40]$ |       |   5   |       |
+| $[40,45]$ |       |   3   |       |
+|  $\sum$   |       |   2   |       |
+
+
+
+
+
+
 
 ## wwwwww
-## wwwwww
-## wwwwww
 
-# Medidas de curtosis
+### Datos no agrupados 
 
-## leptocurtica
-## mesocurtica
-## palticurtica
+
+Si $$P_k=\frac{k(n+1)}{100}; k=1, 2,  \ldots, 99$$  es entero entonces el cuartil es el dato de la posicion $P_k=x_\frac{k(n+1)}{100}$ 
+Si $$P_k=\frac{k(n+1)}{100}$$ no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra $Q_k=\frac{k(n+1)}{100}$ 
+
+* Ejemplo 
+1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
+Al ordenar de manera creciente
+1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
+y
+$$P_k=\frac{k(18+1)}{100}$$
+
+### Datos agrupados
+
+
+$$P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)=\int_1^3f(x)=\int_1^3$$
+
+|   Clase   | $Y_i$ | $f_i$ | $F_i$ |
+|:---------:|:-----:|:-----:|:-----:|
+| $[5,10)$  |  7.5  |   1   |   1   |
+| $[10,15)$ | 12.5  |   2   |   3   |
+| $[15,20)$ | 17.5  |   5   |       |
+| $[20,25)$ | 22.5  |   7   |       |
+| $[25,30]$ |       |  10   |       |
+| $[30,35]$ |       |   6   |       |
+| $[35,40]$ |       |   5   |       |
+| $[40,45]$ |       |   3   |       |
+|  $\sum$   |       |   2   |       |
+
+
+
+# Medidas de curtosis o apuntamiento
+En estadística, usamos la medida de curtosis para describir la "cola" de la distribución, ya que describe la forma de la misma. También es una medida del "pico" de la distribución. Una distribución de curtosis alta tiene un pico más agudo y colas más largas y gruesas, mientras que una distribución de curtosis baja tiene un maní más redondeado y colas más cortas y delgadas.
+
+Datos no agrupados 
+$$k= \frac{\sum_{i=1}^{n}\left( x_i-\overline{x} \right)^4 }{n} $$  
+
+
+Datos agrupados 
+$$ K=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x} \right)^4 }{n} $$  
+
+- **Mesocurtico** : esta es la distribución normal
+- **Leptocurtica** : esta distribución tiene colas más gruesas y un pico más afilado. La curtosis es "positiva" con un valor superior a 3
+- **Platicurtica** : La distribución tiene un pico más bajo y más ancho y colas más delgadas. La curtosis es "negativa" con un valor superior a 3
+
+![https://link](curtosis.jpg)
 
 # Medidas de asimetría
+Podemos decir que la asimetría indica cuánto se desvía nuestra distribución subyacente de la distribución normal, ya que la distribución normal tiene asimetría 0. Generalmente, tenemos tres tipos de asimetría.
+
+- **Simétrico** : cuando la asimetría es cercana a 0 y la media es casi la misma que la mediana
+- **Desviación negativa** : cuando la cola izquierda del histograma de la distribución es más larga y la mayoría de las observaciones se concentran en la cola derecha. En este caso, también podemos utilizar el término "sesgado a la izquierda" o "cola izquierda". y la mediana es mayor que la media.
+- **Desviación positiva** : cuando la cola derecha del histograma de la distribución es más larga y la mayoría de las observaciones se concentran en la cola izquierda. En este caso, también podemos usar el término "sesgado a la derecha" o "cola derecha". y la mediana es menor que la media.
+
+![alt](simetria.png)
+
+
+```{r fig.align='center', fig.height=4}
+data = c(88, 95, 92, 97, 96, 97, 94, 86, 91, 95, 97, 88, 85, 76, 68)
+hist(data, col='steelblue')
+dens <- density(data)
+plot(dens, frame = FALSE, col = "steelblue", 
+     main = "Density plot of mpg") 
+polygon(dens, col = "steelblue")
+```
+
+```{r fig.align='center', fig.height=4}
+ggplot(data=iris, aes(Petal.Length,fill=Species)) +
+geom_density(alpha=0.7) # dibujamos el diagrama de densidad
+```
