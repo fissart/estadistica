@@ -4,9 +4,7 @@
 
 # Prerrequisitos
 
-WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
-
-<!--
+Matemáticas basicas
 
 # Variables
 
@@ -271,23 +269,30 @@ Edades de cierta comunidad
 
 Tabulando
 
-```javascript {cmd="node"}
-const number = 50//parseInt(prompt('Enter the number of terms: '));
-let n1 = 0, n2 = 1, nextTerm;
-console.log('Fibonacci Series:');
-for (let i = 1; i <= number; i++) {
-    console.log(n1);
-    nextTerm = n1 + n2;
-    n1 = n2;
-    n2 = nextTerm;
-}
+```javascript {cmd=true} 
+const number = 50
+ let n1 = 0, n2 = 1, nextTerm; console.log('Fibonacci Series:'); for (let i = 1; i <= number; i++) {     console.log(n1);     nextTerm = n1 + n2;     n1 = n2;     n2 = nextTerm; }
+
 ```
 
-```python {cmd=true matplotlib=true}
-import matplotlib.pyplot as plt
-plt.plot([1,2,3, 4])
-plt.show() # show figure
+
+```r {cmd=true}
+print("wwwwwwwwwwwwwwwww wwwwwwwwwwwwwwwwww")
+``` 
+
+```bash {cmd=true}
+ls .
 ```
+
+```{=html}
+```{r, echo=FALSE, results='asis'}
+input <- data.frame(text = c("a", "b", "c"), 
+                    page_number = c(3, 5, 6))
+links <- paste('<a href="', input$text, '">', input$page_number, "</a>", sep="")
+cat(links, sep = "\n")
+```
+
+
 
 
 ```{r cuantitativa, echo=FALSE, warning = FALSE, message = FALSE, tidy=FALSE}
@@ -308,7 +313,7 @@ levels(mtcars$am) <-c("Automatic", "Manual")
 
 Some text
 
-```{r fig.align='center', fig.height=4}
+```{r fig.align='center', fig.height=4} 
 hist(mtcars$mpg[mtcars$am=="Automatic"], breaks=12, main="mpg for automatic vehicles", xlab="mpg", xlim=c(10, 35))
 ```
 
@@ -324,7 +329,6 @@ pie(
   init.angle = -50, border = NA
 )
 ```
-
 
 ```{r fig.align='center', fig.height=4}
 
@@ -346,6 +350,7 @@ ggplot(data, aes(x=name, y=value)) +
   geom_bar(stat = "identity", width=0.5) +
   coord_flip()
 ```
+
 ## Histograma de frecuencias
 
 ```{r fig.align='center', fig.height=4}
@@ -356,7 +361,7 @@ hist(mtcars$mpg[mtcars$am=="Automatic"], breaks=12, main="mpg for automatic vehi
 
 Son aquellas medidas que buscan un dato representivo central de un conjunto de datos tales como la media, la moda y la mediana.
 
-## La media 
+## La media
 
 A veces llamada *promedio aritmético*, es la medida de tendencia central que pondera los datos.
 
@@ -393,7 +398,8 @@ Considérese la siguiente tabla de distribucion de frecuencias entonces el prome
 | $[30,35]$ | 32.5  |   2   |    65     |
 |  $\sum$   |       |  13   |   307.5   |
 
- $$\overline{x}=\frac{12.5+35++112.5+82.5+65}{13}=\frac{307.5}{13}=23.65$$
+$$\overline{x}=\frac{12.5+35++112.5+82.5+65}{13}=\frac{307.5}{13}=23.65$$
+
 ```{exercise}
 Si el promedio de $n$ datos es $\overline{x}$ entonces el promedio del conjunto inicial más un dato adicional $x_{n+1}$ es $$\overline{x}'=\frac{n\overline{x}+x_{n+1}}{n+1}$$ en general si se adicionan $r$ datos $y_1, y_2, \ldots y_r$ entonces el nuevo promedio será $$\overline{x}'=\frac{n\overline{x}+y_{1}+y_2+\ldots+y_r}{n+r}$$
 
@@ -458,7 +464,6 @@ La moda es el dato que más se repite por ejemplo sea el conjunto de datos tabul
 
 : (\#tab:wwwww) wwwww
 
-
 ### Ejemplo
 
 |   Clase   | $f_i$ |
@@ -471,8 +476,7 @@ La moda es el dato que más se repite por ejemplo sea el conjunto de datos tabul
 
 Primeramente la mayor frecuencia absoluta es 10 y corresponde $f_3=10$ por tanto $i=3$. $L_i=20$
 
-$$ M_o=L_i+\frac{f_i-f_{i-1}}{(f_i-f_{i-1})+(f_i-f_{i+1})}\cdot a_i=$$
-$$ =20+\frac{10-5}{(10-5)+(10-3)}\cdot 5=20+\frac{5}{12}*5=22.08$$
+$$ M_o=L_i+\frac{f_i-f_{i-1}}{(f_i-f_{i-1})+(f_i-f_{i+1})}\cdot a_i=$$ $$ =20+\frac{10-5}{(10-5)+(10-3)}\cdot 5=20+\frac{5}{12}*5=22.08$$
 
 [Más información](https://www.superprof.es/apuntes/escolar/matematicas/estadistica/descriptiva/moda-estadistica.html)
 
@@ -523,10 +527,7 @@ La mediana es independiente de las amplitudes de los intervalos
 
 [Más información](https://www.superprof.es/apuntes/escolar/matematicas/estadistica/descriptiva/mediana.html)
 
-
-
-### Ejemplo 
-
+### Ejemplo
 
 |   Clase   | $f_i$ | $F_i$ |
 |:---------:|:-----:|:-----:|
@@ -539,12 +540,9 @@ La mediana es independiente de las amplitudes de los intervalos
 
 $$\frac{N}{2}=12/2=6$$ ubicando en las frecuencias absolutas acumuladas que corresponde al intervalo $[20,25)$
 
-$$  M_e=L_{i}+\frac{\frac{N}{2}-F_{i-1}}{f_{i}}\cdot a_{i}$$
-$$  =20+\frac{\frac{12}{2}-3}{5}\cdot 5=23$$ por lo tanto la mediana de este conjunto de datos tabulados (agrupados) es $Me=23$
+$$  M_e=L_{i}+\frac{\frac{N}{2}-F_{i-1}}{f_{i}}\cdot a_{i}$$ $$  =20+\frac{\frac{12}{2}-3}{5}\cdot 5=23$$ por lo tanto la mediana de este conjunto de datos tabulados (agrupados) es $Me=23$
 
-
-## Asignación 
-
+## Asignación
 
 Halle le media, la moda y la mediana de los siguientes datos tabulados
 
@@ -560,31 +558,29 @@ Halle le media, la moda y la mediana de los siguientes datos tabulados
 | $[450,500]$ |       |   2   |       |
 | $[500,550]$ |       |   1   |       |
 
+$$\overline{x}=\frac{y_1f_1+y_2f_2+\cdots+y_nf_n}{n}=\frac{1}{n}\sum_{i=1}^ny_if_i$$
 
- $$\overline{x}=\frac{y_1f_1+y_2f_2+\cdots+y_nf_n}{n}=\frac{1}{n}\sum_{i=1}^ny_if_i$$
- 
- $$ M_o=L_i+\frac{f_i-f_{i-1}}{(f_i-f_{i-1})+(f_i-f_{i+1})}\cdot a_i$$
+$$ M_o=L_i+\frac{f_i-f_{i-1}}{(f_i-f_{i-1})+(f_i-f_{i+1})}\cdot a_i$$
 
 $$  M_e=L_{i}+\frac{\frac{N}{2}-F_{i-1}}{f_{i}}\cdot a_{i}$$
 
 # Medidas de dispersión
 
-## Rango 
+## Rango
 
 $R=x_{max}-x_{min}$
 
 Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
 
-$x_{max}=8$
-$x_{min}=1$
+$x_{max}=8$ $x_{min}=1$
 
 por lo tanto $R=x_{max}-x_{min}=8-1=7$
 
 ## Varianza
 
 ### Datos no tabulados
-$$s^2=\frac{\sum\left(x_i-\overline{x}\right )^2}{n-1}$$
 
+$$s^2=\frac{\sum\left(x_i-\overline{x}\right )^2}{n-1}$$
 
 Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
 
@@ -600,13 +596,11 @@ s^2&=\frac{\sum\left(x_i-\overline{x}\right )^2}{n-1}\\
 \end{aligned}
 $$
 
-
 ### Datos tabulados
 
 $$s^2=\frac{\sum f_i\left(Y_i-\overline{x}\right )^2}{n-1}$$
 
 $\overline{x}=\frac{\sum Y_i*f_i}{n}=747.5/31=24.11$
-
 
 |   Clase   | $Y_i$ | $f_i$ | $Y_i*f_i$ |
 |:---------:|:-----:|:-----:|:---------:|
@@ -618,9 +612,7 @@ $\overline{x}=\frac{\sum Y_i*f_i}{n}=747.5/31=24.11$
 | $[30,35]$ | 32.5  |   6   |    195    |
 |  $\sum$   |       |  31   |           |
 
-
-Por lo tanto la varianza para dotos agrupados es 
-
+Por lo tanto la varianza para dotos agrupados es
 
 $$
 \begin{aligned}
@@ -637,9 +629,7 @@ $$
 
 Por lo tanto $$s^2=  31.38$$
 
-
 ## Desviación típica
-
 
 $$s=\sqrt{s^2}$$
 
@@ -655,20 +645,19 @@ La desviacion típica o estandar del siguiente conjunto de datos tabulados
 | $[30,35]$ | 32.5  |   6   |    195    |
 |  $\sum$   |       |  31   |           |
 
-es
-$$s=\sqrt{s^2}=\sqrt{31.38}=5.60$$
-
+es $$s=\sqrt{s^2}=\sqrt{31.38}=5.60$$
 
 ## Desviación media absoluta
 
 ### Datos no tabulados
+
 $$DM=\frac{1}{n}\sum \left\vert x_i-\overline{x}\right\vert$$
 
 Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
 
 $$\overline{x}=40/8=5$$
 
-Entonces 
+Entonces
 
 $$
 \begin{aligned}
@@ -683,9 +672,7 @@ $$DM=\frac{1}{n}\sum f_i \left \vert Y_i-\overline{x}\right\vert$$
 
 $y_i$ marca de clase o punto medio de la clase $i$
 
-
 $\overline{x}=\frac{\sum Y_i*f_i}{n}=747.5/31=24.11$
-
 
 |   Clase   | $Y_i$ | $f_i$ | $Y_i*f_i$ |
 |:---------:|:-----:|:-----:|:---------:|
@@ -712,33 +699,29 @@ $$
 
 por lo tanto $$DM=8.94$$
 
-
 ## Desviación mediana absoluta
 
 ### Datos no tabulados
+
 $$DMe=\frac{1}{n}\sum \left\vert Y_i-Me\right\vert$$
 
 Sean los datos 2, 5, 6, 1, 7, 5, 8, 6 (Ejercicio)
 
-
-
 ### Datos tabulados
-
 
 $$DMe=\frac{1}{n}\sum f_i \left \vert Y_i-Me\right\vert$$
 
 $Me=?$ (Ejercicio)
 
-
 |   Clase   | $Y_i$ | $f_i$ | $Y_i*f_i$ |
 |:---------:|:-----:|:-----:|:---------:|
-| $[5,10)$  |  7.5  |   1   |    7.5    |
-| $[10,15)$ | 12.5  |   2   |    25     |
-| $[15,20)$ | 17.5  |   5   |   87.5    |
+| $[5,10)$  |  7.5  |   2   |    7.5    |
+| $[10,15)$ | 12.5  |   3   |    25     |
+| $[15,20)$ |       |   4   |   87.5    |
 | $[20,25)$ | 22.5  |   7   |   157.5   |
 | $[25,30]$ | 27.5  |  10   |    275    |
-| $[30,35]$ | 32.5  |   6   |    195    |
-|  $\sum$   |       |  31   |           |
+| $[30,35]$ |       |   8   |    195    |
+|  $\sum$   |       |       |           |
 
 Por lo tanto la desviacion de la mediana absoluta es
 
@@ -752,15 +735,11 @@ s^2&=\frac{\sum f_i\left \vert Y_i-Me\right \vert}{n}\\
 \end{aligned}
 $$
 
-## Coeficiente de variacion 
+## Coeficiente de variacion
 
-$$Cv=\frac{s}{\overline{x}}\cdot 100$$
-Si $Cv>25\%$ se dice que los datos estan muy dispersos
-Si $Cv<25\%$ se dice que los datos estan muy juntos
+$$Cv=\frac{s}{\overline{x}}\cdot 100$$ Si $Cv>25\%$ se dice que los datos estan muy dispersos Si $Cv<25\%$ se dice que los datos estan muy juntos
 
-
-Para el conjunto de datos 
-
+Para el conjunto de datos
 
 |   Clase   | $Y_i$ | $f_i$ | $Y_i*f_i$ |
 |:---------:|:-----:|:-----:|:---------:|
@@ -776,7 +755,6 @@ $$Cv=\frac{5.60}{24.11}\cdot 100=0.23\cdot 100=23\%$$
 
 ## Asignación
 
-
 Halle el rango, la varianza, la desviación típica, desviación media, desviación mediana absoluta y el coeficiente de variación. Grafique el hstograma y ubique estos estadigrafos
 
 |    Clase    | $Y_i$ | $f_i$ | $F_i$ |
@@ -789,45 +767,39 @@ Halle el rango, la varianza, la desviación típica, desviación media, desviaci
 | $[300,350]$ |       |  60   |       |
 |   $\sum$    |       |  20   |       |
 
-
 # Medidas de posicion (cuantiles)
 
-- Los deciles, que dividen a la distribución en diez partes;
-- Los percentiles, que dividen a la distribución en cien partes.
+-   Los deciles, que dividen a la distribución en diez partes;
+-   Los percentiles, que dividen a la distribución en cien partes.
 
-## Cuartiles 
+## Cuartiles
 
-Los cuartiles, que dividen a la distribución en cuatro partes (corresponden a los cuantiles 0,25; 0,50 y 0,75);  $Q_1, Q_2, Q_3$
+Los cuartiles, que dividen a la distribución en cuatro partes (corresponden a los cuantiles 0,25; 0,50 y 0,75); $Q_1, Q_2, Q_3$
 
-### Datos no agrupados 
+### Datos no agrupados
+
 Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 Ordenar de menor a mayor (creciente)
 
-Si $$Q_k=\frac{k(n+1)}{4}$$  es entero entonces el cuartil es el dato de la posicion $Q_k=x_\frac{k(n+1)}{4}$ en caso contrario se interpola los datos extremos donde se encuentra el valor $Q_k$
+Si $$Q_k=\frac{k(n+1)}{4}$$ es entero entonces el cuartil es el dato de la posicion $Q_k=x_\frac{k(n+1)}{4}$ en caso contrario se interpola los datos extremos donde se encuentra el valor $Q_k$
 
-* Ejemplo 
-1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor
-1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9
-
+-   Ejemplo 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor 1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9
 
 $Q_1=\frac{1(18+1)}{4}=4.75$ interpolando $Q_1=2+(2-2)\cdot 0.75=2$
-
 
 $Q_2=\frac{2(18+1)}{4}=9.5$ interpolando $Q_2=5+(5-5)\cdot 0.5=5$
 
 $Q_3=\frac{3(18+1)}{4}=14.25$ interpolando $Q_3=6+(7-6)\cdot 0.25=6.25$
 
-
 ### Datos agrupados
 
 $$Q_k=L_i+ A\left(\frac{\frac{kn}{4}-F_{i-1}}{F_i-F_{i-1}}\right);k=1,2,3$$
 
-* $L_i$ limite inferior del intervalo que contiene al decil
-* $F_{i-1}$ frecuencia acumulada  en la clase anterior al decil
-* $F_i$ frecuencia acumulada  en la clase al decil
-* $A$ amplitud intervalica
-* $n$ numero de datos
-* $k$ indice del cuartil correspondiente
-
+-   $L_i$ limite inferior del intervalo que contiene al decil
+-   $F_{i-1}$ frecuencia acumulada en la clase anterior al decil
+-   $F_i$ frecuencia acumulada en la clase al decil
+-   $A$ amplitud intervalica
+-   $n$ numero de datos
+-   $k$ indice del cuartil correspondiente
 
 $$
 \begin{aligned}
@@ -860,34 +832,29 @@ $$
 |:---------:|:-----:|:-----:|:-----:|
 | $[5,10)$  |  7.5  |   1   |   1   |
 | $[10,15)$ | 12.5  |   2   |   3   |
-| $[15,20)$ | 17.5  |   5   |    8   |
-| $[20,25)$ | 22.5  |   7   |     15  |
-| $[25,30]$ |   27.5    |  10   |   25    |
-| $[30,35]$ |   32.5    |   6   |    31   |
-| $[35,40]$ |  37.5     |   5   |   36    |
-| $[40,45]$ |   42.5    |   3   |     39  |
-|  $\sum$   |       |   39   |       |
+| $[15,20)$ | 17.5  |   5   |   8   |
+| $[20,25)$ | 22.5  |   7   |  15   |
+| $[25,30]$ | 27.5  |  10   |  25   |
+| $[30,35]$ | 32.5  |   6   |  31   |
+| $[35,40]$ | 37.5  |   5   |  36   |
+| $[40,45]$ | 42.5  |   3   |  39   |
+|  $\sum$   |       |  39   |       |
 
-
-## Quintiles 
+## Quintiles
 
 wwwwwwwww
 
 ## Deciles
+
 Los deciles, que dividen a la distribución en diez partes es decir $D_1, D_2,\ldots, D_9$
 
-### Datos no agrupados 
+### Datos no agrupados
+
 Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 Ordenar de menor a mayor (creciente)
 
-Si $$D_k=\frac{k(n+1)}{10}$$  es entero entonces el decil es el dato de la posicion $D_k=x_\frac{k(n+1)}{10}; k=1, 2, 3, \ldots, 9$ 
-Si $$D_k=\frac{k(n+1)}{10}$$ no es entero entonces el decil es la interpolacion lineal de de los dos valores entre las cuales se encuentra $D_k=\frac{k(n+1)}{10}$ 
+Si $$D_k=\frac{k(n+1)}{10}$$ es entero entonces el decil es el dato de la posicion $D_k=x_\frac{k(n+1)}{10}; k=1, 2, 3, \ldots, 9$ Si $$D_k=\frac{k(n+1)}{10}$$ no es entero entonces el decil es la interpolacion lineal de de los dos valores entre las cuales se encuentra $D_k=\frac{k(n+1)}{10}$
 
-* Ejemplo 
-1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor
-1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9
-entonces
-
-
+-   Ejemplo 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor 1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9 entonces
 
 $$D_9=\frac{9(18+1)}{10}=17.1$$ interpolando el decil 9 es $D_9=8+(9-8)\cdot 0.1=8.1$
 
@@ -899,13 +866,13 @@ $$D_k=L_i+ A\left(\frac{\frac{kn}{10}-F_{i-1}}{F_i-F_{i-1}}\right)$$
 |:---------:|:-----:|:-----:|:-----:|
 | $[5,10)$  |  7.5  |   1   |   1   |
 | $[10,15)$ | 12.5  |   2   |   3   |
-| $[15,20)$ | 17.5  |   5   |    8   |
-| $[20,25)$ | 22.5  |   7   |     15  |
-| $[25,30]$ |   27.5    |  10   |   25    |
-| $[30,35]$ |   32.5    |   6   |    31   |
-| $[35,40]$ |  37.5     |   5   |   36    |
-| $[40,45]$ |   42.5    |   3   |     39  |
-|  $\sum$   |       |   39   |       |
+| $[15,20)$ | 17.5  |   5   |   8   |
+| $[20,25)$ | 22.5  |   7   |  15   |
+| $[25,30]$ | 27.5  |  10   |  25   |
+| $[30,35]$ | 32.5  |   6   |  31   |
+| $[35,40]$ | 37.5  |   5   |  36   |
+| $[40,45]$ | 42.5  |   3   |  39   |
+|  $\sum$   |       |  39   |       |
 
 $$D_9=L_i+ A\left(\frac{\frac{9\cdot 39}{10}-F_{i-1}}{F_i-F_{i-1}}\right)$$
 
@@ -914,29 +881,16 @@ Entonces $\frac{9\cdot 39}{10}=35.1$
 $$D_9=35+ 5\left(\frac{35.1-31}{36-31}\right)=39.1$$
 
 ## Percentiles
+
 Los percentiles, que dividen a la distribución en diez partes es decir $P_1, P_2,\ldots, P_{99}$
 
+### Datos no agrupados
 
-### Datos no agrupados 
+Si $$P_k=\frac{k(n+1)}{100}; k=1, 2,  \ldots, 99$$ es entero entonces el cuartil es el dato de la posicion $P_k=x_\frac{k(n+1)}{100}$ Si $$P_k=\frac{k(n+1)}{100}$$ no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra $Q_k=\frac{k(n+1)}{100}$
 
-
-Si $$P_k=\frac{k(n+1)}{100}; k=1, 2,  \ldots, 99$$  es entero entonces el cuartil es el dato de la posicion $P_k=x_\frac{k(n+1)}{100}$ 
-Si $$P_k=\frac{k(n+1)}{100}$$ no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra $Q_k=\frac{k(n+1)}{100}$ 
-
-* Ejemplo 
-1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
-Al ordenar de manera creciente
-1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
-y
-$$P_k=\frac{k(18+1)}{100}$$
-
-
-
+-   Ejemplo 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 Al ordenar de manera creciente 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 y $$P_k=\frac{k(18+1)}{100}$$
 
 ### Datos agrupados
-
-
-$$  $$ $ww$ 
 
 $$P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)=\int_1^3f(x)$$
 
@@ -951,167 +905,3 @@ $$P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)=\int_1^3f(x)
 | $[35,40]$ |       |   5   |       |
 | $[40,45]$ |       |   3   |       |
 |  $\sum$   |       |   2   |       |
-
-
-
-
-
-
-
--->
-
-
-# Medidas de asimetria
-
-
-
-### Datos no agrupados 
-
-
-Si $$P_k=\frac{k(n+1)}{100}; k=1, 2,  \ldots, 99$$  es entero entonces el cuartil es el dato de la posicion $P_k=x_\frac{k(n+1)}{100}$ 
-Si $$P_k=\frac{k(n+1)}{100}$$ no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra $Q_k=\frac{k(n+1)}{100}$ 
-
-* Ejemplo 
-1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
-Al ordenar de manera creciente
-1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
-y
-$$P_k=\frac{k(18+1)}{100}$$
-
-
-### Datos agrupados
-
-
-$$P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)=\int_1^3f(x)$$
-
-|   Clase   | $Y_i$ | $f_i$ | $F_i$ |
-|:---------:|:-----:|:-----:|:-----:|
-| $[5,10)$  |  7.5  |   1   |   1   |
-| $[10,15)$ | 12.5  |   2   |   3   |
-| $[15,20)$ | 17.5  |   5   |       |
-| $[20,25)$ | 22.5  |   7   |       |
-| $[25,30]$ |       |  10   |       |
-| $[30,35]$ |       |   6   |       |
-| $[35,40]$ |       |   5   |       |
-| $[40,45]$ |       |   3   |       |
-|  $\sum$   |       |   2   |       |
-
-
-
-
-
-
-
-
-### Datos no agrupados 
-
-
-Si $$P_k=\frac{k(n+1)}{100}; k=1, 2,  \ldots, 99$$  es entero entonces el cuartil es el dato de la posicion $P_k=x_\frac{k(n+1)}{100}$ 
-Si $$P_k=\frac{k(n+1)}{100}$$ no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra $Q_k=\frac{k(n+1)}{100}$ 
-
-* Ejemplo 
-1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
-Al ordenar de manera creciente
-1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
-y
-$$P_k=\frac{k(18+1)}{100}$$
-
-
-
-
-### Datos agrupados
-
-
-$$P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)=\int_1^3f(x)$$
-
-|   Clase   | $Y_i$ | $f_i$ | $F_i$ |
-|:---------:|:-----:|:-----:|:-----:|
-| $[5,10)$  |  7.5  |   1   |   1   |
-| $[10,15)$ | 12.5  |   2   |   3   |
-| $[15,20)$ | 17.5  |   5   |       |
-| $[20,25)$ | 22.5  |   7   |       |
-| $[25,30]$ |       |  10   |       |
-| $[30,35]$ |       |   6   |       |
-| $[35,40]$ |       |   5   |       |
-| $[40,45]$ |       |   3   |       |
-|  $\sum$   |       |   2   |       |
-
-
-
-
-
-
-
-## wwwwww
-
-### Datos no agrupados 
-
-
-Si $$P_k=\frac{k(n+1)}{100}; k=1, 2,  \ldots, 99$$  es entero entonces el cuartil es el dato de la posicion $P_k=x_\frac{k(n+1)}{100}$ 
-Si $$P_k=\frac{k(n+1)}{100}$$ no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra $Q_k=\frac{k(n+1)}{100}$ 
-
-* Ejemplo 
-1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
-Al ordenar de manera creciente
-1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7
-y
-$$P_k=\frac{k(18+1)}{100}$$
-
-### Datos agrupados
-
-
-$$P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)=\int_1^3f(x)=\int_1^3$$
-
-|   Clase   | $Y_i$ | $f_i$ | $F_i$ |
-|:---------:|:-----:|:-----:|:-----:|
-| $[5,10)$  |  7.5  |   1   |   1   |
-| $[10,15)$ | 12.5  |   2   |   3   |
-| $[15,20)$ | 17.5  |   5   |       |
-| $[20,25)$ | 22.5  |   7   |       |
-| $[25,30]$ |       |  10   |       |
-| $[30,35]$ |       |   6   |       |
-| $[35,40]$ |       |   5   |       |
-| $[40,45]$ |       |   3   |       |
-|  $\sum$   |       |   2   |       |
-
-
-
-# Medidas de curtosis o apuntamiento
-En estadística, usamos la medida de curtosis para describir la "cola" de la distribución, ya que describe la forma de la misma. También es una medida del "pico" de la distribución. Una distribución de curtosis alta tiene un pico más agudo y colas más largas y gruesas, mientras que una distribución de curtosis baja tiene un maní más redondeado y colas más cortas y delgadas.
-
-Datos no agrupados 
-$$k= \frac{\sum_{i=1}^{n}\left( x_i-\overline{x} \right)^4 }{n} $$  
-
-
-Datos agrupados 
-$$ K=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x} \right)^4 }{n} $$  
-
-- **Mesocurtico** : esta es la distribución normal
-- **Leptocurtica** : esta distribución tiene colas más gruesas y un pico más afilado. La curtosis es "positiva" con un valor superior a 3
-- **Platicurtica** : La distribución tiene un pico más bajo y más ancho y colas más delgadas. La curtosis es "negativa" con un valor superior a 3
-
-![https://link](curtosis.jpg)
-
-# Medidas de asimetría
-Podemos decir que la asimetría indica cuánto se desvía nuestra distribución subyacente de la distribución normal, ya que la distribución normal tiene asimetría 0. Generalmente, tenemos tres tipos de asimetría.
-
-- **Simétrico** : cuando la asimetría es cercana a 0 y la media es casi la misma que la mediana
-- **Desviación negativa** : cuando la cola izquierda del histograma de la distribución es más larga y la mayoría de las observaciones se concentran en la cola derecha. En este caso, también podemos utilizar el término "sesgado a la izquierda" o "cola izquierda". y la mediana es mayor que la media.
-- **Desviación positiva** : cuando la cola derecha del histograma de la distribución es más larga y la mayoría de las observaciones se concentran en la cola izquierda. En este caso, también podemos usar el término "sesgado a la derecha" o "cola derecha". y la mediana es menor que la media.
-
-![alt](simetria.png)
-
-
-```{r fig.align='center', fig.height=4}
-data = c(88, 95, 92, 97, 96, 97, 94, 86, 91, 95, 97, 88, 85, 76, 68)
-hist(data, col='steelblue')
-dens <- density(data)
-plot(dens, frame = FALSE, col = "steelblue", 
-     main = "Density plot of mpg") 
-polygon(dens, col = "steelblue")
-```
-
-```{r fig.align='center', fig.height=4}
-ggplot(data=iris, aes(Petal.Length,fill=Species)) +
-geom_density(alpha=0.7) # dibujamos el diagrama de densidad
-```

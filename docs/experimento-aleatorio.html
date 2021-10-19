@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 5 Experimento aleatorio | Elementos de la estadística</title>
-  <meta name="description" content="Capítulo 5 Experimento aleatorio | Elementos de la estadística" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <title>Capítulo 10 Experimento aleatorio | Elementos de la estadística</title>
+  <meta name="description" content="Capítulo 10 Experimento aleatorio | Elementos de la estadística" />
+  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 5 Experimento aleatorio | Elementos de la estadística" />
+  <meta property="og:title" content="Capítulo 10 Experimento aleatorio | Elementos de la estadística" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 5 Experimento aleatorio | Elementos de la estadística" />
+  <meta name="twitter:title" content="Capítulo 10 Experimento aleatorio | Elementos de la estadística" />
   
   
   
@@ -24,17 +24,16 @@
 <meta name="author" content="Ricardo Michel MALLQUI BAÑOS" />
 
 
-<meta name="date" content="2021-10-06" />
+<meta name="date" content="2021-10-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="medidas-de-asimetría.html"/>
+<link rel="prev" href="medidas-de-curtosis-o-apuntamiento.html"/>
 <link rel="next" href="álgebra-de-eventos.html"/>
-<script src="libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,32 +50,28 @@
 
 
 
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -85,9 +80,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -120,28 +115,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -159,86 +132,135 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Resumen</a></li>
 <li class="part"><span><b>I Estadística descriptiva</b></span></li>
 <li class="chapter" data-level="1" data-path="prerrequisitos.html"><a href="prerrequisitos.html"><i class="fa fa-check"></i><b>1</b> Prerrequisitos</a></li>
-<li class="chapter" data-level="2" data-path="medidas-de-asimetria.html"><a href="medidas-de-asimetria.html"><i class="fa fa-check"></i><b>2</b> Medidas de asimetria</a>
-<ul>
-<li class="chapter" data-level="2.0.1" data-path="medidas-de-asimetria.html"><a href="medidas-de-asimetria.html#datos-no-agrupados"><i class="fa fa-check"></i><b>2.0.1</b> Datos no agrupados</a></li>
-<li class="chapter" data-level="2.0.2" data-path="medidas-de-asimetria.html"><a href="medidas-de-asimetria.html#datos-agrupados"><i class="fa fa-check"></i><b>2.0.2</b> Datos agrupados</a></li>
-<li class="chapter" data-level="2.0.3" data-path="medidas-de-asimetria.html"><a href="medidas-de-asimetria.html#datos-no-agrupados-1"><i class="fa fa-check"></i><b>2.0.3</b> Datos no agrupados</a></li>
-<li class="chapter" data-level="2.0.4" data-path="medidas-de-asimetria.html"><a href="medidas-de-asimetria.html#datos-agrupados-1"><i class="fa fa-check"></i><b>2.0.4</b> Datos agrupados</a></li>
-<li class="chapter" data-level="2.1" data-path="medidas-de-asimetria.html"><a href="medidas-de-asimetria.html#wwwwww"><i class="fa fa-check"></i><b>2.1</b> wwwwww</a>
-<ul>
-<li class="chapter" data-level="2.1.1" data-path="medidas-de-asimetria.html"><a href="medidas-de-asimetria.html#datos-no-agrupados-2"><i class="fa fa-check"></i><b>2.1.1</b> Datos no agrupados</a></li>
-<li class="chapter" data-level="2.1.2" data-path="medidas-de-asimetria.html"><a href="medidas-de-asimetria.html#datos-agrupados-2"><i class="fa fa-check"></i><b>2.1.2</b> Datos agrupados</a></li>
+<li class="chapter" data-level="2" data-path="variables.html"><a href="variables.html"><i class="fa fa-check"></i><b>2</b> Variables</a><ul>
+<li class="chapter" data-level="2.1" data-path="variables.html"><a href="variables.html#variables-cualitativas"><i class="fa fa-check"></i><b>2.1</b> Variables cualitativas</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="variables.html"><a href="variables.html#nominales"><i class="fa fa-check"></i><b>2.1.1</b> Nominales</a></li>
+<li class="chapter" data-level="2.1.2" data-path="variables.html"><a href="variables.html#ordinales"><i class="fa fa-check"></i><b>2.1.2</b> Ordinales</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="variables.html"><a href="variables.html#variables-cuantitativas"><i class="fa fa-check"></i><b>2.2</b> Variables cuantitativas</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="variables.html"><a href="variables.html#discretas"><i class="fa fa-check"></i><b>2.2.1</b> Discretas</a></li>
+<li class="chapter" data-level="2.2.2" data-path="variables.html"><a href="variables.html#continuas"><i class="fa fa-check"></i><b>2.2.2</b> Continuas</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="variables.html"><a href="variables.html#asignación"><i class="fa fa-check"></i><b>2.3</b> Asignación</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html"><i class="fa fa-check"></i><b>3</b> Organización de datos en tablas de frecuencias</a><ul>
+<li class="chapter" data-level="3.1" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html#distribución-de-frecuencias"><i class="fa fa-check"></i><b>3.1</b> Distribución de frecuencias</a></li>
+<li class="chapter" data-level="3.2" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html#ejemplo-sin-intervalos"><i class="fa fa-check"></i><b>3.2</b> Ejemplo sin intervalos</a></li>
+<li class="chapter" data-level="3.3" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html#example-intervalos"><i class="fa fa-check"></i><b>3.3</b> Example intervalos</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="gráficos-estadísticos.html"><a href="gráficos-estadísticos.html"><i class="fa fa-check"></i><b>4</b> Gráficos estadísticos</a><ul>
+<li class="chapter" data-level="4.1" data-path="gráficos-estadísticos.html"><a href="gráficos-estadísticos.html#histograma-de-frecuencias"><i class="fa fa-check"></i><b>4.1</b> Histograma de frecuencias</a></li>
+<li class="chapter" data-level="4.2" data-path="gráficos-estadísticos.html"><a href="gráficos-estadísticos.html#circulares"><i class="fa fa-check"></i><b>4.2</b> Circulares</a></li>
+<li class="chapter" data-level="4.3" data-path="gráficos-estadísticos.html"><a href="gráficos-estadísticos.html#histograma-de-frecuencias-1"><i class="fa fa-check"></i><b>4.3</b> Histograma de frecuencias</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html"><i class="fa fa-check"></i><b>5</b> Medidas de tendencia central</a><ul>
+<li class="chapter" data-level="5.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#la-media"><i class="fa fa-check"></i><b>5.1</b> La media</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#media-de-datos-no-agrupados"><i class="fa fa-check"></i><b>5.1.1</b> Media de datos no agrupados</a></li>
+<li class="chapter" data-level="5.1.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#media-de-datos-agrupados"><i class="fa fa-check"></i><b>5.1.2</b> Media de datos agrupados</a></li>
+<li class="chapter" data-level="5.1.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#ejemplo"><i class="fa fa-check"></i><b>5.1.3</b> Ejemplo</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#la-moda-mo"><i class="fa fa-check"></i><b>5.2</b> La moda (Mo)</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#moda-de-datos-no-tabulados"><i class="fa fa-check"></i><b>5.2.1</b> Moda de datos no tabulados</a></li>
+<li class="chapter" data-level="5.2.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#moda-de-datos-tabulados"><i class="fa fa-check"></i><b>5.2.2</b> Moda de datos tabulados</a></li>
+<li class="chapter" data-level="5.2.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#ejemplo-1"><i class="fa fa-check"></i><b>5.2.3</b> Ejemplo</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#la-mediana-me"><i class="fa fa-check"></i><b>5.3</b> La mediana (Me)</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#mediana-de-datos-no-tabulados"><i class="fa fa-check"></i><b>5.3.1</b> Mediana de datos no tabulados</a></li>
+<li class="chapter" data-level="5.3.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#mediana-de-datos-tabulados"><i class="fa fa-check"></i><b>5.3.2</b> Mediana de datos tabulados</a></li>
+<li class="chapter" data-level="5.3.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#ejemplo-2"><i class="fa fa-check"></i><b>5.3.3</b> Ejemplo</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#asignación-1"><i class="fa fa-check"></i><b>5.4</b> Asignación</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html"><i class="fa fa-check"></i><b>6</b> Medidas de dispersión</a><ul>
+<li class="chapter" data-level="6.1" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#rango"><i class="fa fa-check"></i><b>6.1</b> Rango</a></li>
+<li class="chapter" data-level="6.2" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#varianza"><i class="fa fa-check"></i><b>6.2</b> Varianza</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#datos-no-tabulados"><i class="fa fa-check"></i><b>6.2.1</b> Datos no tabulados</a></li>
+<li class="chapter" data-level="6.2.2" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#datos-tabulados"><i class="fa fa-check"></i><b>6.2.2</b> Datos tabulados</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#desviación-típica"><i class="fa fa-check"></i><b>6.3</b> Desviación típica</a></li>
+<li class="chapter" data-level="6.4" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#desviación-media-absoluta"><i class="fa fa-check"></i><b>6.4</b> Desviación media absoluta</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#datos-no-tabulados-1"><i class="fa fa-check"></i><b>6.4.1</b> Datos no tabulados</a></li>
+<li class="chapter" data-level="6.4.2" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#datos-tabulados-1"><i class="fa fa-check"></i><b>6.4.2</b> Datos tabulados</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#desviación-mediana-absoluta"><i class="fa fa-check"></i><b>6.5</b> Desviación mediana absoluta</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#datos-no-tabulados-2"><i class="fa fa-check"></i><b>6.5.1</b> Datos no tabulados</a></li>
+<li class="chapter" data-level="6.5.2" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#datos-tabulados-2"><i class="fa fa-check"></i><b>6.5.2</b> Datos tabulados</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#coeficiente-de-variacion"><i class="fa fa-check"></i><b>6.6</b> Coeficiente de variacion</a></li>
+<li class="chapter" data-level="6.7" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#asignación-2"><i class="fa fa-check"></i><b>6.7</b> Asignación</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html"><i class="fa fa-check"></i><b>7</b> Medidas de posicion (cuantiles)</a><ul>
+<li class="chapter" data-level="7.1" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html#cuartiles"><i class="fa fa-check"></i><b>7.1</b> Cuartiles</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html#datos-no-agrupados"><i class="fa fa-check"></i><b>7.1.1</b> Datos no agrupados</a></li>
+<li class="chapter" data-level="7.1.2" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html#datos-agrupados"><i class="fa fa-check"></i><b>7.1.2</b> Datos agrupados</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html#quintiles"><i class="fa fa-check"></i><b>7.2</b> Quintiles</a></li>
+<li class="chapter" data-level="7.3" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html#deciles"><i class="fa fa-check"></i><b>7.3</b> Deciles</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html#datos-no-agrupados-1"><i class="fa fa-check"></i><b>7.3.1</b> Datos no agrupados</a></li>
+<li class="chapter" data-level="7.3.2" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html#datos-agrupados-1"><i class="fa fa-check"></i><b>7.3.2</b> Datos agrupados</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html#percentiles"><i class="fa fa-check"></i><b>7.4</b> Percentiles</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html#datos-no-agrupados-2"><i class="fa fa-check"></i><b>7.4.1</b> Datos no agrupados</a></li>
+<li class="chapter" data-level="7.4.2" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html#datos-agrupados-2"><i class="fa fa-check"></i><b>7.4.2</b> Datos agrupados</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="medidas-de-curtosis-o-apuntamiento.html"><a href="medidas-de-curtosis-o-apuntamiento.html"><i class="fa fa-check"></i><b>3</b> Medidas de curtosis o apuntamiento</a></li>
-<li class="chapter" data-level="4" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html"><i class="fa fa-check"></i><b>4</b> Medidas de asimetría</a></li>
+<li class="chapter" data-level="8" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html"><i class="fa fa-check"></i><b>8</b> Medidas de asimetría</a></li>
+<li class="chapter" data-level="9" data-path="medidas-de-curtosis-o-apuntamiento.html"><a href="medidas-de-curtosis-o-apuntamiento.html"><i class="fa fa-check"></i><b>9</b> Medidas de curtosis o apuntamiento</a></li>
 <li class="part"><span><b>II Probabilidades</b></span></li>
-<li class="chapter" data-level="5" data-path="experimento-aleatorio.html"><a href="experimento-aleatorio.html"><i class="fa fa-check"></i><b>5</b> Experimento aleatorio</a></li>
-<li class="chapter" data-level="6" data-path="álgebra-de-eventos.html"><a href="álgebra-de-eventos.html"><i class="fa fa-check"></i><b>6</b> Álgebra de eventos</a></li>
-<li class="chapter" data-level="7" data-path="técnicas-de-conteo.html"><a href="técnicas-de-conteo.html"><i class="fa fa-check"></i><b>7</b> Técnicas de conteo</a></li>
-<li class="chapter" data-level="8" data-path="definición-de-probabilidad.html"><a href="definición-de-probabilidad.html"><i class="fa fa-check"></i><b>8</b> Definición de probabilidad</a></li>
-<li class="chapter" data-level="9" data-path="probabilidad-condicional.html"><a href="probabilidad-condicional.html"><i class="fa fa-check"></i><b>9</b> Probabilidad condicional</a></li>
-<li class="chapter" data-level="10" data-path="teorema-de-bayes.html"><a href="teorema-de-bayes.html"><i class="fa fa-check"></i><b>10</b> Teorema de Bayes</a></li>
-<li class="chapter" data-level="11" data-path="eventos-independientes-y-secuencias-de-experimentos.html"><a href="eventos-independientes-y-secuencias-de-experimentos.html"><i class="fa fa-check"></i><b>11</b> Eventos independientes y secuencias de experimentos</a></li>
-<li class="chapter" data-level="12" data-path="probabilidad-en-espacio.html"><a href="probabilidad-en-espacio.html"><i class="fa fa-check"></i><b>12</b> Probabilidad en espacio</a></li>
+<li class="chapter" data-level="10" data-path="experimento-aleatorio.html"><a href="experimento-aleatorio.html"><i class="fa fa-check"></i><b>10</b> Experimento aleatorio</a></li>
+<li class="chapter" data-level="11" data-path="álgebra-de-eventos.html"><a href="álgebra-de-eventos.html"><i class="fa fa-check"></i><b>11</b> Álgebra de eventos</a></li>
+<li class="chapter" data-level="12" data-path="técnicas-de-conteo.html"><a href="técnicas-de-conteo.html"><i class="fa fa-check"></i><b>12</b> Técnicas de conteo</a></li>
+<li class="chapter" data-level="13" data-path="definición-de-probabilidad.html"><a href="definición-de-probabilidad.html"><i class="fa fa-check"></i><b>13</b> Definición de probabilidad</a></li>
+<li class="chapter" data-level="14" data-path="probabilidad-condicional.html"><a href="probabilidad-condicional.html"><i class="fa fa-check"></i><b>14</b> Probabilidad condicional</a></li>
+<li class="chapter" data-level="15" data-path="teorema-de-bayes.html"><a href="teorema-de-bayes.html"><i class="fa fa-check"></i><b>15</b> Teorema de Bayes</a></li>
+<li class="chapter" data-level="16" data-path="eventos-independientes-y-secuencias-de-experimentos.html"><a href="eventos-independientes-y-secuencias-de-experimentos.html"><i class="fa fa-check"></i><b>16</b> Eventos independientes y secuencias de experimentos</a></li>
+<li class="chapter" data-level="17" data-path="probabilidad-en-espacio.html"><a href="probabilidad-en-espacio.html"><i class="fa fa-check"></i><b>17</b> Probabilidad en espacio</a></li>
 <li class="part"><span><b>III Inferencia estadística</b></span></li>
-<li class="chapter" data-level="13" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html"><i class="fa fa-check"></i><b>13</b> Variables aleatorias</a>
-<ul>
-<li class="chapter" data-level="13.1" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#clases-de-variables-aleatorias"><i class="fa fa-check"></i><b>13.1</b> Clases de variables aleatorias</a>
-<ul>
-<li class="chapter" data-level="13.1.1" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#variable-aleatoria-discreta"><i class="fa fa-check"></i><b>13.1.1</b> Variable aleatoria discreta</a></li>
-<li class="chapter" data-level="13.1.2" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#variable-aleatoria-continua"><i class="fa fa-check"></i><b>13.1.2</b> Variable aleatoria continua</a></li>
-<li class="chapter" data-level="13.1.3" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#variable-aleatoria-mixta"><i class="fa fa-check"></i><b>13.1.3</b> Variable aleatoria mixta</a></li>
+<li class="chapter" data-level="18" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html"><i class="fa fa-check"></i><b>18</b> Variables aleatorias</a><ul>
+<li class="chapter" data-level="18.1" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#clases-de-variables-aleatorias"><i class="fa fa-check"></i><b>18.1</b> Clases de variables aleatorias</a><ul>
+<li class="chapter" data-level="18.1.1" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#variable-aleatoria-discreta"><i class="fa fa-check"></i><b>18.1.1</b> Variable aleatoria discreta</a></li>
+<li class="chapter" data-level="18.1.2" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#variable-aleatoria-continua"><i class="fa fa-check"></i><b>18.1.2</b> Variable aleatoria continua</a></li>
+<li class="chapter" data-level="18.1.3" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#variable-aleatoria-mixta"><i class="fa fa-check"></i><b>18.1.3</b> Variable aleatoria mixta</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#función-de-probabilidad-de-una-variable-aleatoria"><i class="fa fa-check"></i><b>13.2</b> Función de probabilidad de una variable aleatoria</a>
-<ul>
-<li class="chapter" data-level="13.2.1" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#función-de-probabilidad-de-una-variable-aleatorias-discreta"><i class="fa fa-check"></i><b>13.2.1</b> Función de probabilidad de una variable aleatorias discreta</a></li>
-<li class="chapter" data-level="13.2.2" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#función-de-probabilidad-de-una-variable-aleatoria-continua"><i class="fa fa-check"></i><b>13.2.2</b> Función de probabilidad de una variable aleatoria continua</a></li>
+<li class="chapter" data-level="18.2" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#función-de-probabilidad-de-una-variable-aleatoria"><i class="fa fa-check"></i><b>18.2</b> Función de probabilidad de una variable aleatoria</a><ul>
+<li class="chapter" data-level="18.2.1" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#función-de-probabilidad-de-una-variable-aleatorias-discreta"><i class="fa fa-check"></i><b>18.2.1</b> Función de probabilidad de una variable aleatorias discreta</a></li>
+<li class="chapter" data-level="18.2.2" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#función-de-probabilidad-de-una-variable-aleatoria-continua"><i class="fa fa-check"></i><b>18.2.2</b> Función de probabilidad de una variable aleatoria continua</a></li>
 </ul></li>
-<li class="chapter" data-level="13.3" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#función-de-distribución-de-una-variable-aleatoria"><i class="fa fa-check"></i><b>13.3</b> Función de distribución de una variable aleatoria</a>
-<ul>
-<li class="chapter" data-level="13.3.1" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#función-de-distribución-de-una-variable-aleatoria-discreta"><i class="fa fa-check"></i><b>13.3.1</b> Función de distribución de una variable aleatoria discreta</a></li>
-<li class="chapter" data-level="13.3.2" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#función-de-distribución-de-una-variable-aleatoria-continua"><i class="fa fa-check"></i><b>13.3.2</b> Función de distribución de una variable aleatoria continua</a></li>
+<li class="chapter" data-level="18.3" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#función-de-distribución-de-una-variable-aleatoria"><i class="fa fa-check"></i><b>18.3</b> Función de distribución de una variable aleatoria</a><ul>
+<li class="chapter" data-level="18.3.1" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#función-de-distribución-de-una-variable-aleatoria-discreta"><i class="fa fa-check"></i><b>18.3.1</b> Función de distribución de una variable aleatoria discreta</a></li>
+<li class="chapter" data-level="18.3.2" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html#función-de-distribución-de-una-variable-aleatoria-continua"><i class="fa fa-check"></i><b>18.3.2</b> Función de distribución de una variable aleatoria continua</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="14" data-path="parámetros-de-una-variable-aleatoria.html"><a href="parámetros-de-una-variable-aleatoria.html"><i class="fa fa-check"></i><b>14</b> Parámetros de una variable aleatoria</a>
-<ul>
-<li class="chapter" data-level="14.1" data-path="parámetros-de-una-variable-aleatoria.html"><a href="parámetros-de-una-variable-aleatoria.html#esperanza-matemática"><i class="fa fa-check"></i><b>14.1</b> Esperanza matemática</a></li>
-<li class="chapter" data-level="14.2" data-path="parámetros-de-una-variable-aleatoria.html"><a href="parámetros-de-una-variable-aleatoria.html#medidas-de-variación"><i class="fa fa-check"></i><b>14.2</b> Medidas de variación</a></li>
-<li class="chapter" data-level="14.3" data-path="parámetros-de-una-variable-aleatoria.html"><a href="parámetros-de-una-variable-aleatoria.html#medidas-de-posición"><i class="fa fa-check"></i><b>14.3</b> Medidas de posición</a></li>
-<li class="chapter" data-level="14.4" data-path="parámetros-de-una-variable-aleatoria.html"><a href="parámetros-de-una-variable-aleatoria.html#medidas-de-curtosis"><i class="fa fa-check"></i><b>14.4</b> Medidas de curtosis</a></li>
+<li class="chapter" data-level="19" data-path="parámetros-de-una-variable-aleatoria.html"><a href="parámetros-de-una-variable-aleatoria.html"><i class="fa fa-check"></i><b>19</b> Parámetros de una variable aleatoria</a><ul>
+<li class="chapter" data-level="19.1" data-path="parámetros-de-una-variable-aleatoria.html"><a href="parámetros-de-una-variable-aleatoria.html#esperanza-matemática"><i class="fa fa-check"></i><b>19.1</b> Esperanza matemática</a></li>
+<li class="chapter" data-level="19.2" data-path="parámetros-de-una-variable-aleatoria.html"><a href="parámetros-de-una-variable-aleatoria.html#medidas-de-variación"><i class="fa fa-check"></i><b>19.2</b> Medidas de variación</a></li>
+<li class="chapter" data-level="19.3" data-path="parámetros-de-una-variable-aleatoria.html"><a href="parámetros-de-una-variable-aleatoria.html#medidas-de-posición"><i class="fa fa-check"></i><b>19.3</b> Medidas de posición</a></li>
+<li class="chapter" data-level="19.4" data-path="parámetros-de-una-variable-aleatoria.html"><a href="parámetros-de-una-variable-aleatoria.html#medidas-de-curtosis"><i class="fa fa-check"></i><b>19.4</b> Medidas de curtosis</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="variables-aleatorias-bidimensionales.html"><a href="variables-aleatorias-bidimensionales.html"><i class="fa fa-check"></i><b>15</b> Variables aleatorias bidimensionales</a>
-<ul>
-<li class="chapter" data-level="15.1" data-path="variables-aleatorias-bidimensionales.html"><a href="variables-aleatorias-bidimensionales.html#distribución-bidimensional-discreta"><i class="fa fa-check"></i><b>15.1</b> Distribución bidimensional discreta</a>
-<ul>
-<li class="chapter" data-level="15.1.1" data-path="variables-aleatorias-bidimensionales.html"><a href="variables-aleatorias-bidimensionales.html#distribuciones-marginales"><i class="fa fa-check"></i><b>15.1.1</b> Distribuciones marginales</a></li>
-<li class="chapter" data-level="15.1.2" data-path="variables-aleatorias-bidimensionales.html"><a href="variables-aleatorias-bidimensionales.html#variables-aleatorias-independientes"><i class="fa fa-check"></i><b>15.1.2</b> Variables aleatorias independientes</a></li>
-<li class="chapter" data-level="15.1.3" data-path="variables-aleatorias-bidimensionales.html"><a href="variables-aleatorias-bidimensionales.html#distribuciones-de-probabilidad-condicional"><i class="fa fa-check"></i><b>15.1.3</b> Distribuciones de probabilidad condicional</a></li>
+<li class="chapter" data-level="20" data-path="variables-aleatorias-bidimensionales.html"><a href="variables-aleatorias-bidimensionales.html"><i class="fa fa-check"></i><b>20</b> Variables aleatorias bidimensionales</a><ul>
+<li class="chapter" data-level="20.1" data-path="variables-aleatorias-bidimensionales.html"><a href="variables-aleatorias-bidimensionales.html#distribución-bidimensional-discreta"><i class="fa fa-check"></i><b>20.1</b> Distribución bidimensional discreta</a><ul>
+<li class="chapter" data-level="20.1.1" data-path="variables-aleatorias-bidimensionales.html"><a href="variables-aleatorias-bidimensionales.html#distribuciones-marginales"><i class="fa fa-check"></i><b>20.1.1</b> Distribuciones marginales</a></li>
+<li class="chapter" data-level="20.1.2" data-path="variables-aleatorias-bidimensionales.html"><a href="variables-aleatorias-bidimensionales.html#variables-aleatorias-independientes"><i class="fa fa-check"></i><b>20.1.2</b> Variables aleatorias independientes</a></li>
+<li class="chapter" data-level="20.1.3" data-path="variables-aleatorias-bidimensionales.html"><a href="variables-aleatorias-bidimensionales.html#distribuciones-de-probabilidad-condicional"><i class="fa fa-check"></i><b>20.1.3</b> Distribuciones de probabilidad condicional</a></li>
 </ul></li>
-<li class="chapter" data-level="15.2" data-path="variables-aleatorias-bidimensionales.html"><a href="variables-aleatorias-bidimensionales.html#distribución-bidimensional-continua"><i class="fa fa-check"></i><b>15.2</b> Distribución bidimensional continua</a></li>
+<li class="chapter" data-level="20.2" data-path="variables-aleatorias-bidimensionales.html"><a href="variables-aleatorias-bidimensionales.html#distribución-bidimensional-continua"><i class="fa fa-check"></i><b>20.2</b> Distribución bidimensional continua</a></li>
 </ul></li>
-<li class="chapter" data-level="16" data-path="distribuciones-discreta-importantes.html"><a href="distribuciones-discreta-importantes.html"><i class="fa fa-check"></i><b>16</b> Distribuciones discreta importantes</a>
-<ul>
-<li class="chapter" data-level="16.1" data-path="distribuciones-discreta-importantes.html"><a href="distribuciones-discreta-importantes.html#variable-aleatoria-discreta-binomial"><i class="fa fa-check"></i><b>16.1</b> Variable aleatoria discreta binomial</a></li>
-<li class="chapter" data-level="16.2" data-path="distribuciones-discreta-importantes.html"><a href="distribuciones-discreta-importantes.html#variable-aleatoria-discreta-poisson"><i class="fa fa-check"></i><b>16.2</b> Variable aleatoria discreta Poisson</a></li>
+<li class="chapter" data-level="21" data-path="distribuciones-discreta-importantes.html"><a href="distribuciones-discreta-importantes.html"><i class="fa fa-check"></i><b>21</b> Distribuciones discreta importantes</a><ul>
+<li class="chapter" data-level="21.1" data-path="distribuciones-discreta-importantes.html"><a href="distribuciones-discreta-importantes.html#variable-aleatoria-discreta-binomial"><i class="fa fa-check"></i><b>21.1</b> Variable aleatoria discreta binomial</a></li>
+<li class="chapter" data-level="21.2" data-path="distribuciones-discreta-importantes.html"><a href="distribuciones-discreta-importantes.html#variable-aleatoria-discreta-poisson"><i class="fa fa-check"></i><b>21.2</b> Variable aleatoria discreta Poisson</a></li>
 </ul></li>
-<li class="chapter" data-level="17" data-path="distribuciones-continuas-importantes.html"><a href="distribuciones-continuas-importantes.html"><i class="fa fa-check"></i><b>17</b> Distribuciones continuas importantes</a>
-<ul>
-<li class="chapter" data-level="17.1" data-path="distribuciones-continuas-importantes.html"><a href="distribuciones-continuas-importantes.html#variable-aleatoria-continua-normal"><i class="fa fa-check"></i><b>17.1</b> Variable aleatoria continua normal</a></li>
-<li class="chapter" data-level="17.2" data-path="distribuciones-continuas-importantes.html"><a href="distribuciones-continuas-importantes.html#variable-aleatoria-continua-gamma"><i class="fa fa-check"></i><b>17.2</b> Variable aleatoria continua gamma</a></li>
+<li class="chapter" data-level="22" data-path="distribuciones-continuas-importantes.html"><a href="distribuciones-continuas-importantes.html"><i class="fa fa-check"></i><b>22</b> Distribuciones continuas importantes</a><ul>
+<li class="chapter" data-level="22.1" data-path="distribuciones-continuas-importantes.html"><a href="distribuciones-continuas-importantes.html#variable-aleatoria-continua-normal"><i class="fa fa-check"></i><b>22.1</b> Variable aleatoria continua normal</a></li>
+<li class="chapter" data-level="22.2" data-path="distribuciones-continuas-importantes.html"><a href="distribuciones-continuas-importantes.html#variable-aleatoria-continua-gamma"><i class="fa fa-check"></i><b>22.2</b> Variable aleatoria continua gamma</a></li>
 </ul></li>
-<li class="chapter" data-level="18" data-path="distribuciones-muestrales.html"><a href="distribuciones-muestrales.html"><i class="fa fa-check"></i><b>18</b> Distribuciones muestrales</a></li>
-<li class="chapter" data-level="19" data-path="estimación.html"><a href="estimación.html"><i class="fa fa-check"></i><b>19</b> Estimación</a></li>
-<li class="chapter" data-level="20" data-path="prueba-de-hipótesis.html"><a href="prueba-de-hipótesis.html"><i class="fa fa-check"></i><b>20</b> Prueba de hipótesis</a></li>
+<li class="chapter" data-level="23" data-path="distribuciones-muestrales.html"><a href="distribuciones-muestrales.html"><i class="fa fa-check"></i><b>23</b> Distribuciones muestrales</a></li>
+<li class="chapter" data-level="24" data-path="estimación.html"><a href="estimación.html"><i class="fa fa-check"></i><b>24</b> Estimación</a></li>
+<li class="chapter" data-level="25" data-path="prueba-de-hipótesis.html"><a href="prueba-de-hipótesis.html"><i class="fa fa-check"></i><b>25</b> Prueba de hipótesis</a></li>
 <li class="appendix"><span><b>Apendice</b></span></li>
-<li class="chapter" data-level="A" data-path="sumatorias.html"><a href="sumatorias.html"><i class="fa fa-check"></i><b>A</b> Sumatorias</a>
-<ul>
+<li class="chapter" data-level="A" data-path="sumatorias.html"><a href="sumatorias.html"><i class="fa fa-check"></i><b>A</b> Sumatorias</a><ul>
 <li class="chapter" data-level="A.1" data-path="sumatorias.html"><a href="sumatorias.html#eeeee"><i class="fa fa-check"></i><b>A.1</b> eeeee</a></li>
 </ul></li>
-<li class="chapter" data-level="B" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>B</b> Matrices</a>
-<ul>
+<li class="chapter" data-level="B" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>B</b> Matrices</a><ul>
 <li class="chapter" data-level="B.1" data-path="matrices.html"><a href="matrices.html#algebra-de-matrices"><i class="fa fa-check"></i><b>B.1</b> Algebra de matrices</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
@@ -259,11 +281,10 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="experimento-aleatorio" class="section level1" number="5">
-<h1><span class="header-section-number">Capítulo 5</span> Experimento aleatorio</h1>
-
+<div id="experimento-aleatorio" class="section level1">
+<h1><span class="header-section-number">Capítulo 10</span> Experimento aleatorio</h1>
 <div class="definition">
-<span id="def:unnamed-chunk-16" class="definition"><strong>Definición 5.1  (Experimento aleatorio)  </strong></span>En experiento aleatorio es un fenomeno que genera un evento
+<p><span id="def:www" class="definition"><strong>Definición 10.1  </strong></span>En experimento aleatorio es un fenómeno que genera un evento</p>
 </div>
 </div>
             </section>
@@ -271,7 +292,7 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="medidas-de-asimetría.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="medidas-de-curtosis-o-apuntamiento.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="álgebra-de-eventos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
@@ -316,6 +337,10 @@ gitbook.start({
 "text": null
 },
 "download": ["E_1.pdf", "E_1.epub"],
+"search": {
+"engine": "lunr",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
