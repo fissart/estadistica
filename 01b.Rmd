@@ -29,7 +29,6 @@ Si este coeficiente es nulo, la distribución se dice normal (similar a la distr
 Si el coeficiente es positivo, la distribución se llama leptocúrtica, más puntiaguda que la anterior. Hay una mayor concentración de los datos en torno a la media.
 
 Si el coeficiente es negativo, la distribución se llama platicúrtica y hay una menor concentración de datos en torno a la media. sería más achatada que la primera.
-<!--
 
 ```{r Doge, echo=FALSE, out.width='100%', fig.pos = "!ht", fig.align="center", fig.cap="Hola"}
 if (knitr::is_html_output()) {
@@ -50,19 +49,16 @@ knitr::include_graphics('U.svg')
 ```python3 {cmd=true matplotlib=true}
 import matplotlib.pyplot as plt
 import numpy as np
-
 x = np.random.normal(170, 10, 250)
-
 plt.hist(x)
 plt.show() 
 ```
+
 ```python3 {cmd=true matplotlib=true}
 from matplotlib import rc
 import matplotlib.pylab as plt
-
 rc('font', **{'family': 'serif', 'serif': ['Computer Modern']})
 rc('text', usetex=True)
-
 x = plt.linspace(0,5)
 plt.plot(x,plt.sin(x))
 plt.ylabel(r"This is $\sin(x)$", size=20)
@@ -72,10 +68,8 @@ plt.show()
 ```python3 {cmd=true matplotlib=true}
 import matplotlib.pyplot as plt
 import numpy as np
-
 x = np.array(["A", "B", "C", "D"])
 y = np.array([3, 8, 1, 10])
-
 plt.bar(x,y)
 plt.show()
 ```
@@ -92,6 +86,5 @@ print(x)
 
 ![wwwwwwww](foo.png)
 
-
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+<!--
 -->
