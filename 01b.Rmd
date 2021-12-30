@@ -71,6 +71,4 @@ print(x)
 ```
 
 ![www](foo.png)
-
 ![www](histograma.svg)
-
