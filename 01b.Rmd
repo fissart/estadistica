@@ -74,5 +74,3 @@ print(x)
 
 ![www](histograma.svg)
 
-<!--
--->
