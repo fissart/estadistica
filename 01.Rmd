@@ -4,7 +4,7 @@
 
 # Prerrequisitos
 
-Matemáticas basicas
+Matemáticas básicas
 
 # Variables
 
@@ -16,11 +16,11 @@ Denotan cualidades de objetos personas o animales tales como características in
 
 ### Nominales
 
-Son caracteristicas que simplemente nominan y están propensos a ser jerarquizados u ordenados tales como: El estado civil (soltero, casado, divorciado, viudo), Religión (católica, evangélico, judío, etc).
+Son características que simplemente nominan y están propensos a ser jerarquizados u ordenados tales como: El estado civil (soltero, casado, divorciado, viudo), Religión (católica, evangélico, judío, etc).
 
 ### Ordinales
 
-Son caracteristicas que que si están propensos a ser jerarquizados tales como: Nivel de instrucción (inicial, primaria, secundaria, superior).
+Son características que que si están propensos a ser jerarquizados tales como: Nivel de instrucción (inicial, primaria, secundaria, superior).
 
 ## Variables cuantitativas
 
@@ -28,15 +28,15 @@ Son aquellas variables que están propensos a ser medidas mediante números ya s
 
 ### Discretas
 
-Aquellas que solo son medidos mediante numeros enteros por ejemplo: Número de hijos, número de habitaciones.
+Aquellas que solo son medidos mediante números enteros por ejemplo: Número de hijos, número de habitaciones.
 
 ### Continuas
 
-Aquellas que solo son medidos mediante numeros reales es decir este incluye a los numeros racionales e irracionales. Estatura, volumen, peso.
+Aquellas que solo son medidos mediante números reales es decir este incluye a los números racionales e irracionales. Estatura, volumen, peso.
 
 ## Asignación
 
-1.  Reconosca **5** variables **cualitativas** de una persona, admosfera, una pintura
+1.  Reconozca **5** variables **cualitativas** de una persona, admosfera, una pintura
 
     -   Persona
 
