@@ -28,65 +28,65 @@ Son aquellas variables que están propensos a ser medidas mediante números ya s
 
 ### Discretas
 
-Aquellas que solo son medidos mediante números enteros por ejemplo: Número de hijos, número de habitaciones.
+Aquellas que solo son medidos mediante numeros enteros por ejemplo: Número de hijos, número de habitaciones.
 
 ### Continuas
 
-Aquellas que solo son medidos mediante números reales es decir este incluye a los números racionales e irracionales. Estatura, volumen, peso.
+Aquellas que solo son medidos mediante numeros reales es decir este incluye a los numeros racionales e irracionales. Estatura, volumen, peso.
 
-## Ejercicios propuestos
+## Asignación
 
-1.  Reconozca **5** variables **cualitativas** de una persona, atmósfera y una pintura
+1.  Reconosca **5** variables **cualitativas** de una persona, admosfera, una pintura
 
     -   Persona
 
-        -   Color (moreno, blanco, trigueño)
-        -   Religión (católico, evangélico, pentecostal, etc)
-        -   ...
-        -   ...
-        -   ...
+        -   Color (moreno, blanco, trigueo)
+        -   Religión (catolico, evangelico, pentecostal, etc)
+        -   wwwwwww
+        -   wwww
+        -   wwwwww
 
-    -   Atmósfera
+    -   Admosfera
 
-        -   ...
-        -   ...
-        -   ...
-        -   ...
-        -   ...
+        -   www
+        -   wwwww
+        -   wwwwwww
+        -   wwww
+        -   wwwwww
 
     -   Pintura
 
-        -   ...
-        -   ...
-        -   ...
-        -   ...
-        -   ...
+        -   www
+        -   wwwww
+        -   wwwwwww
+        -   wwww
+        -   wwwwww
 
-2.  Reconozca **5** variables **cuantitativas** de una video, tela, un celular.
+2.  Reconosca **5** variables **cuantitativas** de una video, tela, un celular.
 
     -   Video
 
-        -   Duración ($x$ segundos)
+        -   Duracion ($x$ segundos)
         -   Numero video en youtube a la semana ($n$ cantidades)
-        -   ...
-        -   ...
-        -   ...
+        -   wwwwwww
+        -   wwww
+        -   wwwwww
 
     -   Tela
 
-        -   ...
-        -   ...
-        -   ...
-        -   ...
-        -   ...
+        -   www
+        -   wwwww
+        -   wwwwwww
+        -   wwww
+        -   wwwwww
 
     -   Celular
 
-        -   ...
-        -   ...
-        -   ...
-        -   ...
-        -   ...
+        -   www
+        -   wwwww
+        -   wwwwwww
+        -   wwww
+        -   wwwwww
 
 # Organización de datos en tablas de frecuencias
 
@@ -205,7 +205,7 @@ Menos moralistas que los INFJ, los INFP también se preocupan mucho por ayudar a
 
 ```
 
-::: {solution}
+```{solution}
 
 Se tiene 16 características con los siguientes datos  
 
@@ -229,9 +229,7 @@ Se tiene 16 características con los siguientes datos
 |     INFJ     |    1     |
 |     INFP     |    1     |
 
-: (\#tab:w1) Caption
-
-:::
+```
 
 ```{r cualitativa, echo=FALSE, warning = FALSE, message = FALSE, tidy=FALSE}
 library(openxlsx)
@@ -242,7 +240,7 @@ knitr::kable(new, escape = FALSE, digits = 2, booktabs=T, caption='Datos cualita
 
 ## Example intervalos
 
-::: {solution}
+```{solution}
 
 Edades de cierta comunidad 
 
@@ -267,7 +265,7 @@ Edades de cierta comunidad
 | $[80-90>$  |   3   |
 | $[90-100]$ |   2   |
 
-:::
+```
 
 Tabulando
 
@@ -488,14 +486,14 @@ $$ M_o=L_i+\frac{f_i-f_{i-1}}{(f_i-f_{i-1})+(f_i-f_{i+1})}\cdot a_i=$$ $$ =20+\f
 
 Obtener la mediana consiste en ordenar los datos de menor a mayor y considerar dos casos: El primero si el número de datos es impar entonces el dato $x_{\frac{n+1}{2}}$ del conjunto ordenado será la mediana es decir $$\text{Me}=x_{\frac{n+1}{2}}$$ de otro lado si el número de datos es par entonces la mediana es la semisuma de los dos datos intermedios es decir $$\text{Me}=\frac{x_{\frac{n}{2}}+x_{\frac{n}{2}+1}}{2}$$
 
-::: {exercise}
+```{exercise}
 Sean los conjuntos de datos 5, 6, 8, 2, 1, 5, 6, 7, 10, 0, 14 y 20, 25, 6, 5, 19, 5 obtener la mediana de estos conjuntos de datos.
 
-:::
+```
 
-::: {solution}
+```{solution}
 Al ordenarlos  se obtiene el siguiente arreglo 0, 1, 2, 5, 5, 6, 6, 7, 8, 10, 14 y considerando que $x_1=0$, $x_2=1$, $\ldots$, $x_{11}=14$ en este caso el número de datos es impar entonces el dato $x_{\frac{11+1}{2}}=x_{6}=6$ el la mediana. De otro lado el segundo conjunto de datos al ser ordenados 5, 5, 6, 19, 20, 25 ademas considerando que $x_1=5$, $x_2=5$, $\ldots$, $x_6=25$ conducen a obtener la mediana $\text{Me}=\frac{x_{\frac{6}{2}}+x_{\frac{6}{2}+1}}{2}=\frac{6+19}{2}=12.5$.
-:::
+```
 
 ### Mediana de datos tabulados
 

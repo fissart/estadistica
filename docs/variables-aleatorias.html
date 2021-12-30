@@ -24,7 +24,7 @@
 <meta name="author" content="Ricardo Michel MALLQUI BAÑOS" />
 
 
-<meta name="date" content="2021-12-30" />
+<meta name="date" content="2021-11-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,7 +50,6 @@
 
 
 
-<link rel="shortcut icon" type="image/x-icon" href="www.ico" />
 
 
 <style type="text/css">
@@ -142,7 +141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.1" data-path="variables.html"><a href="variables.html#discretas"><i class="fa fa-check"></i><b>2.2.1</b> Discretas</a></li>
 <li class="chapter" data-level="2.2.2" data-path="variables.html"><a href="variables.html#continuas"><i class="fa fa-check"></i><b>2.2.2</b> Continuas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="variables.html"><a href="variables.html#ejercicios-propuestos"><i class="fa fa-check"></i><b>2.3</b> Ejercicios propuestos</a></li>
+<li class="chapter" data-level="2.3" data-path="variables.html"><a href="variables.html#asignación"><i class="fa fa-check"></i><b>2.3</b> Asignación</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html"><i class="fa fa-check"></i><b>3</b> Organización de datos en tablas de frecuencias</a><ul>
 <li class="chapter" data-level="3.1" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html#distribución-de-frecuencias"><i class="fa fa-check"></i><b>3.1</b> Distribución de frecuencias</a></li>
@@ -170,7 +169,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#mediana-de-datos-tabulados"><i class="fa fa-check"></i><b>5.3.2</b> Mediana de datos tabulados</a></li>
 <li class="chapter" data-level="5.3.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#ejemplo-2"><i class="fa fa-check"></i><b>5.3.3</b> Ejemplo</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#asignación"><i class="fa fa-check"></i><b>5.4</b> Asignación</a></li>
+<li class="chapter" data-level="5.4" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#asignación-1"><i class="fa fa-check"></i><b>5.4</b> Asignación</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html"><i class="fa fa-check"></i><b>6</b> Medidas de dispersión</a><ul>
 <li class="chapter" data-level="6.1" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#rango"><i class="fa fa-check"></i><b>6.1</b> Rango</a></li>
@@ -188,7 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.5.2" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#datos-tabulados-2"><i class="fa fa-check"></i><b>6.5.2</b> Datos tabulados</a></li>
 </ul></li>
 <li class="chapter" data-level="6.6" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#coeficiente-de-variacion"><i class="fa fa-check"></i><b>6.6</b> Coeficiente de variacion</a></li>
-<li class="chapter" data-level="6.7" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#asignación-1"><i class="fa fa-check"></i><b>6.7</b> Asignación</a></li>
+<li class="chapter" data-level="6.7" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#asignación-2"><i class="fa fa-check"></i><b>6.7</b> Asignación</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html"><i class="fa fa-check"></i><b>7</b> Medidas de posicion (cuantiles)</a><ul>
 <li class="chapter" data-level="7.1" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html#cuartiles"><i class="fa fa-check"></i><b>7.1</b> Cuartiles</a><ul>
@@ -286,7 +285,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Capítulo 18</span> Variables aleatorias</h1>
 
 <div class="definition">
-<span id="def:unnamed-chunk-18" class="definition"><strong>Definición 18.1  (Variable aleatoria)  </strong></span>Sea <span class="math inline">\(\Omega\)</span> un espacio muestral asociado a una experimento aleatorio <span class="math inline">\(\epsilon\)</span> y <span class="math inline">\(\omega\in\Omega\)</span>, entonces se genera la función <strong>variable aleatoria</strong>
+<span id="def:unnamed-chunk-22" class="definition"><strong>Definición 18.1  (Variable aleatoria)  </strong></span>Sea <span class="math inline">\(\Omega\)</span> un espacio muestral asociado a una experimento aleatorio <span class="math inline">\(\epsilon\)</span> y <span class="math inline">\(\omega\in\Omega\)</span>, entonces se genera la función <strong>variable aleatoria</strong>
 <span class="math display">\[\begin{align*}
   X:\Omega&amp;\longrightarrow \mathbb{R}\\
   \omega&amp;\longmapsto X(\omega)
@@ -297,7 +296,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 es decir a cada elemento de <span class="math inline">\(\Omega\)</span> se le asocia un número real <span class="math inline">\(\mathbb{R}\)</span>, además la probabilidad de <span class="math inline">\(x\in \mathbb{R}\)</span> es <span class="math inline">\(P[x]= \sum^{n}_{i=1}P\left[\omega_i\right]\)</span> donde <span class="math inline">\(\omega_i\in X^{-1}(x)\)</span>. La definición indica por otro lado que un espacio muestral <span class="math inline">\(\Omega\)</span> puede genera diferentes variables aleatorias.</p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-19" class="example"><strong>Ejemplo 18.1  </strong></span>El espacio muestral de lanzar una monedas tres veces es <span class="math display">\[\omega= \left\{ccc,ccs,csc,scc,css,scs,ssc,sss\right\}\]</span> además sea <span class="math inline">\(n_c\)</span> es número de caras y <span class="math inline">\(n_s\)</span> el número de sellos, es posibles generar dos o mas variables aleatorias por ejemplo:</p>
+<p><span id="exm:unnamed-chunk-23" class="example"><strong>Ejemplo 18.1  </strong></span>El espacio muestral de lanzar una monedas tres veces es <span class="math display">\[\omega= \left\{ccc,ccs,csc,scc,css,scs,ssc,sss\right\}\]</span> además sea <span class="math inline">\(n_c\)</span> es número de caras y <span class="math inline">\(n_s\)</span> el número de sellos, es posibles generar dos o mas variables aleatorias por ejemplo:</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(X(\omega)=n_c\)</span> entonces el rango de <span class="math inline">\(X\)</span> es <span class="math inline">\(R_X \left\{3,2,1,0\right\}\)</span>
 pues <span class="math display">\[\begin{align*}
@@ -326,7 +325,7 @@ que es lo mismo para el segundo caso <span class="math inline">\(X(\omega)=n_c-n
 
 
 <div class="definition">
-<span id="def:unnamed-chunk-20" class="definition"><strong>Definición 18.2  (Eventos equivalentes)  </strong></span>Sea <span class="math inline">\(\Omega\)</span> un espacio muestral asociado a una experimento aleatorio <span class="math inline">\(\epsilon\)</span> y <span class="math inline">\(X\)</span> una variable aleatoria con rango <span class="math inline">\(R_X\)</span> definida sobre <span class="math inline">\(\Omega\)</span>. Dos eventos <span class="math inline">\(W\in\Omega\)</span> y <span class="math inline">\(E_X\in R_X\)</span> son <strong>eventos equivalentes</strong> si existe la relación
+<span id="def:unnamed-chunk-24" class="definition"><strong>Definición 18.2  (Eventos equivalentes)  </strong></span>Sea <span class="math inline">\(\Omega\)</span> un espacio muestral asociado a una experimento aleatorio <span class="math inline">\(\epsilon\)</span> y <span class="math inline">\(X\)</span> una variable aleatoria con rango <span class="math inline">\(R_X\)</span> definida sobre <span class="math inline">\(\Omega\)</span>. Dos eventos <span class="math inline">\(W\in\Omega\)</span> y <span class="math inline">\(E_X\in R_X\)</span> son <strong>eventos equivalentes</strong> si existe la relación
 <span class="math display">\[W= \left\{\omega\in\Omega/X(\omega)=E_X\right\}\]</span> es decir <span class="math inline">\(E_X\)</span> consta de todos los elementos en <span class="math inline">\(\Omega\)</span> para los cuales <span class="math inline">\(X(\omega)\in W\)</span>
 </div>
 
@@ -352,7 +351,7 @@ que es lo mismo para el segundo caso <span class="math inline">\(X(\omega)=n_c-n
 <h3><span class="header-section-number">18.2.1</span> Función de probabilidad de una variable aleatorias discreta</h3>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-21" class="definition"><strong>Definición 18.3  (Función o ley de probabilidad)  </strong></span>Sea <span class="math inline">\(X\)</span> una variable aleatoria con rango <span class="math inline">\(R_X\)</span>. Una función definida por <span class="math display">\[p(x)=P[X=x]= \sum^{}_{ \left\{\omega \in \Omega:X(\omega)=x\right\}}P\left[\left\{\omega\right\}\right]\]</span></p>
+<p><span id="def:unnamed-chunk-25" class="definition"><strong>Definición 18.3  (Función o ley de probabilidad)  </strong></span>Sea <span class="math inline">\(X\)</span> una variable aleatoria con rango <span class="math inline">\(R_X\)</span>. Una función definida por <span class="math display">\[p(x)=P[X=x]= \sum^{}_{ \left\{\omega \in \Omega:X(\omega)=x\right\}}P\left[\left\{\omega\right\}\right]\]</span></p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(p(x)&gt;0\)</span>, <span class="math inline">\(x\in R_X\)</span></li>
 <li><span class="math inline">\(\sum_{x\in R_X}p(x)=P[X=x]=1\)</span></li>
@@ -362,21 +361,21 @@ que es lo mismo para el segundo caso <span class="math inline">\(X(\omega)=n_c-n
 <p>El conjunto de pares ordenados <span class="math inline">\(\left(x,p(x)\right)\)</span>, <span class="math inline">\(x\in R_X\)</span> recibe el nombre de <em>distribución de probabildiad de <span class="math inline">\(X\)</span></em></p>
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-22" class="example"><strong>Ejemplo 18.2  </strong></span>La variable aleatoria discreta
+<p><span id="exm:unnamed-chunk-26" class="example"><strong>Ejemplo 18.2  </strong></span>La variable aleatoria discreta
 <span class="math display">\[p_X(x)=p(1-p)^{x-1}, \text{ $x\in \mathbb{Z}^+$ y $p\in[0,1]$}\]</span></p>
 en efecto <span class="math display">\[p(1-p)^{i-1}&gt;0, \text{ $\forall x\in \mathbb{Z}^+$}\]</span> además <span class="math display">\[ \sum^{\infty}_{i=1}p(1-p)^{i-1}=p \lim_{n\to\infty}\frac{1-(1-p)^{n+1}}{1-(1-p)}=1\]</span>
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-23" class="example"><strong>Ejemplo 18.3  </strong></span>La variable aleatoria discreta
+<p><span id="exm:unnamed-chunk-27" class="example"><strong>Ejemplo 18.3  </strong></span>La variable aleatoria discreta
 <span class="math display">\[p_X(x)=p(1-p), \text{ $x\in \mathbb{Z}^+$ y $p\in[0,1]$}\]</span></p>
 en efecto <span class="math display">\[p(1-p)^{i-1}&gt;0, \text{ $\forall x\in \mathbb{Z}^+$}\]</span> además <span class="math display">\[ \sum^{\infty}_{i=1}p(1-p)^{i-1}=p \lim_{n\to\infty}\frac{1-(1-p)^{n+1}}{1-(1-p)}=1\]</span>
 </div>
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-24" class="example"><strong>Ejemplo 18.4  </strong></span>La variable aleatoria discreta
+<p><span id="exm:unnamed-chunk-28" class="example"><strong>Ejemplo 18.4  </strong></span>La variable aleatoria discreta
 <span class="math display">\[p_X(x)=(1-p)^{x-1}, \text{ $x\in \mathbb{Z}^+$ y $p\in[0,1]$}\]</span></p>
 en efecto <span class="math display">\[p(1-p)^{i-1}&gt;0, \text{ $\forall x\in \mathbb{Z}^+$}\]</span> además <span class="math display">\[ \sum^{\infty}_{i=1}p(1-p)^{i-1}=p \lim_{n\to\infty}\frac{1-(1-p)^{n+1}}{1-(1-p)}=1\]</span>
 </div>
@@ -386,7 +385,7 @@ en efecto <span class="math display">\[p(1-p)^{i-1}&gt;0, \text{ $\forall x\in \
 <h3><span class="header-section-number">18.2.2</span> Función de probabilidad de una variable aleatoria continua</h3>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-25" class="definition"><strong>Definición 18.4  (Función de densidad de probabilidad)  </strong></span>Sea <span class="math inline">\(X\)</span> una variable aleatoria con rango <span class="math inline">\(R_X\)</span>. La función <span class="math inline">\(f(x)\)</span> definida sobre <span class="math inline">\(R_X\)</span></p>
+<p><span id="def:unnamed-chunk-29" class="definition"><strong>Definición 18.4  (Función de densidad de probabilidad)  </strong></span>Sea <span class="math inline">\(X\)</span> una variable aleatoria con rango <span class="math inline">\(R_X\)</span>. La función <span class="math inline">\(f(x)\)</span> definida sobre <span class="math inline">\(R_X\)</span></p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(f(x)&gt;0\)</span>, <span class="math inline">\(x\in R_X\)</span> o <span class="math inline">\(f(x)&gt;0\)</span>, <span class="math inline">\(x\in \mathbb{R}\)</span></li>
 <li><span class="math inline">\(\int_{R_X}f(x)dx=1\)</span> o <span class="math inline">\(\int_{-\infty}^{\infty}f(x)dx=1\)</span></li>
@@ -395,7 +394,7 @@ en efecto <span class="math display">\[p(1-p)^{i-1}&gt;0, \text{ $\forall x\in \
 
 
 <div class="example">
-<p><span id="exm:unnamed-chunk-26" class="example"><strong>Ejemplo 18.5  </strong></span>For a circle with the radius <code>r x</code>,
+<p><span id="exm:unnamed-chunk-30" class="example"><strong>Ejemplo 18.5  </strong></span>For a circle with the radius <code>r x</code>,
 its area is <code>r pi * x^2</code>.
 Sea la función</p>
 </div>
@@ -410,14 +409,14 @@ Sea la función</p>
 \]</span></p>
 
 <div class="example">
-<span id="exm:unnamed-chunk-27" class="example"><strong>Ejemplo 18.6  </strong></span>Sea <span class="math inline">\(f(x)= \frac{\alpha}{\rho}\)</span> es una funcion de densidad pues
+<span id="exm:unnamed-chunk-31" class="example"><strong>Ejemplo 18.6  </strong></span>Sea <span class="math inline">\(f(x)= \frac{\alpha}{\rho}\)</span> es una funcion de densidad pues
 <span class="math display">\[f(x)&gt;0,~ x\in R_X\]</span> además
 <span class="math display">\[\int_{R_X}f(x)dx=1\]</span>
 </div>
 
 
 <div class="example">
-<span id="exm:unnamed-chunk-28" class="example"><strong>Ejemplo 18.7  </strong></span>Sea <span class="math inline">\(f(x)= \frac{\sigma}{\rho}\)</span> es una funcion de densidad pues
+<span id="exm:unnamed-chunk-32" class="example"><strong>Ejemplo 18.7  </strong></span>Sea <span class="math inline">\(f(x)= \frac{\sigma}{\rho}\)</span> es una funcion de densidad pues
 <span class="math display">\[f(x)&gt;0,~ x\in R_X\]</span> además
 <span class="math display">\[\int_{R_X}f(x)dx=1\]</span>
 </div>
@@ -430,7 +429,7 @@ Sea la función</p>
 <h3><span class="header-section-number">18.3.1</span> Función de distribución de una variable aleatoria discreta</h3>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-29" class="definition"><strong>Definición 18.5  (Función de distribución)  </strong></span>Sea <span class="math inline">\(X\)</span> una variable aleatoria con rango <span class="math display">\[R_X= \left\{x_1,x_2,\ldots x_n,\ldots\right\}.\]</span> Con función de probabilidad <span class="math inline">\(p(x_i)=P[X=x_i]\)</span>, sea <span class="math inline">\(x\)</span> cualquier número, real la función definida por <span class="math display">\[F(x)=P[X\leq x]= \sum^{}_{x_i\leq x}p(x_i)= \sum^{}_{x_i\leq x}P[X= x_i]  \]</span>
+<p><span id="def:unnamed-chunk-33" class="definition"><strong>Definición 18.5  (Función de distribución)  </strong></span>Sea <span class="math inline">\(X\)</span> una variable aleatoria con rango <span class="math display">\[R_X= \left\{x_1,x_2,\ldots x_n,\ldots\right\}.\]</span> Con función de probabilidad <span class="math inline">\(p(x_i)=P[X=x_i]\)</span>, sea <span class="math inline">\(x\)</span> cualquier número, real la función definida por <span class="math display">\[F(x)=P[X\leq x]= \sum^{}_{x_i\leq x}p(x_i)= \sum^{}_{x_i\leq x}P[X= x_i]  \]</span>
 recie el nombre de función de distribución de <span class="math inline">\(X\)</span>. Cuyas propiedades son:</p>
 <ol style="list-style-type: decimal">
 <li><span class="math inline">\(0\leq F_X(x)\leq 1\)</span></li>
@@ -443,17 +442,17 @@ recie el nombre de función de distribución de <span class="math inline">\(X\)<
 
 
 <div class="example">
-<span id="exm:unnamed-chunk-30" class="example"><strong>Ejemplo 18.8  </strong></span>wwwwwww
+<span id="exm:unnamed-chunk-34" class="example"><strong>Ejemplo 18.8  </strong></span>wwwwwww
 </div>
 
 
 <div class="example">
-<span id="exm:unnamed-chunk-31" class="example"><strong>Ejemplo 18.9  </strong></span>wwwwwww
+<span id="exm:unnamed-chunk-35" class="example"><strong>Ejemplo 18.9  </strong></span>wwwwwww
 </div>
 
 
 <div class="example">
-<span id="exm:unnamed-chunk-32" class="example"><strong>Ejemplo 18.10  </strong></span>wwwwwww
+<span id="exm:unnamed-chunk-36" class="example"><strong>Ejemplo 18.10  </strong></span>wwwwwww
 </div>
 
 </div>
@@ -461,7 +460,7 @@ recie el nombre de función de distribución de <span class="math inline">\(X\)<
 <h3><span class="header-section-number">18.3.2</span> Función de distribución de una variable aleatoria continua</h3>
 
 <div class="definition">
-<p><span id="def:unnamed-chunk-33" class="definition"><strong>Definición 18.6  (Función de distribución)  </strong></span>Sea <span class="math inline">\(X\)</span> una variable aleatoria con función de densidad <span class="math inline">\(f(x)\)</span>. La función
+<p><span id="def:unnamed-chunk-37" class="definition"><strong>Definición 18.6  (Función de distribución)  </strong></span>Sea <span class="math inline">\(X\)</span> una variable aleatoria con función de densidad <span class="math inline">\(f(x)\)</span>. La función
 <span class="math display">\[F_X(x)=F(x)=P[X\leq x]=\int_{-\infty}^{x}f(t)dt, \text{ $\forall x\in R_X$}\]</span></p>
 <p>Cuyas propiedades son:</p>
 <ol style="list-style-type: decimal">
@@ -473,17 +472,17 @@ recie el nombre de función de distribución de <span class="math inline">\(X\)<
 
 
 <div class="example">
-<span id="exm:unnamed-chunk-34" class="example"><strong>Ejemplo 18.11  </strong></span>wwwwwww
+<span id="exm:unnamed-chunk-38" class="example"><strong>Ejemplo 18.11  </strong></span>wwwwwww
 </div>
 
 
 <div class="example">
-<span id="exm:unnamed-chunk-35" class="example"><strong>Ejemplo 18.12  </strong></span>wwwwwww
+<span id="exm:unnamed-chunk-39" class="example"><strong>Ejemplo 18.12  </strong></span>wwwwwww
 </div>
 
 
 <div class="example">
-<span id="exm:unnamed-chunk-36" class="example"><strong>Ejemplo 18.13  </strong></span>wwwwwww
+<span id="exm:unnamed-chunk-40" class="example"><strong>Ejemplo 18.13  </strong></span>wwwwwww
 </div>
 
 </div>
@@ -522,7 +521,7 @@ gitbook.start({
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
-"theme": "sepia",
+"theme": "white",
 "family": "serif",
 "size": 2
 },

@@ -1,11 +1,9 @@
 bookdown::gitbook:
-  css: style.css
-  includes:
-    in_header: icon.html
+  css: style.css  
   anchor_sections: FALSE
   config:
     fontsettings:
-      theme: sepia
+      theme: white
       family: serif
       size: 2
     toc:

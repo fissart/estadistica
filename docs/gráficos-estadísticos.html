@@ -24,7 +24,7 @@
 <meta name="author" content="Ricardo Michel MALLQUI BAÑOS" />
 
 
-<meta name="date" content="2021-12-30" />
+<meta name="date" content="2021-11-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,7 +50,6 @@
 
 
 
-<link rel="shortcut icon" type="image/x-icon" href="www.ico" />
 
 
 <style type="text/css">
@@ -142,7 +141,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.1" data-path="variables.html"><a href="variables.html#discretas"><i class="fa fa-check"></i><b>2.2.1</b> Discretas</a></li>
 <li class="chapter" data-level="2.2.2" data-path="variables.html"><a href="variables.html#continuas"><i class="fa fa-check"></i><b>2.2.2</b> Continuas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="variables.html"><a href="variables.html#ejercicios-propuestos"><i class="fa fa-check"></i><b>2.3</b> Ejercicios propuestos</a></li>
+<li class="chapter" data-level="2.3" data-path="variables.html"><a href="variables.html#asignación"><i class="fa fa-check"></i><b>2.3</b> Asignación</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html"><i class="fa fa-check"></i><b>3</b> Organización de datos en tablas de frecuencias</a><ul>
 <li class="chapter" data-level="3.1" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html#distribución-de-frecuencias"><i class="fa fa-check"></i><b>3.1</b> Distribución de frecuencias</a></li>
@@ -170,7 +169,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#mediana-de-datos-tabulados"><i class="fa fa-check"></i><b>5.3.2</b> Mediana de datos tabulados</a></li>
 <li class="chapter" data-level="5.3.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#ejemplo-2"><i class="fa fa-check"></i><b>5.3.3</b> Ejemplo</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#asignación"><i class="fa fa-check"></i><b>5.4</b> Asignación</a></li>
+<li class="chapter" data-level="5.4" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#asignación-1"><i class="fa fa-check"></i><b>5.4</b> Asignación</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html"><i class="fa fa-check"></i><b>6</b> Medidas de dispersión</a><ul>
 <li class="chapter" data-level="6.1" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#rango"><i class="fa fa-check"></i><b>6.1</b> Rango</a></li>
@@ -188,7 +187,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.5.2" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#datos-tabulados-2"><i class="fa fa-check"></i><b>6.5.2</b> Datos tabulados</a></li>
 </ul></li>
 <li class="chapter" data-level="6.6" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#coeficiente-de-variacion"><i class="fa fa-check"></i><b>6.6</b> Coeficiente de variacion</a></li>
-<li class="chapter" data-level="6.7" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#asignación-1"><i class="fa fa-check"></i><b>6.7</b> Asignación</a></li>
+<li class="chapter" data-level="6.7" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#asignación-2"><i class="fa fa-check"></i><b>6.7</b> Asignación</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html"><i class="fa fa-check"></i><b>7</b> Medidas de posicion (cuantiles)</a><ul>
 <li class="chapter" data-level="7.1" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html#cuartiles"><i class="fa fa-check"></i><b>7.1</b> Cuartiles</a><ul>
@@ -290,7 +289,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb1-2" title="2"><span class="kw">levels</span>(mtcars<span class="op">$</span>am) &lt;-<span class="kw">c</span>(<span class="st">&quot;Automatic&quot;</span>, <span class="st">&quot;Manual&quot;</span>)</a></code></pre></div>
 <p>Some text</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg[mtcars<span class="op">$</span>am<span class="op">==</span><span class="st">&quot;Automatic&quot;</span>], <span class="dt">breaks=</span><span class="dv">12</span>, <span class="dt">main=</span><span class="st">&quot;mpg for automatic vehicles&quot;</span>, <span class="dt">xlab=</span><span class="st">&quot;mpg&quot;</span>, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">35</span>))</a></code></pre></div>
-<p><img src="E_1_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="E_1_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="circulares" class="section level2">
 <h2><span class="header-section-number">4.2</span> Circulares</h2>
@@ -301,10 +300,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb3-5" title="5">  <span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&#39;#0292D8&#39;</span>, <span class="st">&#39;#F7EA39&#39;</span>, <span class="st">&#39;#C4B632&#39;</span>),</a>
 <a class="sourceLine" id="cb3-6" title="6">  <span class="dt">init.angle =</span> <span class="dv">-50</span>, <span class="dt">border =</span> <span class="ot">NA</span></a>
 <a class="sourceLine" id="cb3-7" title="7">)</a></code></pre></div>
-<p><img src="E_1_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="E_1_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">plot</span>(cars)</a>
 <a class="sourceLine" id="cb4-2" title="2"><span class="kw">lines</span>(<span class="kw">lowess</span>(cars))</a></code></pre></div>
-<p><img src="E_1_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="E_1_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">library</span>(ggplot2)</a>
 <a class="sourceLine" id="cb5-2" title="2"></a>
 <a class="sourceLine" id="cb5-3" title="3"><span class="co"># Create data</span></a>
@@ -317,12 +316,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb5-10" title="10"><span class="kw">ggplot</span>(data, <span class="kw">aes</span>(<span class="dt">x=</span>name, <span class="dt">y=</span>value)) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb5-11" title="11"><span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>, <span class="dt">width=</span><span class="fl">0.5</span>) <span class="op">+</span></a>
 <a class="sourceLine" id="cb5-12" title="12"><span class="st">  </span><span class="kw">coord_flip</span>()</a></code></pre></div>
-<p><img src="E_1_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="E_1_files/figure-html/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="histograma-de-frecuencias-1" class="section level2">
 <h2><span class="header-section-number">4.3</span> Histograma de frecuencias</h2>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">hist</span>(mtcars<span class="op">$</span>mpg[mtcars<span class="op">$</span>am<span class="op">==</span><span class="st">&quot;Automatic&quot;</span>], <span class="dt">breaks=</span><span class="dv">12</span>, <span class="dt">main=</span><span class="st">&quot;mpg for automatic vehicles&quot;</span>, <span class="dt">xlab=</span><span class="st">&quot;mpg&quot;</span>, <span class="dt">xlim=</span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">35</span>))</a></code></pre></div>
-<p><img src="E_1_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="E_1_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
             </section>
@@ -358,7 +357,7 @@ gitbook.start({
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
-"theme": "sepia",
+"theme": "white",
 "family": "serif",
 "size": 2
 },
