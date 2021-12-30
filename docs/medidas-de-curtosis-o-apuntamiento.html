@@ -24,7 +24,7 @@
 <meta name="author" content="Ricardo Michel MALLQUI BAÑOS" />
 
 
-<meta name="date" content="2021-11-23" />
+<meta name="date" content="2021-12-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,6 +50,7 @@
 
 
 
+<link rel="shortcut icon" type="image/x-icon" href="www.ico" />
 
 
 <style type="text/css">
@@ -141,7 +142,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.1" data-path="variables.html"><a href="variables.html#discretas"><i class="fa fa-check"></i><b>2.2.1</b> Discretas</a></li>
 <li class="chapter" data-level="2.2.2" data-path="variables.html"><a href="variables.html#continuas"><i class="fa fa-check"></i><b>2.2.2</b> Continuas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="variables.html"><a href="variables.html#asignación"><i class="fa fa-check"></i><b>2.3</b> Asignación</a></li>
+<li class="chapter" data-level="2.3" data-path="variables.html"><a href="variables.html#ejercicios-propuestos"><i class="fa fa-check"></i><b>2.3</b> Ejercicios propuestos</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html"><i class="fa fa-check"></i><b>3</b> Organización de datos en tablas de frecuencias</a><ul>
 <li class="chapter" data-level="3.1" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html#distribución-de-frecuencias"><i class="fa fa-check"></i><b>3.1</b> Distribución de frecuencias</a></li>
@@ -169,7 +170,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#mediana-de-datos-tabulados"><i class="fa fa-check"></i><b>5.3.2</b> Mediana de datos tabulados</a></li>
 <li class="chapter" data-level="5.3.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#ejemplo-2"><i class="fa fa-check"></i><b>5.3.3</b> Ejemplo</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#asignación-1"><i class="fa fa-check"></i><b>5.4</b> Asignación</a></li>
+<li class="chapter" data-level="5.4" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#asignación"><i class="fa fa-check"></i><b>5.4</b> Asignación</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html"><i class="fa fa-check"></i><b>6</b> Medidas de dispersión</a><ul>
 <li class="chapter" data-level="6.1" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#rango"><i class="fa fa-check"></i><b>6.1</b> Rango</a></li>
@@ -187,7 +188,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.5.2" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#datos-tabulados-2"><i class="fa fa-check"></i><b>6.5.2</b> Datos tabulados</a></li>
 </ul></li>
 <li class="chapter" data-level="6.6" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#coeficiente-de-variacion"><i class="fa fa-check"></i><b>6.6</b> Coeficiente de variacion</a></li>
-<li class="chapter" data-level="6.7" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#asignación-2"><i class="fa fa-check"></i><b>6.7</b> Asignación</a></li>
+<li class="chapter" data-level="6.7" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#asignación-1"><i class="fa fa-check"></i><b>6.7</b> Asignación</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html"><i class="fa fa-check"></i><b>7</b> Medidas de posicion (cuantiles)</a><ul>
 <li class="chapter" data-level="7.1" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html#cuartiles"><i class="fa fa-check"></i><b>7.1</b> Cuartiles</a><ul>
@@ -284,87 +285,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="medidas-de-curtosis-o-apuntamiento" class="section level1">
 <h1><span class="header-section-number">Capítulo 9</span> Medidas de curtosis o apuntamiento</h1>
 <p>En estadística, usamos la medida de curtosis para describir la “cola” de la distribución, ya que describe la forma de la misma. También es una medida del “pico” de la distribución.</p>
-<div class="figure">
-<img src="curtosis.jpg" alt="wwwwwwwwwwwwwwww" />
-<p class="caption">wwwwwwwwwwwwwwww</p>
-</div>
+<p><img src="curtosis.jpg" /></p>
 <ol style="list-style-type: decimal">
 <li><strong>Mesocurtica</strong> : esta es la distribución normal</li>
-<li><strong>Leptocurtica</strong> : esta distribución tiene colas más gruesas y un pico más afilado. La curtosis es “positiva” con un valor superior a 3</li>
-<li><strong>Platicurtica</strong> : La distribución tiene un pico más bajo y más ancho y colas más delgadas. La curtosis es “negativa” con un valor superior a 30.263</li>
+<li><strong>Leptocurtica</strong> : esta distribución tiene colas más gruesas y un pico más afilado. La curtosis es “positiva” con un valor superior a 3.</li>
+<li><strong>Platicurtica</strong> : La distribución tiene un pico más bajo y más ancho y colas más delgadas. La curtosis es “negativa” con un valor superior a 30.263.</li>
 </ol>
 <ul>
-<li><p>En base a la media y desviacion tipica
-<span class="math display">\[k= \frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^4 }{ns^4};\]</span> Si <span class="math inline">\(k=3\)</span> ademas <span class="math inline">\(k\geq 3\)</span></p></li>
+<li><p>En base a la media y desviación típica
+<span class="math display">\[k= \frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^4 }{ns^4}; \]</span> Si <span class="math inline">\(k=3\)</span> ademas <span class="math inline">\(k\geq 3\)</span>.</p></li>
 <li><p>En base a percentiles
-<span class="math display">\[k= \frac{P_{75}-P_{25}}{2\left( P_{90}-P_{10} \right) }\]</span> Si <span class="math inline">\(k&lt;3\)</span> y si <span class="math inline">\(k=3\)</span> ademas <span class="math inline">\(k\geq 0.263\)</span></p></li>
+<span class="math display">\[k= \frac{P_{75}-P_{25}}{2\left( P_{90}-P_{10} \right) }\]</span> Si <span class="math inline">\(k&lt;3\)</span> y si <span class="math inline">\(k=3\)</span> ademas <span class="math inline">\(k\geq 0.263\)</span>.</p></li>
 </ul>
 <p>Si este coeficiente es nulo, la distribución se dice normal (similar a la distribución normal de Gauss) y recibe el nombre de mesocúrtica.</p>
 <p>Si el coeficiente es positivo, la distribución se llama leptocúrtica, más puntiaguda que la anterior. Hay una mayor concentración de los datos en torno a la media.</p>
-<p>Si el coeficiente es negativo, la distribución se llama platicúrtica y hay una menor concentración de datos en torno a la media. sería más achatada que la primera.
-<!--
-
-<div class="figure" style="text-align: center">
-<iframe src="https://www.youtube.com/embed/TTpbP5BVtiA" width="100%" height="400px"></iframe>
-<p class="caption">(\#fig:Doge)Hola</p>
+<p>Si el coeficiente es negativo, la distribución se llama platicúrtica y hay una menor concentración de datos en torno a la media. sería más achatada que la primera.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Doge"></span>
+<iframe src="https://www.youtube.com/embed/TTpbP5BVtiA" width="100%" height="400px">
+</iframe>
+<p class="caption">
+Figura 9.1: Video youtube
+</p>
 </div>
-
-
-
-
-
-
-
-
-
-```python3 {cmd=true matplotlib=true}
-import matplotlib.pyplot as plt
-import numpy as np
-
-x = np.random.normal(170, 10, 250)
-
-plt.hist(x)
-plt.show() 
-```
-```python3 {cmd=true matplotlib=true}
-from matplotlib import rc
-import matplotlib.pylab as plt
-
-rc('font', **{'family': 'serif', 'serif': ['Computer Modern']})
-rc('text', usetex=True)
-
-x = plt.linspace(0,5)
-plt.plot(x,plt.sin(x))
-plt.ylabel(r"This is $\sin(x)$", size=20)
-plt.show()
-```
-
-```python3 {cmd=true matplotlib=true}
-import matplotlib.pyplot as plt
-import numpy as np
-
-x = np.array(["A", "B", "C", "D"])
-y = np.array([3, 8, 1, 10])
-
-plt.bar(x,y)
-plt.show()
-```
-
-```python3 {cmd=true matplotlib=true}
-import numpy
-
-speed = [32,111,138,28,59,77,97]
-
-x = numpy.std(speed)
-
-print(x)
-```
-
-![wwwwwwww](foo.png)
-
-
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
---></p>
+<p><code>python3 {cmd=true matplotlib=true} import matplotlib.pyplot as plt import numpy as np x = np.random.normal(170, 10, 250) plt.hist(x) plt.show()  plt.savefig("histograma.svg")</code></p>
+<p><code>python3 {cmd=true matplotlib=true} from matplotlib import rc import matplotlib.pylab as plt rc('font', **{'family': 'serif', 'serif': ['Computer Modern']}) rc('text', usetex=True) x = plt.linspace(0, 5) plt.plot(x, plt.sin(x)) plt.ylabel(r"This is $\sin(x)$", size=20) plt.show()</code></p>
+<p><code>python3 {cmd=true matplotlib=true} import matplotlib.pyplot as plt import numpy as np x = np.array(["A", "B", "C", "D"]) y = np.array([3, 8, 1, 10]) plt.bar(x,y) plt.show()</code></p>
+<p><code>python3 {cmd=true matplotlib=true} import numpy speed = [32, 111, 138, 28, 59, 77, 97] x = numpy.std(speed) print(x)</code></p>
+<p><img src="foo.png" alt="www" />
+<img src="histograma.svg" alt="www" /></p>
 
 </div>
 

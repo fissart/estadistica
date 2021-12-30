@@ -24,7 +24,7 @@
 <meta name="author" content="Ricardo Michel MALLQUI BAÑOS" />
 
 
-<meta name="date" content="2021-11-23" />
+<meta name="date" content="2021-12-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,6 +50,7 @@
 
 
 
+<link rel="shortcut icon" type="image/x-icon" href="www.ico" />
 
 
 <style type="text/css">
@@ -141,7 +142,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2.1" data-path="variables.html"><a href="variables.html#discretas"><i class="fa fa-check"></i><b>2.2.1</b> Discretas</a></li>
 <li class="chapter" data-level="2.2.2" data-path="variables.html"><a href="variables.html#continuas"><i class="fa fa-check"></i><b>2.2.2</b> Continuas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="variables.html"><a href="variables.html#asignación"><i class="fa fa-check"></i><b>2.3</b> Asignación</a></li>
+<li class="chapter" data-level="2.3" data-path="variables.html"><a href="variables.html#ejercicios-propuestos"><i class="fa fa-check"></i><b>2.3</b> Ejercicios propuestos</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html"><i class="fa fa-check"></i><b>3</b> Organización de datos en tablas de frecuencias</a><ul>
 <li class="chapter" data-level="3.1" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html#distribución-de-frecuencias"><i class="fa fa-check"></i><b>3.1</b> Distribución de frecuencias</a></li>
@@ -169,7 +170,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.3.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#mediana-de-datos-tabulados"><i class="fa fa-check"></i><b>5.3.2</b> Mediana de datos tabulados</a></li>
 <li class="chapter" data-level="5.3.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#ejemplo-2"><i class="fa fa-check"></i><b>5.3.3</b> Ejemplo</a></li>
 </ul></li>
-<li class="chapter" data-level="5.4" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#asignación-1"><i class="fa fa-check"></i><b>5.4</b> Asignación</a></li>
+<li class="chapter" data-level="5.4" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#asignación"><i class="fa fa-check"></i><b>5.4</b> Asignación</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html"><i class="fa fa-check"></i><b>6</b> Medidas de dispersión</a><ul>
 <li class="chapter" data-level="6.1" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#rango"><i class="fa fa-check"></i><b>6.1</b> Rango</a></li>
@@ -187,7 +188,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.5.2" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#datos-tabulados-2"><i class="fa fa-check"></i><b>6.5.2</b> Datos tabulados</a></li>
 </ul></li>
 <li class="chapter" data-level="6.6" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#coeficiente-de-variacion"><i class="fa fa-check"></i><b>6.6</b> Coeficiente de variacion</a></li>
-<li class="chapter" data-level="6.7" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#asignación-2"><i class="fa fa-check"></i><b>6.7</b> Asignación</a></li>
+<li class="chapter" data-level="6.7" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#asignación-1"><i class="fa fa-check"></i><b>6.7</b> Asignación</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html"><i class="fa fa-check"></i><b>7</b> Medidas de posicion (cuantiles)</a><ul>
 <li class="chapter" data-level="7.1" data-path="medidas-de-posicion-cuantiles.html"><a href="medidas-de-posicion-cuantiles.html#cuartiles"><i class="fa fa-check"></i><b>7.1</b> Cuartiles</a><ul>
@@ -285,30 +286,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Capítulo 8</span> Medidas de asimetría</h1>
 <p>Podemos decir que la asimetría indica cuánto se desvía nuestra distribución subyacente de la <strong>distribución normal</strong>, ya que la distribución normal tiene <strong>asimetría 0</strong>. Generalmente, tenemos <strong>tres tipos de asimetría</strong>.</p>
 <ol style="list-style-type: decimal">
-<li><p><strong>Desviación simétrica</strong>: cuando la asimetría es cercana a 0 y la media es casi la misma que la mediana</p></li>
+<li><p><strong>Desviación simétrica</strong>: cuando la asimetría es cercana a 0 y la media es casi la misma que la mediana.</p></li>
 <li><p><strong>Desviación negativa</strong>: cuando la cola izquierda del histograma de la distribución es más larga y la mayoría de las observaciones se concentran en la cola derecha. En este caso, también podemos utilizar el término “sesgado a la izquierda” o “cola izquierda”. y la <strong>mediana es mayor que la media</strong>.</p></li>
-<li><p><strong>Desviación positiva</strong>: cuando la cola derecha del histograma de la distribución es más larga y la mayoría de las observaciones se concentran en la cola izquierda. En este caso, también podemos usar el término “sesgado a la derecha” o “cola derecha”. y la <strong>mediana es menor que la media</strong>.</p>
+<li><p><strong>Desviación positiva</strong>: cuando la cola derecha del histograma de la distribución es más larga y la mayoría de las observaciones se concentran en la cola izquierda. En este caso, también podemos usar el término “sesgado a la derecha” o “cola derecha”. y la <strong>mediana es menor que la media</strong>.</p></li>
+</ol>
 <div class="figure">
 <img src="simetria.png" alt="Medidas de asimetría" />
 <p class="caption">Medidas de asimetría</p>
-</div></li>
-</ol>
+</div>
 <ul>
-<li>Índice de simetría de <strong>Pearson</strong>:</li>
+<li>Índice de simetría de <strong>Pearson</strong></li>
 </ul>
-<p><span class="math display">\[
- f_1=\frac{\overline{x}-Mo}{\sigma}
- \]</span></p>
+<p><span class="math display">\[f_1=\frac{\overline{x}-Mo}{\sigma} \]</span></p>
 <ul>
-<li>Índice de simetría de <strong>Fisher</strong>:</li>
+<li>Índice de simetría de <strong>Fisher</strong></li>
 </ul>
-<p><span class="math display">\[
-f_2=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^3}{n\sigma^3}
-\]</span></p>
-<pre><code>* Simétrico : valores entre -0,5 y 0,5
-* Datos asimétricos moderados : valores entre -1 y -0,5 o entre 0,5 y 1
-* Datos muy sesgados : valores menores que -1 o mayores que 1</code></pre>
-<p>Si la distribución es simétrica, ambos índices son iguales a 0; si es asimétrica a la derecha, ambos son positivos; y si es asimétrica a la izquierda, ambos índices son negativos.</p>
+<p><span class="math display">\[f_2=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^3}{n\sigma^3}\]</span></p>
+<pre><code>- **Simétrico** : valores entre -0,5 y 0,5
+- **Datos asimétricos moderados** : valores entre -1 y -0,5 o entre 0,5 y 1
+- **Datos muy sesgados** : valores menores que -1 o mayores que 1</code></pre>
+<p>Si la distribución es <em>simétrica</em>, ambos índices son iguales a 0; si es <em>asimétrica a la derecha</em>, ambos son <em>positivos</em>; y si es <em>asimétrica a la izquierda</em>, ambos índices son <em>negativos</em>.</p>
 <pre><code>## [1] 0.5059805</code></pre>
 <pre><code>## [1] 78.53333</code></pre>
 <p><img src="E_1_files/figure-html/unnamed-chunk-15-1.png" width="672" style="display: block; margin: auto;" /></p>
@@ -316,7 +313,9 @@ f_2=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^3}{n\sigma^3}
 <pre><code>## [1] 1.216579</code></pre>
 <p><img src="E_1_files/figure-html/unnamed-chunk-17-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre><code>## [1] -1.340429</code></pre>
+<p>Refiérase a la tabla <a href="medidas-de-asimetría.html#tab:w1">8.1</a>.</p>
 <table>
+<caption><span id="tab:w1">Tabla 8.1: </span> Caption</caption>
 <thead>
 <tr class="header">
 <th align="center">Clase</th>
@@ -373,8 +372,6 @@ f_2=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^3}{n\sigma^3}
 <!--
 
 <img src="E_1_files/figure-html/unnamed-chunk-18-1.png" width="672" style="display: block; margin: auto;" /><img src="E_1_files/figure-html/unnamed-chunk-18-2.png" width="672" style="display: block; margin: auto;" /><img src="E_1_files/figure-html/unnamed-chunk-18-3.png" width="672" style="display: block; margin: auto;" />
-
-
 
 
 ```
