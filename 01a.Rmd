@@ -18,11 +18,11 @@ $$f_1=\frac{\overline{x}-Mo}{\sigma} $$
 
 $$f_2=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^3}{n\sigma^3}$$
 
-    - Simétrico : valores entre -0,5 y 0,5
-    - Datos asimétricos moderados : valores entre -1 y -0,5 o entre 0,5 y 1
-    - Datos muy sesgados : valores menores que -1 o mayores que 1
+    - **Simétrico** : valores entre -0,5 y 0,5
+    - **Datos asimétricos moderados** : valores entre -1 y -0,5 o entre 0,5 y 1
+    - **Datos muy sesgados** : valores menores que -1 o mayores que 1
 
-Si la distribución es simétrica, ambos índices son iguales a 0; si es asimétrica a la derecha, ambos son positivos; y si es asimétrica a la izquierda, ambos índices son negativos.
+Si la distribución es *simétrica*, ambos índices son iguales a 0; si es *asimétrica a la derecha*, ambos son *positivos*; y si es *asimétrica a la izquierda*, ambos índices son *negativos*.
 
 ```{r fig.align='center', fig.height=4, echo=FALSE}
 set.seed(5)
@@ -58,6 +58,8 @@ abline(v = c(mean(x), median(x)), col=c("green", "blue"), lty=c(2, 2), lwd=c(3, 
 print(sum((x-mean(x))^3)/((length(x)-1)*sd(x)^3))
 ```
 
+Refiérase a la tabla \@ref(tab:w1).
+
 |   Clase   | $Y_i$ | $f_i$ | $Y_i*f_i$ |
 |:---------:|:-----:|:-----:|:---------:|
 | $[5,10)$  |  7.5  |   2   |    7.5    |
@@ -68,6 +70,7 @@ print(sum((x-mean(x))^3)/((length(x)-1)*sd(x)^3))
 | $[30,35]$ |       |   8   |    195    |
 |  $\sum$   |       |       |           |
 
+: (\#tab:w1) Caption
 
 <!--
 
