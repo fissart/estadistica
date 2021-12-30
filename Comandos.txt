@@ -19,8 +19,8 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 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
 
 
- Rscript -e "rmarkdown::render_site(encoding='UTF-8')"
- Rscript -e "rmarkdown::render_site('01.Rmd', encoding='UTF-8')"
+Rscript -e "rmarkdown::render_site(encoding='UTF-8')"
+Rscript -e "rmarkdown::render_site('01.Rmd', encoding='UTF-8')"
 
 npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
 lsof -i :8081 
