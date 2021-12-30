@@ -27,8 +27,8 @@ Si la distribución es *simétrica*, ambos índices son iguales a 0; si es *asim
 ```{r fig.align='center', fig.height=4, echo=FALSE}
 set.seed(5)
 # normal
-# x = rnorm(1000, 0, 1)  
-x = c(65, 67, 70, 77, 78, 78, 80, 76, 71, 75, 87, 78, 88, 90, 98)
+x = rnorm(1000, 0, 1)  
+# x = c(65, 67, 70, 77, 78, 78, 80, 76, 71, 75, 87, 78, 88, 90, 98)
 print(sum((x-mean(x))^3)/((length(x)-1)*sd(x)^3))
 print(mean(x))
 hist(x, main="Normal: Simétrica", freq=FALSE)
@@ -39,8 +39,8 @@ abline(v = c(mean(x), median(x)), col=c("green", "blue"), lty=c(2, 2), lwd=c(3, 
 ```{r fig.align='center', fig.height=5, echo=FALSE}
 set.seed(5)
 # exponential
-# x = rexp(1000,1)
-x = c(65, 67, 72, 77, 66, 78, 62, 66, 71, 75, 68, 78, 68, 90, 98)
+x = rexp(1000,1)
+# x = c(65, 67, 72, 77, 66, 78, 62, 66, 71, 75, 68, 78, 68, 90, 98)
 hist(x, main="Exponencial: Simetría positiva", freq=FALSE)
 lines(density(x), col='red', lwd=3)
 abline(v = c(mean(x),median(x)),  col=c("green", "blue"), lty=c(2,2), lwd=c(3, 3))
@@ -61,7 +61,7 @@ print(sum((x-mean(x))^3)/((length(x)-1)*sd(x)^3))
 Refiérase a la tabla \@ref(tab:w1).
 
 |   Clase   | $Y_i$ | $f_i$ | $Y_i*f_i$ |
-|:---------:|:-----:|:-----:|:---------:|
+| :-------: | :---: | :---: | :-------: |
 | $[5,10)$  |  7.5  |   2   |    7.5    |
 | $[10,15)$ | 12.5  |   3   |    25     |
 | $[15,20)$ |       |   4   |   87.5    |
