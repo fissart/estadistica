@@ -311,10 +311,10 @@ Figura 9.1: Video youtube
 <p><code>python3 {cmd=true matplotlib=true} from matplotlib import rc import matplotlib.pylab as plt rc('font', **{'family': 'serif', 'serif': ['Computer Modern']}) rc('text', usetex=True) x = plt.linspace(0, 5) plt.plot(x, plt.sin(x)) plt.ylabel(r"This is $\sin(x)$", size=20) plt.show()</code></p>
 <p><code>python3 {cmd=true matplotlib=true} import matplotlib.pyplot as plt import numpy as np x = np.array(["A", "B", "C", "D"]) y = np.array([3, 8, 1, 10]) plt.bar(x,y) plt.show()</code></p>
 <p><code>python3 {cmd=true matplotlib=true} import numpy speed = [32, 111, 138, 28, 59, 77, 97] x = numpy.std(speed) print(x)</code></p>
-<p><img src="foo.png" alt="www" />
-<!--
-![www](histograma.svg)
---></p>
+<div class="figure">
+<img src="foo.png" alt="www" />
+<p class="caption">www</p>
+</div>
 
 </div>
 
@@ -353,7 +353,7 @@ gitbook.start({
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
-"theme": "white",
+"theme": "sepia",
 "family": "serif",
 "size": 2
 },
