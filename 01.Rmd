@@ -205,7 +205,7 @@ Menos moralistas que los INFJ, los INFP también se preocupan mucho por ayudar a
 
 ```
 
-```{solution}
+::: {solution}
 
 Se tiene 16 características con los siguientes datos  
 
@@ -229,7 +229,9 @@ Se tiene 16 características con los siguientes datos
 |     INFJ     |    1     |
 |     INFP     |    1     |
 
-```
+: (\#tab:w1) Caption
+
+:::
 
 ```{r cualitativa, echo=FALSE, warning = FALSE, message = FALSE, tidy=FALSE}
 library(openxlsx)
