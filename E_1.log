@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.8.17)  30 DEC 2021 12:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.8.17)  30 DEC 2021 12:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1725,8 +1725,8 @@ Underfull \hbox (badness 10000) detected at line 538
  [][]
  []
 
-LaTeX Info: Redefining \. on input line 570.
-LaTeX Info: Redefining \% on input line 570.
+LaTeX Info: Redefining \. on input line 573.
+LaTeX Info: Redefining \% on input line 573.
 [13
 Non-PDF special ignored!
 <special> color cmyk 0 0 0 1.0
@@ -1739,24 +1739,24 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 <special> color cmyk 0 0 0 1.0
 ]
-LaTeX Info: Redefining \. on input line 606.
-LaTeX Info: Redefining \% on input line 606.
+LaTeX Info: Redefining \. on input line 608.
+LaTeX Info: Redefining \% on input line 608.
 [14]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 3.5 on input line 629.
+(longtable)                in table 3.5 on input line 631.
 
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 64
-0.
+2.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-Overfull \hbox (11.5pt too wide) in paragraph at lines 640--641
+Overfull \hbox (11.5pt too wide) in paragraph at lines 642--643
 []\T1/pcr/m/n/10 r {cmd=true} print("wwwwwwwwwwwwwwwww wwwwwwwwwwwwwwwwww") 
  []
 
-LaTeX Info: Redefining \. on input line 667.
-LaTeX Info: Redefining \% on input line 667.
+LaTeX Info: Redefining \. on input line 669.
+LaTeX Info: Redefining \% on input line 669.
 [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1797,50 +1797,50 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [16
 
 ]
-Underfull \vbox (badness 10000) detected at line 667
+Underfull \vbox (badness 10000) detected at line 669
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 667
+Overfull \hbox (336.25pt too wide) detected at line 669
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 667
+Underfull \vbox (badness 10000) detected at line 669
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 667
+Overfull \hbox (336.25pt too wide) detected at line 669
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 667
+Underfull \vbox (badness 10000) detected at line 669
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 667
+Overfull \hbox (336.25pt too wide) detected at line 669
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 667
+Underfull \vbox (badness 10000) detected at line 669
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 667
+Overfull \hbox (336.25pt too wide) detected at line 669
 []
  []
 
 Cap\'{\i }tulo 4.
-<E_1_files/figure-latex/unnamed-chunk-6-1.pdf, id=209, 469.755pt x 289.08pt>
-File: E_1_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type pdf)
-<use E_1_files/figure-latex/unnamed-chunk-6-1.pdf>
-Package pdftex.def Info: E_1_files/figure-latex/unnamed-chunk-6-1.pdf  used on 
-input line 687.
+<E_1_files/figure-latex/unnamed-chunk-5-1.pdf, id=209, 469.755pt x 289.08pt>
+File: E_1_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type pdf)
+<use E_1_files/figure-latex/unnamed-chunk-5-1.pdf>
+Package pdftex.def Info: E_1_files/figure-latex/unnamed-chunk-5-1.pdf  used on 
+input line 689.
 (pdftex.def)             Requested size: 336.49588pt x 207.07439pt.
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 6
-97.
+99.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 )
@@ -1850,86 +1850,86 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 
 [17
 
- <./E_1_files/figure-latex/unnamed-chunk-6-1.pdf>]
-<E_1_files/figure-latex/unnamed-chunk-7-1.pdf, id=234, 469.755pt x 289.08pt>
+ <./E_1_files/figure-latex/unnamed-chunk-5-1.pdf>]
+<E_1_files/figure-latex/unnamed-chunk-6-1.pdf, id=234, 469.755pt x 289.08pt>
+File: E_1_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type pdf)
+<use E_1_files/figure-latex/unnamed-chunk-6-1.pdf>
+Package pdftex.def Info: E_1_files/figure-latex/unnamed-chunk-6-1.pdf  used on 
+input line 706.
+(pdftex.def)             Requested size: 336.49588pt x 207.07439pt.
+<E_1_files/figure-latex/unnamed-chunk-7-1.pdf, id=235, 469.755pt x 289.08pt>
 File: E_1_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type pdf)
 <use E_1_files/figure-latex/unnamed-chunk-7-1.pdf>
 Package pdftex.def Info: E_1_files/figure-latex/unnamed-chunk-7-1.pdf  used on 
-input line 704.
+input line 715.
 (pdftex.def)             Requested size: 336.49588pt x 207.07439pt.
-<E_1_files/figure-latex/unnamed-chunk-8-1.pdf, id=235, 469.755pt x 289.08pt>
-File: E_1_files/figure-latex/unnamed-chunk-8-1.pdf Graphic file (type pdf)
-<use E_1_files/figure-latex/unnamed-chunk-8-1.pdf>
-Package pdftex.def Info: E_1_files/figure-latex/unnamed-chunk-8-1.pdf  used on 
-input line 713.
-(pdftex.def)             Requested size: 336.49588pt x 207.07439pt.
-LaTeX Info: Redefining \. on input line 715.
-LaTeX Info: Redefining \% on input line 715.
-[18 <./E_1_files/figure-latex/unnamed-chunk-7-1.pdf> <./E_1_files/figure-latex/
-unnamed-chunk-8-1.pdf
+LaTeX Info: Redefining \. on input line 717.
+LaTeX Info: Redefining \% on input line 717.
+[18 <./E_1_files/figure-latex/unnamed-chunk-6-1.pdf> <./E_1_files/figure-latex/
+unnamed-chunk-7-1.pdf
 
-pdfTeX warning: pdflatex (file ./E_1_files/figure-latex/unnamed-chunk-8-1.pdf):
+pdfTeX warning: pdflatex (file ./E_1_files/figure-latex/unnamed-chunk-7-1.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 719.
-<E_1_files/figure-latex/unnamed-chunk-9-1.pdf, id=255, 469.755pt x 289.08pt>
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 721.
+<E_1_files/figure-latex/unnamed-chunk-8-1.pdf, id=255, 469.755pt x 289.08pt>
+File: E_1_files/figure-latex/unnamed-chunk-8-1.pdf Graphic file (type pdf)
+<use E_1_files/figure-latex/unnamed-chunk-8-1.pdf>
+Package pdftex.def Info: E_1_files/figure-latex/unnamed-chunk-8-1.pdf  used on 
+input line 734.
+(pdftex.def)             Requested size: 336.49588pt x 207.07439pt.
+<E_1_files/figure-latex/unnamed-chunk-9-1.pdf, id=256, 469.755pt x 289.08pt>
 File: E_1_files/figure-latex/unnamed-chunk-9-1.pdf Graphic file (type pdf)
 <use E_1_files/figure-latex/unnamed-chunk-9-1.pdf>
 Package pdftex.def Info: E_1_files/figure-latex/unnamed-chunk-9-1.pdf  used on 
-input line 732.
+input line 745.
 (pdftex.def)             Requested size: 336.49588pt x 207.07439pt.
-<E_1_files/figure-latex/unnamed-chunk-10-1.pdf, id=256, 469.755pt x 289.08pt>
-File: E_1_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file (type pdf)
-<use E_1_files/figure-latex/unnamed-chunk-10-1.pdf>
-Package pdftex.def Info: E_1_files/figure-latex/unnamed-chunk-10-1.pdf  used on
- input line 743.
-(pdftex.def)             Requested size: 336.49588pt x 207.07439pt.
-LaTeX Info: Redefining \. on input line 743.
-LaTeX Info: Redefining \% on input line 743.
-[19 <./E_1_files/figure-latex/unnamed-chunk-9-1.pdf>]
-LaTeX Info: Redefining \. on input line 746.
-LaTeX Info: Redefining \% on input line 746.
-[20 <./E_1_files/figure-latex/unnamed-chunk-10-1.pdf>]
-Underfull \vbox (badness 10000) detected at line 746
+LaTeX Info: Redefining \. on input line 745.
+LaTeX Info: Redefining \% on input line 745.
+[19 <./E_1_files/figure-latex/unnamed-chunk-8-1.pdf>]
+LaTeX Info: Redefining \. on input line 748.
+LaTeX Info: Redefining \% on input line 748.
+[20 <./E_1_files/figure-latex/unnamed-chunk-9-1.pdf>]
+Underfull \vbox (badness 10000) detected at line 748
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 746
+Overfull \hbox (336.25pt too wide) detected at line 748
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 746
+Underfull \vbox (badness 10000) detected at line 748
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 746
+Overfull \hbox (336.25pt too wide) detected at line 748
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 746
+Underfull \vbox (badness 10000) detected at line 748
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 746
+Overfull \hbox (336.25pt too wide) detected at line 748
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 746
+Underfull \vbox (badness 10000) detected at line 748
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 746
+Overfull \hbox (336.25pt too wide) detected at line 748
 []
  []
 
 Cap\'{\i }tulo 5.
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 5.1 on input line 785.
+(longtable)                in table 5.1 on input line 787.
 
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -1942,48 +1942,48 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 ]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 5.2 on input line 802.
+(longtable)                in table 5.2 on input line 804.
 
-LaTeX Info: Redefining \. on input line 830.
-LaTeX Info: Redefining \% on input line 830.
+LaTeX Info: Redefining \. on input line 832.
+LaTeX Info: Redefining \% on input line 832.
 [22]
-LaTeX Info: Redefining \. on input line 884.
-LaTeX Info: Redefining \% on input line 884.
+LaTeX Info: Redefining \. on input line 886.
+LaTeX Info: Redefining \% on input line 886.
 [23]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 5.3 on input line 884.
+(longtable)                in table 5.3 on input line 886.
 
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 5.4 on input line 900.
+(longtable)                in table 5.4 on input line 902.
 
-LaTeX Info: Redefining \. on input line 914.
-LaTeX Info: Redefining \% on input line 914.
+LaTeX Info: Redefining \. on input line 916.
+LaTeX Info: Redefining \% on input line 916.
 [24]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 5.5 on input line 961.
+(longtable)                in table 5.5 on input line 963.
 
-LaTeX Info: Redefining \. on input line 966.
-LaTeX Info: Redefining \% on input line 966.
+LaTeX Info: Redefining \. on input line 968.
+LaTeX Info: Redefining \% on input line 968.
 [25]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 5.6 on input line 980.
+(longtable)                in table 5.6 on input line 982.
 
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 5.7 on input line 1006.
+(longtable)                in table 5.7 on input line 1008.
 
 
 Overfull \vbox (0.78108pt too high) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 1006.
-LaTeX Info: Redefining \% on input line 1006.
+LaTeX Info: Redefining \. on input line 1008.
+LaTeX Info: Redefining \% on input line 1008.
 [26]
-LaTeX Info: Redefining \. on input line 1015.
-LaTeX Info: Redefining \% on input line 1015.
+LaTeX Info: Redefining \. on input line 1017.
+LaTeX Info: Redefining \% on input line 1017.
 [27]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2024,44 +2024,44 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [28
 
 ]
-Underfull \vbox (badness 10000) detected at line 1015
+Underfull \vbox (badness 10000) detected at line 1017
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 1015
+Overfull \hbox (336.25pt too wide) detected at line 1017
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1015
+Underfull \vbox (badness 10000) detected at line 1017
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 1015
+Overfull \hbox (336.25pt too wide) detected at line 1017
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1015
+Underfull \vbox (badness 10000) detected at line 1017
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 1015
+Overfull \hbox (336.25pt too wide) detected at line 1017
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1015
+Underfull \vbox (badness 10000) detected at line 1017
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 1015
+Overfull \hbox (336.25pt too wide) detected at line 1017
 []
  []
 
 Cap\'{\i }tulo 6.
 
-Overfull \hbox (97.18457pt too wide) detected at line 1048
+Overfull \hbox (97.18457pt too wide) detected at line 1050
 [][]
  []
 
@@ -2075,62 +2075,62 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 ]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 6.1 on input line 1070.
+(longtable)                in table 6.1 on input line 1072.
 
 
-Overfull \hbox (179.76855pt too wide) detected at line 1085
+Overfull \hbox (179.76855pt too wide) detected at line 1087
 [][]
  []
 
-LaTeX Info: Redefining \. on input line 1085.
-LaTeX Info: Redefining \% on input line 1085.
+LaTeX Info: Redefining \. on input line 1087.
+LaTeX Info: Redefining \% on input line 1087.
 [30]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 6.2 on input line 1109.
+(longtable)                in table 6.2 on input line 1111.
 
-LaTeX Info: Redefining \. on input line 1119.
-LaTeX Info: Redefining \% on input line 1119.
+LaTeX Info: Redefining \. on input line 1121.
+LaTeX Info: Redefining \% on input line 1121.
 [31]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 6.3 on input line 1156.
+(longtable)                in table 6.3 on input line 1158.
 
 
-Overfull \hbox (149.69305pt too wide) detected at line 1169
+Overfull \hbox (149.69305pt too wide) detected at line 1171
 [][]
  []
 
-LaTeX Info: Redefining \. on input line 1169.
-LaTeX Info: Redefining \% on input line 1169.
+LaTeX Info: Redefining \. on input line 1171.
+LaTeX Info: Redefining \% on input line 1171.
 [32]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 6.4 on input line 1203.
+(longtable)                in table 6.4 on input line 1205.
 
 
 Overfull \vbox (3.3161pt too high) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 1203.
-LaTeX Info: Redefining \% on input line 1203.
+LaTeX Info: Redefining \. on input line 1205.
+LaTeX Info: Redefining \% on input line 1205.
 [33]
-Overfull \hbox (117.16306pt too wide) detected at line 1215
+Overfull \hbox (117.16306pt too wide) detected at line 1217
 [][]
  []
 
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 6.5 on input line 1237.
+(longtable)                in table 6.5 on input line 1239.
 
-LaTeX Info: Redefining \. on input line 1259.
-LaTeX Info: Redefining \% on input line 1259.
+LaTeX Info: Redefining \. on input line 1261.
+LaTeX Info: Redefining \% on input line 1261.
 [34]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 6.6 on input line 1259.
+(longtable)                in table 6.6 on input line 1261.
 
-LaTeX Info: Redefining \. on input line 1262.
-LaTeX Info: Redefining \% on input line 1262.
+LaTeX Info: Redefining \. on input line 1264.
+LaTeX Info: Redefining \% on input line 1264.
 [35]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2171,38 +2171,38 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [36
 
 ]
-Underfull \vbox (badness 10000) detected at line 1262
+Underfull \vbox (badness 10000) detected at line 1264
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 1262
+Overfull \hbox (336.25pt too wide) detected at line 1264
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1262
+Underfull \vbox (badness 10000) detected at line 1264
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 1262
+Overfull \hbox (336.25pt too wide) detected at line 1264
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1262
+Underfull \vbox (badness 10000) detected at line 1264
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 1262
+Overfull \hbox (336.25pt too wide) detected at line 1264
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1262
+Underfull \vbox (badness 10000) detected at line 1264
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 1262
+Overfull \hbox (336.25pt too wide) detected at line 1264
 []
  []
 
@@ -2217,30 +2217,30 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 ]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 7.1 on input line 1359.
+(longtable)                in table 7.1 on input line 1361.
 
 
 Overfull \vbox (6.92287pt too high) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 1359.
-LaTeX Info: Redefining \% on input line 1359.
+LaTeX Info: Redefining \. on input line 1361.
+LaTeX Info: Redefining \% on input line 1361.
 [38]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 7.2 on input line 1406.
+(longtable)                in table 7.2 on input line 1408.
 
-LaTeX Info: Redefining \. on input line 1406.
-LaTeX Info: Redefining \% on input line 1406.
+LaTeX Info: Redefining \. on input line 1408.
+LaTeX Info: Redefining \% on input line 1408.
 [39]
-LaTeX Info: Redefining \. on input line 1433.
-LaTeX Info: Redefining \% on input line 1433.
+LaTeX Info: Redefining \. on input line 1435.
+LaTeX Info: Redefining \% on input line 1435.
 [40]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 7.3 on input line 1450.
+(longtable)                in table 7.3 on input line 1452.
 
-LaTeX Info: Redefining \. on input line 1453.
-LaTeX Info: Redefining \% on input line 1453.
+LaTeX Info: Redefining \. on input line 1455.
+LaTeX Info: Redefining \% on input line 1455.
 [41]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2281,53 +2281,43 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [42
 
 ]
-Underfull \vbox (badness 10000) detected at line 1453
+Underfull \vbox (badness 10000) detected at line 1455
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 1453
+Overfull \hbox (336.25pt too wide) detected at line 1455
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1453
+Underfull \vbox (badness 10000) detected at line 1455
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 1453
+Overfull \hbox (336.25pt too wide) detected at line 1455
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1453
+Underfull \vbox (badness 10000) detected at line 1455
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 1453
+Overfull \hbox (336.25pt too wide) detected at line 1455
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1453
+Underfull \vbox (badness 10000) detected at line 1455
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 1453
+Overfull \hbox (336.25pt too wide) detected at line 1455
 []
  []
 
 Cap\'{\i }tulo 8.
 
-Underfull \hbox (badness 10000) detected at line 1460
- [][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 1460
-[][][]
- []
-
-
 Underfull \hbox (badness 10000) detected at line 1462
  [][]
  []
@@ -2344,13 +2334,23 @@ Underfull \hbox (badness 10000) detected at line 1464
 
 
 Underfull \hbox (badness 10000) detected at line 1464
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1466
+ [][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1466
 [][][]
  []
 
 <simetria.png, id=485, 580.1675pt x 218.8175pt>
 File: simetria.png Graphic file (type png)
 <use simetria.png>
-Package pdftex.def Info: simetria.png  used on input line 1469.
+Package pdftex.def Info: simetria.png  used on input line 1471.
 (pdftex.def)             Requested size: 336.49738pt x 126.91423pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
@@ -2366,81 +2366,81 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 <special> color cmyk 0 0 0 1.0
  <./simetria.png>]
-Overfull \hbox (113.5pt too wide) in paragraph at lines 1493--1493
+Overfull \hbox (113.5pt too wide) in paragraph at lines 1495--1495
 []\T1/pcr/m/n/10 - **Datos asimétricos moderados** : valores entre -1 y -0,5 o 
 entre 0,5 y 1[] 
  []
 
 
-Overfull \hbox (53.5pt too wide) in paragraph at lines 1493--1493
+Overfull \hbox (53.5pt too wide) in paragraph at lines 1495--1495
 []\T1/pcr/m/n/10 - **Datos muy sesgados** : valores menores que -1 o mayores qu
 e 1[] 
  []
 
-<E_1_files/figure-latex/unnamed-chunk-15-1.pdf, id=496, 469.755pt x 289.08pt>
+<E_1_files/figure-latex/unnamed-chunk-14-1.pdf, id=496, 469.755pt x 289.08pt>
+File: E_1_files/figure-latex/unnamed-chunk-14-1.pdf Graphic file (type pdf)
+<use E_1_files/figure-latex/unnamed-chunk-14-1.pdf>
+Package pdftex.def Info: E_1_files/figure-latex/unnamed-chunk-14-1.pdf  used on
+ input line 1507.
+(pdftex.def)             Requested size: 336.49588pt x 207.07439pt.
+<E_1_files/figure-latex/unnamed-chunk-15-1.pdf, id=497, 469.755pt x 361.35pt>
 File: E_1_files/figure-latex/unnamed-chunk-15-1.pdf Graphic file (type pdf)
 <use E_1_files/figure-latex/unnamed-chunk-15-1.pdf>
 Package pdftex.def Info: E_1_files/figure-latex/unnamed-chunk-15-1.pdf  used on
- input line 1505.
-(pdftex.def)             Requested size: 336.49588pt x 207.07439pt.
-<E_1_files/figure-latex/unnamed-chunk-16-1.pdf, id=497, 469.755pt x 361.35pt>
+ input line 1509.
+(pdftex.def)             Requested size: 336.49588pt x 258.84299pt.
+LaTeX Info: Redefining \. on input line 1509.
+LaTeX Info: Redefining \% on input line 1509.
+[44 <./E_1_files/figure-latex/unnamed-chunk-14-1.pdf>]
+<E_1_files/figure-latex/unnamed-chunk-16-1.pdf, id=517, 469.755pt x 361.35pt>
 File: E_1_files/figure-latex/unnamed-chunk-16-1.pdf Graphic file (type pdf)
 <use E_1_files/figure-latex/unnamed-chunk-16-1.pdf>
 Package pdftex.def Info: E_1_files/figure-latex/unnamed-chunk-16-1.pdf  used on
- input line 1507.
+ input line 1515.
 (pdftex.def)             Requested size: 336.49588pt x 258.84299pt.
-LaTeX Info: Redefining \. on input line 1507.
-LaTeX Info: Redefining \% on input line 1507.
-[44 <./E_1_files/figure-latex/unnamed-chunk-15-1.pdf>]
-<E_1_files/figure-latex/unnamed-chunk-17-1.pdf, id=517, 469.755pt x 361.35pt>
-File: E_1_files/figure-latex/unnamed-chunk-17-1.pdf Graphic file (type pdf)
-<use E_1_files/figure-latex/unnamed-chunk-17-1.pdf>
-Package pdftex.def Info: E_1_files/figure-latex/unnamed-chunk-17-1.pdf  used on
- input line 1513.
-(pdftex.def)             Requested size: 336.49588pt x 258.84299pt.
-[45 <./E_1_files/figure-latex/unnamed-chunk-16-1.pdf>]
+[45 <./E_1_files/figure-latex/unnamed-chunk-15-1.pdf>]
 
-LaTeX Warning: Reference `tab:w1' on page 46 undefined on input line 1519.
+LaTeX Warning: Reference `tab:w1' on page 46 undefined on input line 1521.
 
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 8.1 on input line 1539.
+(longtable)                in table 8.1 on input line 1541.
 
-LaTeX Info: Redefining \. on input line 1542.
-LaTeX Info: Redefining \% on input line 1542.
-[46 <./E_1_files/figure-latex/unnamed-chunk-17-1.pdf>]
-Underfull \vbox (badness 10000) detected at line 1542
+LaTeX Info: Redefining \. on input line 1544.
+LaTeX Info: Redefining \% on input line 1544.
+[46 <./E_1_files/figure-latex/unnamed-chunk-16-1.pdf>]
+Underfull \vbox (badness 10000) detected at line 1544
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 1542
+Overfull \hbox (336.25pt too wide) detected at line 1544
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1542
+Underfull \vbox (badness 10000) detected at line 1544
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 1542
+Overfull \hbox (336.25pt too wide) detected at line 1544
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1542
+Underfull \vbox (badness 10000) detected at line 1544
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 1542
+Overfull \hbox (336.25pt too wide) detected at line 1544
 []
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1542
+Underfull \vbox (badness 10000) detected at line 1544
  []
 
 
-Overfull \hbox (336.25pt too wide) detected at line 1542
+Overfull \hbox (336.25pt too wide) detected at line 1544
 []
  []
 
@@ -2448,19 +2448,9 @@ Cap\'{\i }tulo 9.
 <curtosis.jpg, id=557, 279.29344pt x 158.84344pt>
 File: curtosis.jpg Graphic file (type jpg)
 <use curtosis.jpg>
-Package pdftex.def Info: curtosis.jpg  used on input line 1546.
+Package pdftex.def Info: curtosis.jpg  used on input line 1548.
 (pdftex.def)             Requested size: 279.30127pt x 158.84789pt.
 
-Underfull \hbox (badness 10000) detected at line 1552
- [][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 1552
-[][][]
- []
-
-
 Underfull \hbox (badness 10000) detected at line 1554
  [][]
  []
@@ -2477,6 +2467,16 @@ Underfull \hbox (badness 10000) detected at line 1556
 
 
 Underfull \hbox (badness 10000) detected at line 1556
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1558
+ [][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 1558
 [][][]
  []
 
@@ -2497,36 +2497,36 @@ Non-PDF special ignored!
  <./curtosis.jpg>]
 File: U.pdf Graphic file (type pdf)
 <use U.pdf>
-Package pdftex.def Info: U.pdf  used on input line 1576.
+Package pdftex.def Info: U.pdf  used on input line 1578.
 (pdftex.def)             Requested size: 219.8341pt x 290.10074pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1583--1584
+Underfull \hbox (badness 10000) in paragraph at lines 1585--1586
 []\T1/pcr/m/n/10 python3 {cmd=true matplotlib=true} import
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1583--1584
+Underfull \hbox (badness 10000) in paragraph at lines 1585--1586
 \T1/pcr/m/n/10 matplotlib.pyplot as plt import numpy as np x =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1583--1584
+Underfull \hbox (badness 10000) in paragraph at lines 1585--1586
 \T1/pcr/m/n/10 np.random.normal(170, 10, 250) plt.hist(x) plt.show()
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1585--1586
+Underfull \hbox (badness 10000) in paragraph at lines 1587--1588
 []\T1/pcr/m/n/10 python3 {cmd=true matplotlib=true} from matplotlib
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1585--1586
+Underfull \hbox (badness 10000) in paragraph at lines 1587--1588
 \T1/pcr/m/n/10 import rc import matplotlib.pylab as plt rc(\TS1/pcr/m/n/10 '\T1
 /pcr/m/n/10 font\TS1/pcr/m/n/10 '\T1/pcr/m/n/10 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1585--1586
+Underfull \hbox (badness 10000) in paragraph at lines 1587--1588
 \T1/pcr/m/n/10 **{\TS1/pcr/m/n/10 '\T1/pcr/m/n/10 family\TS1/pcr/m/n/10 '\T1/pc
 r/m/n/10 : \TS1/pcr/m/n/10 '\T1/pcr/m/n/10 serif\TS1/pcr/m/n/10 '\T1/pcr/m/n/10
  , \TS1/pcr/m/n/10 '\T1/pcr/m/n/10 serif\TS1/pcr/m/n/10 '\T1/pcr/m/n/10 : [\TS1
@@ -2534,50 +2534,50 @@ r/m/n/10 : \TS1/pcr/m/n/10 '\T1/pcr/m/n/10 serif\TS1/pcr/m/n/10 '\T1/pcr/m/n/10
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1585--1586
+Underfull \hbox (badness 10000) in paragraph at lines 1587--1588
 \T1/pcr/m/n/10 rc(\TS1/pcr/m/n/10 '\T1/pcr/m/n/10 text\TS1/pcr/m/n/10 '\T1/pcr/
 m/n/10 , usetex=True) x = plt.linspace(0, 5)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1585--1586
+Underfull \hbox (badness 10000) in paragraph at lines 1587--1588
 \T1/pcr/m/n/10 plt.plot(x, plt.sin(x)) plt.ylabel(r"This is $\sin(x)$",
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1587--1588
+Underfull \hbox (badness 10000) in paragraph at lines 1589--1590
 []\T1/pcr/m/n/10 python3 {cmd=true matplotlib=true} import
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1587--1588
+Underfull \hbox (badness 10000) in paragraph at lines 1589--1590
 \T1/pcr/m/n/10 matplotlib.pyplot as plt import numpy as np x =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1587--1588
+Underfull \hbox (badness 10000) in paragraph at lines 1589--1590
 \T1/pcr/m/n/10 np.array([.[]", "B", Ç", "D"]) y = np.array([3, 8, 1,
  []
 
-LaTeX Info: Redefining \. on input line 1589.
-LaTeX Info: Redefining \% on input line 1589.
+LaTeX Info: Redefining \. on input line 1591.
+LaTeX Info: Redefining \% on input line 1591.
 [48]
-Underfull \hbox (badness 10000) in paragraph at lines 1589--1590
+Underfull \hbox (badness 10000) in paragraph at lines 1591--1592
 []\T1/pcr/m/n/10 python3 {cmd=true matplotlib=true} import numpy speed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1589--1590
+Underfull \hbox (badness 10000) in paragraph at lines 1591--1592
 \T1/pcr/m/n/10 = [32, 111, 138, 28, 59, 77, 97] x = numpy.std(speed)
  []
 
 <foo.png, id=571, 403.9893pt x 298.4751pt>
 File: foo.png Graphic file (type png)
 <use foo.png>
-Package pdftex.def Info: foo.png  used on input line 1591.
+Package pdftex.def Info: foo.png  used on input line 1593.
 (pdftex.def)             Requested size: 336.51308pt x 248.62236pt.
 
-LaTeX Warning: File `histograma.svg' not found on input line 1592.
+LaTeX Warning: File `histograma.svg' not found on input line 1594.
 
 
 ! LaTeX Error: Unknown graphics extension: .svg.
@@ -2586,11 +2586,11 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1592 \includegraphics{histograma.svg}
+l.1594 \includegraphics{histograma.svg}
                                         
 Here is how much of TeX's memory you used:
  15426 strings out of 483121
- 222227 string characters out of 5964354
+ 222220 string characters out of 5964354
  538662 words of memory out of 5000000
  29756 multiletter control sequences out of 15000+600000
  600199 words of font info for 166 fonts, out of 8000000 for 9000
