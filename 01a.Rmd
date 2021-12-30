@@ -7,7 +7,6 @@ Podemos decir que la asimetría indica cuánto se desvía nuestra distribución 
 2.  **Desviación negativa**: cuando la cola izquierda del histograma de la distribución es más larga y la mayoría de las observaciones se concentran en la cola derecha. En este caso, también podemos utilizar el término "sesgado a la izquierda" o "cola izquierda". y la **mediana es mayor que la media**.
 
 3.  **Desviación positiva**: cuando la cola derecha del histograma de la distribución es más larga y la mayoría de las observaciones se concentran en la cola izquierda. En este caso, también podemos usar el término "sesgado a la derecha" o "cola derecha". y la **mediana es menor que la media**.
-    
 
 ![Medidas de asimetría](simetria.png)
 
