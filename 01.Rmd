@@ -34,33 +34,33 @@ Aquellas que solo son medidos mediante numeros enteros por ejemplo: Número de h
 
 Aquellas que solo son medidos mediante numeros reales es decir este incluye a los numeros racionales e irracionales. Estatura, volumen, peso.
 
-## Asignación
+## Ejercicios propuestos
 
-1.  Reconosca **5** variables **cualitativas** de una persona, admosfera, una pintura
+1.  Reconozca **5** variables **cualitativas** de una persona, admosfera y una pintura
 
     -   Persona
 
         -   Color (moreno, blanco, trigueo)
         -   Religión (catolico, evangelico, pentecostal, etc)
-        -   wwwwwww
-        -   wwww
-        -   wwwwww
+        -   ...
+        -   ...
+        -   ...
 
     -   Admosfera
 
-        -   www
-        -   wwwww
-        -   wwwwwww
-        -   wwww
-        -   wwwwww
+        -   ...
+        -   ...
+        -   ...
+        -   ...
+        -   ...
 
     -   Pintura
 
-        -   www
-        -   wwwww
-        -   wwwwwww
-        -   wwww
-        -   wwwwww
+        -   ...
+        -   ...
+        -   ...
+        -   ...
+        -   ...
 
 2.  Reconosca **5** variables **cuantitativas** de una video, tela, un celular.
 
@@ -68,25 +68,25 @@ Aquellas que solo son medidos mediante numeros reales es decir este incluye a lo
 
         -   Duracion ($x$ segundos)
         -   Numero video en youtube a la semana ($n$ cantidades)
-        -   wwwwwww
-        -   wwww
-        -   wwwwww
+        -   ...
+        -   ...
+        -   ...
 
     -   Tela
 
-        -   www
-        -   wwwww
-        -   wwwwwww
-        -   wwww
-        -   wwwwww
+        -   ...
+        -   ...
+        -   ...
+        -   ...
+        -   ...
 
     -   Celular
 
-        -   www
-        -   wwwww
-        -   wwwwwww
-        -   wwww
-        -   wwwwww
+        -   ...
+        -   ...
+        -   ...
+        -   ...
+        -   ...
 
 # Organización de datos en tablas de frecuencias
 
