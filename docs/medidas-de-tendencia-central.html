@@ -407,7 +407,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math display">\[\overline{x}=\frac{12.5+35++112.5+82.5+65}{13}=\frac{307.5}{13}=23.65\]</span></p>
 
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-10" class="exercise"><strong>Ejercicio 5.1  </strong></span>Si el promedio de <span class="math inline">\(n\)</span> datos es <span class="math inline">\(\overline{x}\)</span> entonces el promedio del conjunto inicial más un dato adicional <span class="math inline">\(x_{n+1}\)</span> es <span class="math display">\[\overline{x}&#39;=\frac{n\overline{x}+x_{n+1}}{n+1}\]</span> en general si se adicionan <span class="math inline">\(r\)</span> datos <span class="math inline">\(y_1, y_2, \ldots y_r\)</span> entonces el nuevo promedio será <span class="math display">\[\overline{x}&#39;=\frac{n\overline{x}+y_{1}+y_2+\ldots+y_r}{n+r}\]</span></p>
+<p><span id="exr:unnamed-chunk-9" class="exercise"><strong>Ejercicio 5.1  </strong></span>Si el promedio de <span class="math inline">\(n\)</span> datos es <span class="math inline">\(\overline{x}\)</span> entonces el promedio del conjunto inicial más un dato adicional <span class="math inline">\(x_{n+1}\)</span> es <span class="math display">\[\overline{x}&#39;=\frac{n\overline{x}+x_{n+1}}{n+1}\]</span> en general si se adicionan <span class="math inline">\(r\)</span> datos <span class="math inline">\(y_1, y_2, \ldots y_r\)</span> entonces el nuevo promedio será <span class="math display">\[\overline{x}&#39;=\frac{n\overline{x}+y_{1}+y_2+\ldots+y_r}{n+r}\]</span></p>
 </div>
 
 
@@ -548,16 +548,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="mediana-de-datos-no-tabulados" class="section level3">
 <h3><span class="header-section-number">5.3.1</span> Mediana de datos no tabulados</h3>
 <p>Obtener la mediana consiste en ordenar los datos de menor a mayor y considerar dos casos: El primero si el número de datos es impar entonces el dato <span class="math inline">\(x_{\frac{n+1}{2}}\)</span> del conjunto ordenado será la mediana es decir <span class="math display">\[\text{Me}=x_{\frac{n+1}{2}}\]</span> de otro lado si el número de datos es par entonces la mediana es la semisuma de los dos datos intermedios es decir <span class="math display">\[\text{Me}=\frac{x_{\frac{n}{2}}+x_{\frac{n}{2}+1}}{2}\]</span></p>
-
-<div class="exercise">
-<p><span id="exr:unnamed-chunk-12" class="exercise"><strong>Ejercicio 5.2  </strong></span>Sean los conjuntos de datos 5, 6, 8, 2, 1, 5, 6, 7, 10, 0, 14 y 20, 25, 6, 5, 19, 5 obtener la mediana de estos conjuntos de datos.</p>
+<div class="{exercise}">
+<p>Sean los conjuntos de datos 5, 6, 8, 2, 1, 5, 6, 7, 10, 0, 14 y 20, 25, 6, 5, 19, 5 obtener la mediana de estos conjuntos de datos.</p>
 </div>
-
-
-<div class="solution">
- <span class="solution"><em>Solución. </em></span> Al ordenarlos se obtiene el siguiente arreglo 0, 1, 2, 5, 5, 6, 6, 7, 8, 10, 14 y considerando que <span class="math inline">\(x_1=0\)</span>, <span class="math inline">\(x_2=1\)</span>, <span class="math inline">\(\ldots\)</span>, <span class="math inline">\(x_{11}=14\)</span> en este caso el número de datos es impar entonces el dato <span class="math inline">\(x_{\frac{11+1}{2}}=x_{6}=6\)</span> el la mediana. De otro lado el segundo conjunto de datos al ser ordenados 5, 5, 6, 19, 20, 25 ademas considerando que <span class="math inline">\(x_1=5\)</span>, <span class="math inline">\(x_2=5\)</span>, <span class="math inline">\(\ldots\)</span>, <span class="math inline">\(x_6=25\)</span> conducen a obtener la mediana <span class="math inline">\(\text{Me}=\frac{x_{\frac{6}{2}}+x_{\frac{6}{2}+1}}{2}=\frac{6+19}{2}=12.5\)</span>.
+<div class="{solution}">
+<p>Al ordenarlos se obtiene el siguiente arreglo 0, 1, 2, 5, 5, 6, 6, 7, 8, 10, 14 y considerando que <span class="math inline">\(x_1=0\)</span>, <span class="math inline">\(x_2=1\)</span>, <span class="math inline">\(\ldots\)</span>, <span class="math inline">\(x_{11}=14\)</span> en este caso el número de datos es impar entonces el dato <span class="math inline">\(x_{\frac{11+1}{2}}=x_{6}=6\)</span> el la mediana. De otro lado el segundo conjunto de datos al ser ordenados 5, 5, 6, 19, 20, 25 ademas considerando que <span class="math inline">\(x_1=5\)</span>, <span class="math inline">\(x_2=5\)</span>, <span class="math inline">\(\ldots\)</span>, <span class="math inline">\(x_6=25\)</span> conducen a obtener la mediana <span class="math inline">\(\text{Me}=\frac{x_{\frac{6}{2}}+x_{\frac{6}{2}+1}}{2}=\frac{6+19}{2}=12.5\)</span>.</p>
 </div>
-
 </div>
 <div id="mediana-de-datos-tabulados" class="section level3">
 <h3><span class="header-section-number">5.3.2</span> Mediana de datos tabulados</h3>
