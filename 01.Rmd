@@ -28,25 +28,25 @@ Son aquellas variables que están propensos a ser medidas mediante números ya s
 
 ### Discretas
 
-Aquellas que solo son medidos mediante numeros enteros por ejemplo: Número de hijos, número de habitaciones.
+Aquellas que solo son medidos mediante números enteros por ejemplo: Número de hijos, número de habitaciones.
 
 ### Continuas
 
-Aquellas que solo son medidos mediante numeros reales es decir este incluye a los numeros racionales e irracionales. Estatura, volumen, peso.
+Aquellas que solo son medidos mediante números reales es decir este incluye a los números racionales e irracionales. Estatura, volumen, peso.
 
 ## Ejercicios propuestos
 
-1.  Reconozca **5** variables **cualitativas** de una persona, admosfera y una pintura
+1.  Reconozca **5** variables **cualitativas** de una persona, atmósfera y una pintura
 
     -   Persona
 
-        -   Color (moreno, blanco, trigueo)
-        -   Religión (catolico, evangelico, pentecostal, etc)
+        -   Color (moreno, blanco, trigueño)
+        -   Religión (católico, evangélico, pentecostal, etc)
         -   ...
         -   ...
         -   ...
 
-    -   Admosfera
+    -   Atmósfera
 
         -   ...
         -   ...
@@ -62,11 +62,11 @@ Aquellas que solo son medidos mediante numeros reales es decir este incluye a lo
         -   ...
         -   ...
 
-2.  Reconosca **5** variables **cuantitativas** de una video, tela, un celular.
+2.  Reconozca **5** variables **cuantitativas** de una video, tela, un celular.
 
     -   Video
 
-        -   Duracion ($x$ segundos)
+        -   Duración ($x$ segundos)
         -   Numero video en youtube a la semana ($n$ cantidades)
         -   ...
         -   ...
