@@ -1,12 +1,12 @@
 bookdown::gitbook:
-  css: style.css  
+  css: style.css
   includes:
     in_header: icon.html
   anchor_sections: FALSE
   config:
     fontsettings:
-      theme: white
-      family: serif
+      theme: sepia
+      family: sans
       size: 2
     toc:
       collapse: section
@@ -30,5 +30,3 @@ bookdown::pdf_book:
 bookdown::epub_book:
   dev: svglite
   stylesheet: style.css
-
-
