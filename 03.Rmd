@@ -1,5 +1,7 @@
 # (PART)  Inferencia estadística {-}
+
 # Variables aleatorias
+
 ```{definition,name="Variable aleatoria"}
 Sea $\Omega$ un espacio muestral asociado a una experimento aleatorio $\epsilon$ y $\omega\in\Omega$,  entonces se genera la función **variable aleatoria** 
 \begin{align*}
@@ -7,6 +9,7 @@ Sea $\Omega$ un espacio muestral asociado a una experimento aleatorio $\epsilon$
   \omega&\longmapsto X(\omega)
 \end{align*}
 ```
+
 \(R_{X}=\{x\in \mathbb {R} /\ \exists \,\omega \in \Omega :X(\omega )=x\}\)
 es decir a cada elemento de $\Omega$ se le asocia un número real $\mathbb{R}$, además la probabilidad de $x\in \mathbb{R}$ es $P[x]= \sum^{n}_{i=1}P\left[\omega_i\right]$ donde $\omega_i\in X^{-1}(x)$. La definición indica por otro lado que un espacio muestral $\Omega$ puede genera diferentes variables aleatorias. 
 
@@ -164,17 +167,6 @@ recie el nombre de función de distribución de $X$. Cuyas propiedades son:
 
 
 
-```{example}
-wwwwwww
-```
-
-```{example}
-wwwwwww
-```
-
-```{example}
-wwwwwww
-```
 
 
 ### Función de distribución de una variable aleatoria continua
@@ -190,19 +182,6 @@ Cuyas propiedades son:
 2. \(F(-\infty)=0\)
 3. \(F(\infty)=1\)
 
-```
-
-
-```{example}
-wwwwwww
-```
-
-```{example}
-wwwwwww
-```
-
-```{example}
-wwwwwww
 ```
 
 
@@ -224,38 +203,8 @@ La varianza es una medida de dispersión de una variable aleatoria $X$ respecto 
 
 $$\sigma =\sqrt{\text{Var}(X)}$$ o bien $$\sigma^{2}=\text{Var}(X)$$
 
-
-```{definition, name="Varianza de una variable aleatoria discreta"}
-Sea 
-```
-
-```{definition, name="Varianza matemática de una variable aleatoria continua"}
-Sea 
-```
-
-## Medidas de posición
-```{definition, name="Cuantiles de una variable aleatoria discreta"}
-Sea 
-```
-
-```{definition, name="Cuantiles matemática de una variable aleatoria continua"}
-Sea 
-```
-
-## Medidas de curtosis
-```{definition, name="Curtosis de una variable aleatoria discreta"}
-Sea 
-```
-
-```{definition, name="Curtosis de una variable aleatoria continua"}
-Sea 
-```
 momento de orden superior
 \[{\displaystyle M_{X}^{(n)}=\mathbb {E} [X^{n}]=\int _{\mathbb {R} }x^{n}f_{X}(x)\ {\text{d}}x}\]
-
-
-
-
 
 # Variables aleatorias bidimensionales
 
@@ -264,7 +213,7 @@ momento de orden superior
 ```
 
 ```{example}
-
+www
 ```
 
 ```{definition,name="Variable aleatoria bidmensional contínua"}
@@ -272,7 +221,7 @@ momento de orden superior
 ```
 
 ```{example}
-
+wwwww
 ```
 ## Distribución bidimensional discreta
 
@@ -298,31 +247,9 @@ Sea $(X,Y)$ una variable bidimensinal discreta con rango $R_{X\times Y}$. A cada
 
 
 
-
-
-
-
-
-
-
-
 # Distribuciones discreta importantes
 ## Variable aleatoria discreta binomial
 ## Variable aleatoria discreta Poisson
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
