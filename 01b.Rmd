@@ -1,6 +1,6 @@
 ---
 output: html_document
-editor_options: 
+editor_options:
   chunk_output_type: inline
 ---
 
@@ -15,10 +15,9 @@ En estadística, usamos la medida de curtosis para describir la "cola" de la dis
 2.  **Leptocurtica** : esta distribución tiene colas más gruesas y un pico más afilado. La curtosis es "positiva" con un valor superior a 3
 3.  **Platicurtica** : La distribución tiene un pico más bajo y más ancho y colas más delgadas. La curtosis es "negativa" con un valor superior a 30.263
 
+* En base a la media y desviación típica
 
-
-* En base a la media y desviacion tipica
-$$k= \frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^4 }{ns^4};$$ Si $k=3$ ademas $k\geq 3$
+$$k= \frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^4 }{ns^4};$$ Si $k=3$ además $k\geq 3$
 
 
 * En base a percentiles
@@ -54,7 +53,7 @@ import numpy as np
 x = np.random.normal(170, 10, 250)
 
 plt.hist(x)
-plt.show() 
+plt.show()
 ```
 ```python3 {cmd=true matplotlib=true}
 from matplotlib import rc

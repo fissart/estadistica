@@ -1,4 +1,4 @@
---- 
+---
 title: "Elementos  de la estadística"
 subtitle: "estadística descriptiva y probabilidades"
 author: "Ricardo Michel MALLQUI BAÑOS"
@@ -9,7 +9,7 @@ documentclass: krantz
 link-citations: yes
 subparagraph: yes
 colorlinks: yes
-fontsize: 10pt
+fontsize: 11pt
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 lot: yes
@@ -44,9 +44,8 @@ always_allow_html: true
 
 La estadística es la ciencia que manipula datos las analiza e interpreta para poder sacar concluciones razonables de ciertos fenomenos naturales. Esta ciencia puede ser dividido en dos: **estadística descirptiva** y  **estadística inferencial**. En la estadística descriptiva se procesan datos de una manera teórica y utilitaria. Estos métodos consisten en la recolección, organización, resumen, descripcion y presenatacion de la información. Si la poblacion está disponible entonces la estadística descriptiva es suficiente para describir ciertos fenomenos. No obstante generalmente no se dispone de toda la población si no de una muestra de ella, es en este caso que se requieren usar técnicas más sofisticadas para tomar decisiones y generalizaciones acerca de la poblacion, desde una pequeña muestra de información. Es cuando entra en el juego la estadística inferencial.
 
-La base teórica de la estadística son las matemáticas 
+La base teórica de la estadística son las matemáticas
 
 
 
 Este libro se compone de dos partes, la primera parte trata sobre la **estadística descirptiva** y la segunda  **estadística inferencial**. Cada una de ellas divididas en capítulos.
-

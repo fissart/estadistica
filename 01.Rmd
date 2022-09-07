@@ -7,28 +7,37 @@
 Matemáticas básicas
 
 # Variables
-
+::: {.definition #pyth name="Variable"}
 Es una **característica** de personas cosas u objetos que son propensos a ser medidas o cualificadas
+:::
 
-## Variables cualitativas
-
+::: {.definition}
 Denotan cualidades de objetos personas o animales tales como características inherentes que *no son medibles por números*, tenemos dos casos de esta variable.
+:::
 
 ### Nominales
 
+::: {.definition}
 Son características que simplemente nominan y están propensos a ser jerarquizados u ordenados tales como: El estado civil (soltero, casado, divorciado, viudo), Religión (católica, evangélico, judío, etc).
+:::
 
 ### Ordinales
 
+::: {.definition}
 Son características que que si están propensos a ser jerarquizados tales como: Nivel de instrucción (inicial, primaria, secundaria, superior).
+:::
 
 ## Variables cuantitativas
 
+::: {.definition}
 Son aquellas variables que están propensos a ser medidas mediante números ya sean números enteros o reales.
+:::
 
 ### Discretas
 
+::: {.definition}
 Aquellas que solo son medidos mediante números enteros por ejemplo: Número de hijos, número de habitaciones.
+:::
 
 ### Continuas
 
@@ -91,8 +100,9 @@ Aquellas que solo son medidos mediante números reales es decir este incluye a l
 # Organización de datos en tablas de frecuencias
 
 ## Distribución de frecuencias
-
+::: {.definition}
 La tabulación es un proceso en el cual los datos son ordenados en grupos llamados *clases* para un análisis más eficaz de estos, los datos podrían estar clasificados mediante una variable cualitativa o cuantitativa en el caso de las variables cualitativas $Y_i$, se considera la siguiente Tabla \@ref(tab:ww)
+:::
 
 |  $Y_i$   |  $f_i$   |  $F_i$   | $F_i^*$  |      $h_i$      |      $H_i$      |      $H_i^*$      | $h_i\%$  | $H_i\%$  | $H_i^*\%$ |
 |:--------:|:--------:|:--------:|:--------:|:---------------:|:---------------:|:-----------------:|:--------:|:--------:|:---------:|
@@ -107,9 +117,7 @@ La tabulación es un proceso en el cual los datos son ordenados en grupos llamad
 En el caso de variables cuantitativas ademas si los datos son muy variados, que para se clasificados adecuadamente, necesitan generarse particiones de longitudes semejantes entonces se utiliza el siguiente proceso; el **número de las particiones** $r$ se consideran de acuerdo a **tres criterios**
 
 1.  Criterio del investigador $r$ no puede ser más de 20 ni menos de 5
-
 2.  $r=\sqrt{n}$ donde $n$ es el número de datos
-
 3.  La regla de Starges que consiste en considerar la fórmula $r=3.322\cdot\log_{10} n$ Una vez establecido el número de particiones se procede a generar los límites laterales de cada una de las particiones, sea $L$ la longitud de todo el conjunto es decir $L=x_{\text{max}}-x_{\text{min}}$ entonces la longitud de las particiones o amplitud interválica se obtiene con $l=\frac{L}{r}$
 
 ```{r cuantitativaw, echo=FALSE, warning = FALSE, message = FALSE, tidy=FALSE}
@@ -131,7 +139,7 @@ Tenga en cuenta que $n$ es el número de datos, es decir $n=f_1+f_2+\ldots+f_r=\
     &=\sum_{i=m}^rf_i\\
     &=n-\sum_{i=1}^{m-1}f_i\\
     &=n-\left(f_1+f_{2}+\ldots+f_{m-1}\right)
-    \end{aligned} 
+    \end{aligned}
     $$
 
 4.  Las **frecuencias absolutas relativas**\index{frecuencias absolutas relativas} obedecen a la fórmula $$h_m=\frac{f_m}{n}$$
@@ -150,8 +158,8 @@ Tenga en cuenta que $n$ es el número de datos, es decir $n=f_1+f_2+\ldots+f_r=\
 
 ## Ejemplo sin intervalos
 
-```{exercise}
-Sean Los 16 tipos de personalidad en un grupo social encuestado. 
+:::{.exercise}
+Sean Los 16 tipos de personalidad en un grupo social encuestado.
 
 1. ESTJ (Extraverted Sensing Thinking Judging)
 Personas a las que les gusta tener el control sobre lo que ocurre a su alrededor, siempre buscan la manera de que todo funcione como debe y, si es necesario, la implementan ellos mismos.
@@ -203,9 +211,9 @@ Personas muy sensibles, reservadas y movidas por unos ideales muy definidos y qu
 16. INFP (Introverted Intuitive Feeling Perceiving)
 Menos moralistas que los INFJ, los INFP también se preocupan mucho por ayudar a los demás desde su posición de personas reservadas. Muestran una sensibilidad estética y artística que las vuelve creativas.
 
-```
+:::
 
-```{solution}
+:::{solution}
 
 Se tiene 16 características con los siguientes datos  
 
@@ -229,7 +237,7 @@ Se tiene 16 características con los siguientes datos
 |     INFJ     |    1     |
 |     INFP     |    1     |
 
-```
+:::
 
 ```{r cualitativa, echo=FALSE, warning = FALSE, message = FALSE, tidy=FALSE}
 library(openxlsx)
@@ -240,9 +248,9 @@ knitr::kable(new, escape = FALSE, digits = 2, booktabs=T, caption='Datos cualita
 
 ## Example intervalos
 
-```{solution}
+:::{solution}
 
-Edades de cierta comunidad 
+Edades de cierta comunidad
 
 
 25
@@ -252,48 +260,22 @@ Edades de cierta comunidad
 60 62 63 66 67
 70 71 72 75 77 78
 81 88 89
-90 99 
+90 99
 
 |   Clase    | $f_i$ |
 |:----------:|:-----:|
-| $[20-30>$  |   1   |
-| $[30-40>$  |   2   |
-| $[40-50>$  |   3   |
-| $[50-60>$  |   4   |
-| $[60-70>$  |   5   |
-| $[70-80>$  |   6   |
-| $[80-90>$  |   3   |
-| $[90-100]$ |   2   |
+| $\left[20-30\right[$  |   1   |
+| $\left[30-40\right[$  |   2   |
+| $\left[40-50\right[$  |   3   |
+| $\left[50-60\right[$  |   4   |
+| $\left[60-70\right[$  |   5   |
+| $\left[70-80\right[$  |   6   |
+| $\left[80-90\right[$  |   3   |
+| $\left[90-100\right]$ |   2   |
 
-```
+:::
 
 Tabulando
-
-```javascript {cmd=true} 
-const number = 50
- let n1 = 0, n2 = 1, nextTerm; console.log('Fibonacci Series:'); for (let i = 1; i <= number; i++) {     console.log(n1);     nextTerm = n1 + n2;     n1 = n2;     n2 = nextTerm; }
-
-```
-
-
-```r {cmd=true}
-print("wwwwwwwwwwwwwwwww wwwwwwwwwwwwwwwwww")
-``` 
-
-```bash {cmd=true}
-ls .
-```
-
-```{=html}
-```{r, echo=FALSE, results='asis'}
-input <- data.frame(text = c("a", "b", "c"), 
-                    page_number = c(3, 5, 6))
-links <- paste('<a href="', input$text, '">', input$page_number, "</a>", sep="")
-cat(links, sep = "\n")
-```
-
-
-
 
 ```{r cuantitativa, echo=FALSE, warning = FALSE, message = FALSE, tidy=FALSE}
 library(openxlsx)
@@ -313,7 +295,7 @@ levels(mtcars$am) <-c("Automatic", "Manual")
 
 Some text
 
-```{r fig.align='center', fig.height=4} 
+```{r fig.align='center', fig.height=4}
 hist(mtcars$mpg[mtcars$am=="Automatic"], breaks=12, main="mpg for automatic vehicles", xlab="mpg", xlim=c(10, 35))
 ```
 
@@ -346,7 +328,7 @@ data <- data.frame(
   )
 
 # Barplot
-ggplot(data, aes(x=name, y=value)) + 
+ggplot(data, aes(x=name, y=value)) +
   geom_bar(stat = "identity", width=0.5) +
   coord_flip()
 ```
@@ -369,8 +351,8 @@ A veces llamada *promedio aritmético*, es la medida de tendencia central que po
 
 Los datos no están agrupados cuando no están ordenados sobre una tabla de distribución de frecuencias. Sean los $n$ datos $x_1, x_2, \ldots, x_n$ entonces la media o promedio aritmético se define como
 
-$$ 
-\overline{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum_{i=1}^nx_i 
+$$
+\overline{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum_{i=1}^nx_i
 $$
 
 ### Media de datos agrupados
@@ -406,7 +388,7 @@ Si el promedio de $n$ datos es $\overline{x}$ entonces el promedio del conjunto 
 ```
 
 ```{solution}
-En efecto sea el promedio 
+En efecto sea el promedio
 \begin{align*}
 \overline{x}'&=\frac{x_1+x_2+\cdots+x_{n+1}}{n+1}\\
 &=\frac{n\frac{x_1+x_2+\cdots x_n}{n}+x_{n+1}}{n+1}\\
@@ -486,14 +468,12 @@ $$ M_o=L_i+\frac{f_i-f_{i-1}}{(f_i-f_{i-1})+(f_i-f_{i+1})}\cdot a_i=$$ $$ =20+\f
 
 Obtener la mediana consiste en ordenar los datos de menor a mayor y considerar dos casos: El primero si el número de datos es impar entonces el dato $x_{\frac{n+1}{2}}$ del conjunto ordenado será la mediana es decir $$\text{Me}=x_{\frac{n+1}{2}}$$ de otro lado si el número de datos es par entonces la mediana es la semisuma de los dos datos intermedios es decir $$\text{Me}=\frac{x_{\frac{n}{2}}+x_{\frac{n}{2}+1}}{2}$$
 
-```{exercise}
+:::{.exercise}
 Sean los conjuntos de datos 5, 6, 8, 2, 1, 5, 6, 7, 10, 0, 14 y 20, 25, 6, 5, 19, 5 obtener la mediana de estos conjuntos de datos.
-
-```
-
-```{solution}
+:::
+:::{.solution}
 Al ordenarlos  se obtiene el siguiente arreglo 0, 1, 2, 5, 5, 6, 6, 7, 8, 10, 14 y considerando que $x_1=0$, $x_2=1$, $\ldots$, $x_{11}=14$ en este caso el número de datos es impar entonces el dato $x_{\frac{11+1}{2}}=x_{6}=6$ el la mediana. De otro lado el segundo conjunto de datos al ser ordenados 5, 5, 6, 19, 20, 25 ademas considerando que $x_1=5$, $x_2=5$, $\ldots$, $x_6=25$ conducen a obtener la mediana $\text{Me}=\frac{x_{\frac{6}{2}}+x_{\frac{6}{2}+1}}{2}=\frac{6+19}{2}=12.5$.
-```
+:::
 
 ### Mediana de datos tabulados
 

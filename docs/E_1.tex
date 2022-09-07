@@ -4,7 +4,7 @@
 \PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
 %
 \documentclass[
-  10pt,
+  11pt,
 ]{krantz}
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
@@ -184,7 +184,7 @@
 \makeatother
 \subtitle{estadística descriptiva y probabilidades}
 \author{Ricardo Michel MALLQUI BAÑOS}
-\date{2022-06-13}
+\date{2022-09-06}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Teorema}[chapter]
@@ -267,32 +267,41 @@ Matemáticas básicas
 \hypertarget{variables}{%
 \chapter{Variables}\label{variables}}
 
-Es una \textbf{característica} de personas cosas u objetos que son propensos a ser medidas o cualificadas
+\begin{definition}[Variable]
+\protect\hypertarget{def:pyth}{}\label{def:pyth}Es una \textbf{característica} de personas cosas u objetos que son propensos a ser medidas o cualificadas
+\end{definition}
 
-\hypertarget{variables-cualitativas}{%
-\section{Variables cualitativas}\label{variables-cualitativas}}
-
+\begin{definition}
 Denotan cualidades de objetos personas o animales tales como características inherentes que \emph{no son medibles por números}, tenemos dos casos de esta variable.
+\end{definition}
 
 \hypertarget{nominales}{%
 \subsection{Nominales}\label{nominales}}
 
+\begin{definition}
 Son características que simplemente nominan y están propensos a ser jerarquizados u ordenados tales como: El estado civil (soltero, casado, divorciado, viudo), Religión (católica, evangélico, judío, etc).
+\end{definition}
 
 \hypertarget{ordinales}{%
 \subsection{Ordinales}\label{ordinales}}
 
+\begin{definition}
 Son características que que si están propensos a ser jerarquizados tales como: Nivel de instrucción (inicial, primaria, secundaria, superior).
+\end{definition}
 
 \hypertarget{variables-cuantitativas}{%
 \section{Variables cuantitativas}\label{variables-cuantitativas}}
 
+\begin{definition}
 Son aquellas variables que están propensos a ser medidas mediante números ya sean números enteros o reales.
+\end{definition}
 
 \hypertarget{discretas}{%
 \subsection{Discretas}\label{discretas}}
 
+\begin{definition}
 Aquellas que solo son medidos mediante números enteros por ejemplo: Número de hijos, número de habitaciones.
+\end{definition}
 
 \hypertarget{continuas}{%
 \subsection{Continuas}\label{continuas}}
@@ -418,7 +427,9 @@ Aquellas que solo son medidos mediante números reales es decir este incluye a l
 \hypertarget{distribuciuxf3n-de-frecuencias}{%
 \section{Distribución de frecuencias}\label{distribuciuxf3n-de-frecuencias}}
 
+\begin{definition}
 La tabulación es un proceso en el cual los datos son ordenados en grupos llamados \emph{clases} para un análisis más eficaz de estos, los datos podrían estar clasificados mediante una variable cualitativa o cuantitativa en el caso de las variables cualitativas \(Y_i\), se considera la siguiente Tabla \ref{tab:ww}
+\end{definition}
 
 \begin{longtable}[]{@{}cccccccccc@{}}
 \caption{\label{tab:ww} Caption}\tabularnewline
@@ -442,6 +453,7 @@ En el caso de variables cuantitativas ademas si los datos son muy variados, que 
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\tightlist
 \item
   Criterio del investigador \(r\) no puede ser más de 20 ni menos de 5
 \item
@@ -477,7 +489,7 @@ Tenga en cuenta que \(n\) es el número de datos, es decir \(n=f_1+f_2+\ldots+f_
   &=\sum_{i=m}^rf_i\\
   &=n-\sum_{i=1}^{m-1}f_i\\
   &=n-\left(f_1+f_{2}+\ldots+f_{m-1}\right)
-  \end{aligned} 
+  \end{aligned}
   \]
 \item
   Las \textbf{frecuencias absolutas relativas}\index{frecuencias absolutas relativas} obedecen a la fórmula \[h_m=\frac{f_m}{n}\]
@@ -499,7 +511,6 @@ Tenga en cuenta que \(n\) es el número de datos, es decir \(n=f_1+f_2+\ldots+f_
 \section{Ejemplo sin intervalos}\label{ejemplo-sin-intervalos}}
 
 \begin{exercise}
-\protect\hypertarget{exr:unnamed-chunk-1}{}\label{exr:unnamed-chunk-1}
 
 Sean Los 16 tipos de personalidad en un grupo social encuestado.
 
@@ -564,8 +575,6 @@ Es muy frecuente que lleguen a ser expertas en un ámbito de conocimiento muy es
 
 \end{exercise}
 
-\begin{solution}
-
 Se tiene 16 características con los siguientes datos
 
 \begin{longtable}[]{@{}cc@{}}
@@ -592,8 +601,6 @@ INFJ & 1 \\
 INFP & 1 \\
 \bottomrule
 \end{longtable}
-
-\end{solution}
 
 \begin{longtable}[t]{cccccccccc}
 \caption{\label{tab:cualitativa}Datos cualitativos}\\
@@ -624,8 +631,6 @@ TOTAL & 75 &  &  &  &  &  & 100.00 &  & \\
 \hypertarget{example-intervalos}{%
 \section{Example intervalos}\label{example-intervalos}}
 
-\begin{solution}
-
 Edades de cierta comunidad
 
 25
@@ -642,32 +647,48 @@ Edades de cierta comunidad
 Clase & \(f_i\) \\
 \midrule
 \endhead
-\([20-30>\) & 1 \\
-\([30-40>\) & 2 \\
-\([40-50>\) & 3 \\
-\([50-60>\) & 4 \\
-\([60-70>\) & 5 \\
-\([70-80>\) & 6 \\
-\([80-90>\) & 3 \\
-\([90-100]\) & 2 \\
+\(\left[20-30\right[\) & 1 \\
+\(\left[30-40\right[\) & 2 \\
+\(\left[40-50\right[\) & 3 \\
+\(\left[50-60\right[\) & 4 \\
+\(\left[60-70\right[\) & 5 \\
+\(\left[70-80\right[\) & 6 \\
+\(\left[80-90\right[\) & 3 \\
+\(\left[90-100\right]\) & 2 \\
 \bottomrule
 \end{longtable}
 
-\end{solution}
-
 Tabulando
 
-```javascript \{cmd=true\}
-const number = 50
-let n1 = 0, n2 = 1, nextTerm; console.log(`Fibonacci Series:'); for (let i = 1; i \textless= number; i++) \{ console.log(n1); nextTerm = n1 + n2; n1 = n2; n2 = nextTerm; \}
+\begin{longtable}[t]{cccccccccc}
+\caption{\label{tab:cuantitativa}Datos cuantitativos (intervalos)}\\
+\toprule
+Clase & $f_i$ & $F_i$ & $F_i^*$ & $h_i$ & $H_i$ & $H_i^*$ & $h_i\%$ & $H_i\%$ & $H_i^*\%$\\
+\midrule
+$[20-30)$ & 1 & 1 & 26 & 0.02 & 0.01 & 0.35 & 2.38 & 1.33 & 34.67\\
+$[30-40)$ & 2 & 3 & 68 & 0.05 & 0.04 & 0.91 & 4.76 & 4.00 & 90.67\\
+$[40-50)$ & 3 & 6 & 68 & 0.07 & 0.08 & 0.91 & 7.14 & 8.00 & 90.67\\
+$[50-60)$ & 4 & 10 & 68 & 0.10 & 0.13 & 0.91 & 9.52 & 13.33 & 90.67\\
+$[60-70)$ & 5 & 15 & 68 & 0.12 & 0.20 & 0.91 & 11.90 & 20.00 & 90.67\\
+$[70-80)$ & 6 & 21 & 84 & 0.14 & 0.28 & 1.12 & 14.29 & 28.00 & 112.00\\
+$[80-90)$ & 3 & 24 & 84 & 0.07 & 0.32 & 1.12 & 7.14 & 32.00 & 112.00\\
+$[90-100]$ & 2 & 26 & 84 & 0.05 & 0.35 & 1.12 & 4.76 & 34.67 & 112.00\\
+TOTAL & 42 &  &  &  &  &  & 61.90 &  & \\
+\bottomrule
+\end{longtable}
 
-\begin{verbatim}
+\hypertarget{gruxe1ficos-estaduxedsticos}{%
+\chapter{Gráficos estadísticos}\label{gruxe1ficos-estaduxedsticos}}
 
-```r {cmd=true}
-print("wwwwwwwwwwwwwwwww wwwwwwwwwwwwwwwwww")
-\end{verbatim}
+\hypertarget{histograma-de-frecuencias}{%
+\section{Histograma de frecuencias}\label{histograma-de-frecuencias}}
 
-\texttt{bash\ \{cmd=true\}\ ls\ .}
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mtcars}\SpecialCharTok{$}\NormalTok{am }\OtherTok{\textless{}{-}} \FunctionTok{as.factor}\NormalTok{(mtcars}\SpecialCharTok{$}\NormalTok{am)}
+\FunctionTok{levels}\NormalTok{(mtcars}\SpecialCharTok{$}\NormalTok{am) }\OtherTok{\textless{}{-}}\FunctionTok{c}\NormalTok{(}\StringTok{"Automatic"}\NormalTok{, }\StringTok{"Manual"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
 Some text
 
@@ -677,7 +698,7 @@ Some text
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-6-1} \end{center}
+\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-2-1} \end{center}
 
 \hypertarget{circulares}{%
 \section{Circulares}\label{circulares}}
@@ -694,7 +715,7 @@ Some text
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-7-1} \end{center}
+\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-3-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -703,7 +724,7 @@ Some text
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-8-1} \end{center}
+\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-4-1} \end{center}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -724,16 +745,16 @@ Some text
 \NormalTok{  )}
 
 \CommentTok{\# Barplot}
-\FunctionTok{ggplot}\NormalTok{(data, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{name, }\AttributeTok{y=}\NormalTok{value)) }\SpecialCharTok{+} 
+\FunctionTok{ggplot}\NormalTok{(data, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{name, }\AttributeTok{y=}\NormalTok{value)) }\SpecialCharTok{+}
   \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{, }\AttributeTok{width=}\FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+}
   \FunctionTok{coord\_flip}\NormalTok{()}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-9-1} \end{center}
+\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-5-1} \end{center}
 
-\hypertarget{histograma-de-frecuencias}{%
-\section{Histograma de frecuencias}\label{histograma-de-frecuencias}}
+\hypertarget{histograma-de-frecuencias-1}{%
+\section{Histograma de frecuencias}\label{histograma-de-frecuencias-1}}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -741,7 +762,7 @@ Some text
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-10-1} \end{center}
+\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-6-1} \end{center}
 
 \hypertarget{medidas-de-tendencia-central}{%
 \chapter{Medidas de tendencia central}\label{medidas-de-tendencia-central}}
@@ -758,8 +779,8 @@ A veces llamada \emph{promedio aritmético}, es la medida de tendencia central q
 
 Los datos no están agrupados cuando no están ordenados sobre una tabla de distribución de frecuencias. Sean los \(n\) datos \(x_1, x_2, \ldots, x_n\) entonces la media o promedio aritmético se define como
 
-\[ 
-\overline{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum_{i=1}^nx_i 
+\[
+\overline{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum_{i=1}^nx_i
 \]
 
 \hypertarget{media-de-datos-agrupados}{%
@@ -805,7 +826,7 @@ Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
 \[\overline{x}=\frac{12.5+35++112.5+82.5+65}{13}=\frac{307.5}{13}=23.65\]
 
 \begin{exercise}
-\protect\hypertarget{exr:unnamed-chunk-11}{}\label{exr:unnamed-chunk-11}Si el promedio de \(n\) datos es \(\overline{x}\) entonces el promedio del conjunto inicial más un dato adicional \(x_{n+1}\) es \[\overline{x}'=\frac{n\overline{x}+x_{n+1}}{n+1}\] en general si se adicionan \(r\) datos \(y_1, y_2, \ldots y_r\) entonces el nuevo promedio será \[\overline{x}'=\frac{n\overline{x}+y_{1}+y_2+\ldots+y_r}{n+r}\]
+\protect\hypertarget{exr:unnamed-chunk-7}{}\label{exr:unnamed-chunk-7}Si el promedio de \(n\) datos es \(\overline{x}\) entonces el promedio del conjunto inicial más un dato adicional \(x_{n+1}\) es \[\overline{x}'=\frac{n\overline{x}+x_{n+1}}{n+1}\] en general si se adicionan \(r\) datos \(y_1, y_2, \ldots y_r\) entonces el nuevo promedio será \[\overline{x}'=\frac{n\overline{x}+y_{1}+y_2+\ldots+y_r}{n+r}\]
 \end{exercise}
 
 \begin{solution}
@@ -915,7 +936,7 @@ Primeramente la mayor frecuencia absoluta es 10 y corresponde \(f_3=10\) por tan
 Obtener la mediana consiste en ordenar los datos de menor a mayor y considerar dos casos: El primero si el número de datos es impar entonces el dato \(x_{\frac{n+1}{2}}\) del conjunto ordenado será la mediana es decir \[\text{Me}=x_{\frac{n+1}{2}}\] de otro lado si el número de datos es par entonces la mediana es la semisuma de los dos datos intermedios es decir \[\text{Me}=\frac{x_{\frac{n}{2}}+x_{\frac{n}{2}+1}}{2}\]
 
 \begin{exercise}
-\protect\hypertarget{exr:unnamed-chunk-13}{}\label{exr:unnamed-chunk-13}Sean los conjuntos de datos 5, 6, 8, 2, 1, 5, 6, 7, 10, 0, 14 y 20, 25, 6, 5, 19, 5 obtener la mediana de estos conjuntos de datos.
+Sean los conjuntos de datos 5, 6, 8, 2, 1, 5, 6, 7, 10, 0, 14 y 20, 25, 6, 5, 19, 5 obtener la mediana de estos conjuntos de datos.
 \end{exercise}
 
 \begin{solution}
@@ -1499,6 +1520,11 @@ f_2=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^3}{n\sigma^3}
 
 Si la distribución es simétrica, ambos índices son iguales a 0; si es asimétrica a la derecha, ambos son positivos; y si es asimétrica a la izquierda, ambos índices son negativos.
 
+\hypertarget{normal-simuxe9trica}{%
+\section{Normal: Simétrica}\label{normal-simuxe9trica}}
+
+wwwwwwwwwwwwwwwwwwwwwwww
+
 \begin{verbatim}
 ## [1] 0.5059805
 \end{verbatim}
@@ -1507,15 +1533,25 @@ Si la distribución es simétrica, ambos índices son iguales a 0; si es asimét
 ## [1] 78.53333
 \end{verbatim}
 
-\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-15-1} \end{center}
+\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-9-1} \end{center}
 
-\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-16-1} \end{center}
+\hypertarget{normal-simetruxeda-positiva}{%
+\section{Normal: Simetría positiva}\label{normal-simetruxeda-positiva}}
+
+wwwwwwwwwwwwwwwww
+
+\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-10-1} \end{center}
 
 \begin{verbatim}
 ## [1] 1.216579
 \end{verbatim}
 
-\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-17-1} \end{center}
+\hypertarget{normal-simetruxeda-negativa}{%
+\section{Normal: Simetría negativa}\label{normal-simetruxeda-negativa}}
+
+wwwwwwwwwwwwwwwww
+
+\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-11-1} \end{center}
 
 \begin{verbatim}
 ## [1] -1.340429
@@ -1559,9 +1595,15 @@ En estadística, usamos la medida de curtosis para describir la ``cola'' de la d
 \end{enumerate}
 
 \begin{itemize}
+\tightlist
 \item
-  En base a la media y desviacion tipica
-  \[k= \frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^4 }{ns^4};\] Si \(k=3\) ademas \(k\geq 3\)
+  En base a la media y desviación típica
+\end{itemize}
+
+\[k= \frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^4 }{ns^4};\] Si \(k=3\) además \(k\geq 3\)
+
+\begin{itemize}
+\tightlist
 \item
   En base a percentiles
   \[k= \frac{P_{75}-P_{25}}{2\left( P_{90}-P_{10} \right) }\] Si \(k<3\) y si \(k=3\) ademas \(k\geq 0.263\)
@@ -1640,18 +1682,56 @@ Sea \(\{A_{1},A_{2},...,A_{i},...,A_{n}\}\) un conjunto de sucesos mutuamente ex
 \chapter{Variables aleatorias}\label{variables-aleatorias}}
 
 \begin{definition}[Variable aleatoria]
-\protect\hypertarget{def:unnamed-chunk-22}{}\label{def:unnamed-chunk-22}Sea \(\Omega\) un espacio muestral asociado a una experimento aleatorio \(\epsilon\) y \(\omega\in\Omega\), entonces se genera la función \textbf{variable aleatoria}
+Sea \(\Omega\) un espacio muestral asociado a una experimento aleatorio \(\epsilon\) y \(\omega\in\Omega\), entonces se genera la función \textbf{variable aleatoria}
 \begin{align*}
   X:\Omega&\longrightarrow \mathbb{R}\\
   \omega&\longmapsto X(\omega)
 \end{align*}
 \end{definition}
 
+\begin{equation}
+  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+  \label{eq:binom}
+\end{equation}
+
+You may refer to it using \eqref{eq:binom}
+
+\begin{align}
+  1 &= 2 \notag \\
+  w &= 2 \label{eq:align}
+\end{align}
+
+\begin{equation}
+\begin{split}
+1 & = 1 \\
+   & = 2 \\
+   & = 3 \\
+   & =2
+\end{split}
+\label{eq:wwww}
+\end{equation}
+
+\begin{definition}[wwwwwww]
+\protect\hypertarget{def:df1}{}\label{def:df1}wwwwwwwwwwwwwwww
+\end{definition}
+
+\begin{theorem}[wwwwwwwwwwwwwwww]
+\protect\hypertarget{thm:th1}{}\label{thm:th1}wwwwwwwwwwwwwwwwwwwwwwww
+\end{theorem}
+
+\begin{example}[wwwwwwww wwww]
+\protect\hypertarget{exm:ex1}{}\label{exm:ex1}wwwwwwww
+\end{example}
+
+\begin{exercise}[wwwwwwwwwwwwwwww]
+\protect\hypertarget{exr:exr1}{}\label{exr:exr1}wwwwwwwwwwwwwww
+\end{exercise}
+
 \(R_{X}=\{x\in \mathbb {R} /\ \exists \,\omega \in \Omega :X(\omega )=x\}\)
 es decir a cada elemento de \(\Omega\) se le asocia un número real \(\mathbb{R}\), además la probabilidad de \(x\in \mathbb{R}\) es \(P[x]= \sum^{n}_{i=1}P\left[\omega_i\right]\) donde \(\omega_i\in X^{-1}(x)\). La definición indica por otro lado que un espacio muestral \(\Omega\) puede genera diferentes variables aleatorias.
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-23}{}\label{exm:unnamed-chunk-23}El espacio muestral de lanzar una monedas tres veces es \[\omega= \left\{ccc,ccs,csc,scc,css,scs,ssc,sss\right\}\] además sea \(n_c\) es número de caras y \(n_s\) el número de sellos, es posibles generar dos o mas variables aleatorias por ejemplo:
+\protect\hypertarget{exm:unnamed-chunk-16}{}\label{exm:unnamed-chunk-16}El espacio muestral de lanzar una monedas tres veces es \[\omega= \left\{ccc,ccs,csc,scc,css,scs,ssc,sss\right\}\] además sea \(n_c\) es número de caras y \(n_s\) el número de sellos, es posibles generar dos o mas variables aleatorias por ejemplo:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1674,7 +1754,7 @@ es decir a cada elemento de \(\Omega\) se le asocia un número real \(\mathbb{R}
   \end{align*}
 \end{enumerate}
 
-Estos subconjuntos de \(\mathbb{R}\) también son espacios muestrales pues el conjunto de elementos de \(\Omega\) con imagen dentro de estos valores reales \(x\) en \(\mathbb{R}\) es un elemento de \(2^{\Omega}\) es decir un evento por lo tanto tiene una determinada probabilidad \(P[x]\), en el primer caso \(X(\omega)=n_c\) tienen probabilidades\\
+Estos subconjuntos de \(\mathbb{R}\) también son espacios muestrales pues el conjunto de elementos de \(\Omega\) con imagen dentro de estos valores reales \(x\) en \(\mathbb{R}\) es un elemento de \(2^{\Omega}\) es decir un evento por lo tanto tiene una determinada probabilidad \(P[x]\), en el primer caso \(X(\omega)=n_c\) tienen probabilidades
 \begin{align*}
   P(3)&=P[ccc]= \frac{1}{8}\\
   P(2)&=P[ccs]=P[csc]=P[scc]=\frac{3}{8}\\
@@ -1685,7 +1765,7 @@ que es lo mismo para el segundo caso \(X(\omega)=n_c-n_s\).
 \end{example}
 
 \begin{definition}[Eventos equivalentes]
-\protect\hypertarget{def:unnamed-chunk-24}{}\label{def:unnamed-chunk-24}Sea \(\Omega\) un espacio muestral asociado a una experimento aleatorio \(\epsilon\) y \(X\) una variable aleatoria con rango \(R_X\) definida sobre \(\Omega\). Dos eventos \(W\in\Omega\) y \(E_X\in R_X\) son \textbf{eventos equivalentes} si existe la relación
+\protect\hypertarget{def:unnamed-chunk-17}{}\label{def:unnamed-chunk-17}Sea \(\Omega\) un espacio muestral asociado a una experimento aleatorio \(\epsilon\) y \(X\) una variable aleatoria con rango \(R_X\) definida sobre \(\Omega\). Dos eventos \(W\in\Omega\) y \(E_X\in R_X\) son \textbf{eventos equivalentes} si existe la relación
 \[W= \left\{\omega\in\Omega/X(\omega)=E_X\right\}\] es decir \(E_X\) consta de todos los elementos en \(\Omega\) para los cuales \(X(\omega)\in W\)
 \end{definition}
 
@@ -1715,7 +1795,7 @@ Discreta y continua
 \subsection{Función de probabilidad de una variable aleatorias discreta}\label{funciuxf3n-de-probabilidad-de-una-variable-aleatorias-discreta}}
 
 \begin{definition}[Función o ley de probabilidad]
-\protect\hypertarget{def:unnamed-chunk-25}{}\label{def:unnamed-chunk-25}
+\protect\hypertarget{def:unnamed-chunk-18}{}\label{def:unnamed-chunk-18}
 
 Sea \(X\) una variable aleatoria con rango \(R_X\). Una función definida por \[p(x)=P[X=x]= \sum^{}_{ \left\{\omega \in \Omega:X(\omega)=x\right\}}P\left[\left\{\omega\right\}\right]\]
 
@@ -1733,21 +1813,21 @@ Sea \(X\) una variable aleatoria con rango \(R_X\). Una función definida por \[
 El conjunto de pares ordenados \(\left(x,p(x)\right)\), \(x\in R_X\) recibe el nombre de \emph{distribución de probabildiad de \(X\)}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-26}{}\label{exm:unnamed-chunk-26}La variable aleatoria discreta
+\protect\hypertarget{exm:unnamed-chunk-19}{}\label{exm:unnamed-chunk-19}La variable aleatoria discreta
 \[p_X(x)=p(1-p)^{x-1}, \text{ $x\in \mathbb{Z}^+$ y $p\in[0,1]$}\]
 
 en efecto \[p(1-p)^{i-1}>0, \text{ $\forall x\in \mathbb{Z}^+$}\] además \[ \sum^{\infty}_{i=1}p(1-p)^{i-1}=p \lim_{n\to\infty}\frac{1-(1-p)^{n+1}}{1-(1-p)}=1\]
 \end{example}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-27}{}\label{exm:unnamed-chunk-27}La variable aleatoria discreta
+\protect\hypertarget{exm:unnamed-chunk-20}{}\label{exm:unnamed-chunk-20}La variable aleatoria discreta
 \[p_X(x)=p(1-p), \text{ $x\in \mathbb{Z}^+$ y $p\in[0,1]$}\]
 
 en efecto \[p(1-p)^{i-1}>0, \text{ $\forall x\in \mathbb{Z}^+$}\] además \[ \sum^{\infty}_{i=1}p(1-p)^{i-1}=p \lim_{n\to\infty}\frac{1-(1-p)^{n+1}}{1-(1-p)}=1\]
 \end{example}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-28}{}\label{exm:unnamed-chunk-28}La variable aleatoria discreta
+\protect\hypertarget{exm:unnamed-chunk-21}{}\label{exm:unnamed-chunk-21}La variable aleatoria discreta
 \[p_X(x)=(1-p)^{x-1}, \text{ $x\in \mathbb{Z}^+$ y $p\in[0,1]$}\]
 
 en efecto \[p(1-p)^{i-1}>0, \text{ $\forall x\in \mathbb{Z}^+$}\] además \[ \sum^{\infty}_{i=1}p(1-p)^{i-1}=p \lim_{n\to\infty}\frac{1-(1-p)^{n+1}}{1-(1-p)}=1\]
@@ -1757,7 +1837,7 @@ en efecto \[p(1-p)^{i-1}>0, \text{ $\forall x\in \mathbb{Z}^+$}\] además \[ \su
 \subsection{Función de probabilidad de una variable aleatoria continua}\label{funciuxf3n-de-probabilidad-de-una-variable-aleatoria-continua}}
 
 \begin{definition}[Función de densidad de probabilidad]
-\protect\hypertarget{def:unnamed-chunk-29}{}\label{def:unnamed-chunk-29}
+\protect\hypertarget{def:unnamed-chunk-22}{}\label{def:unnamed-chunk-22}
 
 Sea \(X\) una variable aleatoria con rango \(R_X\). La función \(f(x)\) definida sobre \(R_X\)
 
@@ -1773,7 +1853,7 @@ Sea \(X\) una variable aleatoria con rango \(R_X\). La función \(f(x)\) definid
 \end{definition}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-30}{}\label{exm:unnamed-chunk-30}For a circle with the radius \texttt{r\ x},
+\protect\hypertarget{exm:unnamed-chunk-23}{}\label{exm:unnamed-chunk-23}For a circle with the radius \texttt{r\ x},
 its area is \texttt{r\ pi\ *\ x\^{}2}.
 Sea la función
 \end{example}
@@ -1790,13 +1870,13 @@ Sea la función
 \]
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-31}{}\label{exm:unnamed-chunk-31}Sea \(f(x)= \frac{\alpha}{\rho}\) es una funcion de densidad pues
+\protect\hypertarget{exm:unnamed-chunk-24}{}\label{exm:unnamed-chunk-24}Sea \(f(x)= \frac{\alpha}{\rho}\) es una funcion de densidad pues
 \[f(x)>0,~ x\in R_X\] además
 \[\int_{R_X}f(x)dx=1\]
 \end{example}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-32}{}\label{exm:unnamed-chunk-32}Sea \(f(x)= \frac{\sigma}{\rho}\) es una funcion de densidad pues
+\protect\hypertarget{exm:unnamed-chunk-25}{}\label{exm:unnamed-chunk-25}Sea \(f(x)= \frac{\sigma}{\rho}\) es una funcion de densidad pues
 \[f(x)>0,~ x\in R_X\] además
 \[\int_{R_X}f(x)dx=1\]
 \end{example}
@@ -1808,7 +1888,7 @@ Sea la función
 \subsection{Función de distribución de una variable aleatoria discreta}\label{funciuxf3n-de-distribuciuxf3n-de-una-variable-aleatoria-discreta}}
 
 \begin{definition}[Función de distribución]
-\protect\hypertarget{def:unnamed-chunk-33}{}\label{def:unnamed-chunk-33}
+\protect\hypertarget{def:unnamed-chunk-26}{}\label{def:unnamed-chunk-26}
 
 Sea \(X\) una variable aleatoria con rango \[R_X= \left\{x_1,x_2,\ldots x_n,\ldots\right\}.\] Con función de probabilidad \(p(x_i)=P[X=x_i]\), sea \(x\) cualquier número, real la función definida por \[F(x)=P[X\leq x]= \sum^{}_{x_i\leq x}p(x_i)= \sum^{}_{x_i\leq x}P[X= x_i]  \]
 recie el nombre de función de distribución de \(X\). Cuyas propiedades son:
@@ -1834,7 +1914,7 @@ recie el nombre de función de distribución de \(X\). Cuyas propiedades son:
 \subsection{Función de distribución de una variable aleatoria continua}\label{funciuxf3n-de-distribuciuxf3n-de-una-variable-aleatoria-continua}}
 
 \begin{definition}[Función de distribución]
-\protect\hypertarget{def:unnamed-chunk-34}{}\label{def:unnamed-chunk-34}
+\protect\hypertarget{def:unnamed-chunk-27}{}\label{def:unnamed-chunk-27}
 
 Sea \(X\) una variable aleatoria con función de densidad \(f(x)\). La función
 \[F_X(x)=F(x)=P[X\leq x]=\int_{-\infty}^{x}f(t)dt, \text{ $\forall x\in R_X$}\]
@@ -1861,11 +1941,11 @@ Cuyas propiedades son:
 \section{Esperanza matemática}\label{esperanza-matemuxe1tica}}
 
 \begin{definition}[Esperanza matemática de una variable aleatoria discreta]
-\protect\hypertarget{def:unnamed-chunk-35}{}\label{def:unnamed-chunk-35}\[\mathbb{E}[X]=\sum _{i=1}^{n}x_{i}p(x_{i})\]
+\protect\hypertarget{def:unnamed-chunk-28}{}\label{def:unnamed-chunk-28}\[\mathbb{E}[X]=\sum _{i=1}^{n}x_{i}p(x_{i})\]
 \end{definition}
 
 \begin{definition}[Esperanza matemática de una variable aleatoria continua]
-\protect\hypertarget{def:unnamed-chunk-36}{}\label{def:unnamed-chunk-36}\[\mathbb{E}[X]=\int_{-\infty }^{\infty}xf(x)dx \text{ equivalentemente }\mathbb {E}[X]=\int_{\Omega }X\,{\text{d}}P\]
+\protect\hypertarget{def:unnamed-chunk-29}{}\label{def:unnamed-chunk-29}\[\mathbb{E}[X]=\int_{-\infty }^{\infty}xf(x)dx \text{ equivalentemente }\mathbb {E}[X]=\int_{\Omega }X\,{\text{d}}P\]
 \end{definition}
 
 el valor esperado a veces se representa por \(\mu =\mathbb {E} [X]\) que es el promedio o la media poblacional.
@@ -1884,26 +1964,26 @@ momento de orden superior
 \chapter{Variables aleatorias bidimensionales}\label{variables-aleatorias-bidimensionales}}
 
 \begin{definition}[Variable aleatoria bidmensional discreta]
-\protect\hypertarget{def:unnamed-chunk-37}{}\label{def:unnamed-chunk-37}\[F(x,y)=P[X\leq x,Y\leq y]= \sum^{x}_{u=-\infty}\sum^{y}_{v=-\infty}=p(u,v)\]
+\protect\hypertarget{def:unnamed-chunk-30}{}\label{def:unnamed-chunk-30}\[F(x,y)=P[X\leq x,Y\leq y]= \sum^{x}_{u=-\infty}\sum^{y}_{v=-\infty}=p(u,v)\]
 \end{definition}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-38}{}\label{exm:unnamed-chunk-38}www
+\protect\hypertarget{exm:unnamed-chunk-31}{}\label{exm:unnamed-chunk-31}www
 \end{example}
 
 \begin{definition}[Variable aleatoria bidmensional contínua]
-\protect\hypertarget{def:unnamed-chunk-39}{}\label{def:unnamed-chunk-39}\[F(x,y)=P[X\leq x,Y\leq y]= \sum^{x}_{u=-\infty}\sum^{y}_{v=-\infty}=p(u,v)\]
+\protect\hypertarget{def:unnamed-chunk-32}{}\label{def:unnamed-chunk-32}\[F(x,y)=P[X\leq x,Y\leq y]= \sum^{x}_{u=-\infty}\sum^{y}_{v=-\infty}=p(u,v)\]
 \end{definition}
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-40}{}\label{exm:unnamed-chunk-40}wwwww
+\protect\hypertarget{exm:unnamed-chunk-33}{}\label{exm:unnamed-chunk-33}wwwww
 \end{example}
 
 \hypertarget{distribuciuxf3n-bidimensional-discreta}{%
 \section{Distribución bidimensional discreta}\label{distribuciuxf3n-bidimensional-discreta}}
 
 \begin{definition}[Función de probabilidad conjunta]
-\protect\hypertarget{def:unnamed-chunk-41}{}\label{def:unnamed-chunk-41}Sea \((X,Y)\) una variable bidimensinal discreta con rango \(R_{X\times Y}\). A cada posible resultado le asociamos un numero \[p(x,y)=P[X=x, Y=y]\] que cumple la siguientes condiciones
+\protect\hypertarget{def:unnamed-chunk-34}{}\label{def:unnamed-chunk-34}Sea \((X,Y)\) una variable bidimensinal discreta con rango \(R_{X\times Y}\). A cada posible resultado le asociamos un numero \[p(x,y)=P[X=x, Y=y]\] que cumple la siguientes condiciones
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1918,7 +1998,7 @@ Alos pares ordenados \(\left((x,y),p(x,y)\right)\) se le llama \textbf{distribuc
 \end{definition}
 
 \begin{definition}[Función de distribución acumulada]
-\protect\hypertarget{def:unnamed-chunk-42}{}\label{def:unnamed-chunk-42}\[F(x,y)=P[X\leq x,Y\leq y]= \sum^{x}_{u=-\infty}\sum^{y}_{v=-\infty}=p(u,v)\]
+\protect\hypertarget{def:unnamed-chunk-35}{}\label{def:unnamed-chunk-35}\[F(x,y)=P[X\leq x,Y\leq y]= \sum^{x}_{u=-\infty}\sum^{y}_{v=-\infty}=p(u,v)\]
 \end{definition}
 
 \hypertarget{distribuciones-marginales}{%
@@ -1981,12 +2061,20 @@ Algunas propiedades son
   \(\sum_{i=1}^nx_i\)
   \[\int_1^3=\lim_{n\to \infty}\sum_{i=0}^{n}f^i(x)\]
   citado por \citep{xie2015}
-  Variable estadística variable estadística\\
-  \#\# ee
+  Variable estadística variable estadística
 \end{enumerate}
 
+\hypertarget{ee}{%
+\section{ee}\label{ee}}
+
+\(\sum_{i=1}^nx_i\)
+
+\[
+\sum_{i=1}^n \frac{1}{2}
+\]
+
 \hypertarget{eeeee}{%
-\section{eeeee}\label{eeeee}}
+\subsection{eeeee}\label{eeeee}}
 
 \hypertarget{matrices}{%
 \chapter{Matrices}\label{matrices}}
@@ -1997,7 +2085,7 @@ a_{11}&a_{12}&\ldots&a_{1n}\\
 a_{21}&a_{22}&\ldots&a_{2n}\\
 \vdots & \vdots & \ddots &\vdots \\
 a_{11}&a_{11}&\ldots&a_{nm}
-\end{pmatrix}_{n\times n}\]
+\end{pmatrix}_{n\times m}\]
 de \textbf{orden} \(n\times m\) tiene \textbf{entradas} \(a_{ij}\) donde el primer subindice indica la fila y el segundo la columna; es usual representar por simplicidad una matriz por \(A=[a_{ij}]_{n\times m}\). Si en el orden \(n=m\) entonces la matriz recibe el nombre de \textbf{matriz cuadrada} la suma de los elementos de la diagonal de una matriz cuadrada \(\sum_{i=1}^na_{ii}\) se llama \textbf{traza}\index{traza}. Si todas las \(a_{ij}\) son cero entonces la matriz \(A=0\) recibe el nombre matriz \textbf{nula}.
 
 Dos matrices son iguales si tienen el \textbf{mismo orden} y cada una de las entradas respectivas son iguales es decir \(A=[a_{ij}]_{n\times m}\) y \(B=[b_{ij}]_{n\times m}\) son iguales si \(a_{ij}=b_{ij}\), \(i=1,2,\ldots n\) y \(j=1,2,\ldots m\)
@@ -2005,14 +2093,42 @@ Dos matrices son iguales si tienen el \textbf{mismo orden} y cada una de las ent
 \hypertarget{algebra-de-matrices}{%
 \section{Algebra de matrices}\label{algebra-de-matrices}}
 
-Sean las matrices \(A=[a_{ij}]_{n\times m}\) y \(B=[b_{ij}]_{p\times q}\) entonces la suma y producto de matrices se definen
+Sean las matrices \[A=[a_{ij}]_{n\times m}=\begin{pmatrix}
+a_{11}&a_{12}&\ldots&a_{1n}\\
+a_{21}&a_{22}&\ldots&a_{2n}\\
+\vdots & \vdots & \ddots &\vdots \\
+a_{11}&a_{11}&\ldots&a_{nm}
+\end{pmatrix}_{n\times m}\] y \[B=[b_{ij}]_{p\times q}=\begin{pmatrix}
+b_{11}&b_{12}&\ldots&b_{1n}\\
+b_{21}&b_{22}&\ldots&b_{2n}\\
+\vdots & \vdots & \ddots &\vdots \\
+b_{11}&b_{11}&\ldots&b_{pq}
+\end{pmatrix}_{p\times q}\] entonces la suma y producto de matrices se definen
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
   Sea \(k\) un escalar entonces se verifica que \(kA=[ka_{ij}]\), \(i=1,2,\ldots n\) y \(j=1,2,\ldots m\) es decir el escalar \(k\) multiplica a cada una de las entradas de la matriz.
+  \begin{align*}
+  kA&=k[a_{ij}]_{n\times m}\\
+  &=[ka_{ij}]_{n\times m}\\
+  &=\begin{pmatrix}
+  ka_{11}&ka_{12}&\ldots&ka_{1n}\\
+  ka_{21}&ka_{22}&\ldots&ka_{2n}\\
+  \vdots & \vdots & \ddots &\vdots \\
+  ka_{11}&ka_{11}&\ldots&ka_{nm}
+  \end{pmatrix}_{n\times m}
+  \end{align*}
 \item
-  La suma o diferencia es posible si \(n=p\) y \(m=q\) es decir los ordenes de \(A\) y \(B\) son iguales, entonces la suma o diferencia resulta \(A\pm B=[a_{ij}+b_{ij}]_{n\times m}\), \(i=1,2,\ldots n\) y \(j=1,2,\ldots m\)
+  La suma o diferencia es posible si \(n=p\) y \(m=q\) es decir los ordenes de \(A\) y \(B\) son iguales, entonces la suma o diferencia resulta \begin{align*}
+  A\pm B&=[a_{ij}+b_{ij}]_{n\times m}\\
+  &=\begin{pmatrix}
+  a_{11} + b_{11}&a_{12} + b_{12}&\ldots&a_{1n} + b_{1n}\\
+  a_{21} + b_{21}&a_{22} + b_{22}&\ldots&a_{2n} + b_{2n}\\
+  \vdots & \vdots & \ddots &\vdots \\
+  a_{11} + b_{11}&a_{11} + b_{11}&\ldots&a_{nm} + b_{nm}
+  \end{pmatrix}_{n\times m}
+  \end{align*} donde \(i=1,2,\ldots n\) y \(j=1,2,\ldots m\)
 \item
   El producto es posible si \(m=p\) es decir el número columnas de la primera matriz es igual al número de filas de la segunda matriz, el orden de la matriz resultante es \(n\times q\) además
   \begin{align*}
@@ -2029,12 +2145,13 @@ Sean las matrices \(A=[a_{ij}]_{n\times m}\) y \(B=[b_{ij}]_{p\times q}\) entonc
 donde \(i=1,2,\ldots n\) y \(j=1,2,\ldots m\)
 
 \begin{example}
-\protect\hypertarget{exm:unnamed-chunk-43}{}\label{exm:unnamed-chunk-43}Sean \(\begin{pmatrix} 3&-1&2\\ 2&-1&2\\ 1&-1&0\\ 5&0&0\\ \end{pmatrix}_{4\times 3}\) y \(\begin{pmatrix} 0&-1&2&2&0\\ 1&-1&-2&1&1\\ 3&-1&-3&5&2\\ \end{pmatrix}_{3\times 5}\) entonces \(A\cdot B=\begin{pmatrix} 5&-4&2&15&3\\ 5&-3&0&13&3\\ -1&0&4&1&-1\\ 0&-5&10&10&0\\ \end{pmatrix}_{4\times 5}\)
+Sean \(\begin{pmatrix} 3&-1&2\\ 2&-1&2\\ 1&-1&0\\ 5&0&0\\ \end{pmatrix}_{4\times 3}\) y \(\begin{pmatrix} 0&-1&2&2&0\\ 1&-1&-2&1&1\\ 3&-1&-3&5&2\\ \end{pmatrix}_{3\times 5}\) entonces \(A\cdot B=\begin{pmatrix} 5&-4&2&15&3\\ 5&-3&0&13&3\\ -1&0&4&1&-1\\ 0&-5&10&10&0\\ \end{pmatrix}_{4\times 5}\)
 \end{example}
 
 En caso de ser posible la multiplicación entre \(A\), \(B\) y \(C\) entonces se verfican las siguientes propiedades
 
-\begin{itemize}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
   \(A(B+C)=AB+AC\)
@@ -2042,12 +2159,72 @@ En caso de ser posible la multiplicación entre \(A\), \(B\) y \(C\) entonces se
   \((A+B)C\)
 \item
   \(A(BC)=(AB)C\)
-\end{itemize}
+\end{enumerate}
+
+\hypertarget{matrices-particulares}{%
+\section{Matrices particulares}\label{matrices-particulares}}
+
+En esta seccion se considera las siguientes matrices: Matriz triangular, matriz particular de una matriz cuadrada,
+matriz transpuesta,
+matriz simetrica,
+matriz conjugada,
+matriz hermitica,
+matriz escalonada.
+
+\hypertarget{matriz-triangular}{%
+\subsection{Matriz triangular}\label{matriz-triangular}}
+
+Una matriz cuadrada \(A\) cuyos elementos \(a_{ij}=0\) si \(i>j\) es decir \[A=\begin{pmatrix}
+a_{11}&a_{12}&\ldots&a_{1n}\\
+0&a_{22}&\ldots&a_{2n}\\
+\vdots & \vdots & \ddots &\vdots \\
+0&0&\ldots&a_{nn}
+\end{pmatrix}_{n\times n}\] se llama \textbf{matriz triangular superior}; reciprocamente si \(i<j\) es decir \[A=\begin{pmatrix}
+a_{11}&0&\ldots&0\\
+a_{21}&a_{22}&\ldots&0\\
+\vdots & \vdots & \ddots &\vdots \\
+a_{11}&a_{11}&\ldots&a_{nn}
+\end{pmatrix}_{n\times n}\] se llama \textbf{matriz triangular inferior}. Si \(A\) es a la vez \textbf{matriz triangular superior} y \textbf{matriz triangular inferior} entonces recibe el nombre de \textbf{matriz diagonal}, representada por
+\[
+\left(a_{11}, a_{22}, \ldots, a_{nn}\right)
+\]
+además si \(a_{11}= a_{22}= \ldots = a_{nn}=k\) la matriz recibe el nombre de \textbf{matriz escalar} y si \(k=1\) la matriz recibe el nombre de \textbf{matriz unidad} representada por \(I_n\) por ejemplo
+\[I_3=\begin{pmatrix}
+1  & 0 & 0 \\
+0  & 1 & 0 \\
+0  & 0 & 1 \\
+\end{pmatrix}
+\]
+
+\hypertarget{matriz-particular-de-una-matriz-cuadrada}{%
+\subsection{Matriz particular de una matriz cuadrada}\label{matriz-particular-de-una-matriz-cuadrada}}
+
+\hypertarget{matriz-transpuesta}{%
+\subsection{Matriz transpuesta}\label{matriz-transpuesta}}
+
+\hypertarget{matriz-simetrica}{%
+\subsection{Matriz simetrica}\label{matriz-simetrica}}
+
+\hypertarget{matriz-conjugada}{%
+\subsection{Matriz conjugada}\label{matriz-conjugada}}
+
+\hypertarget{matriz-hermitica}{%
+\subsection{Matriz hermitica}\label{matriz-hermitica}}
+
+\hypertarget{matriz-escalonada}{%
+\subsection{Matriz escalonada}\label{matriz-escalonada}}
+
+\[
+\begin{pmatrix}
+ w & warnwww   & w \\
+ w & warnwww   & w \\
+\end{pmatrix}_{4\times 3}
+\]
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{xw }\OtherTok{=} \StringTok{\textquotesingle{}Es decir los elementos son demagogos y déspotas\textquotesingle{}} 
-\NormalTok{x1 }\OtherTok{=} \StringTok{\textquotesingle{}Es decir los elementos son demagogos y déspotas\textquotesingle{}} 
+\NormalTok{xw }\OtherTok{=} \StringTok{\textquotesingle{}Es decir los elementos son demagogos y déspotas\textquotesingle{}}
+\NormalTok{x1 }\OtherTok{=} \StringTok{\textquotesingle{}Es decir los elementos son demagogos y déspotas\textquotesingle{}}
 \end{Highlighting}
 \end{Shaded}
 
@@ -2059,9 +2236,17 @@ En caso de ser posible la multiplicación entre \(A\), \(B\) y \(C\) entonces se
 \[
 \Phi_{\mu , \sigma ^{2}}(x)=\frac {1}{\sigma {\sqrt {2\pi }}}e^{-{\frac {(u-\mu )^{2}}{2\sigma ^{2}}}}du
 \]
-* \[\frac{1}{20\sqrt{2\pi }}\int_{-\infty }^{ 300}e^{- \frac{1}{2}\left(\frac{z-200}{20}\right)^2}dz=0.9999997\]
-* 0.9500042 also Es decir los elementos son demagogos y déspotas
-* Es decir los elementos son demagogos y déspotas
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Www \[\frac{1}{20\sqrt{2\pi }}\int_{-\infty }^{ 300}e^{- \frac{1}{2}\left(\frac{z-200}{20}\right)^2}dz=0.9999997\]
+\item
+  0.9500042 also Es decir los elementos son demagogos y déspotas
+\item
+  Es decir los elementos son demagogos y déspotas
+\end{enumerate}
+
 Tabla \ref{tab:ww1}
 
 \begin{longtable}[]{@{}
@@ -2107,33 +2292,6 @@ It is not the same \texttt{x} as the one in R.
 ## (Intercept) 
 ##    12917.13
 \end{verbatim}
-
-Sea la Tabla \ref{tab:2w3} Figures and tables with captions will be placed in \texttt{figure} and \texttt{table} environments, respectively.
-
-\begin{longtable}[t]{cccccccccc}
-\caption{\label{tab:2w3}Figures and tables with captions will be placed in `figure` }\\
-\toprule
-$Y_i$ & $f_i$ & $F_i$ & $F_i^*$ & $h_i$ & $H_i$ & $H_i^*$ & $h_i\%$ & $H_i\%$ & $H_i^*\%$\\
-\midrule
-ESTJ & 1 & 1 & 75 & 0.01 & 0.01 & 1.00 & 1.33 & 1.33 & 100.00\\
-ESTJ & 2 & 3 & 150 & 0.03 & 0.04 & 2.00 & 2.67 & 4.00 & 200.00\\
-ESTP & 3 & 6 & 150 & 0.04 & 0.08 & 2.00 & 4.00 & 8.00 & 200.00\\
-ESFJ & 4 & 10 & 150 & 0.05 & 0.13 & 2.00 & 5.33 & 13.33 & 200.00\\
-ESFP & 6 & 16 & 150 & 0.08 & 0.21 & 2.00 & 8.00 & 21.33 & 200.00\\
-ISTJ & 6 & 22 & 155 & 0.08 & 0.29 & 2.07 & 8.00 & 29.33 & 206.67\\
-ISTP & 7 & 29 & 157 & 0.09 & 0.39 & 2.09 & 9.33 & 38.67 & 209.33\\
-ISFJ & 8 & 37 & 158 & 0.11 & 0.49 & 2.11 & 10.67 & 49.33 & 210.67\\
-ISFP & 9 & 46 & 166 & 0.12 & 0.61 & 2.21 & 12.00 & 61.33 & 221.33\\
-ENTJ & 10 & 56 & 166 & 0.13 & 0.75 & 2.21 & 13.33 & 74.67 & 221.33\\
-ENTP & 6 & 62 & 166 & 0.08 & 0.83 & 2.21 & 8.00 & 82.67 & 221.33\\
-ENFJ & 5 & 67 & 166 & 0.07 & 0.89 & 2.21 & 6.67 & 89.33 & 221.33\\
-ENFP & 3 & 70 & 166 & 0.04 & 0.93 & 2.21 & 4.00 & 93.33 & 221.33\\
-INTJ & 2 & 72 & 167 & 0.03 & 0.96 & 2.23 & 2.67 & 96.00 & 222.67\\
-INTP & 1 & 73 & 169 & 0.01 & 0.97 & 2.25 & 1.33 & 97.33 & 225.33\\
-INFJ & 1 & 74 & 172 & 0.01 & 0.99 & 2.29 & 1.33 & 98.67 & 229.33\\
-INFP & 1 & 75 & 176 & 0.01 & 1.00 & 2.35 & 1.33 & 100.00 & 234.67\\
-\bottomrule
-\end{longtable}
 
   \bibliography{book.bib,packages.bib}
 

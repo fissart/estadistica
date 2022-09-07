@@ -5,8 +5,8 @@ bookdown::gitbook:
   anchor_sections: FALSE
   config:
     fontsettings:
-      theme: sepia
-      family: sans
+      theme: white
+      family: serif
       size: 2
     toc:
       collapse: section

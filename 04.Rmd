@@ -2,17 +2,25 @@
 # Sumatorias
 
 Una suma de números representados por $x_1, x_2, \ldots, x_n$ se simboliza en forma compacta mediante el simbolo $\sum$ (sigma) es decir la suma de los números anteriores se puede escribir del siguiente modo $$x_1+x_2+\dots+x_n=\sum_{i=1}^nx_i.$$
-Algunas propiedades son 
+Algunas propiedades son
 
 1. $k\sum_{i=1}^nx_i=\sum_{i=1}^nkx_i$
 2. $\sum_{i=1}^n\left(x_i+y_i\right)=\sum_{i=1}^nx_i+\sum_{i=1}^ny_i$
 3. $\sum_{i=1}^nx_i$
 $$\int_1^3=\lim_{n\to \infty}\sum_{i=0}^{n}f^i(x)$$
 citado por [@xie2015]
-Variable estadística variable estadística   
+Variable estadística variable estadística
+
+
 ## ee
 
-## eeeee
+$\sum_{i=1}^nx_i$
+
+$$
+\sum_{i=1}^n \frac{1}{2}
+$$
+
+### eeeee
 
 # Matrices
 
@@ -22,19 +30,47 @@ a_{11}&a_{12}&\ldots&a_{1n}\\
 a_{21}&a_{22}&\ldots&a_{2n}\\
 \vdots & \vdots & \ddots &\vdots \\
 a_{11}&a_{11}&\ldots&a_{nm}
-\end{pmatrix}_{n\times n}$$
+\end{pmatrix}_{n\times m}$$
 de **orden** $n\times m$ tiene **entradas** $a_{ij}$ donde el primer subindice indica la fila y el segundo la columna; es usual representar por simplicidad una matriz por $A=[a_{ij}]_{n\times m}$. Si en el orden $n=m$  entonces la matriz recibe el nombre de **matriz cuadrada**  la suma de los elementos de la diagonal de una matriz cuadrada $\sum_{i=1}^na_{ii}$ se llama **traza**\index{traza}. Si todas las $a_{ij}$ son cero entonces la matriz $A=0$ recibe el nombre matriz **nula**.
 
 Dos matrices son iguales si tienen el **mismo orden** y cada una de las entradas respectivas son iguales es decir $A=[a_{ij}]_{n\times m}$ y $B=[b_{ij}]_{n\times m}$ son iguales si $a_{ij}=b_{ij}$, $i=1,2,\ldots n$ y $j=1,2,\ldots m$
 
 ## Algebra de matrices
-Sean las matrices $A=[a_{ij}]_{n\times m}$ y $B=[b_{ij}]_{p\times q}$ entonces la suma y producto de matrices se definen
+Sean las matrices $$A=[a_{ij}]_{n\times m}=\begin{pmatrix}
+a_{11}&a_{12}&\ldots&a_{1n}\\
+a_{21}&a_{22}&\ldots&a_{2n}\\
+\vdots & \vdots & \ddots &\vdots \\
+a_{11}&a_{11}&\ldots&a_{nm}
+\end{pmatrix}_{n\times m}$$ y $$B=[b_{ij}]_{p\times q}=\begin{pmatrix}
+b_{11}&b_{12}&\ldots&b_{1n}\\
+b_{21}&b_{22}&\ldots&b_{2n}\\
+\vdots & \vdots & \ddots &\vdots \\
+b_{11}&b_{11}&\ldots&b_{pq}
+\end{pmatrix}_{p\times q}$$ entonces la suma y producto de matrices se definen
 
 1. Sea $k$ un escalar entonces se verifica que $kA=[ka_{ij}]$, $i=1,2,\ldots n$ y $j=1,2,\ldots m$ es decir el escalar $k$ multiplica a cada una de las entradas de la matriz.
+\begin{align*}
+kA&=k[a_{ij}]_{n\times m}\\
+&=[ka_{ij}]_{n\times m}\\
+&=\begin{pmatrix}
+ka_{11}&ka_{12}&\ldots&ka_{1n}\\
+ka_{21}&ka_{22}&\ldots&ka_{2n}\\
+\vdots & \vdots & \ddots &\vdots \\
+ka_{11}&ka_{11}&\ldots&ka_{nm}
+\end{pmatrix}_{n\times m}
+\end{align*}
 
-2. La suma o diferencia es posible si $n=p$ y $m=q$ es decir los ordenes de $A$ y $B$ son iguales, entonces la suma o diferencia resulta $A\pm B=[a_{ij}+b_{ij}]_{n\times m}$, $i=1,2,\ldots n$ y $j=1,2,\ldots m$ 
+2. La suma o diferencia es posible si $n=p$ y $m=q$ es decir los ordenes de $A$ y $B$ son iguales, entonces la suma o diferencia resulta \begin{align*}
+A\pm B&=[a_{ij}+b_{ij}]_{n\times m}\\
+&=\begin{pmatrix}
+a_{11} + b_{11}&a_{12} + b_{12}&\ldots&a_{1n} + b_{1n}\\
+a_{21} + b_{21}&a_{22} + b_{22}&\ldots&a_{2n} + b_{2n}\\
+\vdots & \vdots & \ddots &\vdots \\
+a_{11} + b_{11}&a_{11} + b_{11}&\ldots&a_{nm} + b_{nm}
+\end{pmatrix}_{n\times m}
+\end{align*} donde $i=1,2,\ldots n$ y $j=1,2,\ldots m$
 
-3. El producto es posible si $m=p$ es decir el número columnas de la primera matriz es igual al número de filas de la segunda matriz, el orden de la matriz resultante es $n\times q$ además 
+3. El producto es posible si $m=p$ es decir el número columnas de la primera matriz es igual al número de filas de la segunda matriz, el orden de la matriz resultante es $n\times q$ además
 \begin{align*}
 A\cdot B&=\left[\sum_{k=1}^pa_{ik}b_{kj}\right]_{n\times q}\\
 &=\begin{pmatrix}
@@ -47,7 +83,7 @@ A\cdot B&=\left[\sum_{k=1}^pa_{ik}b_{kj}\right]_{n\times q}\\
 
 donde $i=1,2,\ldots n$ y $j=1,2,\ldots m$
 
-```{example}
+:::{.example}
 Sean $\begin{pmatrix}
 3&-1&2\\
 2&-1&2\\
@@ -63,18 +99,66 @@ Sean $\begin{pmatrix}
 -1&0&4&1&-1\\
 0&-5&10&10&0\\
 \end{pmatrix}_{4\times 5}$
-```
+:::
 En caso de ser posible la multiplicación entre $A$, $B$ y $C$ entonces se verfican las siguientes propiedades
 
-* $A(B+C)=AB+AC$
-* $(A+B)C$
-* $A(BC)=(AB)C$
+1. $A(B+C)=AB+AC$
+2. $(A+B)C$
+3. $A(BC)=(AB)C$
+
+## Matrices particulares
+
+En esta seccion se considera las siguientes matrices: Matriz triangular, matriz particular de una matriz cuadrada,
+ matriz transpuesta,
+ matriz simetrica,
+ matriz conjugada,
+ matriz hermitica,
+ matriz escalonada.
 
 
+### Matriz triangular
+
+Una matriz cuadrada $A$ cuyos elementos $a_{ij}=0$ si $i>j$ es decir $$A=\begin{pmatrix}
+a_{11}&a_{12}&\ldots&a_{1n}\\
+0&a_{22}&\ldots&a_{2n}\\
+\vdots & \vdots & \ddots &\vdots \\
+0&0&\ldots&a_{nn}
+\end{pmatrix}_{n\times n}$$ se llama **matriz triangular superior**; reciprocamente si $i<j$ es decir $$A=\begin{pmatrix}
+a_{11}&0&\ldots&0\\
+a_{21}&a_{22}&\ldots&0\\
+\vdots & \vdots & \ddots &\vdots \\
+a_{11}&a_{11}&\ldots&a_{nn}
+\end{pmatrix}_{n\times n}$$ se llama **matriz triangular inferior**. Si $A$ es a la vez **matriz triangular superior** y **matriz triangular inferior** entonces recibe el nombre de **matriz diagonal**, representada por
+$$
+\left(a_{11}, a_{22}, \ldots, a_{nn}\right)
+$$
+además si $a_{11}= a_{22}= \ldots = a_{nn}=k$ la matriz recibe el nombre de **matriz escalar** y si $k=1$ la matriz recibe el nombre de **matriz unidad** representada por $I_n$ por ejemplo
+$$I_3=\begin{pmatrix}
+1  & 0 & 0 \\
+0  & 1 & 0 \\
+0  & 0 & 1 \\
+\end{pmatrix}
+$$
+
+
+### Matriz particular de una matriz cuadrada
+### Matriz transpuesta
+### Matriz simetrica
+### Matriz conjugada
+### Matriz hermitica
+### Matriz escalonada
+
+
+$$
+\begin{pmatrix}
+ w & warnwww   & w \\
+ w & warnwww   & w \\
+\end{pmatrix}_{4\times 3}
+$$
 
 ```{r}
-xw = 'Es decir los elementos son demagogos y déspotas' 
-x1 = 'Es decir los elementos son demagogos y déspotas' 
+xw = 'Es decir los elementos son demagogos y déspotas'
+x1 = 'Es decir los elementos son demagogos y déspotas'
 
 ```
 
@@ -99,9 +183,13 @@ $$
 $$
 \Phi_{\mu , \sigma ^{2}}(x)=\frac {1}{\sigma {\sqrt {2\pi }}}e^{-{\frac {(u-\mu )^{2}}{2\sigma ^{2}}}}du
 $$
-* $$\frac{1}{20\sqrt{2\pi }}\int_{-\infty }^{`r r1<-300` `r r1`}e^{- \frac{1}{2}\left(\frac{z-200}{20}\right)^2}dz=`r integrate(dnorm, mean=200, sd=20, lower= -Inf, upper= r1, abs.tol = 0)$value`$$
-* `r integrate(dnorm, -1.96, 1.96)$ value` also `r xw`
-* `r x1`
+
+1. Www $$\frac{1}{20\sqrt{2\pi }}\int_{-\infty }^{`r r1<-300` `r r1`}e^{- \frac{1}{2}\left(\frac{z-200}{20}\right)^2}dz=`r integrate(dnorm, mean=200, sd=20, lower= -Inf, upper= r1, abs.tol = 0)$value`$$
+
+2. `r integrate(dnorm, -1.96, 1.96)$ value` also `r xw`
+
+3. `r x1`
+
 Tabla \@ref(tab:ww1)
 
 Table: (\#tab:ww1) Caption
@@ -112,7 +200,7 @@ Table: (\#tab:ww1) Caption
 |         Engine |   2   | w   | `r x1` \(\sum^{n}_{i=1}{f_i}\) | Engine to be used for processing templates. Handlebars is the default. |
 |         `r x1` |   3   | w   |       \( \sum^{n}_{i=1}{f_i}\) | extension to be used for dest files.                                   |
 
-variable aleatoria Variable aleatoria entonces 
+variable aleatoria Variable aleatoria entonces
 
 `r exp(1)`  `r pnorm(1.96)`  `r pnorm(81, 85, 5, lower.tail = FALSE)`
 
@@ -133,7 +221,7 @@ library(ggthemes)
 library(ggrepel)
 
 ggplot(, aes(x = w, y = ww)) + theme(text=element_text(family="serif", size=12)) +
-  geom_point(color = "red", size = 2) + labs(x = "Número de días desde 5/3/20:1", y="Número de casos")+geom_label_repel(aes(label = ww, family="serif"), size = 5, 
+  geom_point(color = "red", size = 2) + labs(x = "Número de días desde 5/3/20:1", y="Número de casos")+geom_label_repel(aes(label = ww, family="serif"), size = 5,
 
                   box.padding   = 0.5,
                   point.padding = 0.1,
@@ -143,68 +231,3 @@ w=function(x) f$coefficients[1]+f$coefficients[2]*x+f$coefficients[3]*x^2+f$coef
 w(50)
 
 ```
-
-```{r,echo=F,eval=F}
-\[f(x)=`r round(f$coefficients[1],3)`+`r round(f$coefficients[2],3)`x+`r round(f$coefficients[3],3)`x^2+`r round(f$coefficients[4],3)`x^3\]
-
-| | | |
-| :--------------------: | :------------------------: | :---------------------: |
-|\(f(30)_{\text{04 abril}}=`r round(w(30),0)`\) | \(f(31)_{\text{05 abril}}=`r round(w(31),0)`\) | \(f(32)=`r round(w(32),0)`\) |
-|\(f(33)=`r round(w(33),0)`\) | \(f(34)=`r round(w(34),0)`\) | \(f(35)=`r round(w(35),0)`\) |
-|\(f(36)=`r round(w(36),0)`\) | \(f(37)=`r round(w(37),0)`\) | \(f(38)=`r round(w(38),0)`\) |
-|**\(f(39)_{\text{-}}=`r round(w(39),0)`\)** | \(f(40)=`r round(w(40),0)`\) | \(f(41)=`r round(w(41),0)`\) |
-|\(f(100)=`r round(w(100),0)`\) |\(f(360)=`r round(w(360),0)`\) | \(f(370)=`r round(w(370),0)`\) |
-```
-
-Sea la Tabla \@ref(tab:2w3) Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
-
-```{r 2w3, echo=FALSE, warning = FALSE, message = FALSE, tidy=FALSE}
-library(openxlsx)
-opts <- options(knitr.kable.NA = "",ggrepel.max.overlaps = Inf)
-new <-read.xlsx(xlsxFile="levene.xlsx", sheet=1, cols=c(5:14), rows=c(1:18), colNames=T)
-knitr::kable(new, escape = FALSE, digits = 2, booktabs=T, caption='Figures and tables with captions will be placed in `figure` ', linesep = "", longtable=T, align = "c")
-```
-
-```{r,echo = F, eval=FALSE}
-library(openxlsx)
-#library(kableExtra)
-new <-read.xlsx(xlsxFile="levene.xlsx",sheet=1,cols=c(1:7),rows=c(1:39),colNames=T)
-rownames(new)[7:9] = c('$\\beta_0$', '$\\beta_1$', '$\\beta_3$')
-colnames(new)[2:3] = c('$\\alpha$','$\\sum^{n}_{i=1}{x_i}$')
-rownames(new)[35] = '$\\sum^{n}_{i=1}{x_i}$'
-knitr::kable(new, escape = FALSE,booktabs=T,caption='Figures and tables with captions will be placed in `figure`',linesep = "",longtable=T)
-#footnote(knitr::kable(new, "html"z), alphabet = c("Note a", "Note b"))
-```
-
-```{r www, eval=F, fig.cap='Here is a nice figure 100!', fig.width = 5, fig.asp=.75, fig.align='center', echo=FALSE, warning = FALSE, message = FALSE, tidy=FALSE}
-library(extrafont)
-library(tidyverse)
-par(mar = c(4, 4, .1, .1))
-plot(pressure, type = 'b', pch = 9, family = "serif", ylab="", xlab="")
-text(200, 200, "Sans Italic text", font = 3)
-text(80, 80, "Serif text", family = "Times New Roman")
-title(ylab="Withinwww-cluster variance", line=2.2, family="serif")
-title(xlab="Within-cluster variancewwww", line=2.2, family="serif")
-
-```
-
-<!-- ctrl shift c -->
-```{r wwwww, eval=F, fig.cap='Here is a nice figure 100!',  fig.width = 5, fig.asp=.75, fig.align='center', echo=FALSE,warning = FALSE,message = FALSE,tidy=FALSE}
-library(extrafont)
-library(tidyverse)
-new <-read.xlsx(xlsxFile="levene.xlsx",sheet=1,cols=c(1:3),rows=c(2:33),colNames=FALSE)
-Temperature <- new$X2
-h <- hist(Temperature, xlab="", ylab="",
-          #yaxt='n',lab=c(6,5,7), # no ticks on y axis, all ticks on x
-          ylim=c(0,12),
-          breaks=5,
-          family = "serif",
-          main=NULL,
-          xlim=c(4,8),
-col="magenta",plot.margin = margin(0, 0, -0.5, -0.3, "cm"),
-)
-text(h$mids,h$counts,labels=h$counts, adj=c(0.5, -0.5), family = "serif")# top frecuencia.
-title(ylab="Within-cluster variance", line=2.2, family="serif")
-title(xlab="Within-cluster variance", line=2.2, family="serif")
-```
-

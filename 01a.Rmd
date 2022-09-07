@@ -30,8 +30,10 @@ $$
 
 Si la distribución es simétrica, ambos índices son iguales a 0; si es asimétrica a la derecha, ambos son positivos; y si es asimétrica a la izquierda, ambos índices son negativos.
 
+## Normal: Simétrica
+wwwwwwwwwwwwwwwwwwwwwwww
 
-```{r fig.align='center', fig.height=4, echo=FALSE}
+```{r fig.align='center', fig.height=5, echo=FALSE}
 set.seed(5)
 
 # normal
@@ -44,6 +46,10 @@ lines(density(x), col='red', lwd=3)
 abline(v = c(mean(x),median(x)),  col=c("green", "blue"), lty=c(2,2), lwd=c(3, 3))
 ```
 
+## Normal: Simetría positiva
+
+wwwwwwwwwwwwwwwww
+
 ```{r fig.align='center', fig.height=5, echo=FALSE}
 set.seed(5)
 # exponential
@@ -54,6 +60,10 @@ lines(density(x), col='red', lwd=3)
 abline(v = c(mean(x),median(x)),  col=c("green", "blue"), lty=c(2,2), lwd=c(3, 3))
 print(sum((x-mean(x))^3)/((length(x)-1)*sd(x)^3))
 ```
+
+## Normal: Simetría negativa
+
+wwwwwwwwwwwwwwwww
 
 ```{r fig.align='center', fig.height=5, echo=FALSE}
 set.seed(5)
@@ -120,12 +130,12 @@ points(medias,pch=16,col="red")
 
 
 ```{r fig.align='center', fig.height=5, echo=FALSE}
-intervalos <- seq(from = 0, to = 120, by = 10) 
+intervalos <- seq(from = 0, to = 120, by = 10)
 data = c(88, 65, 67, 67, 76, 77, 64, 71, 61, 95, 67, 75, 65, 66, 68)
 hist(data,  breaks = "Sturges",freq =
        F, ylim = c(0, 0.1), xlim = c(50, 120),main='', xlab='Calificaciones', ylab = NULL, col = "aquamarine3",border = "black", labels = TRUE)
 boxplot(data, horizontal=TRUE,boxwex=0.03, at=0.09,  add=TRUE, axes=TRUE,col=c("GREEN","red","red"))
-medias <- c(mean(data)) 
+medias <- c(mean(data))
 points(medias,pch=16,col="blue")
 lines(density(data), ylim = c(0, 1),xlim = c(3, 120), lwd = 2,col="blue")
 curve(dnorm(x, mean(data), sd(data)), lwd = 2, col = "black", add = T)
@@ -153,11 +163,11 @@ abline(v=mode, col="red")
 ```
 
 ```{r fig.align='center', fig.height=5, echo=FALSE}
-intervalos <- seq(from = 0, to = 120, by = 10) 
+intervalos <- seq(from = 0, to = 120, by = 10)
 data = c(88, 95, 92, 97, 96, 97, 94, 86, 91, 95, 97, 88, 85, 76, 68)
 hist(data,  breaks = "Sturges",freq = F, ylim = c(0, 0.1), xlim = c(50, 120),main='', xlab='Calificaciones', ylab = NULL, col = "aquamarine3",border = "black", labels = TRUE)
 boxplot(data, horizontal=TRUE,boxwex=0.03, at=0.09,  add=TRUE, axes=TRUE,col=c("GREEN","red","red"))
-medias <- c(mean(data)) 
+medias <- c(mean(data))
 points(medias,pch=16,col="blue")
 lines(density(data), ylim = c(0, 1),xlim = c(3, 120), lwd = 2,col="blue")
 curve(dnorm(x, mean(data), sd(data)), lwd = 2, col = "black", add = T)
@@ -185,11 +195,11 @@ abline(v=mode, col="red")
 ```
 
 ```{r fig.align='center', fig.height=5, echo=FALSE}
-intervalos <- seq(from = 0, to = 120, by = 10) 
+intervalos <- seq(from = 0, to = 120, by = 10)
 data = c(65, 67, 70, 77, 78, 78, 80, 76, 71, 75, 87, 78, 88, 90, 98)
 hist(data,  breaks = "Sturges",freq = F, ylim = c(0, 0.1), xlim = c(50, 120),main='', xlab='Calificaciones', ylab = NULL, col = "aquamarine3",border = "black", labels = TRUE)
 boxplot(data, horizontal=TRUE,boxwex=0.03, at=0.09,  add=TRUE, axes=TRUE,col=c("GREEN","red","red"))
-medias <- c(mean(data)) 
+medias <- c(mean(data))
 points(medias,pch=16,col="blue")
 lines(density(data), ylim = c(0, 1),xlim = c(3, 120), lwd = 2,col="blue")
 curve(dnorm(x, mean(data), sd(data)), lwd = 2, col = "black", add = T)

@@ -2,16 +2,55 @@
 
 # Variables aleatorias
 
-```{definition,name="Variable aleatoria"}
-Sea $\Omega$ un espacio muestral asociado a una experimento aleatorio $\epsilon$ y $\omega\in\Omega$,  entonces se genera la función **variable aleatoria** 
+::: {.definition name="Variable aleatoria"}
+Sea $\Omega$ un espacio muestral asociado a una experimento aleatorio $\epsilon$ y $\omega\in\Omega$,  entonces se genera la función **variable aleatoria**
 \begin{align*}
   X:\Omega&\longrightarrow \mathbb{R}\\
   \omega&\longmapsto X(\omega)
 \end{align*}
-```
+:::
+
+
+\begin{equation}
+  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+  (\#eq:binom)
+\end{equation}
+
+You may refer to it using \@ref(eq:binom)
+
+\begin{align}
+  1 &= 2 \notag \\
+  w &= 2 (\#eq:align)
+\end{align}
+
+
+\begin{equation}
+\begin{split}
+1 & = 1 \\
+   & = 2 \\
+   & = 3 \\
+   & =2
+\end{split}
+(\#eq:wwww)
+\end{equation}
+
+
+::: {.definition #df1 name="wwwwwww"}
+wwwwwwwwwwwwwwww
+:::
+
+::: {.theorem #th1 name="wwwwwwwwwwwwwwww"}
+wwwwwwwwwwwwwwwwwwwwwwww
+:::
+::: {.example #ex1 name="wwwwwwww wwww"}
+wwwwwwww
+:::
+::: {.exercise #exr1 name="wwwwwwwwwwwwwwww"}
+wwwwwwwwwwwwwww
+:::
 
 \(R_{X}=\{x\in \mathbb {R} /\ \exists \,\omega \in \Omega :X(\omega )=x\}\)
-es decir a cada elemento de $\Omega$ se le asocia un número real $\mathbb{R}$, además la probabilidad de $x\in \mathbb{R}$ es $P[x]= \sum^{n}_{i=1}P\left[\omega_i\right]$ donde $\omega_i\in X^{-1}(x)$. La definición indica por otro lado que un espacio muestral $\Omega$ puede genera diferentes variables aleatorias. 
+es decir a cada elemento de $\Omega$ se le asocia un número real $\mathbb{R}$, además la probabilidad de $x\in \mathbb{R}$ es $P[x]= \sum^{n}_{i=1}P\left[\omega_i\right]$ donde $\omega_i\in X^{-1}(x)$. La definición indica por otro lado que un espacio muestral $\Omega$ puede genera diferentes variables aleatorias.
 
 
 ```{example}
@@ -24,7 +63,7 @@ pues \begin{align*}
   1&=X(css)=X(scs)=X(ssc)&\\
   0&=X(sss)&
 \end{align*}
-2. $X(\omega)=n_c-n_s$ entonces las imagenes de $X$ son $R_X= \left\{3,1,-1,-3\right\}$ en efecto 
+2. $X(\omega)=n_c-n_s$ entonces las imagenes de $X$ son $R_X= \left\{3,1,-1,-3\right\}$ en efecto
 \begin{align*}
   3&=X(ccc)&\\
   1&=X(ccs)=X(csc)=X(scc)&\\
@@ -32,7 +71,7 @@ pues \begin{align*}
   -3&=X(sss).&
 \end{align*}
 
-Estos subconjuntos de $\mathbb{R}$ también son espacios muestrales pues el conjunto de elementos de $\Omega$ con imagen dentro de estos valores reales $x$ en $\mathbb{R}$ es un elemento de $2^{\Omega}$ es decir un evento por lo tanto tiene una determinada probabilidad $P[x]$, en el primer caso $X(\omega)=n_c$ tienen probabilidades  
+Estos subconjuntos de $\mathbb{R}$ también son espacios muestrales pues el conjunto de elementos de $\Omega$ con imagen dentro de estos valores reales $x$ en $\mathbb{R}$ es un elemento de $2^{\Omega}$ es decir un evento por lo tanto tiene una determinada probabilidad $P[x]$, en el primer caso $X(\omega)=n_c$ tienen probabilidades
 \begin{align*}
   P(3)&=P[ccc]= \frac{1}{8}\\
   P(2)&=P[ccs]=P[csc]=P[scc]=\frac{3}{8}\\
@@ -68,14 +107,14 @@ Discreta y continua
 
 
 
-## Función de probabilidad de una variable aleatoria 
+## Función de probabilidad de una variable aleatoria
 
 ### Función de probabilidad de una variable aleatorias discreta
 ```{definition,name="Función o ley de probabilidad"}
 Sea $X$ una variable aleatoria con rango $R_X$. Una función definida por \[p(x)=P[X=x]= \sum^{}_{ \left\{\omega \in \Omega:X(\omega)=x\right\}}P\left[\left\{\omega\right\}\right]\]
 
 1. $p(x)>0$, $x\in R_X$
-1. $\sum_{x\in R_X}p(x)=P[X=x]=1$ 
+1. $\sum_{x\in R_X}p(x)=P[X=x]=1$
 
 ```
 
@@ -84,21 +123,21 @@ El conjunto de pares ordenados $\left(x,p(x)\right)$, $x\in R_X$ recibe el nombr
 
 
 ```{example}
-La variable aleatoria discreta 
+La variable aleatoria discreta
 \[p_X(x)=p(1-p)^{x-1}, \text{ $x\in \mathbb{Z}^+$ y $p\in[0,1]$}\]
 
 en efecto \[p(1-p)^{i-1}>0, \text{ $\forall x\in \mathbb{Z}^+$}\] además  \[ \sum^{\infty}_{i=1}p(1-p)^{i-1}=p \lim_{n\to\infty}\frac{1-(1-p)^{n+1}}{1-(1-p)}=1\]
 ```
 
 ```{example}
-La variable aleatoria discreta 
+La variable aleatoria discreta
 \[p_X(x)=p(1-p), \text{ $x\in \mathbb{Z}^+$ y $p\in[0,1]$}\]
 
 en efecto \[p(1-p)^{i-1}>0, \text{ $\forall x\in \mathbb{Z}^+$}\] además  \[ \sum^{\infty}_{i=1}p(1-p)^{i-1}=p \lim_{n\to\infty}\frac{1-(1-p)^{n+1}}{1-(1-p)}=1\]
 ```
 
 ```{example}
-La variable aleatoria discreta 
+La variable aleatoria discreta
 \[p_X(x)=(1-p)^{x-1}, \text{ $x\in \mathbb{Z}^+$ y $p\in[0,1]$}\]
 
 en efecto \[p(1-p)^{i-1}>0, \text{ $\forall x\in \mathbb{Z}^+$}\] además  \[ \sum^{\infty}_{i=1}p(1-p)^{i-1}=p \lim_{n\to\infty}\frac{1-(1-p)^{n+1}}{1-(1-p)}=1\]
@@ -108,10 +147,10 @@ en efecto \[p(1-p)^{i-1}>0, \text{ $\forall x\in \mathbb{Z}^+$}\] además  \[ \s
 
 
 ```{definition,name="Función de densidad de probabilidad"}
-Sea $X$ una variable aleatoria con rango $R_X$. La  función $f(x)$ definida sobre $R_X$ 
-  
+Sea $X$ una variable aleatoria con rango $R_X$. La  función $f(x)$ definida sobre $R_X$
+
 1. $f(x)>0$, $x\in R_X$ o $f(x)>0$, $x\in \mathbb{R}$
-2. $\int_{R_X}f(x)dx=1$ o $\int_{-\infty}^{\infty}f(x)dx=1$ 
+2. $\int_{R_X}f(x)dx=1$ o $\int_{-\infty}^{\infty}f(x)dx=1$
 
 ```
 
@@ -150,7 +189,7 @@ Sea $f(x)= \frac{\sigma}{\rho}$ es una funcion de densidad pues
 
 
 
-## Función de distribución de una variable aleatoria 
+## Función de distribución de una variable aleatoria
 ### Función de distribución de una variable aleatoria discreta
 ```{definition,name="Función de distribución"}
 Sea $X$ una variable aleatoria con rango $$R_X= \left\{x_1,x_2,\ldots x_n,\ldots\right\}.$$ Con función de probabilidad \(p(x_i)=P[X=x_i]\), sea $x$ cualquier número, real la función definida por \[F(x)=P[X\leq x]= \sum^{}_{x_i\leq x}p(x_i)= \sum^{}_{x_i\leq x}P[X= x_i]  \]
