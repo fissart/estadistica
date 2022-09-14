@@ -17,12 +17,12 @@ Sea $\Omega$ un espacio muestral asociado a una experimento aleatorio $\epsilon$
 \end{equation}
 
 You may refer to it using \@ref(eq:binom)
-
+<!--
 \begin{align}
   1 &= 2 \notag \\
   w &= 2 (\#eq:align)
 \end{align}
-
+--!
 
 \begin{equation}
 \begin{split}
