@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 12 Definición de probabilidad | Elementos de la estadística</title>
-  <meta name="description" content="Capítulo 12 Definición de probabilidad | Elementos de la estadística" />
+  <title>Capítulo 9 Experimento aleatorio, espacio muestral y eventos | Elementos de la estadística</title>
+  <meta name="description" content="Capítulo 9 Experimento aleatorio, espacio muestral y eventos | Elementos de la estadística" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 12 Definición de probabilidad | Elementos de la estadística" />
+  <meta property="og:title" content="Capítulo 9 Experimento aleatorio, espacio muestral y eventos | Elementos de la estadística" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 12 Definición de probabilidad | Elementos de la estadística" />
+  <meta name="twitter:title" content="Capítulo 9 Experimento aleatorio, espacio muestral y eventos | Elementos de la estadística" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="técnicas-de-conteo.html"/>
-<link rel="next" href="probabilidad-condicional.html"/>
+<link rel="prev" href="medidas-de-curtosis-o-apuntamiento.html"/>
+<link rel="next" href="álgebra-de-eventos.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -292,16 +292,54 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="definición-de-probabilidad" class="section level1" number="12">
-<h1><span class="header-section-number">Capítulo 12</span> Definición de probabilidad</h1>
+<div id="experimento-aleatorio-espacio-muestral-y-eventos" class="section level1" number="9">
+<h1><span class="header-section-number">Capítulo 9</span> Experimento aleatorio, espacio muestral y eventos</h1>
+<div id="experimento-aleatorio" class="section level2" number="9.1">
+<h2><span class="header-section-number">9.1</span> Experimento aleatorio</h2>
+<div class="definition">
+<p><span id="def:www" class="definition"><strong>Definición 9.1  (Experimento aleatorio simple) </strong></span>Experimento aleatorio es la reproducción controlada de un fenómeno, existiendo incertidumbre sobre el resultado que se obtendrá. Un experimento aleatorio bajo el mismo conjunto aparente de condiciones iniciales, puede presentar resultados diferentes, es decir, no se puede predecir o reproducir el resultado exacto de cada experiencia particular. (Ej.: Lanzamiento de un dado, lanzamiento de una moneda, lanzamiento de una carta de una baraja).</p>
+<p>Este tipo de fenómeno es opuesto al suceso determinista, en el que conocer todos los factores de un experimento permite predecir exactamente el resultado del mismo. Por ejemplo, conociendo la altura desde la que se arroja un móvil es posible saber exactamente el tiempo que tardará en llegar al suelo en condiciones de vacío. Es al azar ya que es aleatorio.</p>
+<p>Denotado por <span class="math inline">\(\epsilon\)</span></p>
+</div>
+<p>Los experimentos pueden dividirse en dos clases: Deterministicos y no Deterministicos</p>
+<ol style="list-style-type: decimal">
+<li><p>Un experimeneto es deterministico si los resultados del experimento estan completamente determinado y puede describirse por un formula matematica (modelo deterministico). Por ejemplos Soltar un objeto en el aire, el movimento horizontal de un objeto impulsada por una fuerza, etc.</p></li>
+<li><p>Un experimeneto es no deterministico si los resultados del experimento no puede predecirse con exactitud antes de realizar el experimento. Por ejemplos: Lanzar una moneda y observar y es cara o sello, lanzar un dado y observar que numero aparece en la cara superior etc.</p></li>
+</ol>
+</div>
+<div id="espacio-muestral" class="section level2" number="9.2">
+<h2><span class="header-section-number">9.2</span> Espacio muestral</h2>
+<div class="definition">
+<p><span id="def:unlabeled-div-10" class="definition"><strong>Definición 9.2  (Espacio muestral) </strong></span>Son los posibles resultados de un experimento. Denotado por <span class="math inline">\(\Omega\)</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-11" class="example"><strong>Ejemplo 9.1  (Ejemplo de espacio muestral) </strong></span>Los resultados del experimento aleatorio <span class="math inline">\(\epsilon\)</span>: Lanzamiento de una moneda son <span class="math inline">\(\Omega=\left\{C,S\right\}\)</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-12" class="definition"><strong>Definición 9.3  (Experimentos compuestos) </strong></span>Compuesta de dos o más experimentos simples, existen dos tipos: Exclusivos (o) e inclusivos (y)</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-13" class="definition"><strong>Definición 9.4  (Experimentos compuestos exclusivos) </strong></span><span class="math inline">\(\epsilon\)</span> es una <strong>o-combinacion</strong> de los <span class="math inline">\(\epsilon_1\)</span> y <span class="math inline">\(\epsilon_2\)</span> simples si solo si <span class="math inline">\(\epsilon\)</span> ocurre, cuando <span class="math inline">\(\epsilon_1\)</span> y <span class="math inline">\(\epsilon_2\)</span> ocurre (pero no ambos).</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-14" class="example"><strong>Ejemplo 9.2  </strong></span><span class="math inline">\(\epsilon_1\)</span>: lanzar un dado, <span class="math inline">\(\Omega=\left\{1,2,3,4,5,6\right\}\)</span> y <span class="math inline">\(\epsilon_2\)</span>: lanzar una moneda, <span class="math inline">\(\Omega=\left\{C,S\right\}\)</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-15" class="definition"><strong>Definición 9.5  (Experimentos compuestos inclusivos) </strong></span><span class="math inline">\(\epsilon\)</span> es una <strong>y-combinacion</strong> de los <span class="math inline">\(\epsilon_1\)</span> y <span class="math inline">\(\epsilon_2\)</span> simples si solo si <span class="math inline">\(\epsilon\)</span> ocurre cuando ambos <span class="math inline">\(\epsilon_1\)</span> y <span class="math inline">\(\epsilon_2\)</span> ocurren.</p>
+<p>El espacio muestral asociado a <span class="math inline">\(\epsilon\)</span> es <span class="math inline">\(\Omega=\Omega_1\times \omega_2\)</span> (el producto cartesiano de los espacios muetrales de los experimentos <span class="math inline">\(\epsilon_1\)</span> y <span class="math inline">\(\epsilon_2\)</span>)</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-16" class="example"><strong>Ejemplo 9.3  </strong></span><span class="math inline">\(\epsilon_1\)</span>: lanzar una moneda, <span class="math inline">\(\Omega_1=\left\{C,S\right\}\)</span>, <span class="math inline">\(\epsilon_2\)</span>: lanzar una moneda, <span class="math inline">\(\Omega_2=\left\{C,S\right\}\)</span> y <span class="math inline">\(\epsilon_3\)</span>: lanzar una moneda, <span class="math inline">\(\Omega_3=\left\{C,S\right\}\)</span>. Por lo tanto el experimentos y-compuesto genera el espacio muestral <span class="math inline">\(\Omega=\Omega_1\times\Omega_2\times\Omega_3=\left\{CCC,CSC,SCC,SSC,CCS,CSS,SCS,SSS\right\}\)</span></p>
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="técnicas-de-conteo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="probabilidad-condicional.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="medidas-de-curtosis-o-apuntamiento.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="álgebra-de-eventos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

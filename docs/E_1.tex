@@ -820,7 +820,7 @@ tiene el dato máximo \(x_{max}=8\) y el dato mínimo \(x_{min}=1\). Por lo tant
 \hypertarget{varianza}{%
 \section{Varianza}\label{varianza}}
 
-Mide la dispersión de los datso con respecto a la media
+Mide la dispersión de los datos con respecto a la media
 
 \hypertarget{datos-no-tabulados}{%
 \subsection{Datos no tabulados}\label{datos-no-tabulados}}
@@ -932,7 +932,7 @@ DM&=\frac{\sum\left\vert x_i-\overline{x}\right \vert}{n}\\
 
 \[DM=\frac{1}{n}\sum f_i \left \vert Y_i-\overline{x}\right\vert\]
 
-\(y_i\) marca de clase o punto medio de la clase \(i\)
+\(Y_i\) marca de clase o punto medio de la clase \(i\)
 
 \(\overline{x}=\frac{\sum Y_i*f_i}{n}=747.5/31=24.11\)
 
@@ -1048,22 +1048,32 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
 \([100,150)\) & & 20 & 3 \\
 \([150,200)\) & & 50 & \\
 \([200,250)\) & & 70 & \\
-\([250,300]\) & & 100 & \\
+\([250,300)\) & & 100 & \\
 \([300,350]\) & & 60 & \\
 \(\sum\) & & 20 & \\
 \bottomrule
 \end{longtable}
 
-\hypertarget{medidas-de-posicion-cuantiles}{%
-\chapter{Medidas de posicion (cuantiles)}\label{medidas-de-posicion-cuantiles}}
-
 \begin{itemize}
 \tightlist
 \item
-  Los deciles, que dividen a la distribución en diez partes;
+  Rango \(R=x_{max}-x_{min}\)
 \item
-  Los percentiles, que dividen a la distribución en cien partes.
+  Varianza \(s^2=\frac{f_i\sum\left(Y_i-\overline{x}\right )^2}{n-1}\)
+\item
+  Desviación típica \(s=sqrt{s^2}\)
+\item
+  Desviación media absoluta \(DM=\frac{1}{n}\sum f_i\left\vert Y_i-\overline{x}\right\vert\)
+\item
+  Desviación mediana absoluta \(DMe=\frac{1}{n}\sum f_i\left\vert Y_i-Me\right\vert\)
+\item
+  Coeficiente de variación \(CV=\frac{s}{\overline{x}}100\)
 \end{itemize}
+
+\hypertarget{medidas-de-posiciuxf3n-cuantiles}{%
+\chapter{Medidas de posición (cuantiles)}\label{medidas-de-posiciuxf3n-cuantiles}}
+
+Estos estadigrafos dividen al conjunto de datos en un número deternimado.
 
 \hypertarget{cuartiles}{%
 \section{Cuartiles}\label{cuartiles}}
@@ -1073,9 +1083,9 @@ Los cuartiles, que dividen a la distribución en cuatro partes (corresponden a l
 \hypertarget{datos-no-agrupados}{%
 \subsection{Datos no agrupados}\label{datos-no-agrupados}}
 
-Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 Ordenar de menor a mayor (creciente)
+Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 \textbf{Ordenar} de menor a mayor (creciente)
 
-Si \[Q_k=\frac{k(n+1)}{4}\] es entero entonces el cuartil es el dato de la posicion \(Q_k=x_\frac{k(n+1)}{4}\) en caso contrario se interpola los datos extremos donde se encuentra el valor \(Q_k\)
+Si \[Q_k=\frac{k(n+1)}{4}\] es \textbf{entero} entonces el cuartil es el dato de la posición \(Q_k=x_\frac{k(n+1)}{4}\) en caso contrario se \textbf{interpola} los datos extremos donde se encuentra el valor \(Q_k\)
 
 \begin{itemize}
 \tightlist
@@ -1092,7 +1102,7 @@ Si \[Q_k=\frac{k(n+1)}{4}\] es entero entonces el cuartil es el dato de la posic
 \hypertarget{datos-agrupados}{%
 \subsection{Datos agrupados}\label{datos-agrupados}}
 
-\[Q_k=L_i+ A\left(\frac{\frac{kn}{4}-F_{i-1}}{F_i-F_{i-1}}\right);k=1,2,3\]
+\[Q_k=L_i+ a_i\left(\frac{\frac{kn}{4}-F_{i-1}}{F_i-F_{i-1}}\right);k=1,2,3\]
 
 \begin{itemize}
 \tightlist
@@ -1103,39 +1113,12 @@ Si \[Q_k=\frac{k(n+1)}{4}\] es entero entonces el cuartil es el dato de la posic
 \item
   \(F_i\) frecuencia acumulada en la clase al decil
 \item
-  \(A\) amplitud intervalica
+  \(a_i\) amplitud interválica
 \item
   \(n\) numero de datos
 \item
-  \(k\) indice del cuartil correspondiente
+  \(k\) índice del cuartil correspondiente
 \end{itemize}
-
-\[
-\begin{aligned}
-Q_1&=L_i+ A\left(\frac{\frac{1n}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
-&=L_i+ A\left(\frac{\frac{1*39}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
-&=20+ 5\cdot\left(\frac{9.75 -8}{15-8}\right)\\
-&=21.5
-\end{aligned}
-\]
-
-\[
-\begin{aligned}
-Q_2&=L_i+ A\left(\frac{\frac{2n}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
-&=L_i+ A\left(\frac{\frac{2*39}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
-&=25+ 5\cdot\left(\frac{19.5 -15}{25-15}\right)\\
-&= 27.5
-\end{aligned}
-\]
-
-\[
-\begin{aligned}
-Q_3&=L_i+ A\left(\frac{\frac{3n}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
-&=L_i+ A\left(\frac{\frac{2*39}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
-&=30+ 5\cdot\left(\frac{29.25 -25}{31-25}\right)\\
-&= 33.542
-\end{aligned}
-\]
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
@@ -1154,10 +1137,40 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
 \bottomrule
 \end{longtable}
 
+\[
+\begin{aligned}
+Q_1&=L_i+ a_i\left(\frac{\frac{1n}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&=L_i+ a_i\left(\frac{\frac{1*39}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&=20+ 5\cdot\left(\frac{9.75 -8}{15-8}\right)\\
+&=21.5
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+Q_2&=L_i+ a_i\left(\frac{\frac{2n}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&=L_i+ a_i\left(\frac{\frac{2*39}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&=25+ 5\cdot\left(\frac{19.5 -15}{25-15}\right)\\
+&= 27.5
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+Q_3&=L_i+ a_i\left(\frac{\frac{3n}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&=L_i+ a_i\left(\frac{\frac{2*39}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&=30+ 5\cdot\left(\frac{29.25 -25}{31-25}\right)\\
+&= 33.542
+\end{aligned}
+\]
+
 \hypertarget{quintiles}{%
 \section{Quintiles}\label{quintiles}}
 
-wwwwwwwww
+Similar al caso anterior
+
+\[Q_5=L_i+ a_i\left(\frac{\frac{kn}{5}-F_{i-1}}{F_i-F_{i-1}}\right)\]
+donde \(k=1,2,3,4\)
 
 \hypertarget{deciles}{%
 \section{Deciles}\label{deciles}}
@@ -1171,17 +1184,16 @@ Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 Ordenar de m
 
 Si \[D_k=\frac{k(n+1)}{10}\] es entero entonces el decil es el dato de la posicion \(D_k=x_\frac{k(n+1)}{10}; k=1, 2, 3, \ldots, 9\) Si \[D_k=\frac{k(n+1)}{10}\] no es entero entonces el decil es la interpolacion lineal de de los dos valores entre las cuales se encuentra \(D_k=\frac{k(n+1)}{10}\)
 
-\begin{itemize}
-\tightlist
-\item
-  Ejemplo 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor 1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9 entonces
-\end{itemize}
+\begin{example}
+Sean los datos: 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor 1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9 entonces
 
 \[D_9=\frac{9(18+1)}{10}=17.1\] interpolando el decil 9 es \(D_9=8+(9-8)\cdot 0.1=8.1\)
+\end{example}
 
 \hypertarget{datos-agrupados-1}{%
 \subsection{Datos agrupados}\label{datos-agrupados-1}}
 
+La fórmula es
 \[D_k=L_i+ A\left(\frac{\frac{kn}{10}-F_{i-1}}{F_i-F_{i-1}}\right)\]
 
 \begin{longtable}[]{@{}cccc@{}}
@@ -1392,12 +1404,62 @@ Si el coeficiente es negativo, la distribución se llama platicúrtica y hay una
 \hypertarget{part-probabilidades}{%
 \part{Probabilidades}\label{part-probabilidades}}
 
-\hypertarget{experimento-aleatorio}{%
-\chapter{Experimento aleatorio}\label{experimento-aleatorio}}
+\hypertarget{experimento-aleatorio-espacio-muestral-y-eventos}{%
+\chapter{Experimento aleatorio, espacio muestral y eventos}\label{experimento-aleatorio-espacio-muestral-y-eventos}}
 
-\begin{definition}
-\protect\hypertarget{def:www}{}\label{def:www}En experimento aleatorio es un fenómeno que genera un evento
+\hypertarget{experimento-aleatorio}{%
+\section{Experimento aleatorio}\label{experimento-aleatorio}}
+
+\begin{definition}[Experimento aleatorio simple]
+\protect\hypertarget{def:www}{}\label{def:www}Experimento aleatorio es la reproducción controlada de un fenómeno, existiendo incertidumbre sobre el resultado que se obtendrá. Un experimento aleatorio bajo el mismo conjunto aparente de condiciones iniciales, puede presentar resultados diferentes, es decir, no se puede predecir o reproducir el resultado exacto de cada experiencia particular. (Ej.: Lanzamiento de un dado, lanzamiento de una moneda, lanzamiento de una carta de una baraja).
+
+Este tipo de fenómeno es opuesto al suceso determinista, en el que conocer todos los factores de un experimento permite predecir exactamente el resultado del mismo. Por ejemplo, conociendo la altura desde la que se arroja un móvil es posible saber exactamente el tiempo que tardará en llegar al suelo en condiciones de vacío. Es al azar ya que es aleatorio.
+
+Denotado por \(\epsilon\)
 \end{definition}
+
+Los experimentos pueden dividirse en dos clases: Deterministicos y no Deterministicos
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Un experimeneto es deterministico si los resultados del experimento estan completamente determinado y puede describirse por un formula matematica (modelo deterministico). Por ejemplos Soltar un objeto en el aire, el movimento horizontal de un objeto impulsada por una fuerza, etc.
+\item
+  Un experimeneto es no deterministico si los resultados del experimento no puede predecirse con exactitud antes de realizar el experimento. Por ejemplos: Lanzar una moneda y observar y es cara o sello, lanzar un dado y observar que numero aparece en la cara superior etc.
+\end{enumerate}
+
+\hypertarget{espacio-muestral}{%
+\section{Espacio muestral}\label{espacio-muestral}}
+
+\begin{definition}[Espacio muestral]
+Son los posibles resultados de un experimento. Denotado por \(\Omega\)
+\end{definition}
+
+\begin{example}[Ejemplo de espacio muestral]
+Los resultados del experimento aleatorio \(\epsilon\): Lanzamiento de una moneda son \(\Omega=\left\{C,S\right\}\)
+\end{example}
+
+\begin{definition}[Experimentos compuestos]
+Compuesta de dos o más experimentos simples, existen dos tipos: Exclusivos (o) e inclusivos (y)
+\end{definition}
+
+\begin{definition}[Experimentos compuestos exclusivos]
+\(\epsilon\) es una \textbf{o-combinacion} de los \(\epsilon_1\) y \(\epsilon_2\) simples si solo si \(\epsilon\) ocurre, cuando \(\epsilon_1\) y \(\epsilon_2\) ocurre (pero no ambos).
+\end{definition}
+
+\begin{example}
+\(\epsilon_1\): lanzar un dado, \(\Omega=\left\{1,2,3,4,5,6\right\}\) y \(\epsilon_2\): lanzar una moneda, \(\Omega=\left\{C,S\right\}\)
+\end{example}
+
+\begin{definition}[Experimentos compuestos inclusivos]
+\(\epsilon\) es una \textbf{y-combinacion} de los \(\epsilon_1\) y \(\epsilon_2\) simples si solo si \(\epsilon\) ocurre cuando ambos \(\epsilon_1\) y \(\epsilon_2\) ocurren.
+
+El espacio muestral asociado a \(\epsilon\) es \(\Omega=\Omega_1\times \omega_2\) (el producto cartesiano de los espacios muetrales de los experimentos \(\epsilon_1\) y \(\epsilon_2\))
+\end{definition}
+
+\begin{example}
+\(\epsilon_1\): lanzar una moneda, \(\Omega_1=\left\{C,S\right\}\), \(\epsilon_2\): lanzar una moneda, \(\Omega_2=\left\{C,S\right\}\) y \(\epsilon_3\): lanzar una moneda, \(\Omega_3=\left\{C,S\right\}\). Por lo tanto el experimentos y-compuesto genera el espacio muestral \(\Omega=\Omega_1\times\Omega_2\times\Omega_3=\left\{CCC,CSC,SCC,SSC,CCS,CSS,SCS,SSS\right\}\)
+\end{example}
 
 \hypertarget{uxe1lgebra-de-eventos}{%
 \chapter{Álgebra de eventos}\label{uxe1lgebra-de-eventos}}

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 12 Definición de probabilidad | Elementos de la estadística</title>
-  <meta name="description" content="Capítulo 12 Definición de probabilidad | Elementos de la estadística" />
+  <title>Capítulo 6 Medidas de posición (cuantiles) | Elementos de la estadística</title>
+  <meta name="description" content="Capítulo 6 Medidas de posición (cuantiles) | Elementos de la estadística" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 12 Definición de probabilidad | Elementos de la estadística" />
+  <meta property="og:title" content="Capítulo 6 Medidas de posición (cuantiles) | Elementos de la estadística" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 12 Definición de probabilidad | Elementos de la estadística" />
+  <meta name="twitter:title" content="Capítulo 6 Medidas de posición (cuantiles) | Elementos de la estadística" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="técnicas-de-conteo.html"/>
-<link rel="next" href="probabilidad-condicional.html"/>
+<link rel="prev" href="medidas-de-dispersión.html"/>
+<link rel="next" href="medidas-de-asimetría.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -292,16 +292,309 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="definición-de-probabilidad" class="section level1" number="12">
-<h1><span class="header-section-number">Capítulo 12</span> Definición de probabilidad</h1>
+<div id="medidas-de-posición-cuantiles" class="section level1" number="6">
+<h1><span class="header-section-number">Capítulo 6</span> Medidas de posición (cuantiles)</h1>
+<p>Estos estadigrafos dividen al conjunto de datos en un número deternimado.</p>
+<div id="cuartiles" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Cuartiles</h2>
+<p>Los cuartiles, que dividen a la distribución en cuatro partes (corresponden a los cuantiles 0,25; 0,50 y 0,75); <span class="math inline">\(Q_1, Q_2, Q_3\)</span></p>
+<div id="datos-no-agrupados" class="section level3" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Datos no agrupados</h3>
+<p>Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 <strong>Ordenar</strong> de menor a mayor (creciente)</p>
+<p>Si <span class="math display">\[Q_k=\frac{k(n+1)}{4}\]</span> es <strong>entero</strong> entonces el cuartil es el dato de la posición <span class="math inline">\(Q_k=x_\frac{k(n+1)}{4}\)</span> en caso contrario se <strong>interpola</strong> los datos extremos donde se encuentra el valor <span class="math inline">\(Q_k\)</span></p>
+<ul>
+<li>Ejemplo 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor 1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9</li>
+</ul>
+<p><span class="math inline">\(Q_1=\frac{1(18+1)}{4}=4.75\)</span> interpolando <span class="math inline">\(Q_1=2+(2-2)\cdot 0.75=2\)</span></p>
+<p><span class="math inline">\(Q_2=\frac{2(18+1)}{4}=9.5\)</span> interpolando <span class="math inline">\(Q_2=5+(5-5)\cdot 0.5=5\)</span></p>
+<p><span class="math inline">\(Q_3=\frac{3(18+1)}{4}=14.25\)</span> interpolando <span class="math inline">\(Q_3=6+(7-6)\cdot 0.25=6.25\)</span></p>
+</div>
+<div id="datos-agrupados" class="section level3" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Datos agrupados</h3>
+<p><span class="math display">\[Q_k=L_i+ a_i\left(\frac{\frac{kn}{4}-F_{i-1}}{F_i-F_{i-1}}\right);k=1,2,3\]</span></p>
+<ul>
+<li><span class="math inline">\(L_i\)</span> limite inferior del intervalo que contiene al decil</li>
+<li><span class="math inline">\(F_{i-1}\)</span> frecuencia acumulada en la clase anterior al decil</li>
+<li><span class="math inline">\(F_i\)</span> frecuencia acumulada en la clase al decil</li>
+<li><span class="math inline">\(a_i\)</span> amplitud interválica</li>
+<li><span class="math inline">\(n\)</span> numero de datos</li>
+<li><span class="math inline">\(k\)</span> índice del cuartil correspondiente</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Clase</th>
+<th align="center"><span class="math inline">\(Y_i\)</span></th>
+<th align="center"><span class="math inline">\(f_i\)</span></th>
+<th align="center"><span class="math inline">\(F_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\([5,10)\)</span></td>
+<td align="center">7.5</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([10,15)\)</span></td>
+<td align="center">12.5</td>
+<td align="center">2</td>
+<td align="center">3</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\([15,20)\)</span></td>
+<td align="center">17.5</td>
+<td align="center">5</td>
+<td align="center">8</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([20,25)\)</span></td>
+<td align="center">22.5</td>
+<td align="center">7</td>
+<td align="center">15</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\([25,30]\)</span></td>
+<td align="center">27.5</td>
+<td align="center">10</td>
+<td align="center">25</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([30,35]\)</span></td>
+<td align="center">32.5</td>
+<td align="center">6</td>
+<td align="center">31</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\([35,40]\)</span></td>
+<td align="center">37.5</td>
+<td align="center">5</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([40,45]\)</span></td>
+<td align="center">42.5</td>
+<td align="center">3</td>
+<td align="center">39</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\sum\)</span></td>
+<td align="center"></td>
+<td align="center">39</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[
+\begin{aligned}
+Q_1&amp;=L_i+ a_i\left(\frac{\frac{1n}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&amp;=L_i+ a_i\left(\frac{\frac{1*39}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&amp;=20+ 5\cdot\left(\frac{9.75 -8}{15-8}\right)\\
+&amp;=21.5
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+Q_2&amp;=L_i+ a_i\left(\frac{\frac{2n}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&amp;=L_i+ a_i\left(\frac{\frac{2*39}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&amp;=25+ 5\cdot\left(\frac{19.5 -15}{25-15}\right)\\
+&amp;= 27.5
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+Q_3&amp;=L_i+ a_i\left(\frac{\frac{3n}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&amp;=L_i+ a_i\left(\frac{\frac{2*39}{4}-F_{i-1}}{F_i-F_{i-1}}\right)\\
+&amp;=30+ 5\cdot\left(\frac{29.25 -25}{31-25}\right)\\
+&amp;= 33.542
+\end{aligned}
+\]</span></p>
+</div>
+</div>
+<div id="quintiles" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Quintiles</h2>
+<p>Similar al caso anterior</p>
+<p><span class="math display">\[Q_5=L_i+ a_i\left(\frac{\frac{kn}{5}-F_{i-1}}{F_i-F_{i-1}}\right)\]</span>
+donde <span class="math inline">\(k=1,2,3,4\)</span></p>
+</div>
+<div id="deciles" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Deciles</h2>
+<p>Los deciles, que dividen a la distribución en diez partes es decir <span class="math inline">\(D_1, D_2,\ldots, D_9\)</span></p>
+<div id="datos-no-agrupados-1" class="section level3" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Datos no agrupados</h3>
+<p>Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 Ordenar de menor a mayor (creciente)</p>
+<p>Si <span class="math display">\[D_k=\frac{k(n+1)}{10}\]</span> es entero entonces el decil es el dato de la posicion <span class="math inline">\(D_k=x_\frac{k(n+1)}{10}; k=1, 2, 3, \ldots, 9\)</span> Si <span class="math display">\[D_k=\frac{k(n+1)}{10}\]</span> no es entero entonces el decil es la interpolacion lineal de de los dos valores entre las cuales se encuentra <span class="math inline">\(D_k=\frac{k(n+1)}{10}\)</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-9" class="example"><strong>Ejemplo 6.1  </strong></span>Sean los datos: 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor 1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9 entonces</p>
+<p><span class="math display">\[D_9=\frac{9(18+1)}{10}=17.1\]</span> interpolando el decil 9 es <span class="math inline">\(D_9=8+(9-8)\cdot 0.1=8.1\)</span></p>
+</div>
+</div>
+<div id="datos-agrupados-1" class="section level3" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> Datos agrupados</h3>
+<p>La fórmula es
+<span class="math display">\[D_k=L_i+ A\left(\frac{\frac{kn}{10}-F_{i-1}}{F_i-F_{i-1}}\right)\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Clase</th>
+<th align="center"><span class="math inline">\(Y_i\)</span></th>
+<th align="center"><span class="math inline">\(f_i\)</span></th>
+<th align="center"><span class="math inline">\(F_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\([5,10)\)</span></td>
+<td align="center">7.5</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([10,15)\)</span></td>
+<td align="center">12.5</td>
+<td align="center">2</td>
+<td align="center">3</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\([15,20)\)</span></td>
+<td align="center">17.5</td>
+<td align="center">5</td>
+<td align="center">8</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([20,25)\)</span></td>
+<td align="center">22.5</td>
+<td align="center">7</td>
+<td align="center">15</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\([25,30]\)</span></td>
+<td align="center">27.5</td>
+<td align="center">10</td>
+<td align="center">25</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([30,35]\)</span></td>
+<td align="center">32.5</td>
+<td align="center">6</td>
+<td align="center">31</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\([35,40]\)</span></td>
+<td align="center">37.5</td>
+<td align="center">5</td>
+<td align="center">36</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([40,45]\)</span></td>
+<td align="center">42.5</td>
+<td align="center">3</td>
+<td align="center">39</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\sum\)</span></td>
+<td align="center"></td>
+<td align="center">39</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[D_9=L_i+ A\left(\frac{\frac{9\cdot 39}{10}-F_{i-1}}{F_i-F_{i-1}}\right)\]</span></p>
+<p>Entonces <span class="math inline">\(\frac{9\cdot 39}{10}=35.1\)</span></p>
+<p><span class="math display">\[D_9=35+ 5\left(\frac{35.1-31}{36-31}\right)=39.1\]</span></p>
+</div>
+</div>
+<div id="percentiles" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> Percentiles</h2>
+<p>Los percentiles, que dividen a la distribución en diez partes es decir <span class="math inline">\(P_1, P_2,\ldots, P_{99}\)</span></p>
+<div id="datos-no-agrupados-2" class="section level3" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Datos no agrupados</h3>
+<p>Si <span class="math display">\[P_k=\frac{k(n+1)}{100}; k=1, 2,  \ldots, 99\]</span> es entero entonces el cuartil es el dato de la posicion <span class="math inline">\(P_k=x_\frac{k(n+1)}{100}\)</span> Si <span class="math display">\[P_k=\frac{k(n+1)}{100}\]</span> no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra <span class="math inline">\(Q_k=\frac{k(n+1)}{100}\)</span></p>
+<ul>
+<li>Ejemplo 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 Al ordenar de manera creciente 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 y <span class="math display">\[P_k=\frac{k(18+1)}{100}\]</span></li>
+</ul>
+</div>
+<div id="datos-agrupados-2" class="section level3" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> Datos agrupados</h3>
+<p><span class="math display">\[P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)=\int_1^3f(x)\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Clase</th>
+<th align="center"><span class="math inline">\(Y_i\)</span></th>
+<th align="center"><span class="math inline">\(f_i\)</span></th>
+<th align="center"><span class="math inline">\(F_i\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\([5,10)\)</span></td>
+<td align="center">7.5</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([10,15)\)</span></td>
+<td align="center">12.5</td>
+<td align="center">2</td>
+<td align="center">3</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\([15,20)\)</span></td>
+<td align="center">17.5</td>
+<td align="center">5</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([20,25)\)</span></td>
+<td align="center">22.5</td>
+<td align="center">7</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\([25,30]\)</span></td>
+<td align="center"></td>
+<td align="center">10</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([30,35]\)</span></td>
+<td align="center"></td>
+<td align="center">6</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\([35,40]\)</span></td>
+<td align="center"></td>
+<td align="center">5</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\([40,45]\)</span></td>
+<td align="center"></td>
+<td align="center">3</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\sum\)</span></td>
+<td align="center"></td>
+<td align="center">2</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="técnicas-de-conteo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="probabilidad-condicional.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="medidas-de-dispersión.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="medidas-de-asimetría.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

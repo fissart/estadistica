@@ -1,10 +1,72 @@
 # (PART) Probabilidades {.unnumbered}
 
-# Experimento aleatorio
+# Experimento aleatorio, espacio muestral y eventos
 
-::: {#www .definition}
-En experimento aleatorio es un fenómeno que genera un evento
+##  Experimento aleatorio
+
+::: {#www .definition name="Experimento aleatorio simple"}
+Experimento aleatorio es la reproducción controlada de un fenómeno, existiendo incertidumbre sobre el resultado que se obtendrá. Un experimento aleatorio bajo el mismo conjunto aparente de condiciones iniciales, puede presentar resultados diferentes, es decir, no se puede predecir o reproducir el resultado exacto de cada experiencia particular. (Ej.: Lanzamiento de un dado, lanzamiento de una moneda, lanzamiento de una carta de una baraja).
+
+Este tipo de fenómeno es opuesto al suceso determinista, en el que conocer todos los factores de un experimento permite predecir exactamente el resultado del mismo. Por ejemplo, conociendo la altura desde la que se arroja un móvil es posible saber exactamente el tiempo que tardará en llegar al suelo en condiciones de vacío. Es al azar ya que es aleatorio.
+
+Denotado por $\epsilon$
 :::
+
+
+Los experimentos pueden dividirse en dos clases: Deterministicos y no Deterministicos
+
+1. Un experimeneto es deterministico si los resultados del experimento estan completamente determinado y puede describirse por un formula matematica (modelo deterministico). Por ejemplos Soltar un objeto en el aire, el movimento horizontal de un objeto impulsada por una fuerza, etc.
+
+2. Un experimeneto es no deterministico si los resultados del experimento no puede predecirse con exactitud antes de realizar el experimento. Por ejemplos: Lanzar una moneda y observar y es cara o sello, lanzar un dado y observar que numero aparece en la cara superior etc.
+
+## Espacio muestral
+
+
+::: {.definition  name="Espacio muestral"}
+Son los posibles resultados de un experimento. Denotado por $\Omega$
+:::
+
+::: {.example  name="Ejemplo de espacio muestral"}
+Los resultados del experimento aleatorio $\epsilon$: Lanzamiento de una moneda son $\Omega=\left\{C,S\right\}$
+:::
+
+::: {.definition  name="Experimentos compuestos"}
+Compuesta de dos o más experimentos simples, existen dos tipos: Exclusivos (o) e inclusivos (y)
+:::
+
+
+::: {.definition  name="Experimentos compuestos exclusivos"}
+$\epsilon$ es una **o-combinacion** de los $\epsilon_1$ y $\epsilon_2$ simples si solo si $\epsilon$ ocurre, cuando $\epsilon_1$ y $\epsilon_2$ ocurre (pero no ambos).
+
+:::
+
+:::{.example}
+$\epsilon_1$: lanzar un dado, $\Omega=\left\{1,2,3,4,5,6\right\}$ y $\epsilon_2$: lanzar una moneda, $\Omega=\left\{C,S\right\}$
+:::
+
+
+::: {.definition  name="Experimentos compuestos inclusivos"}
+$\epsilon$ es una **y-combinacion** de los $\epsilon_1$ y $\epsilon_2$ simples si solo si $\epsilon$ ocurre cuando ambos $\epsilon_1$ y $\epsilon_2$ ocurren.
+
+El espacio muestral asociado a $\epsilon$ es $\Omega=\Omega_1\times \omega_2$ (el producto cartesiano de los espacios muetrales de los experimentos $\epsilon_1$ y $\epsilon_2$)
+:::
+
+
+:::{.example}
+$\epsilon_1$: lanzar una moneda, $\Omega_1=\left\{C,S\right\}$, $\epsilon_2$: lanzar una moneda, $\Omega_2=\left\{C,S\right\}$ y $\epsilon_3$: lanzar una moneda, $\Omega_3=\left\{C,S\right\}$. Por lo tanto el experimentos y-compuesto genera el espacio muestral $\Omega=\Omega_1\times\Omega_2\times\Omega_3=\left\{CCC,CSC,SCC,SSC,CCS,CSS,SCS,SSS\right\}$
+:::
+
+
+::: {.definition  name="Espacio muestral discreto"}
+
+wwwwwwwwww
+:::
+
+::: {.definition  name="Espacio muestral continuo"}
+wwwwwwwwwwwwwwww
+
+:::
+
 
 # Álgebra de eventos
 

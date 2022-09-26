@@ -40,7 +40,7 @@ datos-no-tabulados-2
 datos-tabulados-2
 coeficiente-de-variacion
 asignación-1
-medidas-de-posicion-cuantiles
+medidas-de-posición-cuantiles
 cuartiles
 datos-no-agrupados
 datos-agrupados
@@ -56,7 +56,9 @@ normal-simétrica
 normal-simetría-positiva
 normal-simetría-negativa
 medidas-de-curtosis-o-apuntamiento
+experimento-aleatorio-espacio-muestral-y-eventos
 experimento-aleatorio
+espacio-muestral
 álgebra-de-eventos
 técnicas-de-conteo
 definición-de-probabilidad
