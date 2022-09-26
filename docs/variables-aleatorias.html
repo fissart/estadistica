@@ -23,7 +23,7 @@
 <meta name="author" content="Ricardo Michel MALLQUI BAÑOS" />
 
 
-<meta name="date" content="2022-09-14" />
+<meta name="date" content="2022-09-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -176,19 +176,16 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="4.1.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#media-de-datos-no-agrupados"><i class="fa fa-check"></i><b>4.1.1</b> Media de datos no agrupados</a></li>
 <li class="chapter" data-level="4.1.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#media-de-datos-agrupados"><i class="fa fa-check"></i><b>4.1.2</b> Media de datos agrupados</a></li>
-<li class="chapter" data-level="4.1.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#ejemplo"><i class="fa fa-check"></i><b>4.1.3</b> Ejemplo</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#la-moda-mo"><i class="fa fa-check"></i><b>4.2</b> La moda (Mo)</a>
 <ul>
 <li class="chapter" data-level="4.2.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#moda-de-datos-no-tabulados"><i class="fa fa-check"></i><b>4.2.1</b> Moda de datos no tabulados</a></li>
 <li class="chapter" data-level="4.2.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#moda-de-datos-tabulados"><i class="fa fa-check"></i><b>4.2.2</b> Moda de datos tabulados</a></li>
-<li class="chapter" data-level="4.2.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#ejemplo-1"><i class="fa fa-check"></i><b>4.2.3</b> Ejemplo</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#la-mediana-me"><i class="fa fa-check"></i><b>4.3</b> La mediana (Me)</a>
 <ul>
 <li class="chapter" data-level="4.3.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#mediana-de-datos-no-tabulados"><i class="fa fa-check"></i><b>4.3.1</b> Mediana de datos no tabulados</a></li>
 <li class="chapter" data-level="4.3.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#mediana-de-datos-tabulados"><i class="fa fa-check"></i><b>4.3.2</b> Mediana de datos tabulados</a></li>
-<li class="chapter" data-level="4.3.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#ejemplo-2"><i class="fa fa-check"></i><b>4.3.3</b> Ejemplo</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#asignación"><i class="fa fa-check"></i><b>4.4</b> Asignación</a></li>
 </ul></li>
@@ -294,7 +291,7 @@ div.csl-indent {
 <div id="variables-aleatorias" class="section level1" number="17">
 <h1><span class="header-section-number">Capítulo 17</span> Variables aleatorias</h1>
 <div class="definition">
-<p><span id="def:unlabeled-div-8" class="definition"><strong>Definición 17.1  (Variable aleatoria) </strong></span>Sea <span class="math inline">\(\Omega\)</span> un espacio muestral asociado a una experimento aleatorio <span class="math inline">\(\epsilon\)</span> y <span class="math inline">\(\omega\in\Omega\)</span>, entonces se genera la función <strong>variable aleatoria</strong>
+<p><span id="def:unlabeled-div-9" class="definition"><strong>Definición 17.1  (Variable aleatoria) </strong></span>Sea <span class="math inline">\(\Omega\)</span> un espacio muestral asociado a una experimento aleatorio <span class="math inline">\(\epsilon\)</span> y <span class="math inline">\(\omega\in\Omega\)</span>, entonces se genera la función <strong>variable aleatoria</strong>
 <span class="math display">\[\begin{align*}
   X:\Omega&amp;\longrightarrow \mathbb{R}\\
   \omega&amp;\longmapsto X(\omega)
@@ -341,7 +338,7 @@ wwwwwwwwwwwwwww
 es decir a cada elemento de $\Omega$ se le asocia un número real $\mathbb{R}$, además la probabilidad de $x\in \mathbb{R}$ es $P[x]= \sum^{n}_{i=1}P\left[\omega_i\right]$ donde $\omega_i\in X^{-1}(x)$. La definición indica por otro lado que un espacio muestral $\Omega$ puede genera diferentes variables aleatorias.
 
 
-::: {.example #unnamed-chunk-13}
+::: {.example #unnamed-chunk-11}
 El espacio muestral de lanzar una monedas tres veces es $$\omega= \left\{ccc,ccs,csc,scc,css,scs,ssc,sss\right\}$$ además sea $n_c$ es número de caras y $n_s$ el número de sellos, es posibles generar dos o mas variables aleatorias por ejemplo:
 
 1. $X(\omega)=n_c$ entonces el rango de $X$ es $R_X \left\{3,2,1,0\right\}$
@@ -370,7 +367,7 @@ que es lo mismo para el segundo caso $X(\omega)=n_c-n_s$.
 
 :::
 
-::: {.definition #unnamed-chunk-14 name="Eventos equivalentes"}
+::: {.definition #unnamed-chunk-12 name="Eventos equivalentes"}
 Sea $\Omega$ un espacio muestral asociado a una experimento aleatorio $\epsilon$ y $X$ una variable aleatoria con rango $R_X$ definida sobre $\Omega$. Dos eventos $W\in\Omega$ y $E_X\in R_X$ son **eventos equivalentes** si  existe la relación
 \[W= \left\{\omega\in\Omega/X(\omega)=E_X\right\}\] es decir $E_X$ consta de todos los elementos en $\Omega$ para los cuales $X(\omega)\in W$
 :::
@@ -398,7 +395,7 @@ Discreta y continua
 ## Función de probabilidad de una variable aleatoria
 
 ### Función de probabilidad de una variable aleatorias discreta
-::: {.definition #unnamed-chunk-15 name="Función o ley de probabilidad"}
+::: {.definition #unnamed-chunk-13 name="Función o ley de probabilidad"}
 Sea $X$ una variable aleatoria con rango $R_X$. Una función definida por \[p(x)=P[X=x]= \sum^{}_{ \left\{\omega \in \Omega:X(\omega)=x\right\}}P\left[\left\{\omega\right\}\right]\]
 
 1. $p(x)>0$, $x\in R_X$
@@ -410,21 +407,21 @@ Sea $X$ una variable aleatoria con rango $R_X$. Una función definida por \[p(x)
 El conjunto de pares ordenados $\left(x,p(x)\right)$, $x\in R_X$ recibe el nombre de *distribución de probabildiad de $X$*
 
 
-::: {.example #unnamed-chunk-16}
+::: {.example #unnamed-chunk-14}
 La variable aleatoria discreta
 \[p_X(x)=p(1-p)^{x-1}, \text{ $x\in \mathbb{Z}^+$ y $p\in[0,1]$}\]
 
 en efecto \[p(1-p)^{i-1}>0, \text{ $\forall x\in \mathbb{Z}^+$}\] además  \[ \sum^{\infty}_{i=1}p(1-p)^{i-1}=p \lim_{n\to\infty}\frac{1-(1-p)^{n+1}}{1-(1-p)}=1\]
 :::
 
-::: {.example #unnamed-chunk-17}
+::: {.example #unnamed-chunk-15}
 La variable aleatoria discreta
 \[p_X(x)=p(1-p), \text{ $x\in \mathbb{Z}^+$ y $p\in[0,1]$}\]
 
 en efecto \[p(1-p)^{i-1}>0, \text{ $\forall x\in \mathbb{Z}^+$}\] además  \[ \sum^{\infty}_{i=1}p(1-p)^{i-1}=p \lim_{n\to\infty}\frac{1-(1-p)^{n+1}}{1-(1-p)}=1\]
 :::
 
-::: {.example #unnamed-chunk-18}
+::: {.example #unnamed-chunk-16}
 La variable aleatoria discreta
 \[p_X(x)=(1-p)^{x-1}, \text{ $x\in \mathbb{Z}^+$ y $p\in[0,1]$}\]
 
@@ -434,7 +431,7 @@ en efecto \[p(1-p)^{i-1}>0, \text{ $\forall x\in \mathbb{Z}^+$}\] además  \[ \s
 ### Función de probabilidad de una variable aleatoria continua
 
 
-::: {.definition #unnamed-chunk-19 name="Función de densidad de probabilidad"}
+::: {.definition #unnamed-chunk-17 name="Función de densidad de probabilidad"}
 Sea $X$ una variable aleatoria con rango $R_X$. La  función $f(x)$ definida sobre $R_X$
 
 1. $f(x)>0$, $x\in R_X$ o $f(x)>0$, $x\in \mathbb{R}$
@@ -442,7 +439,7 @@ Sea $X$ una variable aleatoria con rango $R_X$. La  función $f(x)$ definida sob
 
 :::
 
-::: {.example #unnamed-chunk-20}
+::: {.example #unnamed-chunk-18}
 For a circle with the radius `r x`,
 its area is `r pi * x^2`.
 Sea la función
@@ -463,13 +460,13 @@ Sea la función
 \]
 
 
-::: {.example #unnamed-chunk-21}
+::: {.example #unnamed-chunk-19}
 Sea $f(x)= \frac{\alpha}{\rho}$ es una funcion de densidad pues
   $$f(x)>0,~ x\in R_X$$ además
   $$\int_{R_X}f(x)dx=1$$
 :::
 
-::: {.example #unnamed-chunk-22}
+::: {.example #unnamed-chunk-20}
 Sea $f(x)= \frac{\sigma}{\rho}$ es una funcion de densidad pues
   $$f(x)>0,~ x\in R_X$$ además
   $$\int_{R_X}f(x)dx=1$$
@@ -479,7 +476,7 @@ Sea $f(x)= \frac{\sigma}{\rho}$ es una funcion de densidad pues
 
 ## Función de distribución de una variable aleatoria
 ### Función de distribución de una variable aleatoria discreta
-::: {.definition #unnamed-chunk-23 name="Función de distribución"}
+::: {.definition #unnamed-chunk-21 name="Función de distribución"}
 Sea $X$ una variable aleatoria con rango $$R_X= \left\{x_1,x_2,\ldots x_n,\ldots\right\}.$$ Con función de probabilidad \(p(x_i)=P[X=x_i]\), sea $x$ cualquier número, real la función definida por \[F(x)=P[X\leq x]= \sum^{}_{x_i\leq x}p(x_i)= \sum^{}_{x_i\leq x}P[X= x_i]  \]
 recie el nombre de función de distribución de $X$. Cuyas propiedades son:
 
@@ -499,7 +496,7 @@ recie el nombre de función de distribución de $X$. Cuyas propiedades son:
 ### Función de distribución de una variable aleatoria continua
 
 
-::: {.definition #unnamed-chunk-24 name="Función de distribución"}
+::: {.definition #unnamed-chunk-22 name="Función de distribución"}
 Sea $X$ una variable aleatoria con función de densidad $f(x)$. La función
 \[F_X(x)=F(x)=P[X\leq x]=\int_{-\infty}^{x}f(t)dt, \text{ $\forall x\in R_X$}\]
 
@@ -515,11 +512,11 @@ Cuyas propiedades son:
 # Parámetros de una variable aleatoria
 ## Esperanza matemática
 
-::: {.definition #unnamed-chunk-25 name="Esperanza matemática de una variable aleatoria discreta"}
+::: {.definition #unnamed-chunk-23 name="Esperanza matemática de una variable aleatoria discreta"}
 \[\mathbb{E}[X]=\sum _{i=1}^{n}x_{i}p(x_{i})\]
 :::
 
-::: {.definition #unnamed-chunk-26 name="Esperanza matemática de una variable aleatoria continua"}
+::: {.definition #unnamed-chunk-24 name="Esperanza matemática de una variable aleatoria continua"}
 \[\mathbb{E}[X]=\int_{-\infty }^{\infty}xf(x)dx \text{ equivalentemente }\mathbb {E}[X]=\int_{\Omega }X\,{\text{d}}P\]
 :::
 el valor esperado a veces se representa por \(\mu =\mathbb {E} [X]\) que es el promedio o la media poblacional.
@@ -535,24 +532,24 @@ momento de orden superior
 
 # Variables aleatorias bidimensionales
 
-::: {.definition #unnamed-chunk-27 name="Variable aleatoria bidmensional discreta"}
+::: {.definition #unnamed-chunk-25 name="Variable aleatoria bidmensional discreta"}
+\[F(x,y)=P[X\leq x,Y\leq y]= \sum^{x}_{u=-\infty}\sum^{y}_{v=-\infty}=p(u,v)\]
+:::
+
+::: {.example #unnamed-chunk-26}
+www
+:::
+
+::: {.definition #unnamed-chunk-27 name="Variable aleatoria bidmensional contínua"}
 \[F(x,y)=P[X\leq x,Y\leq y]= \sum^{x}_{u=-\infty}\sum^{y}_{v=-\infty}=p(u,v)\]
 :::
 
 ::: {.example #unnamed-chunk-28}
-www
-:::
-
-::: {.definition #unnamed-chunk-29 name="Variable aleatoria bidmensional contínua"}
-\[F(x,y)=P[X\leq x,Y\leq y]= \sum^{x}_{u=-\infty}\sum^{y}_{v=-\infty}=p(u,v)\]
-:::
-
-::: {.example #unnamed-chunk-30}
 wwwww
 :::
 ## Distribución bidimensional discreta
 
-::: {.definition #unnamed-chunk-31 name="Función de probabilidad conjunta"}
+::: {.definition #unnamed-chunk-29 name="Función de probabilidad conjunta"}
 Sea $(X,Y)$ una variable bidimensinal discreta con rango $R_{X\times Y}$. A cada posible resultado le asociamos un numero $$p(x,y)=P[X=x, Y=y]$$ que cumple la siguientes condiciones
 
 1. $1>p(x,y)>0$, $(x,y)\in R_{X\times Y}\in$
@@ -561,7 +558,7 @@ Sea $(X,Y)$ una variable bidimensinal discreta con rango $R_{X\times Y}$. A cada
   Alos pares ordenados $\left((x,y),p(x,y)\right)$ se le llama **distribución de probabilidad conjunta**
 :::
 
-::: {.definition #unnamed-chunk-32 name="Función de distribución acumulada"}
+::: {.definition #unnamed-chunk-30 name="Función de distribución acumulada"}
 \[F(x,y)=P[X\leq x,Y\leq y]= \sum^{x}_{u=-\infty}\sum^{y}_{v=-\infty}=p(u,v)\]
 :::
 

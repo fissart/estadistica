@@ -23,7 +23,7 @@
 <meta name="author" content="Ricardo Michel MALLQUI BAÑOS" />
 
 
-<meta name="date" content="2022-09-14" />
+<meta name="date" content="2022-09-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -176,19 +176,16 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="4.1.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#media-de-datos-no-agrupados"><i class="fa fa-check"></i><b>4.1.1</b> Media de datos no agrupados</a></li>
 <li class="chapter" data-level="4.1.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#media-de-datos-agrupados"><i class="fa fa-check"></i><b>4.1.2</b> Media de datos agrupados</a></li>
-<li class="chapter" data-level="4.1.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#ejemplo"><i class="fa fa-check"></i><b>4.1.3</b> Ejemplo</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#la-moda-mo"><i class="fa fa-check"></i><b>4.2</b> La moda (Mo)</a>
 <ul>
 <li class="chapter" data-level="4.2.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#moda-de-datos-no-tabulados"><i class="fa fa-check"></i><b>4.2.1</b> Moda de datos no tabulados</a></li>
 <li class="chapter" data-level="4.2.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#moda-de-datos-tabulados"><i class="fa fa-check"></i><b>4.2.2</b> Moda de datos tabulados</a></li>
-<li class="chapter" data-level="4.2.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#ejemplo-1"><i class="fa fa-check"></i><b>4.2.3</b> Ejemplo</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#la-mediana-me"><i class="fa fa-check"></i><b>4.3</b> La mediana (Me)</a>
 <ul>
 <li class="chapter" data-level="4.3.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#mediana-de-datos-no-tabulados"><i class="fa fa-check"></i><b>4.3.1</b> Mediana de datos no tabulados</a></li>
 <li class="chapter" data-level="4.3.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#mediana-de-datos-tabulados"><i class="fa fa-check"></i><b>4.3.2</b> Mediana de datos tabulados</a></li>
-<li class="chapter" data-level="4.3.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#ejemplo-2"><i class="fa fa-check"></i><b>4.3.3</b> Ejemplo</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#asignación"><i class="fa fa-check"></i><b>4.4</b> Asignación</a></li>
 </ul></li>
@@ -294,21 +291,11 @@ div.csl-indent {
 <div id="medidas-de-tendencia-central" class="section level1" number="4">
 <h1><span class="header-section-number">Capítulo 4</span> Medidas de tendencia central</h1>
 <p>Son aquellas medidas que buscan un dato representivo central de un conjunto de datos tales como la media, la moda y la mediana.</p>
-<div id="la-media" class="section level2" number="4.1">
-<h2><span class="header-section-number">4.1</span> La media</h2>
-<p>A veces llamada <em>promedio aritmético</em>, es la medida de tendencia central que pondera los datos.</p>
-<div id="media-de-datos-no-agrupados" class="section level3" number="4.1.1">
-<h3><span class="header-section-number">4.1.1</span> Media de datos no agrupados</h3>
-<p>Los datos no están agrupados cuando no están ordenados sobre una tabla de distribución de frecuencias. Sean los <span class="math inline">\(n\)</span> datos <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span> entonces la media o promedio aritmético se define como</p>
-<p><span class="math display">\[
-\overline{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum_{i=1}^nx_i
-\]</span></p>
+<div class="definition">
+<p><span id="def:tabulacion" class="definition"><strong>Definición 4.1  (Datos agrupados y los no agrupados) </strong></span>La principal diferencia entre los datos agrupados y los no agrupados es que los agrupados están clasificados según un criterio y los no agrupados se encuentran en el mismo formato que cuando se recopilaron.</p>
 </div>
-<div id="media-de-datos-agrupados" class="section level3" number="4.1.2">
-<h3><span class="header-section-number">4.1.2</span> Media de datos agrupados</h3>
-<p>Considérese la siguiente tabla de distribucion de frecuencias entonces el promedio es <span class="math display">\[\overline{x}=\frac{y_1f_1+y_2f_2+\cdots+y_nf_n}{n}=\frac{1}{n}\sum_{i=1}^ny_if_i\]</span></p>
 <table>
-<caption><span id="tab:www">Tabla 4.1: </span> Captionww</caption>
+<caption><span id="tab:agrupados1">Tabla 4.1: </span> Datos agrupados en intervalos.</caption>
 <thead>
 <tr class="header">
 <th align="center">Clase</th>
@@ -362,9 +349,24 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
+<div id="la-media" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> La media</h2>
+<p>A veces llamada <em>promedio aritmético</em>, es la medida de tendencia central que pondera los datos.</p>
+<div id="media-de-datos-no-agrupados" class="section level3" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Media de datos no agrupados</h3>
+<p>Los datos no están agrupados cuando no están ordenados sobre una tabla de distribución de frecuencias. Sean los <span class="math inline">\(n\)</span> datos <span class="math inline">\(x_1, x_2, \ldots, x_n\)</span> entonces la media o promedio aritmético se define como</p>
+<p><span class="math display">\[
+\overline{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum_{i=1}^nx_i
+\]</span></p>
+<div class="example">
+<p><span id="exm:media-noagrupados" class="example"><strong>Ejemplo 4.1  (Media de datos no agrupados) </strong></span>wwwwwww</p>
 </div>
-<div id="ejemplo" class="section level3" number="4.1.3">
-<h3><span class="header-section-number">4.1.3</span> Ejemplo</h3>
+</div>
+<div id="media-de-datos-agrupados" class="section level3" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Media de datos agrupados</h3>
+<p>Considérese la siguiente tabla de distribución de frecuencias Tabla <a href="medidas-de-tendencia-central.html#tab:agrupados1">4.1</a> entonces el promedio es <span class="math display">\[\overline{x}=\frac{y_1f_1+y_2f_2+\cdots+y_nf_n}{n}=\frac{1}{n}\sum_{i=1}^ny_if_i\]</span></p>
+<div class="example">
+<p><span id="exm:media-agrupados" class="example"><strong>Ejemplo 4.2  (Media de datos agrupados) </strong></span>Sean los datos</p>
 <table>
 <thead>
 <tr class="header">
@@ -414,8 +416,9 @@ div.csl-indent {
 </tbody>
 </table>
 <p><span class="math display">\[\overline{x}=\frac{12.5+35++112.5+82.5+65}{13}=\frac{307.5}{13}=23.65\]</span></p>
+</div>
 <div class="exercise">
-<p><span id="exr:unnamed-chunk-4" class="exercise"><strong>Ejercicio 4.1  </strong></span>Si el promedio de <span class="math inline">\(n\)</span> datos es <span class="math inline">\(\overline{x}\)</span> entonces el promedio del conjunto inicial más un dato adicional <span class="math inline">\(x_{n+1}\)</span> es <span class="math display">\[\overline{x}&#39;=\frac{n\overline{x}+x_{n+1}}{n+1}\]</span> en general si se adicionan <span class="math inline">\(r\)</span> datos <span class="math inline">\(y_1, y_2, \ldots y_r\)</span> entonces el nuevo promedio será <span class="math display">\[\overline{x}&#39;=\frac{n\overline{x}+y_{1}+y_2+\ldots+y_r}{n+r}\]</span></p>
+<p><span id="exr:unlabeled-div-4" class="exercise"><strong>Ejercicio 4.1  </strong></span>Si el promedio de <span class="math inline">\(n\)</span> datos es <span class="math inline">\(\overline{x}\)</span> entonces el promedio del conjunto inicial más un dato adicional <span class="math inline">\(x_{n+1}\)</span> es <span class="math display">\[\overline{x}&#39;=\frac{n\overline{x}+x_{n+1}}{n+1}\]</span> en general si se adicionan <span class="math inline">\(r\)</span> datos <span class="math inline">\(y_1, y_2, \ldots y_r\)</span> entonces el nuevo promedio será <span class="math display">\[\overline{x}&#39;=\frac{n\overline{x}+y_{1}+y_2+\ldots+y_r}{n+r}\]</span></p>
 </div>
 <div class="solution">
 <p><span id="unlabeled-div-5" class="solution"><em>Solución</em>. </span>En efecto sea el promedio
@@ -447,7 +450,7 @@ div.csl-indent {
 </div>
 <div id="moda-de-datos-tabulados" class="section level3" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> Moda de datos tabulados</h3>
-<p>La moda es el dato que más se repite por ejemplo sea el conjunto de datos tabulados entonces la moda es <span class="math display">\[ M_o=L_i+\frac{f_i-f_{i-1}}{(f_i-f_{i-1})+(f_i-f_{i+1})}\cdot a_i\]</span></p>
+<p>La moda es el dato que más se repite por ejemplo sea el conjunto de datos tabulados de la Tabla <a href="medidas-de-tendencia-central.html#tab:agrupados1">4.1</a> entonces la moda es <span class="math display">\[ M_o=L_i+\frac{f_i-f_{i-1}}{(f_i-f_{i-1})+(f_i-f_{i+1})}\cdot a_i\]</span></p>
 <ul>
 <li><p><span class="math inline">\(L_i\)</span> es el límite inferior de la clase modal</p></li>
 <li><p><span class="math inline">\(f_i\)</span> es la frecuencia absoluta de la clase modal</p></li>
@@ -455,64 +458,8 @@ div.csl-indent {
 <li><p><span class="math inline">\(f_{i+1}\)</span> es la frecuencia absoluta inmediatamente posterior a la clase modal</p></li>
 <li><p><span class="math inline">\(a_i\)</span> es la amplitud de la clase</p></li>
 </ul>
-<table>
-<caption><span id="tab:wwwww">Tabla 4.2: </span> wwwww</caption>
-<thead>
-<tr class="header">
-<th align="center">Clase</th>
-<th align="center"><span class="math inline">\(Y_i\)</span></th>
-<th align="center"><span class="math inline">\(f_i\)</span></th>
-<th align="center"><span class="math inline">\(F_i\)</span></th>
-<th align="center"><span class="math inline">\(\ldots\)</span></th>
-<th align="center"><span class="math inline">\(H_i^*\%\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><span class="math inline">\([y_1,y_2)\)</span></td>
-<td align="center"><span class="math inline">\(y_1\)</span></td>
-<td align="center"><span class="math inline">\(f_1\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(H_1^*\%\)</span></td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\([y_2,y_3)\)</span></td>
-<td align="center"><span class="math inline">\(y_2\)</span></td>
-<td align="center"><span class="math inline">\(f_2\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(H_1^*\%\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\([y_3,y_4)\)</span></td>
-<td align="center"><span class="math inline">\(y_3\)</span></td>
-<td align="center"><span class="math inline">\(f_3\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(H_1^*\%\)</span></td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\(\vdots\)</span></td>
-<td align="center"><span class="math inline">\(\vdots\)</span></td>
-<td align="center"><span class="math inline">\(\vdots\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(\vdots\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\([y_{r-1},y_r]\)</span></td>
-<td align="center"><span class="math inline">\(y_r\)</span></td>
-<td align="center"><span class="math inline">\(f_r\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(H_1^*\%\)</span></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="ejemplo-1" class="section level3" number="4.2.3">
-<h3><span class="header-section-number">4.2.3</span> Ejemplo</h3>
+<div class="example">
+<p><span id="exm:unlabeled-div-6" class="example"><strong>Ejemplo 4.3  </strong></span>Sea la tabla</p>
 <table>
 <thead>
 <tr class="header">
@@ -548,21 +495,20 @@ div.csl-indent {
 <p><a href="https://www.superprof.es/apuntes/escolar/matematicas/estadistica/descriptiva/moda-estadistica.html">Más información</a></p>
 </div>
 </div>
+</div>
 <div id="la-mediana-me" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> La mediana (Me)</h2>
 <div id="mediana-de-datos-no-tabulados" class="section level3" number="4.3.1">
 <h3><span class="header-section-number">4.3.1</span> Mediana de datos no tabulados</h3>
 <p>Obtener la mediana consiste en ordenar los datos de menor a mayor y considerar dos casos: El primero si el número de datos es impar entonces el dato <span class="math inline">\(x_{\frac{n+1}{2}}\)</span> del conjunto ordenado será la mediana es decir <span class="math display">\[\text{Me}=x_{\frac{n+1}{2}}\]</span> de otro lado si el número de datos es par entonces la mediana es la semisuma de los dos datos intermedios es decir <span class="math display">\[\text{Me}=\frac{x_{\frac{n}{2}}+x_{\frac{n}{2}+1}}{2}\]</span></p>
-<div class="exercise">
-<p><span id="exr:unlabeled-div-6" class="exercise"><strong>Ejercicio 4.2  </strong></span>Sean los conjuntos de datos 5, 6, 8, 2, 1, 5, 6, 7, 10, 0, 14 y 20, 25, 6, 5, 19, 5 obtener la mediana de estos conjuntos de datos.</p>
-</div>
-<div class="solution">
-<p><span id="unlabeled-div-7" class="solution"><em>Solución</em>. </span>Al ordenarlos se obtiene el siguiente arreglo 0, 1, 2, 5, 5, 6, 6, 7, 8, 10, 14 y considerando que <span class="math inline">\(x_1=0\)</span>, <span class="math inline">\(x_2=1\)</span>, <span class="math inline">\(\ldots\)</span>, <span class="math inline">\(x_{11}=14\)</span> en este caso el número de datos es impar entonces el dato <span class="math inline">\(x_{\frac{11+1}{2}}=x_{6}=6\)</span> el la mediana. De otro lado el segundo conjunto de datos al ser ordenados 5, 5, 6, 19, 20, 25 ademas considerando que <span class="math inline">\(x_1=5\)</span>, <span class="math inline">\(x_2=5\)</span>, <span class="math inline">\(\ldots\)</span>, <span class="math inline">\(x_6=25\)</span> conducen a obtener la mediana <span class="math inline">\(\text{Me}=\frac{x_{\frac{6}{2}}+x_{\frac{6}{2}+1}}{2}=\frac{6+19}{2}=12.5\)</span>.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-7" class="example"><strong>Ejemplo 4.4  </strong></span>Sean los conjuntos de datos 5, 6, 8, 2, 1, 5, 6, 7, 10, 0, 14 y 20, 25, 6, 5, 19, 5 obtener la mediana de estos conjuntos de datos.</p>
+<p>Al ordenarlos se obtiene el siguiente arreglo 0, 1, 2, 5, 5, 6, 6, 7, 8, 10, 14 y considerando que <span class="math inline">\(x_1=0\)</span>, <span class="math inline">\(x_2=1\)</span>, <span class="math inline">\(\ldots\)</span>, <span class="math inline">\(x_{11}=14\)</span> en este caso el número de datos es impar entonces el dato <span class="math inline">\(x_{\frac{11+1}{2}}=x_{6}=6\)</span> el la mediana. De otro lado el segundo conjunto de datos al ser ordenados 5, 5, 6, 19, 20, 25 ademas considerando que <span class="math inline">\(x_1=5\)</span>, <span class="math inline">\(x_2=5\)</span>, <span class="math inline">\(\ldots\)</span>, <span class="math inline">\(x_6=25\)</span> conducen a obtener la mediana <span class="math inline">\(\text{Me}=\frac{x_{\frac{6}{2}}+x_{\frac{6}{2}+1}}{2}=\frac{6+19}{2}=12.5\)</span>.</p>
 </div>
 </div>
 <div id="mediana-de-datos-tabulados" class="section level3" number="4.3.2">
 <h3><span class="header-section-number">4.3.2</span> Mediana de datos tabulados</h3>
-<p>La mediana se encuentra en el intervalo donde la frecuencia acumulada llega hasta la mitad de la suma de las frecuencias absolutas.</p>
+<p>La mediana se encuentra en el intervalo donde la frecuencia acumulada llega hasta la mitad de la suma de las frecuencias absolutas. Sea la Tabla <a href="medidas-de-tendencia-central.html#tab:agrupados1">4.1</a>.</p>
 <p>Es decir tenemos que buscar el intervalo en el que se encuentre.</p>
 <p><span class="math display">\[  M_e=L_{i}+\frac{\frac{N}{2}-F_{i-1}}{f_{i}}\cdot a_{i}\]</span></p>
 <p><span class="math inline">\(L_{i}\)</span> es el límite inferior de la clase donde se encuentra la mediana</p>
@@ -571,65 +517,9 @@ div.csl-indent {
 <p><span class="math inline">\(F_{i-1}\)</span> es la frecuencia acumulada anterior a la clase mediana</p>
 <p><span class="math inline">\(a_{i}\)</span> es la amplitud de la clase</p>
 <p>La mediana es independiente de las amplitudes de los intervalos</p>
-<table>
-<caption><span id="tab:mediana">Tabla 4.3: </span> Mediana</caption>
-<thead>
-<tr class="header">
-<th align="center">Clase</th>
-<th align="center"><span class="math inline">\(Y_i\)</span></th>
-<th align="center"><span class="math inline">\(f_i\)</span></th>
-<th align="center"><span class="math inline">\(F_i\)</span></th>
-<th align="center"><span class="math inline">\(\ldots\)</span></th>
-<th align="center"><span class="math inline">\(H_i^*\%\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><span class="math inline">\([y_1,y_2)\)</span></td>
-<td align="center"><span class="math inline">\(y_1\)</span></td>
-<td align="center"><span class="math inline">\(f_1\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(H_1^*\%\)</span></td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\([y_2,y_3)\)</span></td>
-<td align="center"><span class="math inline">\(y_2\)</span></td>
-<td align="center"><span class="math inline">\(f_2\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(H_1^*\%\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\([y_3,y_4)\)</span></td>
-<td align="center"><span class="math inline">\(y_3\)</span></td>
-<td align="center"><span class="math inline">\(f_3\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(H_1^*\%\)</span></td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\(\vdots\)</span></td>
-<td align="center"><span class="math inline">\(\vdots\)</span></td>
-<td align="center"><span class="math inline">\(\vdots\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(\vdots\)</span></td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\([y_{r-1},y_r]\)</span></td>
-<td align="center"><span class="math inline">\(y_r\)</span></td>
-<td align="center"><span class="math inline">\(f_r\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(\ldots\)</span></td>
-<td align="center"><span class="math inline">\(H_1^*\%\)</span></td>
-</tr>
-</tbody>
-</table>
 <p><a href="https://www.superprof.es/apuntes/escolar/matematicas/estadistica/descriptiva/mediana.html">Más información</a></p>
-</div>
-<div id="ejemplo-2" class="section level3" number="4.3.3">
-<h3><span class="header-section-number">4.3.3</span> Ejemplo</h3>
+<div class="example">
+<p><span id="exm:unlabeled-div-8" class="example"><strong>Ejemplo 4.5  </strong></span>Sea la tabla</p>
 <table>
 <thead>
 <tr class="header">
@@ -673,6 +563,7 @@ div.csl-indent {
 </table>
 <p><span class="math display">\[\frac{N}{2}=12/2=6\]</span> ubicando en las frecuencias absolutas acumuladas que corresponde al intervalo <span class="math inline">\([20,25)\)</span></p>
 <p><span class="math display">\[  M_e=L_{i}+\frac{\frac{N}{2}-F_{i-1}}{f_{i}}\cdot a_{i}\]</span> <span class="math display">\[  =20+\frac{\frac{12}{2}-3}{5}\cdot 5=23\]</span> por lo tanto la mediana de este conjunto de datos tabulados (agrupados) es <span class="math inline">\(Me=23\)</span></p>
+</div>
 </div>
 </div>
 <div id="asignación" class="section level2" number="4.4">

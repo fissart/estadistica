@@ -188,7 +188,7 @@
 \makeatother
 \subtitle{estadística descriptiva y probabilidades}
 \author{Ricardo Michel MALLQUI BAÑOS}
-\date{2022-09-14}
+\date{2022-09-26}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Teorema}[chapter]
@@ -275,14 +275,19 @@ Estar familiarizado con las nociones de matemáticas básicas, \textbf{cálculo 
 \section{Definiciones básicas}\label{definiciones-buxe1sicas}}
 
 \begin{definition}[Estadística]
-\protect\hypertarget{def:std}{}\label{def:std}Statistics is the science of data. This involves collecting, classifying, summarizing, organizing, analyzing,
-and interpreting data.
+\protect\hypertarget{def:std}{}\label{def:std}Es la ciencia de los datos. Es decir colecciona, clasifica, resume, organiza, analiza e interpreta datos
 \end{definition}
 
-The science of statistics is commonly applied to two types of problems:
-1. Summarizing, describing, and exploring data
-2. Using sample data to infer the nature of the data set from which the sample was
-selected
+La estadística es comúnmente aplicada a dos tipos de problemas:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Resumiendo, describiendo y explorando datos.
+\item
+  Usando muestra de datos para inferir la naturaleza de un conjunto de datos del cual se extrajo la muestra seleccionada.
+\end{enumerate}
 
 \begin{definition}[Estadística descriptiva]
 \protect\hypertarget{def:descriptiva}{}\label{def:descriptiva}The branch of statistics devoted to the organization, summarization, and description of data sets is
@@ -432,39 +437,8 @@ Tenga en cuenta que \(n\) es el número de datos, es decir \(n=f_1+f_2+\ldots+f_
 \end{enumerate}
 
 \begin{example}
+
 Sean Los 16 tipos de personalidad en un grupo social encuestado. Organice los datos en una tabla de frecuencias
-\end{example}
-
-\begin{solution}
-
-Se tiene 16 características con los siguientes datos
-
-\begin{longtable}[]{@{}cc@{}}
-\toprule
-Personalidad & Cantidad \\
-\midrule
-\endhead
-ESTJ & 1 \\
-ESTJ & 2 \\
-ESTP & 3 \\
-ESFJ & 4 \\
-ESFP & 5 \\
-ISTJ & 6 \\
-ISTP & 7 \\
-ISFJ & 8 \\
-ISFP & 9 \\
-ENTJ & 10 \\
-ENTP & 6 \\
-ENFJ & 5 \\
-ENFP & 3 \\
-INTJ & 2 \\
-INTP & 1 \\
-INFJ & 1 \\
-INFP & 1 \\
-\bottomrule
-\end{longtable}
-
-\end{solution}
 
 \begin{longtable}[t]{cccccccccc}
 \caption{\label{tab:cualitativa}Datos cualitativos}\\
@@ -492,9 +466,9 @@ TOTAL & 75 &  &  &  &  &  & 100.00 &  & \\
 \bottomrule
 \end{longtable}
 
-\begin{example}
-wwwwwwwwwwwwwwwwwwwwww
 \end{example}
+
+\begin{example}
 
 Edades de cierta comunidad
 
@@ -506,22 +480,6 @@ Edades de cierta comunidad
 70 71 72 75 77 78
 81 88 89
 90 99
-
-\begin{longtable}[]{@{}cc@{}}
-\toprule
-Clase & \(f_i\) \\
-\midrule
-\endhead
-\(\left[20-30\right[\) & 1 \\
-\(\left[30-40\right[\) & 2 \\
-\(\left[40-50\right[\) & 3 \\
-\(\left[50-60\right[\) & 4 \\
-\(\left[60-70\right[\) & 5 \\
-\(\left[70-80\right[\) & 6 \\
-\(\left[80-90\right[\) & 3 \\
-\(\left[90-100\right]\) & 2 \\
-\bottomrule
-\end{longtable}
 
 Tabulando
 
@@ -541,6 +499,8 @@ $[90-100]$ & 2 & 26 & 84 & 0.05 & 0.35 & 1.12 & 4.76 & 34.67 & 112.00\\
 TOTAL & 42 &  &  &  &  &  & 61.90 &  & \\
 \bottomrule
 \end{longtable}
+
+\end{example}
 
 \hypertarget{gruxe1ficos-estaduxedsticos}{%
 \chapter{Gráficos estadísticos}\label{gruxe1ficos-estaduxedsticos}}
@@ -606,27 +566,12 @@ TOTAL & 42 &  &  &  &  &  & 61.90 &  & \\
 
 Son aquellas medidas que buscan un dato representivo central de un conjunto de datos tales como la media, la moda y la mediana.
 
-\hypertarget{la-media}{%
-\section{La media}\label{la-media}}
-
-A veces llamada \emph{promedio aritmético}, es la medida de tendencia central que pondera los datos.
-
-\hypertarget{media-de-datos-no-agrupados}{%
-\subsection{Media de datos no agrupados}\label{media-de-datos-no-agrupados}}
-
-Los datos no están agrupados cuando no están ordenados sobre una tabla de distribución de frecuencias. Sean los \(n\) datos \(x_1, x_2, \ldots, x_n\) entonces la media o promedio aritmético se define como
-
-\[
-\overline{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum_{i=1}^nx_i
-\]
-
-\hypertarget{media-de-datos-agrupados}{%
-\subsection{Media de datos agrupados}\label{media-de-datos-agrupados}}
-
-Considérese la siguiente tabla de distribucion de frecuencias entonces el promedio es \[\overline{x}=\frac{y_1f_1+y_2f_2+\cdots+y_nf_n}{n}=\frac{1}{n}\sum_{i=1}^ny_if_i\]
+\begin{definition}[Datos agrupados y los no agrupados]
+\protect\hypertarget{def:tabulacion}{}\label{def:tabulacion}La principal diferencia entre los datos agrupados y los no agrupados es que los agrupados están clasificados según un criterio y los no agrupados se encuentran en el mismo formato que cuando se recopilaron.
+\end{definition}
 
 \begin{longtable}[]{@{}cccccc@{}}
-\caption{\label{tab:www} Captionww}\tabularnewline
+\caption{\label{tab:agrupados1} Datos agrupados en intervalos.}\tabularnewline
 \toprule
 Clase & \(Y_i\) & \(f_i\) & \(F_i\) & \(\ldots\) & \(H_i^*\%\) \\
 \midrule
@@ -643,8 +588,31 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\) & \(\ldots\) & \(H_i^*\%\) \\
 \bottomrule
 \end{longtable}
 
-\hypertarget{ejemplo}{%
-\subsection{Ejemplo}\label{ejemplo}}
+\hypertarget{la-media}{%
+\section{La media}\label{la-media}}
+
+A veces llamada \emph{promedio aritmético}, es la medida de tendencia central que pondera los datos.
+
+\hypertarget{media-de-datos-no-agrupados}{%
+\subsection{Media de datos no agrupados}\label{media-de-datos-no-agrupados}}
+
+Los datos no están agrupados cuando no están ordenados sobre una tabla de distribución de frecuencias. Sean los \(n\) datos \(x_1, x_2, \ldots, x_n\) entonces la media o promedio aritmético se define como
+
+\[
+\overline{x}=\frac{x_1+x_2+\cdots+x_n}{n}=\frac{1}{n}\sum_{i=1}^nx_i
+\]
+
+\begin{example}[Media de datos no agrupados]
+\protect\hypertarget{exm:media-noagrupados}{}\label{exm:media-noagrupados}wwwwwww
+\end{example}
+
+\hypertarget{media-de-datos-agrupados}{%
+\subsection{Media de datos agrupados}\label{media-de-datos-agrupados}}
+
+Considérese la siguiente tabla de distribución de frecuencias Tabla \ref{tab:agrupados1} entonces el promedio es \[\overline{x}=\frac{y_1f_1+y_2f_2+\cdots+y_nf_n}{n}=\frac{1}{n}\sum_{i=1}^ny_if_i\]
+
+\begin{example}[Media de datos agrupados]
+\protect\hypertarget{exm:media-agrupados}{}\label{exm:media-agrupados}Sean los datos
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
@@ -661,9 +629,10 @@ Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
 \end{longtable}
 
 \[\overline{x}=\frac{12.5+35++112.5+82.5+65}{13}=\frac{307.5}{13}=23.65\]
+\end{example}
 
 \begin{exercise}
-\protect\hypertarget{exr:unnamed-chunk-4}{}\label{exr:unnamed-chunk-4}Si el promedio de \(n\) datos es \(\overline{x}\) entonces el promedio del conjunto inicial más un dato adicional \(x_{n+1}\) es \[\overline{x}'=\frac{n\overline{x}+x_{n+1}}{n+1}\] en general si se adicionan \(r\) datos \(y_1, y_2, \ldots y_r\) entonces el nuevo promedio será \[\overline{x}'=\frac{n\overline{x}+y_{1}+y_2+\ldots+y_r}{n+r}\]
+Si el promedio de \(n\) datos es \(\overline{x}\) entonces el promedio del conjunto inicial más un dato adicional \(x_{n+1}\) es \[\overline{x}'=\frac{n\overline{x}+x_{n+1}}{n+1}\] en general si se adicionan \(r\) datos \(y_1, y_2, \ldots y_r\) entonces el nuevo promedio será \[\overline{x}'=\frac{n\overline{x}+y_{1}+y_2+\ldots+y_r}{n+r}\]
 \end{exercise}
 
 \begin{solution}
@@ -709,7 +678,7 @@ Halle la moda de los siguinetes datos 3, 5,3,6,7,3,4,5,5 ya que hay hay precenci
 \hypertarget{moda-de-datos-tabulados}{%
 \subsection{Moda de datos tabulados}\label{moda-de-datos-tabulados}}
 
-La moda es el dato que más se repite por ejemplo sea el conjunto de datos tabulados entonces la moda es \[ M_o=L_i+\frac{f_i-f_{i-1}}{(f_i-f_{i-1})+(f_i-f_{i+1})}\cdot a_i\]
+La moda es el dato que más se repite por ejemplo sea el conjunto de datos tabulados de la Tabla \ref{tab:agrupados1} entonces la moda es \[ M_o=L_i+\frac{f_i-f_{i-1}}{(f_i-f_{i-1})+(f_i-f_{i+1})}\cdot a_i\]
 
 \begin{itemize}
 \item
@@ -724,26 +693,8 @@ La moda es el dato que más se repite por ejemplo sea el conjunto de datos tabul
   \(a_i\) es la amplitud de la clase
 \end{itemize}
 
-\begin{longtable}[]{@{}cccccc@{}}
-\caption{\label{tab:wwwww} wwwww}\tabularnewline
-\toprule
-Clase & \(Y_i\) & \(f_i\) & \(F_i\) & \(\ldots\) & \(H_i^*\%\) \\
-\midrule
-\endfirsthead
-\toprule
-Clase & \(Y_i\) & \(f_i\) & \(F_i\) & \(\ldots\) & \(H_i^*\%\) \\
-\midrule
-\endhead
-\([y_1,y_2)\) & \(y_1\) & \(f_1\) & \(\ldots\) & \(\ldots\) & \(H_1^*\%\) \\
-\([y_2,y_3)\) & \(y_2\) & \(f_2\) & \(\ldots\) & \(\ldots\) & \(H_1^*\%\) \\
-\([y_3,y_4)\) & \(y_3\) & \(f_3\) & \(\ldots\) & \(\ldots\) & \(H_1^*\%\) \\
-\(\vdots\) & \(\vdots\) & \(\vdots\) & \(\ldots\) & \(\ldots\) & \(\vdots\) \\
-\([y_{r-1},y_r]\) & \(y_r\) & \(f_r\) & \(\ldots\) & \(\ldots\) & \(H_1^*\%\) \\
-\bottomrule
-\end{longtable}
-
-\hypertarget{ejemplo-1}{%
-\subsection{Ejemplo}\label{ejemplo-1}}
+\begin{example}
+Sea la tabla
 
 \begin{longtable}[]{@{}cc@{}}
 \toprule
@@ -763,6 +714,7 @@ Primeramente la mayor frecuencia absoluta es 10 y corresponde \(f_3=10\) por tan
 \[ M_o=L_i+\frac{f_i-f_{i-1}}{(f_i-f_{i-1})+(f_i-f_{i+1})}\cdot a_i=\] \[ =20+\frac{10-5}{(10-5)+(10-3)}\cdot 5=20+\frac{5}{12}*5=22.08\]
 
 \href{https://www.superprof.es/apuntes/escolar/matematicas/estadistica/descriptiva/moda-estadistica.html}{Más información}
+\end{example}
 
 \hypertarget{la-mediana-me}{%
 \section{La mediana (Me)}\label{la-mediana-me}}
@@ -772,18 +724,16 @@ Primeramente la mayor frecuencia absoluta es 10 y corresponde \(f_3=10\) por tan
 
 Obtener la mediana consiste en ordenar los datos de menor a mayor y considerar dos casos: El primero si el número de datos es impar entonces el dato \(x_{\frac{n+1}{2}}\) del conjunto ordenado será la mediana es decir \[\text{Me}=x_{\frac{n+1}{2}}\] de otro lado si el número de datos es par entonces la mediana es la semisuma de los dos datos intermedios es decir \[\text{Me}=\frac{x_{\frac{n}{2}}+x_{\frac{n}{2}+1}}{2}\]
 
-\begin{exercise}
+\begin{example}
 Sean los conjuntos de datos 5, 6, 8, 2, 1, 5, 6, 7, 10, 0, 14 y 20, 25, 6, 5, 19, 5 obtener la mediana de estos conjuntos de datos.
-\end{exercise}
 
-\begin{solution}
 Al ordenarlos se obtiene el siguiente arreglo 0, 1, 2, 5, 5, 6, 6, 7, 8, 10, 14 y considerando que \(x_1=0\), \(x_2=1\), \(\ldots\), \(x_{11}=14\) en este caso el número de datos es impar entonces el dato \(x_{\frac{11+1}{2}}=x_{6}=6\) el la mediana. De otro lado el segundo conjunto de datos al ser ordenados 5, 5, 6, 19, 20, 25 ademas considerando que \(x_1=5\), \(x_2=5\), \(\ldots\), \(x_6=25\) conducen a obtener la mediana \(\text{Me}=\frac{x_{\frac{6}{2}}+x_{\frac{6}{2}+1}}{2}=\frac{6+19}{2}=12.5\).
-\end{solution}
+\end{example}
 
 \hypertarget{mediana-de-datos-tabulados}{%
 \subsection{Mediana de datos tabulados}\label{mediana-de-datos-tabulados}}
 
-La mediana se encuentra en el intervalo donde la frecuencia acumulada llega hasta la mitad de la suma de las frecuencias absolutas.
+La mediana se encuentra en el intervalo donde la frecuencia acumulada llega hasta la mitad de la suma de las frecuencias absolutas. Sea la Tabla \ref{tab:agrupados1}.
 
 Es decir tenemos que buscar el intervalo en el que se encuentre.
 
@@ -801,28 +751,10 @@ Es decir tenemos que buscar el intervalo en el que se encuentre.
 
 La mediana es independiente de las amplitudes de los intervalos
 
-\begin{longtable}[]{@{}cccccc@{}}
-\caption{\label{tab:mediana} Mediana}\tabularnewline
-\toprule
-Clase & \(Y_i\) & \(f_i\) & \(F_i\) & \(\ldots\) & \(H_i^*\%\) \\
-\midrule
-\endfirsthead
-\toprule
-Clase & \(Y_i\) & \(f_i\) & \(F_i\) & \(\ldots\) & \(H_i^*\%\) \\
-\midrule
-\endhead
-\([y_1,y_2)\) & \(y_1\) & \(f_1\) & \(\ldots\) & \(\ldots\) & \(H_1^*\%\) \\
-\([y_2,y_3)\) & \(y_2\) & \(f_2\) & \(\ldots\) & \(\ldots\) & \(H_1^*\%\) \\
-\([y_3,y_4)\) & \(y_3\) & \(f_3\) & \(\ldots\) & \(\ldots\) & \(H_1^*\%\) \\
-\(\vdots\) & \(\vdots\) & \(\vdots\) & \(\ldots\) & \(\ldots\) & \(\vdots\) \\
-\([y_{r-1},y_r]\) & \(y_r\) & \(f_r\) & \(\ldots\) & \(\ldots\) & \(H_1^*\%\) \\
-\bottomrule
-\end{longtable}
-
 \href{https://www.superprof.es/apuntes/escolar/matematicas/estadistica/descriptiva/mediana.html}{Más información}
 
-\hypertarget{ejemplo-2}{%
-\subsection{Ejemplo}\label{ejemplo-2}}
+\begin{example}
+Sea la tabla
 
 \begin{longtable}[]{@{}ccc@{}}
 \toprule
@@ -841,6 +773,7 @@ Clase & \(f_i\) & \(F_i\) \\
 \[\frac{N}{2}=12/2=6\] ubicando en las frecuencias absolutas acumuladas que corresponde al intervalo \([20,25)\)
 
 \[  M_e=L_{i}+\frac{\frac{N}{2}-F_{i-1}}{f_{i}}\cdot a_{i}\] \[  =20+\frac{\frac{12}{2}-3}{5}\cdot 5=23\] por lo tanto la mediana de este conjunto de datos tabulados (agrupados) es \(Me=23\)
+\end{example}
 
 \hypertarget{asignaciuxf3n}{%
 \section{Asignación}\label{asignaciuxf3n}}
@@ -873,26 +806,29 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
 \hypertarget{medidas-de-dispersiuxf3n}{%
 \chapter{Medidas de dispersión}\label{medidas-de-dispersiuxf3n}}
 
+Son medidas o parametros que miden la dispersion de los datos, entre ellos tenmos
+
 \hypertarget{rango}{%
 \section{Rango}\label{rango}}
 
-\(R=x_{max}-x_{min}\)
+Es la longitud de un conjunto de datos, es decir la diferencia
+\[R=x_{max}-x_{min}\]
 
-Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
-
-\(x_{max}=8\) \(x_{min}=1\)
-
-por lo tanto \(R=x_{max}-x_{min}=8-1=7\)
+Por ejemplo sean los datos 2, 5, 6, 1, 7, 5, 8, 6
+tiene el dato máximo \(x_{max}=8\) y el dato mínimo \(x_{min}=1\). Por lo tanto \(R=x_{max}-x_{min}=8-1=7.\)
 
 \hypertarget{varianza}{%
 \section{Varianza}\label{varianza}}
 
+Mide la dispersión de los datso con respecto a la media
+
 \hypertarget{datos-no-tabulados}{%
 \subsection{Datos no tabulados}\label{datos-no-tabulados}}
 
+Se usa la siguiente fórmula
 \[s^2=\frac{\sum\left(x_i-\overline{x}\right )^2}{n-1}\]
 
-Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
+Ejemplo. Sean los datos 2, 5, 6, 1, 7, 5, 8, 6
 
 \[\overline{x}=40/8=5\]
 
@@ -909,6 +845,7 @@ s^2&=\frac{\sum\left(x_i-\overline{x}\right )^2}{n-1}\\
 \hypertarget{datos-tabulados}{%
 \subsection{Datos tabulados}\label{datos-tabulados}}
 
+Sea la Tabla \ref{tab:agrupados1}. Entonces la formula que resuelve la varianza es
 \[s^2=\frac{\sum f_i\left(Y_i-\overline{x}\right )^2}{n-1}\]
 
 \(\overline{x}=\frac{\sum Y_i*f_i}{n}=747.5/31=24.11\)
@@ -928,7 +865,7 @@ Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
 \bottomrule
 \end{longtable}
 
-Por lo tanto la varianza para dotos agrupados es
+Por lo tanto la varianza para datos agrupados es
 
 \[
 \begin{aligned}
@@ -1370,14 +1307,14 @@ wwwwwwwwwwwwwwwwwwwwwwww
 ## [1] 78.53333
 \end{verbatim}
 
-\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-6-1} \end{center}
+\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-4-1} \end{center}
 
 \hypertarget{normal-simetruxeda-positiva}{%
 \section{Normal: Simetría positiva}\label{normal-simetruxeda-positiva}}
 
 wwwwwwwwwwwwwwwww
 
-\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-7-1} \end{center}
+\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-5-1} \end{center}
 
 \begin{verbatim}
 ## [1] 1.216579
@@ -1388,7 +1325,7 @@ wwwwwwwwwwwwwwwww
 
 wwwwwwwwwwwwwwwww
 
-\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-8-1} \end{center}
+\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-6-1} \end{center}
 
 \begin{verbatim}
 ## [1] -1.340429

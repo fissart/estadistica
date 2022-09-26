@@ -2,10 +2,7 @@ tab:ww
 tab:cuantitativaw
 tab:cualitativa
 tab:cuantitativa
-tab:www
-exr:unnamed-chunk-4
-tab:wwwww
-tab:mediana
+tab:agrupados1
 eq:binom
 tab:ww1
 fig:ww1w
@@ -22,15 +19,12 @@ medidas-de-tendencia-central
 la-media
 media-de-datos-no-agrupados
 media-de-datos-agrupados
-ejemplo
 la-moda-mo
 moda-de-datos-no-tabulados
 moda-de-datos-tabulados
-ejemplo-1
 la-mediana-me
 mediana-de-datos-no-tabulados
 mediana-de-datos-tabulados
-ejemplo-2
 asignación
 medidas-de-dispersión
 rango
