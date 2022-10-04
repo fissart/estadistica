@@ -614,9 +614,9 @@ $$Cv=\frac{5.60}{24.11}\cdot 100=0.23\cdot 100=23\%$$
 
 Halle el rango, la varianza, la desviación típica, desviación media, desviación mediana absoluta y el coeficiente de variación. Grafique el hstograma y ubique estos estadigrafos
 
-|    Clase    | $Y_i$ | $f_i$ | $F_i$ |
+|    Clase    | $y_i$ | $f_i$ | $F_i$ |
 |:-----------:|:-----:|:-----:|:-----:|
-| $[50,100)$  |       |   8   |   1   |
+| $[50,100)$  |  75   |   8   |   1   |
 | $[100,150)$ |       |  20   |   3   |
 | $[150,200)$ |       |  50   |       |
 | $[200,250)$ |       |  70   |       |
@@ -626,11 +626,11 @@ Halle el rango, la varianza, la desviación típica, desviación media, desviaci
 
 
 * Rango $R=x_{max}-x_{min}$
-* Varianza $s^2=\frac{f_i\sum\left(Y_i-\overline{x}\right )^2}{n-1}$
-* Desviación típica $s=sqrt{s^2}$
-* Desviación media absoluta $DM=\frac{1}{n}\sum f_i\left\vert Y_i-\overline{x}\right\vert$
-* Desviación mediana absoluta $DMe=\frac{1}{n}\sum f_i\left\vert Y_i-Me\right\vert$
-* Coeficiente de variación $CV=\frac{s}{\overline{x}}100$
+* Varianza $s^2=\frac{\sum f_i\left(y_i-\overline{x}\right )^2}{n-1}$
+* Desviación típica $s=\sqrt{s^2}$
+* Desviación media absoluta $DM=\frac{1}{n}\sum f_i\left\vert y_i-\overline{x}\right\vert$
+* Desviación mediana absoluta $DMe=\frac{1}{n}\sum f_i\left\vert y_i-Me\right\vert$
+* Coeficiente de variación $CV=\frac{s}{\overline{x}}1000$
 
 
 # Medidas de posición (cuantiles)
