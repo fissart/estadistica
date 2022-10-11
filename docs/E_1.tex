@@ -188,7 +188,7 @@
 \makeatother
 \subtitle{estadística descriptiva y probabilidades}
 \author{Ricardo Michel MALLQUI BAÑOS}
-\date{2022-09-26}
+\date{2022-10-10}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Teorema}[chapter]
@@ -898,7 +898,7 @@ Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
 \([10,15)\) & 12.5 & 2 & 25 \\
 \([15,20)\) & 17.5 & 5 & 87.5 \\
 \([20,25)\) & 22.5 & 7 & 157.5 \\
-\([25,30]\) & 27.5 & 10 & 275 \\
+\([25,30)\) & 27.5 & 10 & 275 \\
 \([30,35]\) & 32.5 & 6 & 195 \\
 \(\sum\) & & 31 & \\
 \bottomrule
@@ -945,7 +945,7 @@ Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
 \([10,15)\) & 12.5 & 2 & 25 \\
 \([15,20)\) & 17.5 & 5 & 87.5 \\
 \([20,25)\) & 22.5 & 7 & 157.5 \\
-\([25,30]\) & 27.5 & 10 & 275 \\
+\([25,30)\) & 27.5 & 10 & 275 \\
 \([30,35]\) & 32.5 & 6 & 195 \\
 \(\sum\) & & 31 & \\
 \bottomrule
@@ -992,7 +992,7 @@ Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
 \([10,15)\) & 12.5 & 3 & 25 \\
 \([15,20)\) & & 4 & 87.5 \\
 \([20,25)\) & 22.5 & 7 & 157.5 \\
-\([25,30]\) & 27.5 & 10 & 275 \\
+\([25,30)\) & 27.5 & 10 & 275 \\
 \([30,35]\) & & 8 & 195 \\
 \(\sum\) & & & \\
 \bottomrule
@@ -1026,7 +1026,7 @@ Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
 \([10,15)\) & 12.5 & 2 & 25 \\
 \([15,20)\) & 17.5 & 5 & 87.5 \\
 \([20,25)\) & 22.5 & 7 & 157.5 \\
-\([25,30]\) & 27.5 & 10 & 275 \\
+\([25,30)\) & 27.5 & 10 & 275 \\
 \([30,35]\) & 32.5 & 6 & 195 \\
 \(\sum\) & & 31 & \\
 \bottomrule
@@ -1041,10 +1041,10 @@ Halle el rango, la varianza, la desviación típica, desviación media, desviaci
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+Clase & \(y_i\) & \(f_i\) & \(F_i\) \\
 \midrule
 \endhead
-\([50,100)\) & & 8 & 1 \\
+\([50,100)\) & 75 & 8 & 1 \\
 \([100,150)\) & & 20 & 3 \\
 \([150,200)\) & & 50 & \\
 \([200,250)\) & & 70 & \\
@@ -1059,21 +1059,21 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
 \item
   Rango \(R=x_{max}-x_{min}\)
 \item
-  Varianza \(s^2=\frac{f_i\sum\left(Y_i-\overline{x}\right )^2}{n-1}\)
+  Varianza \(s^2=\frac{\sum f_i\left(y_i-\overline{x}\right )^2}{n-1}\)
 \item
-  Desviación típica \(s=sqrt{s^2}\)
+  Desviación típica \(s=\sqrt{s^2}\)
 \item
-  Desviación media absoluta \(DM=\frac{1}{n}\sum f_i\left\vert Y_i-\overline{x}\right\vert\)
+  Desviación media absoluta \(DM=\frac{1}{n}\sum f_i\left\vert y_i-\overline{x}\right\vert\)
 \item
-  Desviación mediana absoluta \(DMe=\frac{1}{n}\sum f_i\left\vert Y_i-Me\right\vert\)
+  Desviación mediana absoluta \(DMe=\frac{1}{n}\sum f_i\left\vert y_i-Me\right\vert\)
 \item
-  Coeficiente de variación \(CV=\frac{s}{\overline{x}}100\)
+  Coeficiente de variación \(CV=\frac{s}{\overline{x}}1000\)
 \end{itemize}
 
 \hypertarget{medidas-de-posiciuxf3n-cuantiles}{%
 \chapter{Medidas de posición (cuantiles)}\label{medidas-de-posiciuxf3n-cuantiles}}
 
-Estos estadigrafos dividen al conjunto de datos en un número deternimado.
+Estos estadigrafos dividen al conjunto de datos en un número determinado.
 
 \hypertarget{cuartiles}{%
 \section{Cuartiles}\label{cuartiles}}
@@ -1083,14 +1083,14 @@ Los cuartiles, que dividen a la distribución en cuatro partes (corresponden a l
 \hypertarget{datos-no-agrupados}{%
 \subsection{Datos no agrupados}\label{datos-no-agrupados}}
 
-Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 \textbf{Ordenar} de menor a mayor (creciente)
+Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7. \textbf{Ordenar} de menor a mayor (creciente)
 
 Si \[Q_k=\frac{k(n+1)}{4}\] es \textbf{entero} entonces el cuartil es el dato de la posición \(Q_k=x_\frac{k(n+1)}{4}\) en caso contrario se \textbf{interpola} los datos extremos donde se encuentra el valor \(Q_k\)
 
 \begin{itemize}
 \tightlist
 \item
-  Ejemplo 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor 1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9
+  Ejemplo 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor 1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9.
 \end{itemize}
 
 \(Q_1=\frac{1(18+1)}{4}=4.75\) interpolando \(Q_1=2+(2-2)\cdot 0.75=2\)
@@ -1129,9 +1129,9 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
 \([10,15)\) & 12.5 & 2 & 3 \\
 \([15,20)\) & 17.5 & 5 & 8 \\
 \([20,25)\) & 22.5 & 7 & 15 \\
-\([25,30]\) & 27.5 & 10 & 25 \\
-\([30,35]\) & 32.5 & 6 & 31 \\
-\([35,40]\) & 37.5 & 5 & 36 \\
+\([25,30)\) & 27.5 & 10 & 25 \\
+\([30,35)\) & 32.5 & 6 & 31 \\
+\([35,40)\) & 37.5 & 5 & 36 \\
 \([40,45]\) & 42.5 & 3 & 39 \\
 \(\sum\) & & 39 & \\
 \bottomrule
@@ -1205,10 +1205,11 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
 \([10,15)\) & 12.5 & 2 & 3 \\
 \([15,20)\) & 17.5 & 5 & 8 \\
 \([20,25)\) & 22.5 & 7 & 15 \\
-\([25,30]\) & 27.5 & 10 & 25 \\
-\([30,35]\) & 32.5 & 6 & 31 \\
-\([35,40]\) & 37.5 & 5 & 36 \\
+\([25,30)\) & 27.5 & 10 & 25 \\
+\([30,35)\) & 32.5 & 6 & 31 \\
+\([35,40)\) & 37.5 & 5 & 36 \\
 \([40,45]\) & 42.5 & 3 & 39 \\
+:---------: & :-----: & :-----: & :-----: \\
 \(\sum\) & & 39 & \\
 \bottomrule
 \end{longtable}
@@ -1238,7 +1239,7 @@ Si \[P_k=\frac{k(n+1)}{100}; k=1, 2,  \ldots, 99\] es entero entonces el cuartil
 \hypertarget{datos-agrupados-2}{%
 \subsection{Datos agrupados}\label{datos-agrupados-2}}
 
-\[P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)=\int_1^3f(x)\]
+\[P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)\]
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
@@ -1249,10 +1250,10 @@ Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
 \([10,15)\) & 12.5 & 2 & 3 \\
 \([15,20)\) & 17.5 & 5 & \\
 \([20,25)\) & 22.5 & 7 & \\
-\([25,30]\) & & 10 & \\
-\([30,35]\) & & 6 & \\
-\([35,40]\) & & 5 & \\
-\([40,45]\) & & 3 & \\
+\([25,30\) & & 10 & \\
+\([30,35\) & & 6 & \\
+\([35,40\) & & 5 & \\
+\([40,45\) & & 3 & \\
 \(\sum\) & & 2 & \\
 \bottomrule
 \end{longtable}
@@ -1270,13 +1271,13 @@ Podemos decir que la asimetría indica cuánto se desvía nuestra distribución 
   \textbf{Desviación negativa}: cuando la cola izquierda del histograma de la distribución es más larga y la mayoría de las observaciones se concentran en la cola derecha. En este caso, también podemos utilizar el término ``sesgado a la izquierda'' o ``cola izquierda''. y la \textbf{mediana es mayor que la media}.
 \item
   \textbf{Desviación positiva}: cuando la cola derecha del histograma de la distribución es más larga y la mayoría de las observaciones se concentran en la cola izquierda. En este caso, también podemos usar el término ``sesgado a la derecha'' o ``cola derecha''. y la \textbf{mediana es menor que la media}.
-
-  \begin{figure}
-  \centering
-  \includegraphics{simetria.png}
-  \caption{Medidas de asimetría}
-  \end{figure}
 \end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics{simetria.png}
+\caption{Medidas de asimetría}
+\end{figure}
 
 \begin{itemize}
 \tightlist
@@ -1285,63 +1286,55 @@ Podemos decir que la asimetría indica cuánto se desvía nuestra distribución 
 \end{itemize}
 
 \[
- f_1=\frac{\overline{x}-Mo}{\sigma}
- \]
+A_s=\frac{3(\overline{x}-Me)}{s}
+\]
+
+\(-3<A_s<3\)
+
+\[
+A_s=\frac{\overline{x}-Mo}{s}
+\]
+
+\(-3<A_s<3\)
 
 \begin{itemize}
 \tightlist
 \item
-  Índice de simetría de \textbf{Fisher}:
+  Índice de simetría de \textbf{Yule Bowley}:
 \end{itemize}
 
 \[
-f_2=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^3}{n\sigma^3}
+A_s=\frac{Q_1+Q_3-2Q_2}{Q_3-Q_1}
 \]
 
-\begin{verbatim}
-* Simétrico : valores entre -0,5 y 0,5
-* Datos asimétricos moderados : valores entre -1 y -0,5 o entre 0,5 y 1
-* Datos muy sesgados : valores menores que -1 o mayores que 1
-\end{verbatim}
+\(-1<A_s<1\)
 
-Si la distribución es simétrica, ambos índices son iguales a 0; si es asimétrica a la derecha, ambos son positivos; y si es asimétrica a la izquierda, ambos índices son negativos.
+\begin{itemize}
+\item
+  Índice de simetría de \textbf{Fisher}:
 
-\hypertarget{normal-simuxe9trica}{%
-\section{Normal: Simétrica}\label{normal-simuxe9trica}}
+  \begin{itemize}
+  \item
+    Datos no agrupados
+    \[
+    A_s=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^3}{n\sigma^3}
+    \]
+  \item
+    Datos agrupados
+    \[
+    A_s=\frac{\sum_{i=1}^{n}f_i\left( x_i-\overline{x}\right)^3}{n\sigma^3}
+    \]
+  \item
+    Datos agrupados en intervalos
+    \[
+    A_s=\frac{\sum_{i=1}^{n}f_i\left( y_i-\overline{x}\right)^3}{n\sigma^3}
+    \]
+  \end{itemize}
+\end{itemize}
 
-wwwwwwwwwwwwwwwwwwwwwwww
+\begin{example}
 
-\begin{verbatim}
-## [1] 0.5059805
-\end{verbatim}
-
-\begin{verbatim}
-## [1] 78.53333
-\end{verbatim}
-
-\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-4-1} \end{center}
-
-\hypertarget{normal-simetruxeda-positiva}{%
-\section{Normal: Simetría positiva}\label{normal-simetruxeda-positiva}}
-
-wwwwwwwwwwwwwwwww
-
-\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-5-1} \end{center}
-
-\begin{verbatim}
-## [1] 1.216579
-\end{verbatim}
-
-\hypertarget{normal-simetruxeda-negativa}{%
-\section{Normal: Simetría negativa}\label{normal-simetruxeda-negativa}}
-
-wwwwwwwwwwwwwwwww
-
-\begin{center}\includegraphics{E_1_files/figure-latex/unnamed-chunk-6-1} \end{center}
-
-\begin{verbatim}
-## [1] -1.340429
-\end{verbatim}
+www - wwwwwwwwww
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
@@ -1357,6 +1350,8 @@ Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
 \(\sum\) & & & \\
 \bottomrule
 \end{longtable}
+
+\end{example}
 
 \hypertarget{medidas-de-curtosis-o-apuntamiento}{%
 \chapter{Medidas de curtosis o apuntamiento}\label{medidas-de-curtosis-o-apuntamiento}}
@@ -1469,10 +1464,55 @@ wwwwwwwwww
 wwwwwwwwwwwwwwww
 \end{definition}
 
+\begin{definition}[Eventos]
+Cualquier subconjunto de un espacio muestral, denotado generalamente por A, B, C, etc. Si A es un evento entonces \(A\subset \Omega\), llamaremos \emph{suceso} a todo elemento de un espacio muestral y lo denotaremos por \(w,\) \(x,\) \(y\), etc. Si \(x\) es un suceso entonces \(x\in \Omega\). Un evento con un solo elemento, se llama \emph{evento elemental}.
+\end{definition}
+
+\begin{remark}
+El evento \(\left\{w\right\}\) y el susceso \(w\) no son lo mismo. En otras palabras, evento es cualquier elemento de \(\mathcal{P}(\Omega)\), (asi \(\emptyset\) y \(\Omega\) son eventos).
+\end{remark}
+
+\begin{example}
+Sea el experimento del lanzamiento de un dado, generando el espacio muestral \(\Omega=\left\{1,2,3,4,5,6\right\}\), las potencias de este conjunto es \[\mathcal{P}(\Omega)= \left\{\left\{\right\},
+\left\{1\right\},
+\left\{2\right\},
+\ldots,
+\left\{1,2,3,4,5,6\right\}
+\right\}\]
+por lo tanto algunos eventos \(\left\{1,2,3,4,5,6\right\},\) \(\emptyset\), \(\left\{1,2\right\}\), etc.
+\end{example}
+
+\begin{remark}
+El número de elementos de un conjunto potencia es \(2^n\) donde \(n=\left\vert S\right\vert\), el número de elementos de un conjunto \(S\).
+\end{remark}
+
 \hypertarget{uxe1lgebra-de-eventos}{%
 \chapter{Álgebra de eventos}\label{uxe1lgebra-de-eventos}}
 
 Sean \(A\), \(B\) y \(C\) eventos entonces 1. e 2. wwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Sub eventos
+\item
+  Igualdad de eventos
+\item
+  Unión de eventos
+\item
+  Intersección de eventos
+\item
+  Diferencia de eventos
+\item
+  Complento de un evento
+\item
+  Leyes distributivas \(A\cup (B\cap C)=(A\cup B)\cap (A\cup C)\).
+\item
+  Leyes de Morgan
+\item
+  Producto cartesiano
+\end{enumerate}
 
 \[ \int_{1}^{2}=\sum_{2}^{2}x_1 \]
 

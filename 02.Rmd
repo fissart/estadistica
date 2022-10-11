@@ -67,10 +67,45 @@ wwwwwwwwwwwwwwww
 
 :::
 
+::: {.definition  name="Eventos"}
+Cualquier subconjunto de un espacio muestral, denotado generalamente por A, B, C, etc. Si A es un evento entonces $A\subset \Omega$, llamaremos _suceso_ a todo elemento de un espacio muestral y lo denotaremos por $w,$ $x,$ $y$, etc. Si $x$ es un suceso entonces $x\in \Omega$. Un evento con un solo elemento, se llama _evento elemental_.
+:::
+
+
+:::{.remark}
+El evento $\left\{w\right\}$ y el susceso $w$ no son lo mismo. En otras palabras, evento es cualquier elemento de $\mathcal{P}(\Omega)$, (asi $\emptyset$ y $\Omega$ son eventos).
+:::
+
+:::{.example}
+Sea el experimento del lanzamiento de un dado, generando el espacio muestral $\Omega=\left\{1,2,3,4,5,6\right\}$, las potencias de este conjunto es  $$\mathcal{P}(\Omega)= \left\{\left\{\right\},
+\left\{1\right\},
+\left\{2\right\},
+\ldots,
+\left\{1,2,3,4,5,6\right\}
+\right\}$$
+por lo tanto algunos eventos $\left\{1,2,3,4,5,6\right\},$ $\emptyset$, $\left\{1,2\right\}$, etc.
+:::
+
+:::{.remark}
+El número de elementos de un conjunto potencia es $2^n$ donde $n=\left\vert S\right\vert$, el número de elementos de un conjunto $S$.
+:::
 
 # Álgebra de eventos
 
+
+
 Sean $A$, $B$ y $C$ eventos entonces 1. e 2. wwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+
+1. Sub eventos
+1. Igualdad de eventos
+2. Unión de eventos
+3. Intersección de eventos
+5. Diferencia de eventos
+6. Complento de un evento
+7. Leyes distributivas $A\cup (B\cap C)=(A\cup B)\cap (A\cup C)$.
+7. Leyes de Morgan
+7. Producto cartesiano
+
 
 $$ \int_{1}^{2}=\sum_{2}^{2}x_1 $$
 

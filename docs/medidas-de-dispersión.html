@@ -23,7 +23,7 @@
 <meta name="author" content="Ricardo Michel MALLQUI BAÑOS" />
 
 
-<meta name="date" content="2022-09-26" />
+<meta name="date" content="2022-10-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -230,12 +230,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.4.2" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html#datos-agrupados-2"><i class="fa fa-check"></i><b>6.4.2</b> Datos agrupados</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html"><i class="fa fa-check"></i><b>7</b> Medidas de asimetría</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html#normal-simétrica"><i class="fa fa-check"></i><b>7.1</b> Normal: Simétrica</a></li>
-<li class="chapter" data-level="7.2" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html#normal-simetría-positiva"><i class="fa fa-check"></i><b>7.2</b> Normal: Simetría positiva</a></li>
-<li class="chapter" data-level="7.3" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html#normal-simetría-negativa"><i class="fa fa-check"></i><b>7.3</b> Normal: Simetría negativa</a></li>
-</ul></li>
+<li class="chapter" data-level="7" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html"><i class="fa fa-check"></i><b>7</b> Medidas de asimetría</a></li>
 <li class="chapter" data-level="8" data-path="medidas-de-curtosis-o-apuntamiento.html"><a href="medidas-de-curtosis-o-apuntamiento.html"><i class="fa fa-check"></i><b>8</b> Medidas de curtosis o apuntamiento</a></li>
 <li class="part"><span><b>II Probabilidades</b></span></li>
 <li class="chapter" data-level="9" data-path="experimento-aleatorio-espacio-muestral-y-eventos.html"><a href="experimento-aleatorio-espacio-muestral-y-eventos.html"><i class="fa fa-check"></i><b>9</b> Experimento aleatorio, espacio muestral y eventos</a>
@@ -435,7 +430,7 @@ s^2&amp;=\frac{\sum f_i\left(Y_i-\overline{x}\right )^2}{n-1}\\
 <td align="center">157.5</td>
 </tr>
 <tr class="odd">
-<td align="center"><span class="math inline">\([25,30]\)</span></td>
+<td align="center"><span class="math inline">\([25,30)\)</span></td>
 <td align="center">27.5</td>
 <td align="center">10</td>
 <td align="center">275</td>
@@ -511,7 +506,7 @@ DM&amp;=\frac{\sum\left\vert x_i-\overline{x}\right \vert}{n}\\
 <td align="center">157.5</td>
 </tr>
 <tr class="odd">
-<td align="center"><span class="math inline">\([25,30]\)</span></td>
+<td align="center"><span class="math inline">\([25,30)\)</span></td>
 <td align="center">27.5</td>
 <td align="center">10</td>
 <td align="center">275</td>
@@ -590,7 +585,7 @@ DM&amp;=\frac{\sum f_i\left \vert Y_i-\overline{x}\right \vert}{n}\\
 <td align="center">157.5</td>
 </tr>
 <tr class="odd">
-<td align="center"><span class="math inline">\([25,30]\)</span></td>
+<td align="center"><span class="math inline">\([25,30)\)</span></td>
 <td align="center">27.5</td>
 <td align="center">10</td>
 <td align="center">275</td>
@@ -659,7 +654,7 @@ s^2&amp;=\frac{\sum f_i\left \vert Y_i-Me\right \vert}{n}\\
 <td align="center">157.5</td>
 </tr>
 <tr class="odd">
-<td align="center"><span class="math inline">\([25,30]\)</span></td>
+<td align="center"><span class="math inline">\([25,30)\)</span></td>
 <td align="center">27.5</td>
 <td align="center">10</td>
 <td align="center">275</td>
@@ -687,7 +682,7 @@ s^2&amp;=\frac{\sum f_i\left \vert Y_i-Me\right \vert}{n}\\
 <thead>
 <tr class="header">
 <th align="center">Clase</th>
-<th align="center"><span class="math inline">\(Y_i\)</span></th>
+<th align="center"><span class="math inline">\(y_i\)</span></th>
 <th align="center"><span class="math inline">\(f_i\)</span></th>
 <th align="center"><span class="math inline">\(F_i\)</span></th>
 </tr>
@@ -695,7 +690,7 @@ s^2&amp;=\frac{\sum f_i\left \vert Y_i-Me\right \vert}{n}\\
 <tbody>
 <tr class="odd">
 <td align="center"><span class="math inline">\([50,100)\)</span></td>
-<td align="center"></td>
+<td align="center">75</td>
 <td align="center">8</td>
 <td align="center">1</td>
 </tr>
@@ -739,11 +734,11 @@ s^2&amp;=\frac{\sum f_i\left \vert Y_i-Me\right \vert}{n}\\
 </table>
 <ul>
 <li>Rango <span class="math inline">\(R=x_{max}-x_{min}\)</span></li>
-<li>Varianza <span class="math inline">\(s^2=\frac{f_i\sum\left(Y_i-\overline{x}\right )^2}{n-1}\)</span></li>
-<li>Desviación típica <span class="math inline">\(s=sqrt{s^2}\)</span></li>
-<li>Desviación media absoluta <span class="math inline">\(DM=\frac{1}{n}\sum f_i\left\vert Y_i-\overline{x}\right\vert\)</span></li>
-<li>Desviación mediana absoluta <span class="math inline">\(DMe=\frac{1}{n}\sum f_i\left\vert Y_i-Me\right\vert\)</span></li>
-<li>Coeficiente de variación <span class="math inline">\(CV=\frac{s}{\overline{x}}100\)</span></li>
+<li>Varianza <span class="math inline">\(s^2=\frac{\sum f_i\left(y_i-\overline{x}\right )^2}{n-1}\)</span></li>
+<li>Desviación típica <span class="math inline">\(s=\sqrt{s^2}\)</span></li>
+<li>Desviación media absoluta <span class="math inline">\(DM=\frac{1}{n}\sum f_i\left\vert y_i-\overline{x}\right\vert\)</span></li>
+<li>Desviación mediana absoluta <span class="math inline">\(DMe=\frac{1}{n}\sum f_i\left\vert y_i-Me\right\vert\)</span></li>
+<li>Coeficiente de variación <span class="math inline">\(CV=\frac{s}{\overline{x}}1000\)</span></li>
 </ul>
 </div>
 </div>

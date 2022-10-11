@@ -8,30 +8,53 @@ Podemos decir que la asimetría indica cuánto se desvía nuestra distribución 
 
 3.  **Desviación positiva**: cuando la cola derecha del histograma de la distribución es más larga y la mayoría de las observaciones se concentran en la cola izquierda. En este caso, también podemos usar el término "sesgado a la derecha" o "cola derecha". y la **mediana es menor que la media**.
 
-    ![Medidas de asimetría](simetria.png)
+![Medidas de asimetría](simetria.png)
 
--   Índice de simetría de **Pearson**:
-
-$$
- f_1=\frac{\overline{x}-Mo}{\sigma}
- $$
-
--   Índice de simetría de **Fisher**:
+- Índice de simetría de **Pearson**:
 
 $$
-f_2=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^3}{n\sigma^3}
+A_s=\frac{3(\overline{x}-Me)}{s}
+$$
+
+$-3<A_s<3$
+
+$$
+A_s=\frac{\overline{x}-Mo}{s}
+$$
+
+$-3<A_s<3$
+
+- Índice de simetría de **Yule Bowley**:
+
+$$
+A_s=\frac{Q_1+Q_3-2Q_2}{Q_3-Q_1}
+$$
+
+$-1<A_s<1$
+
+
+- Índice de simetría de **Fisher**:
+
+  * Datos no agrupados
+$$
+A_s=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^3}{n\sigma^3}
+$$
+
+  * Datos agrupados
+$$
+A_s=\frac{\sum_{i=1}^{n}f_i\left( x_i-\overline{x}\right)^3}{n\sigma^3}
 $$
 
 
-    * Simétrico : valores entre -0,5 y 0,5
-    * Datos asimétricos moderados : valores entre -1 y -0,5 o entre 0,5 y 1
-    * Datos muy sesgados : valores menores que -1 o mayores que 1
+  * Datos agrupados en intervalos
+$$
+A_s=\frac{\sum_{i=1}^{n}f_i\left( y_i-\overline{x}\right)^3}{n\sigma^3}
+$$
 
 
-Si la distribución es simétrica, ambos índices son iguales a 0; si es asimétrica a la derecha, ambos son positivos; y si es asimétrica a la izquierda, ambos índices son negativos.
-
+<!--
 ## Normal: Simétrica
-wwwwwwwwwwwwwwwwwwwwwwww
+
 
 ```{r fig.align='center', fig.height=5, echo=FALSE}
 set.seed(5)
@@ -63,11 +86,11 @@ print(sum((x-mean(x))^3)/((length(x)-1)*sd(x)^3))
 
 ## Normal: Simetría negativa
 
-wwwwwwwwwwwwwwwww
-
 ```{r fig.align='center', fig.height=5, echo=FALSE}
 set.seed(5)
+
 # beta
+
 # x= rbeta(10000,5,2)
 x = c(88, 95, 92, 97, 96, 97, 95, 86, 91, 95, 97, 88, 85, 76, 68)
 hist(x,  breaks = "Sturges", main="Beta: Simetría negativa", freq=FALSE)
@@ -75,14 +98,11 @@ lines(density(x), col='red', lwd=3)
 abline(v = c(mean(x),median(x)),  col=c("green", "blue"), lty=c(2,2), lwd=c(3, 3))
 print(sum((x-mean(x))^3)/((length(x)-1)*sd(x)^3))
 ```
+-->
 
+:::{.example}
 
-
-
-
-
-
-
+www - wwwwwwwwww
 
 |   Clase   | $Y_i$ | $f_i$ | $Y_i*f_i$ |
 |:---------:|:-----:|:-----:|:---------:|
@@ -96,9 +116,7 @@ print(sum((x-mean(x))^3)/((length(x)-1)*sd(x)^3))
 
 
 
-
-
-
+:::
 
 
 

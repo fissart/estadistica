@@ -23,7 +23,7 @@
 <meta name="author" content="Ricardo Michel MALLQUI BAÑOS" />
 
 
-<meta name="date" content="2022-09-26" />
+<meta name="date" content="2022-10-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -230,12 +230,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.4.2" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html#datos-agrupados-2"><i class="fa fa-check"></i><b>6.4.2</b> Datos agrupados</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html"><i class="fa fa-check"></i><b>7</b> Medidas de asimetría</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html#normal-simétrica"><i class="fa fa-check"></i><b>7.1</b> Normal: Simétrica</a></li>
-<li class="chapter" data-level="7.2" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html#normal-simetría-positiva"><i class="fa fa-check"></i><b>7.2</b> Normal: Simetría positiva</a></li>
-<li class="chapter" data-level="7.3" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html#normal-simetría-negativa"><i class="fa fa-check"></i><b>7.3</b> Normal: Simetría negativa</a></li>
-</ul></li>
+<li class="chapter" data-level="7" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html"><i class="fa fa-check"></i><b>7</b> Medidas de asimetría</a></li>
 <li class="chapter" data-level="8" data-path="medidas-de-curtosis-o-apuntamiento.html"><a href="medidas-de-curtosis-o-apuntamiento.html"><i class="fa fa-check"></i><b>8</b> Medidas de curtosis o apuntamiento</a></li>
 <li class="part"><span><b>II Probabilidades</b></span></li>
 <li class="chapter" data-level="9" data-path="experimento-aleatorio-espacio-muestral-y-eventos.html"><a href="experimento-aleatorio-espacio-muestral-y-eventos.html"><i class="fa fa-check"></i><b>9</b> Experimento aleatorio, espacio muestral y eventos</a>
@@ -294,16 +289,16 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="medidas-de-posición-cuantiles" class="section level1" number="6">
 <h1><span class="header-section-number">Capítulo 6</span> Medidas de posición (cuantiles)</h1>
-<p>Estos estadigrafos dividen al conjunto de datos en un número deternimado.</p>
+<p>Estos estadigrafos dividen al conjunto de datos en un número determinado.</p>
 <div id="cuartiles" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> Cuartiles</h2>
 <p>Los cuartiles, que dividen a la distribución en cuatro partes (corresponden a los cuantiles 0,25; 0,50 y 0,75); <span class="math inline">\(Q_1, Q_2, Q_3\)</span></p>
 <div id="datos-no-agrupados" class="section level3" number="6.1.1">
 <h3><span class="header-section-number">6.1.1</span> Datos no agrupados</h3>
-<p>Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 <strong>Ordenar</strong> de menor a mayor (creciente)</p>
+<p>Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7. <strong>Ordenar</strong> de menor a mayor (creciente)</p>
 <p>Si <span class="math display">\[Q_k=\frac{k(n+1)}{4}\]</span> es <strong>entero</strong> entonces el cuartil es el dato de la posición <span class="math inline">\(Q_k=x_\frac{k(n+1)}{4}\)</span> en caso contrario se <strong>interpola</strong> los datos extremos donde se encuentra el valor <span class="math inline">\(Q_k\)</span></p>
 <ul>
-<li>Ejemplo 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor 1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9</li>
+<li>Ejemplo 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor 1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9.</li>
 </ul>
 <p><span class="math inline">\(Q_1=\frac{1(18+1)}{4}=4.75\)</span> interpolando <span class="math inline">\(Q_1=2+(2-2)\cdot 0.75=2\)</span></p>
 <p><span class="math inline">\(Q_2=\frac{2(18+1)}{4}=9.5\)</span> interpolando <span class="math inline">\(Q_2=5+(5-5)\cdot 0.5=5\)</span></p>
@@ -355,19 +350,19 @@ div.csl-indent {
 <td align="center">15</td>
 </tr>
 <tr class="odd">
-<td align="center"><span class="math inline">\([25,30]\)</span></td>
+<td align="center"><span class="math inline">\([25,30)\)</span></td>
 <td align="center">27.5</td>
 <td align="center">10</td>
 <td align="center">25</td>
 </tr>
 <tr class="even">
-<td align="center"><span class="math inline">\([30,35]\)</span></td>
+<td align="center"><span class="math inline">\([30,35)\)</span></td>
 <td align="center">32.5</td>
 <td align="center">6</td>
 <td align="center">31</td>
 </tr>
 <tr class="odd">
-<td align="center"><span class="math inline">\([35,40]\)</span></td>
+<td align="center"><span class="math inline">\([35,40)\)</span></td>
 <td align="center">37.5</td>
 <td align="center">5</td>
 <td align="center">36</td>
@@ -469,19 +464,19 @@ donde <span class="math inline">\(k=1,2,3,4\)</span></p>
 <td align="center">15</td>
 </tr>
 <tr class="odd">
-<td align="center"><span class="math inline">\([25,30]\)</span></td>
+<td align="center"><span class="math inline">\([25,30)\)</span></td>
 <td align="center">27.5</td>
 <td align="center">10</td>
 <td align="center">25</td>
 </tr>
 <tr class="even">
-<td align="center"><span class="math inline">\([30,35]\)</span></td>
+<td align="center"><span class="math inline">\([30,35)\)</span></td>
 <td align="center">32.5</td>
 <td align="center">6</td>
 <td align="center">31</td>
 </tr>
 <tr class="odd">
-<td align="center"><span class="math inline">\([35,40]\)</span></td>
+<td align="center"><span class="math inline">\([35,40)\)</span></td>
 <td align="center">37.5</td>
 <td align="center">5</td>
 <td align="center">36</td>
@@ -493,6 +488,12 @@ donde <span class="math inline">\(k=1,2,3,4\)</span></p>
 <td align="center">39</td>
 </tr>
 <tr class="odd">
+<td align="center">:———:</td>
+<td align="center">:—–:</td>
+<td align="center">:—–:</td>
+<td align="center">:—–:</td>
+</tr>
+<tr class="even">
 <td align="center"><span class="math inline">\(\sum\)</span></td>
 <td align="center"></td>
 <td align="center">39</td>
@@ -517,7 +518,7 @@ donde <span class="math inline">\(k=1,2,3,4\)</span></p>
 </div>
 <div id="datos-agrupados-2" class="section level3" number="6.4.2">
 <h3><span class="header-section-number">6.4.2</span> Datos agrupados</h3>
-<p><span class="math display">\[P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)=\int_1^3f(x)\]</span></p>
+<p><span class="math display">\[P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)\]</span></p>
 <table>
 <thead>
 <tr class="header">
@@ -553,25 +554,25 @@ donde <span class="math inline">\(k=1,2,3,4\)</span></p>
 <td align="center"></td>
 </tr>
 <tr class="odd">
-<td align="center"><span class="math inline">\([25,30]\)</span></td>
+<td align="center"><span class="math inline">\([25,30\)</span></td>
 <td align="center"></td>
 <td align="center">10</td>
 <td align="center"></td>
 </tr>
 <tr class="even">
-<td align="center"><span class="math inline">\([30,35]\)</span></td>
+<td align="center"><span class="math inline">\([30,35\)</span></td>
 <td align="center"></td>
 <td align="center">6</td>
 <td align="center"></td>
 </tr>
 <tr class="odd">
-<td align="center"><span class="math inline">\([35,40]\)</span></td>
+<td align="center"><span class="math inline">\([35,40\)</span></td>
 <td align="center"></td>
 <td align="center">5</td>
 <td align="center"></td>
 </tr>
 <tr class="even">
-<td align="center"><span class="math inline">\([40,45]\)</span></td>
+<td align="center"><span class="math inline">\([40,45\)</span></td>
 <td align="center"></td>
 <td align="center">3</td>
 <td align="center"></td>

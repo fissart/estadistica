@@ -23,7 +23,7 @@
 <meta name="author" content="Ricardo Michel MALLQUI BAÑOS" />
 
 
-<meta name="date" content="2022-09-26" />
+<meta name="date" content="2022-10-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -230,12 +230,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.4.2" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html#datos-agrupados-2"><i class="fa fa-check"></i><b>6.4.2</b> Datos agrupados</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html"><i class="fa fa-check"></i><b>7</b> Medidas de asimetría</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html#normal-simétrica"><i class="fa fa-check"></i><b>7.1</b> Normal: Simétrica</a></li>
-<li class="chapter" data-level="7.2" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html#normal-simetría-positiva"><i class="fa fa-check"></i><b>7.2</b> Normal: Simetría positiva</a></li>
-<li class="chapter" data-level="7.3" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html#normal-simetría-negativa"><i class="fa fa-check"></i><b>7.3</b> Normal: Simetría negativa</a></li>
-</ul></li>
+<li class="chapter" data-level="7" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html"><i class="fa fa-check"></i><b>7</b> Medidas de asimetría</a></li>
 <li class="chapter" data-level="8" data-path="medidas-de-curtosis-o-apuntamiento.html"><a href="medidas-de-curtosis-o-apuntamiento.html"><i class="fa fa-check"></i><b>8</b> Medidas de curtosis o apuntamiento</a></li>
 <li class="part"><span><b>II Probabilidades</b></span></li>
 <li class="chapter" data-level="9" data-path="experimento-aleatorio-espacio-muestral-y-eventos.html"><a href="experimento-aleatorio-espacio-muestral-y-eventos.html"><i class="fa fa-check"></i><b>9</b> Experimento aleatorio, espacio muestral y eventos</a>
@@ -310,32 +305,50 @@ div.csl-indent {
 <div id="espacio-muestral" class="section level2" number="9.2">
 <h2><span class="header-section-number">9.2</span> Espacio muestral</h2>
 <div class="definition">
-<p><span id="def:unlabeled-div-10" class="definition"><strong>Definición 9.2  (Espacio muestral) </strong></span>Son los posibles resultados de un experimento. Denotado por <span class="math inline">\(\Omega\)</span></p>
+<p><span id="def:unlabeled-div-11" class="definition"><strong>Definición 9.2  (Espacio muestral) </strong></span>Son los posibles resultados de un experimento. Denotado por <span class="math inline">\(\Omega\)</span></p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-11" class="example"><strong>Ejemplo 9.1  (Ejemplo de espacio muestral) </strong></span>Los resultados del experimento aleatorio <span class="math inline">\(\epsilon\)</span>: Lanzamiento de una moneda son <span class="math inline">\(\Omega=\left\{C,S\right\}\)</span></p>
+<p><span id="exm:unlabeled-div-12" class="example"><strong>Ejemplo 9.1  (Ejemplo de espacio muestral) </strong></span>Los resultados del experimento aleatorio <span class="math inline">\(\epsilon\)</span>: Lanzamiento de una moneda son <span class="math inline">\(\Omega=\left\{C,S\right\}\)</span></p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-12" class="definition"><strong>Definición 9.3  (Experimentos compuestos) </strong></span>Compuesta de dos o más experimentos simples, existen dos tipos: Exclusivos (o) e inclusivos (y)</p>
+<p><span id="def:unlabeled-div-13" class="definition"><strong>Definición 9.3  (Experimentos compuestos) </strong></span>Compuesta de dos o más experimentos simples, existen dos tipos: Exclusivos (o) e inclusivos (y)</p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-13" class="definition"><strong>Definición 9.4  (Experimentos compuestos exclusivos) </strong></span><span class="math inline">\(\epsilon\)</span> es una <strong>o-combinacion</strong> de los <span class="math inline">\(\epsilon_1\)</span> y <span class="math inline">\(\epsilon_2\)</span> simples si solo si <span class="math inline">\(\epsilon\)</span> ocurre, cuando <span class="math inline">\(\epsilon_1\)</span> y <span class="math inline">\(\epsilon_2\)</span> ocurre (pero no ambos).</p>
+<p><span id="def:unlabeled-div-14" class="definition"><strong>Definición 9.4  (Experimentos compuestos exclusivos) </strong></span><span class="math inline">\(\epsilon\)</span> es una <strong>o-combinacion</strong> de los <span class="math inline">\(\epsilon_1\)</span> y <span class="math inline">\(\epsilon_2\)</span> simples si solo si <span class="math inline">\(\epsilon\)</span> ocurre, cuando <span class="math inline">\(\epsilon_1\)</span> y <span class="math inline">\(\epsilon_2\)</span> ocurre (pero no ambos).</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-14" class="example"><strong>Ejemplo 9.2  </strong></span><span class="math inline">\(\epsilon_1\)</span>: lanzar un dado, <span class="math inline">\(\Omega=\left\{1,2,3,4,5,6\right\}\)</span> y <span class="math inline">\(\epsilon_2\)</span>: lanzar una moneda, <span class="math inline">\(\Omega=\left\{C,S\right\}\)</span></p>
+<p><span id="exm:unlabeled-div-15" class="example"><strong>Ejemplo 9.2  </strong></span><span class="math inline">\(\epsilon_1\)</span>: lanzar un dado, <span class="math inline">\(\Omega=\left\{1,2,3,4,5,6\right\}\)</span> y <span class="math inline">\(\epsilon_2\)</span>: lanzar una moneda, <span class="math inline">\(\Omega=\left\{C,S\right\}\)</span></p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-15" class="definition"><strong>Definición 9.5  (Experimentos compuestos inclusivos) </strong></span><span class="math inline">\(\epsilon\)</span> es una <strong>y-combinacion</strong> de los <span class="math inline">\(\epsilon_1\)</span> y <span class="math inline">\(\epsilon_2\)</span> simples si solo si <span class="math inline">\(\epsilon\)</span> ocurre cuando ambos <span class="math inline">\(\epsilon_1\)</span> y <span class="math inline">\(\epsilon_2\)</span> ocurren.</p>
+<p><span id="def:unlabeled-div-16" class="definition"><strong>Definición 9.5  (Experimentos compuestos inclusivos) </strong></span><span class="math inline">\(\epsilon\)</span> es una <strong>y-combinacion</strong> de los <span class="math inline">\(\epsilon_1\)</span> y <span class="math inline">\(\epsilon_2\)</span> simples si solo si <span class="math inline">\(\epsilon\)</span> ocurre cuando ambos <span class="math inline">\(\epsilon_1\)</span> y <span class="math inline">\(\epsilon_2\)</span> ocurren.</p>
 <p>El espacio muestral asociado a <span class="math inline">\(\epsilon\)</span> es <span class="math inline">\(\Omega=\Omega_1\times \omega_2\)</span> (el producto cartesiano de los espacios muetrales de los experimentos <span class="math inline">\(\epsilon_1\)</span> y <span class="math inline">\(\epsilon_2\)</span>)</p>
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-16" class="example"><strong>Ejemplo 9.3  </strong></span><span class="math inline">\(\epsilon_1\)</span>: lanzar una moneda, <span class="math inline">\(\Omega_1=\left\{C,S\right\}\)</span>, <span class="math inline">\(\epsilon_2\)</span>: lanzar una moneda, <span class="math inline">\(\Omega_2=\left\{C,S\right\}\)</span> y <span class="math inline">\(\epsilon_3\)</span>: lanzar una moneda, <span class="math inline">\(\Omega_3=\left\{C,S\right\}\)</span>. Por lo tanto el experimentos y-compuesto genera el espacio muestral <span class="math inline">\(\Omega=\Omega_1\times\Omega_2\times\Omega_3=\left\{CCC,CSC,SCC,SSC,CCS,CSS,SCS,SSS\right\}\)</span></p>
+<p><span id="exm:unlabeled-div-17" class="example"><strong>Ejemplo 9.3  </strong></span><span class="math inline">\(\epsilon_1\)</span>: lanzar una moneda, <span class="math inline">\(\Omega_1=\left\{C,S\right\}\)</span>, <span class="math inline">\(\epsilon_2\)</span>: lanzar una moneda, <span class="math inline">\(\Omega_2=\left\{C,S\right\}\)</span> y <span class="math inline">\(\epsilon_3\)</span>: lanzar una moneda, <span class="math inline">\(\Omega_3=\left\{C,S\right\}\)</span>. Por lo tanto el experimentos y-compuesto genera el espacio muestral <span class="math inline">\(\Omega=\Omega_1\times\Omega_2\times\Omega_3=\left\{CCC,CSC,SCC,SSC,CCS,CSS,SCS,SSS\right\}\)</span></p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-17" class="definition"><strong>Definición 9.6  (Espacio muestral discreto) </strong></span>wwwwwwwwww</p>
+<p><span id="def:unlabeled-div-18" class="definition"><strong>Definición 9.6  (Espacio muestral discreto) </strong></span>wwwwwwwwww</p>
 </div>
 <div class="definition">
-<p><span id="def:unlabeled-div-18" class="definition"><strong>Definición 9.7  (Espacio muestral continuo) </strong></span>wwwwwwwwwwwwwwww</p>
+<p><span id="def:unlabeled-div-19" class="definition"><strong>Definición 9.7  (Espacio muestral continuo) </strong></span>wwwwwwwwwwwwwwww</p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-20" class="definition"><strong>Definición 9.8  (Eventos) </strong></span>Cualquier subconjunto de un espacio muestral, denotado generalamente por A, B, C, etc. Si A es un evento entonces <span class="math inline">\(A\subset \Omega\)</span>, llamaremos <em>suceso</em> a todo elemento de un espacio muestral y lo denotaremos por <span class="math inline">\(w,\)</span> <span class="math inline">\(x,\)</span> <span class="math inline">\(y\)</span>, etc. Si <span class="math inline">\(x\)</span> es un suceso entonces <span class="math inline">\(x\in \Omega\)</span>. Un evento con un solo elemento, se llama <em>evento elemental</em>.</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-21" class="remark"><em>Observación</em>. </span>El evento <span class="math inline">\(\left\{w\right\}\)</span> y el susceso <span class="math inline">\(w\)</span> no son lo mismo. En otras palabras, evento es cualquier elemento de <span class="math inline">\(\mathcal{P}(\Omega)\)</span>, (asi <span class="math inline">\(\emptyset\)</span> y <span class="math inline">\(\Omega\)</span> son eventos).</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-22" class="example"><strong>Ejemplo 9.4  </strong></span>Sea el experimento del lanzamiento de un dado, generando el espacio muestral <span class="math inline">\(\Omega=\left\{1,2,3,4,5,6\right\}\)</span>, las potencias de este conjunto es <span class="math display">\[\mathcal{P}(\Omega)= \left\{\left\{\right\},
+\left\{1\right\},
+\left\{2\right\},
+\ldots,
+\left\{1,2,3,4,5,6\right\}
+\right\}\]</span>
+por lo tanto algunos eventos <span class="math inline">\(\left\{1,2,3,4,5,6\right\},\)</span> <span class="math inline">\(\emptyset\)</span>, <span class="math inline">\(\left\{1,2\right\}\)</span>, etc.</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-23" class="remark"><em>Observación</em>. </span>El número de elementos de un conjunto potencia es <span class="math inline">\(2^n\)</span> donde <span class="math inline">\(n=\left\vert S\right\vert\)</span>, el número de elementos de un conjunto <span class="math inline">\(S\)</span>.</p>
 </div>
 </div>
 </div>

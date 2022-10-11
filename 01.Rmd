@@ -498,7 +498,7 @@ La desviacion típica o estandar del siguiente conjunto de datos tabulados
 | $[10,15)$ | 12.5  |   2   |    25     |
 | $[15,20)$ | 17.5  |   5   |   87.5    |
 | $[20,25)$ | 22.5  |   7   |   157.5   |
-| $[25,30]$ | 27.5  |  10   |    275    |
+| $[25,30)$  | 27.5  |  10   |    275    |
 | $[30,35]$ | 32.5  |   6   |    195    |
 |  $\sum$   |       |  31   |           |
 
@@ -537,7 +537,7 @@ $\overline{x}=\frac{\sum Y_i*f_i}{n}=747.5/31=24.11$
 | $[10,15)$ | 12.5  |   2   |    25     |
 | $[15,20)$ | 17.5  |   5   |   87.5    |
 | $[20,25)$ | 22.5  |   7   |   157.5   |
-| $[25,30]$ | 27.5  |  10   |    275    |
+| $[25,30)$  | 27.5  |  10   |    275    |
 | $[30,35]$ | 32.5  |   6   |    195    |
 |  $\sum$   |       |  31   |           |
 
@@ -576,7 +576,7 @@ $Me=?$ (Ejercicio)
 | $[10,15)$ | 12.5  |   3   |    25     |
 | $[15,20)$ |       |   4   |   87.5    |
 | $[20,25)$ | 22.5  |   7   |   157.5   |
-| $[25,30]$ | 27.5  |  10   |    275    |
+| $[25,30)$  | 27.5  |  10   |    275    |
 | $[30,35]$ |       |   8   |    195    |
 |  $\sum$   |       |       |           |
 
@@ -604,7 +604,7 @@ Para el conjunto de datos
 | $[10,15)$ | 12.5  |   2   |    25     |
 | $[15,20)$ | 17.5  |   5   |   87.5    |
 | $[20,25)$ | 22.5  |   7   |   157.5   |
-| $[25,30]$ | 27.5  |  10   |    275    |
+| $[25,30)$  | 27.5  |  10   |    275    |
 | $[30,35]$ | 32.5  |   6   |    195    |
 |  $\sum$   |       |  31   |           |
 
@@ -635,7 +635,9 @@ Halle el rango, la varianza, la desviación típica, desviación media, desviaci
 
 # Medidas de posición (cuantiles)
 
-Estos estadigrafos dividen al conjunto de datos en un número deternimado.
+Estos estadigrafos dividen al conjunto de datos en un número determinado.
+
+
 
 ## Cuartiles
 
@@ -643,11 +645,11 @@ Los cuartiles, que dividen a la distribución en cuatro partes (corresponden a l
 
 ### Datos no agrupados
 
-Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 **Ordenar** de menor a mayor (creciente)
+Sean los datos 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7. **Ordenar** de menor a mayor (creciente)
 
 Si $$Q_k=\frac{k(n+1)}{4}$$ es **entero** entonces el cuartil es el dato de la posición $Q_k=x_\frac{k(n+1)}{4}$ en caso contrario se **interpola** los datos extremos donde se encuentra el valor $Q_k$
 
--   Ejemplo 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor 1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9
+-   Ejemplo 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 ordenados de menor a mayor 1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 8, 9.
 
 $Q_1=\frac{1(18+1)}{4}=4.75$ interpolando $Q_1=2+(2-2)\cdot 0.75=2$
 
@@ -666,17 +668,16 @@ $$Q_k=L_i+ a_i\left(\frac{\frac{kn}{4}-F_{i-1}}{F_i-F_{i-1}}\right);k=1,2,3$$
 -   $n$ numero de datos
 -   $k$ índice del cuartil correspondiente
 
-
 |   Clase   | $Y_i$ | $f_i$ | $F_i$ |
 |:---------:|:-----:|:-----:|:-----:|
 | $[5,10)$  |  7.5  |   1   |   1   |
 | $[10,15)$ | 12.5  |   2   |   3   |
 | $[15,20)$ | 17.5  |   5   |   8   |
 | $[20,25)$ | 22.5  |   7   |  15   |
-| $[25,30]$ | 27.5  |  10   |  25   |
-| $[30,35]$ | 32.5  |   6   |  31   |
-| $[35,40]$ | 37.5  |   5   |  36   |
-| $[40,45]$ | 42.5  |   3   |  39   |
+| $[25,30)$  | 27.5  |  10   |  25   |
+| $[30,35)$  | 32.5  |   6   |  31   |
+| $[35,40)$  | 37.5  |   5   |  36   |
+| $[40,45]$  | 42.5  |   3   |  39   |
 |  $\sum$   |       |  39   |       |
 
 $$
@@ -742,10 +743,11 @@ $$D_k=L_i+ A\left(\frac{\frac{kn}{10}-F_{i-1}}{F_i-F_{i-1}}\right)$$
 | $[10,15)$ | 12.5  |   2   |   3   |
 | $[15,20)$ | 17.5  |   5   |   8   |
 | $[20,25)$ | 22.5  |   7   |  15   |
-| $[25,30]$ | 27.5  |  10   |  25   |
-| $[30,35]$ | 32.5  |   6   |  31   |
-| $[35,40]$ | 37.5  |   5   |  36   |
+| $[25,30)$ | 27.5  |  10   |  25   |
+| $[30,35)$ | 32.5  |   6   |  31   |
+| $[35,40)$ | 37.5  |   5   |  36   |
 | $[40,45]$ | 42.5  |   3   |  39   |
+|:---------:|:-----:|:-----:|:-----:|
 |  $\sum$   |       |  39   |       |
 
 $$D_9=L_i+ A\left(\frac{\frac{9\cdot 39}{10}-F_{i-1}}{F_i-F_{i-1}}\right)$$
@@ -762,20 +764,20 @@ Los percentiles, que dividen a la distribución en diez partes es decir $P_1, P_
 
 Si $$P_k=\frac{k(n+1)}{100}; k=1, 2,  \ldots, 99$$ es entero entonces el cuartil es el dato de la posicion $P_k=x_\frac{k(n+1)}{100}$ Si $$P_k=\frac{k(n+1)}{100}$$ no es entero entonces el cuartil es la interpolacion lineal de de los dos valores entre las cuales se encuentra $Q_k=\frac{k(n+1)}{100}$
 
--   Ejemplo 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 Al ordenar de manera creciente 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 y $$P_k=\frac{k(18+1)}{100}$$
+-   Ejemplo 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2, 5, 6, 7 Al ordenar de manera creciente 1, 2, 5, 1 ,5, 6, 7, 8, 9, 3, 4, 5, 2, 6, 2,  5, 6, 7 y $$P_k=\frac{k(18+1)}{100}$$
 
 ### Datos agrupados
 
-$$P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)=\int_1^3f(x)$$
+$$P_k=L_i+ A\left(\frac{\frac{kn}{100}-F_{i-1}}{F_i-F_{i-1}}\right)$$
 
 |   Clase   | $Y_i$ | $f_i$ | $F_i$ |
 |:---------:|:-----:|:-----:|:-----:|
 | $[5,10)$  |  7.5  |   1   |   1   |
-| $[10,15)$ | 12.5  |   2   |   3   |
-| $[15,20)$ | 17.5  |   5   |       |
-| $[20,25)$ | 22.5  |   7   |       |
-| $[25,30]$ |       |  10   |       |
-| $[30,35]$ |       |   6   |       |
-| $[35,40]$ |       |   5   |       |
-| $[40,45]$ |       |   3   |       |
+| $[10,15)$| 12.5  |   2   |   3   |
+| $[15,20)$| 17.5  |   5   |       |
+| $[20,25)$| 22.5  |   7   |       |
+| $[25,30$  |       |  10   |       |
+| $[30,35$  |       |   6   |       |
+| $[35,40$  |       |   5   |       |
+| $[40,45$  |       |   3   |       |
 |  $\sum$   |       |   2   |       |

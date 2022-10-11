@@ -23,7 +23,7 @@
 <meta name="author" content="Ricardo Michel MALLQUI BAÑOS" />
 
 
-<meta name="date" content="2022-09-26" />
+<meta name="date" content="2022-10-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -230,12 +230,7 @@ div.csl-indent {
 <li class="chapter" data-level="6.4.2" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html#datos-agrupados-2"><i class="fa fa-check"></i><b>6.4.2</b> Datos agrupados</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html"><i class="fa fa-check"></i><b>7</b> Medidas de asimetría</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html#normal-simétrica"><i class="fa fa-check"></i><b>7.1</b> Normal: Simétrica</a></li>
-<li class="chapter" data-level="7.2" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html#normal-simetría-positiva"><i class="fa fa-check"></i><b>7.2</b> Normal: Simetría positiva</a></li>
-<li class="chapter" data-level="7.3" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html#normal-simetría-negativa"><i class="fa fa-check"></i><b>7.3</b> Normal: Simetría negativa</a></li>
-</ul></li>
+<li class="chapter" data-level="7" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html"><i class="fa fa-check"></i><b>7</b> Medidas de asimetría</a></li>
 <li class="chapter" data-level="8" data-path="medidas-de-curtosis-o-apuntamiento.html"><a href="medidas-de-curtosis-o-apuntamiento.html"><i class="fa fa-check"></i><b>8</b> Medidas de curtosis o apuntamiento</a></li>
 <li class="part"><span><b>II Probabilidades</b></span></li>
 <li class="chapter" data-level="9" data-path="experimento-aleatorio-espacio-muestral-y-eventos.html"><a href="experimento-aleatorio-espacio-muestral-y-eventos.html"><i class="fa fa-check"></i><b>9</b> Experimento aleatorio, espacio muestral y eventos</a>
@@ -298,46 +293,82 @@ div.csl-indent {
 <ol style="list-style-type: decimal">
 <li><p><strong>Desviación simétrica</strong>: cuando la asimetría es cercana a 0 y la media es casi la misma que la mediana</p></li>
 <li><p><strong>Desviación negativa</strong>: cuando la cola izquierda del histograma de la distribución es más larga y la mayoría de las observaciones se concentran en la cola derecha. En este caso, también podemos utilizar el término “sesgado a la izquierda” o “cola izquierda.” y la <strong>mediana es mayor que la media</strong>.</p></li>
-<li><p><strong>Desviación positiva</strong>: cuando la cola derecha del histograma de la distribución es más larga y la mayoría de las observaciones se concentran en la cola izquierda. En este caso, también podemos usar el término “sesgado a la derecha” o “cola derecha.” y la <strong>mediana es menor que la media</strong>.</p>
+<li><p><strong>Desviación positiva</strong>: cuando la cola derecha del histograma de la distribución es más larga y la mayoría de las observaciones se concentran en la cola izquierda. En este caso, también podemos usar el término “sesgado a la derecha” o “cola derecha.” y la <strong>mediana es menor que la media</strong>.</p></li>
+</ol>
 <div class="figure">
 <img src="simetria.png" alt="" />
 <p class="caption">Medidas de asimetría</p>
-</div></li>
-</ol>
+</div>
 <ul>
 <li>Índice de simetría de <strong>Pearson</strong>:</li>
 </ul>
 <p><span class="math display">\[
- f_1=\frac{\overline{x}-Mo}{\sigma}
- \]</span></p>
+A_s=\frac{3(\overline{x}-Me)}{s}
+\]</span></p>
+<p><span class="math inline">\(-3&lt;A_s&lt;3\)</span></p>
+<p><span class="math display">\[
+A_s=\frac{\overline{x}-Mo}{s}
+\]</span></p>
+<p><span class="math inline">\(-3&lt;A_s&lt;3\)</span></p>
 <ul>
-<li>Índice de simetría de <strong>Fisher</strong>:</li>
+<li>Índice de simetría de <strong>Yule Bowley</strong>:</li>
 </ul>
 <p><span class="math display">\[
-f_2=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^3}{n\sigma^3}
+A_s=\frac{Q_1+Q_3-2Q_2}{Q_3-Q_1}
 \]</span></p>
-<pre><code>* Simétrico : valores entre -0,5 y 0,5
-* Datos asimétricos moderados : valores entre -1 y -0,5 o entre 0,5 y 1
-* Datos muy sesgados : valores menores que -1 o mayores que 1</code></pre>
-<p>Si la distribución es simétrica, ambos índices son iguales a 0; si es asimétrica a la derecha, ambos son positivos; y si es asimétrica a la izquierda, ambos índices son negativos.</p>
-<div id="normal-simétrica" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Normal: Simétrica</h2>
-<p>wwwwwwwwwwwwwwwwwwwwwwww</p>
-<pre><code>## [1] 0.5059805</code></pre>
-<pre><code>## [1] 78.53333</code></pre>
-<p><img src="E_1_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
-</div>
-<div id="normal-simetría-positiva" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> Normal: Simetría positiva</h2>
-<p>wwwwwwwwwwwwwwwww</p>
-<p><img src="E_1_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" /></p>
-<pre><code>## [1] 1.216579</code></pre>
-</div>
-<div id="normal-simetría-negativa" class="section level2" number="7.3">
-<h2><span class="header-section-number">7.3</span> Normal: Simetría negativa</h2>
-<p>wwwwwwwwwwwwwwwww</p>
-<p><img src="E_1_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
-<pre><code>## [1] -1.340429</code></pre>
+<p><span class="math inline">\(-1&lt;A_s&lt;1\)</span></p>
+<ul>
+<li><p>Índice de simetría de <strong>Fisher</strong>:</p>
+<ul>
+<li><p>Datos no agrupados
+<span class="math display">\[
+A_s=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^3}{n\sigma^3}
+\]</span></p></li>
+<li><p>Datos agrupados
+<span class="math display">\[
+A_s=\frac{\sum_{i=1}^{n}f_i\left( x_i-\overline{x}\right)^3}{n\sigma^3}
+\]</span></p></li>
+<li><p>Datos agrupados en intervalos
+<span class="math display">\[
+A_s=\frac{\sum_{i=1}^{n}f_i\left( y_i-\overline{x}\right)^3}{n\sigma^3}
+\]</span></p></li>
+</ul></li>
+</ul>
+<!--
+## Normal: Simétrica
+
+
+
+```
+## [1] 0.5059805
+```
+
+```
+## [1] 78.53333
+```
+
+<img src="E_1_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" />
+
+## Normal: Simetría positiva
+
+wwwwwwwwwwwwwwwww
+
+<img src="E_1_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" />
+
+```
+## [1] 1.216579
+```
+
+## Normal: Simetría negativa
+
+<img src="E_1_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" />
+
+```
+## [1] -1.340429
+```
+-->
+<div class="example">
+<p><span id="exm:unlabeled-div-10" class="example"><strong>Ejemplo 7.1  </strong></span>www - wwwwwwwwww</p>
 <table>
 <thead>
 <tr class="header">
@@ -392,6 +423,7 @@ f_2=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^3}{n\sigma^3}
 </tr>
 </tbody>
 </table>
+</div>
 <!--
 
 <img src="E_1_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /><img src="E_1_files/figure-html/unnamed-chunk-7-2.png" width="672" style="display: block; margin: auto;" /><img src="E_1_files/figure-html/unnamed-chunk-7-3.png" width="672" style="display: block; margin: auto;" />
@@ -456,7 +488,6 @@ f_2=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^3}{n\sigma^3}
 <img src="E_1_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" />
 -->
 
-</div>
 </div>
             </section>
 
