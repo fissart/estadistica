@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 7 Medidas de asimetría | Elementos de la estadística</title>
-  <meta name="description" content="Capítulo 7 Medidas de asimetría | Elementos de la estadística" />
+  <title>Capítulo 9 Variables estadísticas bidimensionales | Elementos de la estadística</title>
+  <meta name="description" content="Capítulo 9 Variables estadísticas bidimensionales | Elementos de la estadística" />
   <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 7 Medidas de asimetría | Elementos de la estadística" />
+  <meta property="og:title" content="Capítulo 9 Variables estadísticas bidimensionales | Elementos de la estadística" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 7 Medidas de asimetría | Elementos de la estadística" />
+  <meta name="twitter:title" content="Capítulo 9 Variables estadísticas bidimensionales | Elementos de la estadística" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="medidas-de-posición-cuantiles.html"/>
-<link rel="next" href="medidas-de-curtosis-o-apuntamiento.html"/>
+<link rel="prev" href="medidas-de-curtosis-o-apuntamiento.html"/>
+<link rel="next" href="experimento-aleatorio-espacio-muestral-y-eventos.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -265,449 +265,150 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="medidas-de-asimetría" class="section level1">
-<h1><span class="header-section-number">Capítulo 7</span> Medidas de asimetría</h1>
-<p>Podemos decir que la asimetría indica cuánto se desvía nuestra distribución subyacente de la <strong>distribución normal</strong>, ya que la distribución normal tiene <strong>asimetría 0</strong>. Generalmente, tenemos <strong>tres tipos de asimetría</strong>.</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Desviación simétrica</strong>: cuando la asimetría es cercana a 0 y la media es casi la misma que la mediana</p></li>
-<li><p><strong>Desviación negativa</strong>: cuando la cola izquierda del histograma de la distribución es más larga y la mayoría de las observaciones se concentran en la cola derecha. En este caso, también podemos utilizar el término “sesgado a la izquierda” o “cola izquierda”. y la <strong>mediana es mayor que la media</strong>.</p></li>
-<li><p><strong>Desviación positiva</strong>: cuando la cola derecha del histograma de la distribución es más larga y la mayoría de las observaciones se concentran en la cola izquierda. En este caso, también podemos usar el término “sesgado a la derecha” o “cola derecha”. y la <strong>mediana es menor que la media</strong>.</p></li>
-</ol>
-<div class="figure">
-<img src="simetria.png" alt="Medidas de asimetría" />
-<p class="caption">Medidas de asimetría</p>
-</div>
-<div id="índice-de-simetría-de-pearson" class="section level2">
-<h2><span class="header-section-number">7.1</span> Índice de simetría de <strong>Pearson</strong>:</h2>
-<p><span class="math display">\[
-A_s=\frac{3(\overline{x}-Me)}{s}
-\]</span></p>
-<p><span class="math inline">\(-3&lt;A_s&lt;3\)</span></p>
-<p><span class="math display">\[
-A_s=\frac{\overline{x}-Mo}{s}
-\]</span></p>
-<p><span class="math inline">\(-3&lt;A_s&lt;3\)</span></p>
-<div class="example">
-<p><span id="exm:unlabeled-div-10" class="example"><strong>Ejemplo 7.1  </strong></span>Sea la tabla con intervalos</p>
+<div id="variables-estadísticas-bidimensionales" class="section level1">
+<h1><span class="header-section-number">Capítulo 9</span> Variables estadísticas bidimensionales</h1>
+<div class="definition">
+<p><span id="def:unlabeled-div-15" class="definition"><strong>Definición 9.1  </strong></span>Sea <span class="math inline">\((X,Y)\)</span> una variable estadistica bidimensional tal que los disitnos valores que toman <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span> son
+<span class="math display">\[X:x_1,x_2,\ldots, x_n\]</span>
+<span class="math display">\[Y:y_1,y_2,\ldots, y_m.\]</span></p>
+<p>Una dsitubicuion bidimensional de frecuencias es un arreglo de los valores observados <span class="math inline">\((x_1,y_1); (x_1,y_2); \ldots, (x_k,y_1), \ldots, (x_n,y_m),\)</span> de la variable bidimensional <span class="math inline">\((X,Y)\)</span>, con sus respectivas frecuencias, en una tabla de doble entrada de la forma</p>
 <table>
-<caption><span id="tab:asimetria1">Tabla 7.1: </span>Pearson en datos tabulados en intervalos</caption>
 <thead>
 <tr class="header">
-<th align="center">Clase</th>
-<th align="center"><span class="math inline">\(y_i\)</span></th>
-<th align="center"><span class="math inline">\({f}_i\)</span></th>
-<th align="center"><span class="math inline">\(y_i*f_i\)</span></th>
-<th align="center"><span class="math inline">\(F_i\)</span></th>
-<th align="center"><span class="math inline">\(f_i(y_i-\overline{x})^2\)</span></th>
+<th align="center">Clases</th>
+<th align="center"><span class="math inline">\(y_1\)</span></th>
+<th align="center"><span class="math inline">\(y_2\)</span></th>
+<th align="center"><span class="math inline">\(\ldots\)</span></th>
+<th align="center"><span class="math inline">\(y_n\)</span></th>
+<th align="center">TOTAL</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="center"><span class="math inline">\([5,10)\)</span></td>
-<td align="center">7.5</td>
-<td align="center">1</td>
-<td align="center">7.50</td>
-<td align="center">1</td>
-<td align="center">280.56</td>
+<td align="center"><span class="math inline">\(x_1\)</span></td>
+<td align="center"><span class="math inline">\(f_{11}\)</span></td>
+<td align="center"><span class="math inline">\(f_{12}\)</span></td>
+<td align="center"><span class="math inline">\(\ldots\)</span></td>
+<td align="center"><span class="math inline">\(f_{1n}\)</span></td>
+<td align="center"><span class="math inline">\(f_{1.}\)</span></td>
 </tr>
 <tr class="even">
-<td align="center"><span class="math inline">\([10,15)\)</span></td>
-<td align="center">12.5</td>
-<td align="center">2</td>
-<td align="center">25.00</td>
-<td align="center">3</td>
-<td align="center">276.12</td>
+<td align="center"><span class="math inline">\(x_2\)</span></td>
+<td align="center"><span class="math inline">\(f_{21}\)</span></td>
+<td align="center"><span class="math inline">\(f_{22}\)</span></td>
+<td align="center"><span class="math inline">\(\ldots\)</span></td>
+<td align="center"><span class="math inline">\(f_{2n}\)</span></td>
+<td align="center"><span class="math inline">\(f_{2.}\)</span></td>
 </tr>
 <tr class="odd">
-<td align="center"><span class="math inline">\([15,20)\)</span></td>
-<td align="center">17.5</td>
-<td align="center">7</td>
-<td align="center">122.50</td>
-<td align="center">10</td>
-<td align="center">318.94</td>
+<td align="center"><span class="math inline">\(\ldots\)</span></td>
+<td align="center"><span class="math inline">\(\ldots\)</span></td>
+<td align="center"><span class="math inline">\(\ldots\)</span></td>
+<td align="center"><span class="math inline">\(\ldots\)</span></td>
+<td align="center"><span class="math inline">\(\ldots\)</span></td>
+<td align="center"><span class="math inline">\(\ldots\)</span></td>
 </tr>
 <tr class="even">
-<td align="center"><span class="math inline">\([20,25)\)</span></td>
-<td align="center">22.5</td>
-<td align="center">10</td>
-<td align="center">225.00</td>
-<td align="center">20</td>
-<td align="center">30.62</td>
+<td align="center"><span class="math inline">\(x_m\)</span></td>
+<td align="center"><span class="math inline">\(f_{m1}\)</span></td>
+<td align="center"><span class="math inline">\(f_{m2}\)</span></td>
+<td align="center"><span class="math inline">\(\ldots\)</span></td>
+<td align="center"><span class="math inline">\(f_{mn}\)</span></td>
+<td align="center"><span class="math inline">\(f_{m.}\)</span></td>
 </tr>
 <tr class="odd">
-<td align="center"><span class="math inline">\([25,30]\)</span></td>
-<td align="center">27.5</td>
-<td align="center">12</td>
-<td align="center">330.00</td>
-<td align="center">32</td>
-<td align="center">126.75</td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\([30,35]\)</span></td>
-<td align="center">32.5</td>
-<td align="center">8</td>
-<td align="center">260.00</td>
-<td align="center">40</td>
-<td align="center">544.50</td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\(\sum\)</span></td>
-<td align="center"></td>
-<td align="center">40</td>
-<td align="center">970.00</td>
-<td align="center"></td>
-<td align="center">1577.50</td>
-</tr>
-<tr class="even">
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><span class="math inline">\(\overline{x}\)</span></td>
-<td align="center">24.25</td>
-<td align="center"><span class="math inline">\(Me\)</span></td>
-<td align="center">25.00</td>
-</tr>
-<tr class="odd">
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><span class="math inline">\(s\)</span></td>
-<td align="center">6.36</td>
-<td align="center"><span class="math inline">\(Mo\)</span></td>
-<td align="center">28.00</td>
-</tr>
-<tr class="even">
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">As(Me)</td>
-<td align="center">-0.35</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="odd">
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">As(Mo)</td>
-<td align="center">-0.59</td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">TOTAL</td>
+<td align="center"><span class="math inline">\(f_{.1}\)</span></td>
+<td align="center"><span class="math inline">\(f_{.2}\)</span></td>
+<td align="center"><span class="math inline">\(\ldots\)</span></td>
+<td align="center"><span class="math inline">\(f_{.n}\)</span></td>
+<td align="center"><span class="math inline">\(n=\sum_{i=1}^m\sum_{j=1}^n\)</span></td>
 </tr>
 </tbody>
 </table>
 </div>
-</div>
-<div id="índice-de-simetría-de-yule-bowley" class="section level2">
-<h2><span class="header-section-number">7.2</span> Índice de simetría de <strong>Yule Bowley</strong>:</h2>
-<p><span class="math display">\[
-A_s=\frac{Q_1+Q_3-2Q_2}{Q_3-Q_1}
-\]</span></p>
-<p><span class="math inline">\(-1&lt;A_s&lt;1\)</span></p>
-<div class="example">
-<p><span id="exm:unlabeled-div-11" class="example"><strong>Ejemplo 7.2  </strong></span>Sea la tabla con intervalos</p>
-<table>
-<caption><span id="tab:asimetria2">Tabla 7.2: </span>Yule Bowley en datos tabulados en intervalos</caption>
-<thead>
-<tr class="header">
-<th align="center">Clase</th>
-<th align="center"><span class="math inline">\(y_i\)</span></th>
-<th align="center"><span class="math inline">\({f}_i\)</span></th>
-<th align="center"><span class="math inline">\(y_i*f_i\)</span></th>
-<th align="center"><span class="math inline">\(F_i\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><span class="math inline">\([5,10)\)</span></td>
-<td align="center">7.5</td>
-<td align="center">1.00</td>
-<td align="center">7.5</td>
-<td align="center">1.00</td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\([10,15)\)</span></td>
-<td align="center">12.5</td>
-<td align="center">2.00</td>
-<td align="center">25</td>
-<td align="center">3.00</td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\([15,20)\)</span></td>
-<td align="center">17.5</td>
-<td align="center">7.00</td>
-<td align="center">122.5</td>
-<td align="center">10.00</td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\([20,25)\)</span></td>
-<td align="center">22.5</td>
-<td align="center">10.00</td>
-<td align="center">225</td>
-<td align="center">20.00</td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\([25,30]\)</span></td>
-<td align="center">27.5</td>
-<td align="center">12.00</td>
-<td align="center">330</td>
-<td align="center">32.00</td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\([30,35]\)</span></td>
-<td align="center">32.5</td>
-<td align="center">8.00</td>
-<td align="center">260</td>
-<td align="center">40.00</td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\(\sum\)</span></td>
-<td align="center"></td>
-<td align="center">40.00</td>
-<td align="center">970</td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><span class="math inline">\(Me=Q_2\)</span></td>
-<td align="center">25.00</td>
-</tr>
-<tr class="odd">
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><span class="math inline">\(Q_1\)</span></td>
-<td align="center">20.00</td>
-</tr>
-<tr class="even">
-<td align="center"></td>
-<td align="center">As</td>
-<td align="center">-0.09</td>
-<td align="center"><span class="math inline">\(Q_3\)</span></td>
-<td align="center">29.17</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div id="índice-de-simetría-de-fisher" class="section level2">
-<h2><span class="header-section-number">7.3</span> Índice de simetría de <strong>Fisher</strong>:</h2>
-<ul>
-<li><p>Datos no agrupados
-<span class="math display">\[
-A_s=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^3}{n\sigma^3}
-\]</span></p></li>
-<li><p>Datos agrupados
-<span class="math display">\[
-A_s=\frac{\sum_{i=1}^{n}f_i\left( x_i-\overline{x}\right)^3}{n\sigma^3}
-\]</span></p></li>
-<li><p>Datos agrupados en intervalos
-<span class="math display">\[
-A_s=\frac{\sum_{i=1}^{n}f_i\left( y_i-\overline{x}\right)^3}{n\sigma^3}
-\]</span></p></li>
-</ul>
-<div class="example">
-<p><span id="exm:unlabeled-div-12" class="example"><strong>Ejemplo 7.3  </strong></span>Sea la tabla con intervalos</p>
-<table>
-<caption><span id="tab:asimetria3">Tabla 7.3: </span>Fisher en datos tabulados en intervalos</caption>
-<thead>
-<tr class="header">
-<th align="center">Clase</th>
-<th align="center"><span class="math inline">\(y_i\)</span></th>
-<th align="center"><span class="math inline">\({f}_i\)</span></th>
-<th align="center"><span class="math inline">\(y_i*f_i\)</span></th>
-<th align="center"><span class="math inline">\(f_i(y_i-\overline{x})^3.\)</span></th>
-<th align="center"><span class="math inline">\(f_i(y_i-\overline{x})^2\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="center"><span class="math inline">\([5,10)\)</span></td>
-<td align="center">7.5</td>
-<td align="center">1</td>
-<td align="center">7.50</td>
-<td align="center">-4699.42</td>
-<td align="center">280.56</td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\([10,15)\)</span></td>
-<td align="center">12.5</td>
-<td align="center">2</td>
-<td align="center">25.00</td>
-<td align="center">-3244.47</td>
-<td align="center">276.12</td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\([15,20)\)</span></td>
-<td align="center">17.5</td>
-<td align="center">7</td>
-<td align="center">122.50</td>
-<td align="center">-2152.83</td>
-<td align="center">318.94</td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\([20,25)\)</span></td>
-<td align="center">22.5</td>
-<td align="center">10</td>
-<td align="center">225.00</td>
-<td align="center">-53.59</td>
-<td align="center">30.62</td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\([25,30]\)</span></td>
-<td align="center">27.5</td>
-<td align="center">12</td>
-<td align="center">330.00</td>
-<td align="center">411.94</td>
-<td align="center">126.75</td>
-</tr>
-<tr class="even">
-<td align="center"><span class="math inline">\([30,35]\)</span></td>
-<td align="center">32.5</td>
-<td align="center">8</td>
-<td align="center">260.00</td>
-<td align="center">4492.12</td>
-<td align="center">544.50</td>
-</tr>
-<tr class="odd">
-<td align="center"><span class="math inline">\(\sum\)</span></td>
-<td align="center"></td>
-<td align="center">40</td>
-<td align="center">970.00</td>
-<td align="center">-5246.25</td>
-<td align="center">1577.50</td>
-</tr>
-<tr class="even">
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><span class="math inline">\(\overline{x}\)</span></td>
-<td align="center">24.25</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="odd">
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><span class="math inline">\(s\)</span></td>
-<td align="center">6.36</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">As</td>
-<td align="center">-0.85</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody>
-</table>
+<div id="regresión-y-correlación-lineal" class="section level2">
+<h2><span class="header-section-number">9.1</span> Regresión y correlación lineal</h2>
+<div class="definition">
+<p><span id="def:unlabeled-div-16" class="definition"><strong>Definición 9.2  (Coeficiente de correlacion muestral) </strong></span>Sean <span class="math inline">\((x_1,y_1); (x_2,y_2);\ldots, (x_k,y_k)\)</span> valores de la variable estadsitica bidimensional <span class="math inline">\((X,Y)\)</span> cuyas frecuencias realtivas son <span class="math inline">\(f_1, f_1, \ldots, f_k\)</span> respectivamente. El coeficiente de correlacion muestral entre las variables <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> es:
+<span class="math display">\[Corr(X,Y)=r=\frac{s_{XY}}{s_{X}s_{Y}}=\frac{Cov(X,Y)}{\sqrt{s_{X}^2}\sqrt{s_{Y}^2}}=\frac{\sum_{i=1}^kf_i(x_i-\overline{X})(y_i-\overline{Y})}{\sqrt{\sum_{i=1}^kf_i(x_i-\overline{X})^2}\sqrt{\sum_{i=1}^kf_i(x_i-\overline{Y})^2}}.\]</span></p>
+<p>Donde</p>
 </div>
 <!--
-## Normal: Simétrica
+<div class="figure" style="text-align: center">
+<iframe src="https://www.youtube.com/embed/TTpbP5BVtiA" width="100%" height="400px" data-external="1"></iframe>
+<p class="caption">(\#fig:Doge)Hola</p>
+</div>
 
 
 
+
+
+
+
+
+
+```python3 {cmd=true matplotlib=true}
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.random.normal(170, 10, 250)
+
+plt.hist(x)
+plt.show()
 ```
-## [1] 0.5059805
-```
+```python3 {cmd=true matplotlib=true}
+from matplotlib import rc
+import matplotlib.pylab as plt
 
-```
-## [1] 78.53333
-```
+rc('font', **{'family': 'serif', 'serif': ['Computer Modern']})
+rc('text', usetex=True)
 
-<img src="E_1_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" />
-
-## Normal: Simetría positiva
-
-wwwwwwwwwwwwwwwww
-
-<img src="E_1_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" />
-
-```
-## [1] 1.216579
-```
-
-## Normal: Simetría negativa
-
-<img src="E_1_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" />
-
-```
-## [1] -1.340429
-```
--->
-<!--
-
-<img src="E_1_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /><img src="E_1_files/figure-html/unnamed-chunk-7-2.png" width="672" style="display: block; margin: auto;" /><img src="E_1_files/figure-html/unnamed-chunk-7-3.png" width="672" style="display: block; margin: auto;" />
-
-
-
-
-```
-## Media: 71.46667
+x = plt.linspace(0,5)
+plt.plot(x,plt.sin(x))
+plt.ylabel(r"This is $\sin(x)$", size=20)
+plt.show()
 ```
 
-```
-## Mediana: 67
+```python3 {cmd=true matplotlib=true}
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.array(["A", "B", "C", "D"])
+y = np.array([3, 8, 1, 10])
+
+plt.bar(x,y)
+plt.show()
 ```
 
-```
-## Moda: 67
+```python3 {cmd=true matplotlib=true}
+import numpy
+
+speed = [32,111,138,28,59,77,97]
+
+x = numpy.std(speed)
+
+print(x)
 ```
 
-```
-## Quartiles: 61 65.5 67 75.5 95
-```
-
-<img src="E_1_files/figure-html/unnamed-chunk-8-1.png" width="672" style="display: block; margin: auto;" />
+![wwwwwwww](foo.png)
 
 
-```
-## Media: 89.66667
-```
-
-```
-## Mediana: 92
-```
-
-```
-## Moda: 97
-```
-
-```
-## Quartiles: 68 87 92 95.5 97
-```
-
-<img src="E_1_files/figure-html/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" />
-
-
-```
-## Media: 78.53333
-```
-
-```
-## Mediana: 78
-```
-
-```
-## Moda: 78
-```
-
-```
-## Quartiles: 65 73 78 83.5 98
-```
-
-<img src="E_1_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" />
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 -->
 
 </div>
 </div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="medidas-de-posición-cuantiles.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="medidas-de-curtosis-o-apuntamiento.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="medidas-de-curtosis-o-apuntamiento.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="experimento-aleatorio-espacio-muestral-y-eventos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,53 +1,46 @@
-% Options for packages loaded elsewhere
-\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
 %
-\documentclass[
-  11pt,
-]{krantz}
-\usepackage{amsmath,amssymb}
+\documentclass[11pt,]{krantz}
 \usepackage{lmodern}
+\usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provide euro and other symbols
-\else % if luatex or xetex
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
   \usepackage{unicode-math}
-  \defaultfontfeatures{Scale=MatchLowercase}
-  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
-  \setmonofont[Scale=0.7]{Source Code Pro}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+    \setmonofont[Mapping=tex-ansi,Scale=0.7]{Source Code Pro}
 \fi
-% Use upquote if available, for straight quotes in verbatim environments
+% use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-\IfFileExists{microtype.sty}{% use microtype if available
-  \usepackage[]{microtype}
-  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\makeatletter
-\@ifundefined{KOMAClassName}{% if non-KOMA class
-  \IfFileExists{parskip.sty}{%
-    \usepackage{parskip}
-  }{% else
-    \setlength{\parindent}{0pt}
-    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
-}{% if KOMA class
-  \KOMAoptions{parskip=half}}
-\makeatother
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{hyperref}
 \hypersetup{
-  pdftitle={Elementos de la estadística},
-  pdfauthor={Ricardo Michel MALLQUI BAÑOS},
-  colorlinks=true,
-  linkcolor=Maroon,
-  filecolor=Maroon,
-  citecolor=Blue,
-  urlcolor=Blue,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
+            pdftitle={Elementos de la estadística},
+            pdfauthor={Ricardo Michel MALLQUI BAÑOS},
+            colorlinks=true,
+            linkcolor=Maroon,
+            filecolor=Maroon,
+            citecolor=Blue,
+            urlcolor=Blue,
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
@@ -88,17 +81,10 @@
 \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
 \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\usepackage{longtable,booktabs,array}
-\usepackage{calc} % for calculating minipage widths
-% Correct order of tables after \paragraph or \subparagraph
-\usepackage{etoolbox}
-\makeatletter
-\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
-\makeatother
-% Allow footnotes in longtable head/foot
-\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
-\makesavenoteenv{longtable}
-\usepackage{graphicx}
+\usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{longtable}}{}
+\usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -107,14 +93,16 @@
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-% Set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
-\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
 \usepackage[spanish,es-lcroman,es-tabla]{babel}
 \usepackage{booktabs}
 \usepackage{graphicx}
@@ -173,22 +161,14 @@
 %\flushbottom
 
 \frontmatter
-\ifluatex
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
 \title{Elementos de la estadística}
-\usepackage{etoolbox}
-\makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
-\makeatother
+\providecommand{\subtitle}[1]{}
 \subtitle{estadística descriptiva y probabilidades}
 \author{Ricardo Michel MALLQUI BAÑOS}
-\date{2022-10-10}
+\date{2022-10-17}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Teorema}[chapter]
@@ -290,30 +270,26 @@ La estadística es comúnmente aplicada a dos tipos de problemas:
 \end{enumerate}
 
 \begin{definition}[Estadística descriptiva]
-\protect\hypertarget{def:descriptiva}{}\label{def:descriptiva}The branch of statistics devoted to the organization, summarization, and description of data sets is
-called descriptive statistics.
+\protect\hypertarget{def:descriptiva}{}\label{def:descriptiva}Es la rama de la estadística dedicado a la oganizacion, descripicion de un conjunto de datos
 \end{definition}
 
 \begin{definition}[Estadística inferencial]
-\protect\hypertarget{def:inferencial}{}\label{def:inferencial}The branch of statistics concerned with using sample data to make an inference about a large set of
-data is called inferential statistics.
+\protect\hypertarget{def:inferencial}{}\label{def:inferencial}Es la rama de la estidistica que usa una muestra de datos para realizar inferencias acerca de una población
 \end{definition}
 
 \begin{definition}[Muestra]
-\protect\hypertarget{def:muestra}{}\label{def:muestra}A sample is a subset of data selected from the target population.
+\protect\hypertarget{def:muestra}{}\label{def:muestra}Es un subconjunto de datos seleccionados de una poblacion, usando algún método de muestreo
 \end{definition}
 
-\begin{definition}[Unidad]
-\protect\hypertarget{def:unidad}{}\label{def:unidad}The object (e.g., person, thing, transaction, specimen, or event) upon which measurements are
-collected is called the experimental unit. (Note: A population consists of data collected on many
-experimental units.)
+\begin{definition}[Unidad experimental]
+\protect\hypertarget{def:unidad}{}\label{def:unidad}El objeto (persona, cosa, especimen o evento) sobre los cuales se miden son llmados \textbf{unidades experimentales}.
 \end{definition}
 
 \hypertarget{elementos-fundamentales-de-la-estaduxedstica}{%
 \section{Elementos fundamentales de la estadística}\label{elementos-fundamentales-de-la-estaduxedstica}}
 
 \begin{definition}[Poblacion]
-\protect\hypertarget{def:poblacion}{}\label{def:poblacion}A statistical population is a data set (usually large, sometimes conceptual) that is our target of interest.
+\protect\hypertarget{def:poblacion}{}\label{def:poblacion}Es un conjunto de datos (usualmente grande, algunas veces conceptual) del cual se desea obtener datos de interés
 \end{definition}
 
 \begin{definition}[Variables cuantitativas]
@@ -363,18 +339,18 @@ La tabulación es un proceso en el cual los datos son ordenados en grupos llamad
 \begin{longtable}[]{@{}cccccccccc@{}}
 \caption{\label{tab:ww} Caption}\tabularnewline
 \toprule
-\(Y_i\) & \(f_i\) & \(F_i\) & \(F_i^*\) & \(h_i\) & \(H_i\) & \(H_i^*\) & \(h_i\%\) & \(H_i\%\) & \(H_i^*\%\) \\
+\(Y_i\) & \(f_i\) & \(F_i\) & \(F_i^*\) & \(h_i\) & \(H_i\) & \(H_i^*\) & \(h_i\%\) & \(H_i\%\) & \(H_i^*\%\)\tabularnewline
 \midrule
 \endfirsthead
 \toprule
-\(Y_i\) & \(f_i\) & \(F_i\) & \(F_i^*\) & \(h_i\) & \(H_i\) & \(H_i^*\) & \(h_i\%\) & \(H_i\%\) & \(H_i^*\%\) \\
+\(Y_i\) & \(f_i\) & \(F_i\) & \(F_i^*\) & \(h_i\) & \(H_i\) & \(H_i^*\) & \(h_i\%\) & \(H_i\%\) & \(H_i^*\%\)\tabularnewline
 \midrule
 \endhead
-\(Y_1\) & \(f_1\) & \(F_1\) & \(F_1^*\) & \(\frac{f_1}{n}\) & \(\frac{F_1}{n}\) & \(\frac{F_1^*}{n}\) & \(h_1\) & \(H_1\) & \(H_1^*\) \\
-\(Y_2\) & \(f_2\) & \(F_2\) & \(F_2^*\) & \(\frac{f_2}{n}\) & \(\frac{F_2}{n}\) & \(\frac{F_2^*}{n}\) & \(h_2\) & \(H_2\) & \(H_1^*\) \\
-\(Y_3\) & \(f_3\) & \(F_3\) & \(F_3^*\) & \(\frac{f_3}{n}\) & \(\frac{F_3}{n}\) & \(\frac{F_3^*}{n}\) & \(h_3\) & \(H_3\) & \(H_1^*\) \\
-\(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) \\
-\(Y_r\) & \(f_r\) & \(F_r\) & \(F_r^*\) & \(\frac{f_r}{n}\) & \(\frac{F_r}{n}\) & \(\frac{F_r^*}{n}\) & \(h_r\) & \(H_r\) & \(H_1^*\) \\
+\(Y_1\) & \(f_1\) & \(F_1\) & \(F_1^*\) & \(\frac{f_1}{n}\) & \(\frac{F_1}{n}\) & \(\frac{F_1^*}{n}\) & \(h_1\) & \(H_1\) & \(H_1^*\)\tabularnewline
+\(Y_2\) & \(f_2\) & \(F_2\) & \(F_2^*\) & \(\frac{f_2}{n}\) & \(\frac{F_2}{n}\) & \(\frac{F_2^*}{n}\) & \(h_2\) & \(H_2\) & \(H_1^*\)\tabularnewline
+\(Y_3\) & \(f_3\) & \(F_3\) & \(F_3^*\) & \(\frac{f_3}{n}\) & \(\frac{F_3}{n}\) & \(\frac{F_3^*}{n}\) & \(h_3\) & \(H_3\) & \(H_1^*\)\tabularnewline
+\(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\) & \(\vdots\)\tabularnewline
+\(Y_r\) & \(f_r\) & \(F_r\) & \(F_r^*\) & \(\frac{f_r}{n}\) & \(\frac{F_r}{n}\) & \(\frac{F_r^*}{n}\) & \(h_r\) & \(H_r\) & \(H_1^*\)\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -488,15 +464,16 @@ Tabulando
 \toprule
 Clase & $f_i$ & $F_i$ & $F_i^*$ & $h_i$ & $H_i$ & $H_i^*$ & $h_i\%$ & $H_i\%$ & $H_i^*\%$\\
 \midrule
-$[20-30)$ & 1 & 1 & 26 & 0.02 & 0.01 & 0.35 & 2.38 & 1.33 & 34.67\\
-$[30-40)$ & 2 & 3 & 68 & 0.05 & 0.04 & 0.91 & 4.76 & 4.00 & 90.67\\
-$[40-50)$ & 3 & 6 & 68 & 0.07 & 0.08 & 0.91 & 7.14 & 8.00 & 90.67\\
-$[50-60)$ & 4 & 10 & 68 & 0.10 & 0.13 & 0.91 & 9.52 & 13.33 & 90.67\\
-$[60-70)$ & 5 & 15 & 68 & 0.12 & 0.20 & 0.91 & 11.90 & 20.00 & 90.67\\
-$[70-80)$ & 6 & 21 & 84 & 0.14 & 0.28 & 1.12 & 14.29 & 28.00 & 112.00\\
-$[80-90)$ & 3 & 24 & 84 & 0.07 & 0.32 & 1.12 & 7.14 & 32.00 & 112.00\\
-$[90-100]$ & 2 & 26 & 84 & 0.05 & 0.35 & 1.12 & 4.76 & 34.67 & 112.00\\
+$[20-30)$ & 1 & 1 & 26.0 & 0.02 & 0.01 & 0.35 & 2.38 & 1.33 & 34.67\\
+$[30-40)$ & 2 & 3 & 68.0 & 0.05 & 0.04 & 0.91 & 4.76 & 4.00 & 90.67\\
+$[40-50)$ & 3 & 6 & 68.0 & 0.07 & 0.08 & 0.91 & 7.14 & 8.00 & 90.67\\
+$[50-60)$ & 4 & 10 & 68.0 & 0.10 & 0.13 & 0.91 & 9.52 & 13.33 & 90.67\\
+$[60-70)$ & 5 & 15 & 68.0 & 0.12 & 0.20 & 0.91 & 11.90 & 20.00 & 90.67\\
+$[70-80)$ & 6 & 21 & 75.5 & 0.14 & 0.28 & 1.01 & 14.29 & 28.00 & 100.67\\
+$[80-90)$ & 3 & 24 & 88.0 & 0.07 & 0.32 & 1.17 & 7.14 & 32.00 & 117.33\\
+$[90-100]$ & 2 & 26 & 105.5 & 0.05 & 0.35 & 1.41 & 4.76 & 34.67 & 140.67\\
 TOTAL & 42 &  &  &  &  &  & 61.90 &  & \\
+Pearson &  &  &  &  &  &  &  &  & \\
 \bottomrule
 \end{longtable}
 
@@ -513,12 +490,12 @@ TOTAL & 42 &  &  &  &  &  & 61.90 &  & \\
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{par}\NormalTok{(}\AttributeTok{mar =} \FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{))}
-\FunctionTok{pie}\NormalTok{(}
-  \FunctionTok{c}\NormalTok{(}\DecValTok{280}\NormalTok{, }\DecValTok{60}\NormalTok{, }\DecValTok{20}\NormalTok{),}
-  \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Sky\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Sunny side of pyramid\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Shady side of pyramid\textquotesingle{}}\NormalTok{),}
-  \AttributeTok{col =} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}\#0292D8\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}\#F7EA39\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}\#C4B632\textquotesingle{}}\NormalTok{),}
-  \AttributeTok{init.angle =} \SpecialCharTok{{-}}\DecValTok{50}\NormalTok{, }\AttributeTok{border =} \ConstantTok{NA}
+\KeywordTok{par}\NormalTok{(}\DataTypeTok{mar =} \KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{1}\NormalTok{))}
+\KeywordTok{pie}\NormalTok{(}
+  \KeywordTok{c}\NormalTok{(}\DecValTok{280}\NormalTok{, }\DecValTok{60}\NormalTok{, }\DecValTok{20}\NormalTok{),}
+  \KeywordTok{c}\NormalTok{(}\StringTok{'Sky'}\NormalTok{, }\StringTok{'Sunny side of pyramid'}\NormalTok{, }\StringTok{'Shady side of pyramid'}\NormalTok{),}
+  \DataTypeTok{col =} \KeywordTok{c}\NormalTok{(}\StringTok{'#0292D8'}\NormalTok{, }\StringTok{'#F7EA39'}\NormalTok{, }\StringTok{'#C4B632'}\NormalTok{),}
+  \DataTypeTok{init.angle =} \DecValTok{-50}\NormalTok{, }\DataTypeTok{border =} \OtherTok{NA}
 \NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
@@ -527,8 +504,8 @@ TOTAL & 42 &  &  &  &  &  & 61.90 &  & \\
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{plot}\NormalTok{(cars)}
-\FunctionTok{lines}\NormalTok{(}\FunctionTok{lowess}\NormalTok{(cars))}
+\KeywordTok{plot}\NormalTok{(cars)}
+\KeywordTok{lines}\NormalTok{(}\KeywordTok{lowess}\NormalTok{(cars))}
 \end{Highlighting}
 \end{Shaded}
 
@@ -536,26 +513,18 @@ TOTAL & 42 &  &  &  &  &  & 61.90 &  & \\
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(ggplot2)}
-\end{Highlighting}
-\end{Shaded}
+\KeywordTok{library}\NormalTok{(ggplot2)}
 
-\begin{verbatim}
-## Warning: package 'ggplot2' was built under R version 4.1.3
-\end{verbatim}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# Create data}
-\NormalTok{data }\OtherTok{\textless{}{-}} \FunctionTok{data.frame}\NormalTok{(}
-  \AttributeTok{name=}\FunctionTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{,}\StringTok{"B"}\NormalTok{,}\StringTok{"C"}\NormalTok{,}\StringTok{"D"}\NormalTok{,}\StringTok{"E"}\NormalTok{) ,  }
-  \AttributeTok{value=}\FunctionTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{,}\DecValTok{12}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{18}\NormalTok{,}\DecValTok{45}\NormalTok{)}
+\CommentTok{# Create data}
+\NormalTok{data <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(}
+  \DataTypeTok{name=}\KeywordTok{c}\NormalTok{(}\StringTok{"A"}\NormalTok{,}\StringTok{"B"}\NormalTok{,}\StringTok{"C"}\NormalTok{,}\StringTok{"D"}\NormalTok{,}\StringTok{"E"}\NormalTok{) ,  }
+  \DataTypeTok{value=}\KeywordTok{c}\NormalTok{(}\DecValTok{3}\NormalTok{,}\DecValTok{12}\NormalTok{,}\DecValTok{5}\NormalTok{,}\DecValTok{18}\NormalTok{,}\DecValTok{45}\NormalTok{)}
 \NormalTok{  )}
 
-\CommentTok{\# Barplot}
-\FunctionTok{ggplot}\NormalTok{(data, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x=}\NormalTok{name, }\AttributeTok{y=}\NormalTok{value)) }\SpecialCharTok{+}
-  \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{, }\AttributeTok{width=}\FloatTok{0.5}\NormalTok{) }\SpecialCharTok{+}
-  \FunctionTok{coord\_flip}\NormalTok{()}
+\CommentTok{# Barplot}
+\KeywordTok{ggplot}\NormalTok{(data, }\KeywordTok{aes}\NormalTok{(}\DataTypeTok{x=}\NormalTok{name, }\DataTypeTok{y=}\NormalTok{value)) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{geom_bar}\NormalTok{(}\DataTypeTok{stat =} \StringTok{"identity"}\NormalTok{, }\DataTypeTok{width=}\FloatTok{0.5}\NormalTok{) }\OperatorTok{+}
+\StringTok{  }\KeywordTok{coord_flip}\NormalTok{()}
 \end{Highlighting}
 \end{Shaded}
 
@@ -573,18 +542,18 @@ Son aquellas medidas que buscan un dato representivo central de un conjunto de d
 \begin{longtable}[]{@{}cccccc@{}}
 \caption{\label{tab:agrupados1} Datos agrupados en intervalos.}\tabularnewline
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(F_i\) & \(\ldots\) & \(H_i^*\%\) \\
+Clase & \(Y_i\) & \(f_i\) & \(F_i\) & \(\ldots\) & \(H_i^*\%\)\tabularnewline
 \midrule
 \endfirsthead
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(F_i\) & \(\ldots\) & \(H_i^*\%\) \\
+Clase & \(Y_i\) & \(f_i\) & \(F_i\) & \(\ldots\) & \(H_i^*\%\)\tabularnewline
 \midrule
 \endhead
-\([y_1,y_2)\) & \(y_1\) & \(f_1\) & \(\ldots\) & \(\ldots\) & \(H_1^*\%\) \\
-\([y_2,y_3)\) & \(y_2\) & \(f_2\) & \(\ldots\) & \(\ldots\) & \(H_1^*\%\) \\
-\([y_3,y_4)\) & \(y_3\) & \(f_3\) & \(\ldots\) & \(\ldots\) & \(H_1^*\%\) \\
-\(\vdots\) & \(\vdots\) & \(\vdots\) & \(\ldots\) & \(\ldots\) & \(\vdots\) \\
-\([y_{r-1},y_r]\) & \(y_r\) & \(f_r\) & \(\ldots\) & \(\ldots\) & \(H_1^*\%\) \\
+\([y_1,y_2)\) & \(y_1\) & \(f_1\) & \(\ldots\) & \(\ldots\) & \(H_1^*\%\)\tabularnewline
+\([y_2,y_3)\) & \(y_2\) & \(f_2\) & \(\ldots\) & \(\ldots\) & \(H_1^*\%\)\tabularnewline
+\([y_3,y_4)\) & \(y_3\) & \(f_3\) & \(\ldots\) & \(\ldots\) & \(H_1^*\%\)\tabularnewline
+\(\vdots\) & \(\vdots\) & \(\vdots\) & \(\ldots\) & \(\ldots\) & \(\vdots\)\tabularnewline
+\([y_{r-1},y_r]\) & \(y_r\) & \(f_r\) & \(\ldots\) & \(\ldots\) & \(H_1^*\%\)\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -616,15 +585,15 @@ Considérese la siguiente tabla de distribución de frecuencias Tabla \ref{tab:a
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
+Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\)\tabularnewline
 \midrule
 \endhead
-\([10,15)\) & 12.5 & 1 & 12.5 \\
-\([15,20)\) & 17.5 & 2 & 35 \\
-\([20,25)\) & 22.5 & 5 & 112.5 \\
-\([25,30)\) & 27.5 & 3 & 82.5 \\
-\([30,35]\) & 32.5 & 2 & 65 \\
-\(\sum\) & & 13 & 307.5 \\
+\([10,15)\) & 12.5 & 1 & 12.5\tabularnewline
+\([15,20)\) & 17.5 & 2 & 35\tabularnewline
+\([20,25)\) & 22.5 & 5 & 112.5\tabularnewline
+\([25,30)\) & 27.5 & 3 & 82.5\tabularnewline
+\([30,35]\) & 32.5 & 2 & 65\tabularnewline
+\(\sum\) & & 13 & 307.5\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -698,14 +667,14 @@ Sea la tabla
 
 \begin{longtable}[]{@{}cc@{}}
 \toprule
-Clase & \(f_i\) \\
+Clase & \(f_i\)\tabularnewline
 \midrule
 \endhead
-\([10,15)\) & 2 \\
-\([15,20)\) & 5 \\
-\([20,25)\) & 10 \\
-\([25,30)\) & 3 \\
-\([30,35]\) & 1 \\
+\([10,15)\) & 2\tabularnewline
+\([15,20)\) & 5\tabularnewline
+\([20,25)\) & 10\tabularnewline
+\([25,30)\) & 3\tabularnewline
+\([30,35]\) & 1\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -758,15 +727,15 @@ Sea la tabla
 
 \begin{longtable}[]{@{}ccc@{}}
 \toprule
-Clase & \(f_i\) & \(F_i\) \\
+Clase & \(f_i\) & \(F_i\)\tabularnewline
 \midrule
 \endhead
-\([10,15)\) & 1 & 1 \\
-\([15,20)\) & 2 & 3 \\
-\([20,25)\) & 5 & 8 \\
-\([25,30)\) & 3 & 11 \\
-\([30,35]\) & 1 & 12 \\
-\(\sum\) & 12 & \\
+\([10,15)\) & 1 & 1\tabularnewline
+\([15,20)\) & 2 & 3\tabularnewline
+\([20,25)\) & 5 & 8\tabularnewline
+\([25,30)\) & 3 & 11\tabularnewline
+\([30,35]\) & 1 & 12\tabularnewline
+\(\sum\) & 12 &\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -782,18 +751,18 @@ Halle le media, la moda y la mediana de los siguientes datos tabulados
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+Clase & \(Y_i\) & \(f_i\) & \(F_i\)\tabularnewline
 \midrule
 \endhead
-\([100,150)\) & & 1 & 1 \\
-\([150,200)\) & & 2 & 3 \\
-\([200,250)\) & & 5 & \\
-\([250,300)\) & & 7 & \\
-\([300,350]\) & & 10 & \\
-\([350,400]\) & & 6 & \\
-\([400,450]\) & & 5 & \\
-\([450,500]\) & & 2 & \\
-\([500,550]\) & & 1 & \\
+\([100,150)\) & & 1 & 1\tabularnewline
+\([150,200)\) & & 2 & 3\tabularnewline
+\([200,250)\) & & 5 &\tabularnewline
+\([250,300)\) & & 7 &\tabularnewline
+\([300,350]\) & & 10 &\tabularnewline
+\([350,400]\) & & 6 &\tabularnewline
+\([400,450]\) & & 5 &\tabularnewline
+\([450,500]\) & & 2 &\tabularnewline
+\([500,550]\) & & 1 &\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -852,16 +821,16 @@ Sea la Tabla \ref{tab:agrupados1}. Entonces la formula que resuelve la varianza 
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
+Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\)\tabularnewline
 \midrule
 \endhead
-\([5,10)\) & 7.5 & 1 & 7.5 \\
-\([10,15)\) & 12.5 & 2 & 25 \\
-\([15,20)\) & 17.5 & 5 & 87.5 \\
-\([20,25)\) & 22.5 & 7 & 157.5 \\
-\([25,30]\) & 27.5 & 10 & 275 \\
-\([30,35]\) & 32.5 & 6 & 195 \\
-\(\sum\) & & 31 & \\
+\([5,10)\) & 7.5 & 1 & 7.5\tabularnewline
+\([10,15)\) & 12.5 & 2 & 25\tabularnewline
+\([15,20)\) & 17.5 & 5 & 87.5\tabularnewline
+\([20,25)\) & 22.5 & 7 & 157.5\tabularnewline
+\([25,30]\) & 27.5 & 10 & 275\tabularnewline
+\([30,35]\) & 32.5 & 6 & 195\tabularnewline
+\(\sum\) & & 31 &\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -891,16 +860,16 @@ La desviacion típica o estandar del siguiente conjunto de datos tabulados
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
+Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\)\tabularnewline
 \midrule
 \endhead
-\([5,10)\) & 7.5 & 1 & 7.5 \\
-\([10,15)\) & 12.5 & 2 & 25 \\
-\([15,20)\) & 17.5 & 5 & 87.5 \\
-\([20,25)\) & 22.5 & 7 & 157.5 \\
-\([25,30)\) & 27.5 & 10 & 275 \\
-\([30,35]\) & 32.5 & 6 & 195 \\
-\(\sum\) & & 31 & \\
+\([5,10)\) & 7.5 & 1 & 7.5\tabularnewline
+\([10,15)\) & 12.5 & 2 & 25\tabularnewline
+\([15,20)\) & 17.5 & 5 & 87.5\tabularnewline
+\([20,25)\) & 22.5 & 7 & 157.5\tabularnewline
+\([25,30)\) & 27.5 & 10 & 275\tabularnewline
+\([30,35]\) & 32.5 & 6 & 195\tabularnewline
+\(\sum\) & & 31 &\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -938,16 +907,16 @@ DM&=\frac{\sum\left\vert x_i-\overline{x}\right \vert}{n}\\
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
+Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\)\tabularnewline
 \midrule
 \endhead
-\([5,10)\) & 7.5 & 1 & 7.5 \\
-\([10,15)\) & 12.5 & 2 & 25 \\
-\([15,20)\) & 17.5 & 5 & 87.5 \\
-\([20,25)\) & 22.5 & 7 & 157.5 \\
-\([25,30)\) & 27.5 & 10 & 275 \\
-\([30,35]\) & 32.5 & 6 & 195 \\
-\(\sum\) & & 31 & \\
+\([5,10)\) & 7.5 & 1 & 7.5\tabularnewline
+\([10,15)\) & 12.5 & 2 & 25\tabularnewline
+\([15,20)\) & 17.5 & 5 & 87.5\tabularnewline
+\([20,25)\) & 22.5 & 7 & 157.5\tabularnewline
+\([25,30)\) & 27.5 & 10 & 275\tabularnewline
+\([30,35]\) & 32.5 & 6 & 195\tabularnewline
+\(\sum\) & & 31 &\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -985,16 +954,16 @@ Sean los datos 2, 5, 6, 1, 7, 5, 8, 6 (Ejercicio)
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
+Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\)\tabularnewline
 \midrule
 \endhead
-\([5,10)\) & 7.5 & 2 & 7.5 \\
-\([10,15)\) & 12.5 & 3 & 25 \\
-\([15,20)\) & & 4 & 87.5 \\
-\([20,25)\) & 22.5 & 7 & 157.5 \\
-\([25,30)\) & 27.5 & 10 & 275 \\
-\([30,35]\) & & 8 & 195 \\
-\(\sum\) & & & \\
+\([5,10)\) & 7.5 & 2 & 7.5\tabularnewline
+\([10,15)\) & 12.5 & 3 & 25\tabularnewline
+\([15,20)\) & & 4 & 87.5\tabularnewline
+\([20,25)\) & 22.5 & 7 & 157.5\tabularnewline
+\([25,30)\) & 27.5 & 10 & 275\tabularnewline
+\([30,35]\) & & 8 & 195\tabularnewline
+\(\sum\) & & &\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -1019,16 +988,16 @@ Para el conjunto de datos
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
+Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\)\tabularnewline
 \midrule
 \endhead
-\([5,10)\) & 7.5 & 1 & 7.5 \\
-\([10,15)\) & 12.5 & 2 & 25 \\
-\([15,20)\) & 17.5 & 5 & 87.5 \\
-\([20,25)\) & 22.5 & 7 & 157.5 \\
-\([25,30)\) & 27.5 & 10 & 275 \\
-\([30,35]\) & 32.5 & 6 & 195 \\
-\(\sum\) & & 31 & \\
+\([5,10)\) & 7.5 & 1 & 7.5\tabularnewline
+\([10,15)\) & 12.5 & 2 & 25\tabularnewline
+\([15,20)\) & 17.5 & 5 & 87.5\tabularnewline
+\([20,25)\) & 22.5 & 7 & 157.5\tabularnewline
+\([25,30)\) & 27.5 & 10 & 275\tabularnewline
+\([30,35]\) & 32.5 & 6 & 195\tabularnewline
+\(\sum\) & & 31 &\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -1041,16 +1010,16 @@ Halle el rango, la varianza, la desviación típica, desviación media, desviaci
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-Clase & \(y_i\) & \(f_i\) & \(F_i\) \\
+Clase & \(y_i\) & \(f_i\) & \(F_i\)\tabularnewline
 \midrule
 \endhead
-\([50,100)\) & 75 & 8 & 1 \\
-\([100,150)\) & & 20 & 3 \\
-\([150,200)\) & & 50 & \\
-\([200,250)\) & & 70 & \\
-\([250,300)\) & & 100 & \\
-\([300,350]\) & & 60 & \\
-\(\sum\) & & 20 & \\
+\([50,100)\) & 75 & 8 & 8\tabularnewline
+\([100,150)\) & & 20 & 28\tabularnewline
+\([150,200)\) & & 50 &\tabularnewline
+\([200,250)\) & & 70 &\tabularnewline
+\([250,300)\) & & 100 &\tabularnewline
+\([300,350]\) & & 60 &\tabularnewline
+\(\sum\) & & 20 &\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -1122,18 +1091,18 @@ Si \[Q_k=\frac{k(n+1)}{4}\] es \textbf{entero} entonces el cuartil es el dato de
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+Clase & \(Y_i\) & \(f_i\) & \(F_i\)\tabularnewline
 \midrule
 \endhead
-\([5,10)\) & 7.5 & 1 & 1 \\
-\([10,15)\) & 12.5 & 2 & 3 \\
-\([15,20)\) & 17.5 & 5 & 8 \\
-\([20,25)\) & 22.5 & 7 & 15 \\
-\([25,30)\) & 27.5 & 10 & 25 \\
-\([30,35)\) & 32.5 & 6 & 31 \\
-\([35,40)\) & 37.5 & 5 & 36 \\
-\([40,45]\) & 42.5 & 3 & 39 \\
-\(\sum\) & & 39 & \\
+\([5,10)\) & 7.5 & 1 & 1\tabularnewline
+\([10,15)\) & 12.5 & 2 & 3\tabularnewline
+\([15,20)\) & 17.5 & 5 & 8\tabularnewline
+\([20,25)\) & 22.5 & 7 & 15\tabularnewline
+\([25,30)\) & 27.5 & 10 & 25\tabularnewline
+\([30,35)\) & 32.5 & 6 & 31\tabularnewline
+\([35,40)\) & 37.5 & 5 & 36\tabularnewline
+\([40,45]\) & 42.5 & 3 & 39\tabularnewline
+\(\sum\) & & 39 &\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -1198,19 +1167,19 @@ La fórmula es
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+Clase & \(Y_i\) & \(f_i\) & \(F_i\)\tabularnewline
 \midrule
 \endhead
-\([5,10)\) & 7.5 & 1 & 1 \\
-\([10,15)\) & 12.5 & 2 & 3 \\
-\([15,20)\) & 17.5 & 5 & 8 \\
-\([20,25)\) & 22.5 & 7 & 15 \\
-\([25,30)\) & 27.5 & 10 & 25 \\
-\([30,35)\) & 32.5 & 6 & 31 \\
-\([35,40)\) & 37.5 & 5 & 36 \\
-\([40,45]\) & 42.5 & 3 & 39 \\
-:---------: & :-----: & :-----: & :-----: \\
-\(\sum\) & & 39 & \\
+\([5,10)\) & 7.5 & 1 & 1\tabularnewline
+\([10,15)\) & 12.5 & 2 & 3\tabularnewline
+\([15,20)\) & 17.5 & 5 & 8\tabularnewline
+\([20,25)\) & 22.5 & 7 & 15\tabularnewline
+\([25,30)\) & 27.5 & 10 & 25\tabularnewline
+\([30,35)\) & 32.5 & 6 & 31\tabularnewline
+\([35,40)\) & 37.5 & 5 & 36\tabularnewline
+\([40,45]\) & 42.5 & 3 & 39\tabularnewline
+:---------: & :-----: & :-----: & :-----:\tabularnewline
+\(\sum\) & & 39 &\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -1243,18 +1212,18 @@ Si \[P_k=\frac{k(n+1)}{100}; k=1, 2,  \ldots, 99\] es entero entonces el cuartil
 
 \begin{longtable}[]{@{}cccc@{}}
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(F_i\) \\
+Clase & \(Y_i\) & \(f_i\) & \(F_i\)\tabularnewline
 \midrule
 \endhead
-\([5,10)\) & 7.5 & 1 & 1 \\
-\([10,15)\) & 12.5 & 2 & 3 \\
-\([15,20)\) & 17.5 & 5 & \\
-\([20,25)\) & 22.5 & 7 & \\
-\([25,30\) & & 10 & \\
-\([30,35\) & & 6 & \\
-\([35,40\) & & 5 & \\
-\([40,45\) & & 3 & \\
-\(\sum\) & & 2 & \\
+\([5,10)\) & 7.5 & 1 & 1\tabularnewline
+\([10,15)\) & 12.5 & 2 & 3\tabularnewline
+\([15,20)\) & 17.5 & 5 &\tabularnewline
+\([20,25)\) & 22.5 & 7 &\tabularnewline
+\([25,30\) & & 10 &\tabularnewline
+\([30,35\) & & 6 &\tabularnewline
+\([35,40\) & & 5 &\tabularnewline
+\([40,45\) & & 3 &\tabularnewline
+\(\sum\) & & 2 &\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -1279,11 +1248,8 @@ Podemos decir que la asimetría indica cuánto se desvía nuestra distribución 
 \caption{Medidas de asimetría}
 \end{figure}
 
-\begin{itemize}
-\tightlist
-\item
-  Índice de simetría de \textbf{Pearson}:
-\end{itemize}
+\hypertarget{uxedndice-de-simetruxeda-de-pearson}{%
+\section{\texorpdfstring{Índice de simetría de \textbf{Pearson}:}{Índice de simetría de Pearson:}}\label{uxedndice-de-simetruxeda-de-pearson}}
 
 \[
 A_s=\frac{3(\overline{x}-Me)}{s}
@@ -1297,11 +1263,33 @@ A_s=\frac{\overline{x}-Mo}{s}
 
 \(-3<A_s<3\)
 
-\begin{itemize}
-\tightlist
-\item
-  Índice de simetría de \textbf{Yule Bowley}:
-\end{itemize}
+\begin{example}
+
+Sea la tabla con intervalos
+
+\begin{longtable}[t]{cccccc}
+\caption{\label{tab:asimetria1}Pearson en datos tabulados en intervalos}\\
+\toprule
+Clase & $y_i$ & ${f}_i$ & $y_i*f_i$ & $F_i$ & $f_i(y_i-\overline{x})^2$\\
+\midrule
+$[5,10)$ & 7.5 & 1 & 7.50 & 1 & 280.56\\
+$[10,15)$ & 12.5 & 2 & 25.00 & 3 & 276.12\\
+$[15,20)$ & 17.5 & 7 & 122.50 & 10 & 318.94\\
+$[20,25)$ & 22.5 & 10 & 225.00 & 20 & 30.62\\
+$[25,30]$ & 27.5 & 12 & 330.00 & 32 & 126.75\\
+$[30,35]$ & 32.5 & 8 & 260.00 & 40 & 544.50\\
+$\sum$ &  & 40 & 970.00 &  & 1577.50\\
+ &  & $\overline{x}$ & 24.25 & $Me$ & 25.00\\
+ &  & $s$ & 6.36 & $Mo$ & 28.00\\
+ &  & As(Me) & -0.35 &  & \\
+ &  & As(Mo) & -0.59 &  & \\
+\bottomrule
+\end{longtable}
+
+\end{example}
+
+\hypertarget{uxedndice-de-simetruxeda-de-yule-bowley}{%
+\section{\texorpdfstring{Índice de simetría de \textbf{Yule Bowley}:}{Índice de simetría de Yule Bowley:}}\label{uxedndice-de-simetruxeda-de-yule-bowley}}
 
 \[
 A_s=\frac{Q_1+Q_3-2Q_2}{Q_3-Q_1}
@@ -1309,45 +1297,70 @@ A_s=\frac{Q_1+Q_3-2Q_2}{Q_3-Q_1}
 
 \(-1<A_s<1\)
 
+\begin{example}
+
+Sea la tabla con intervalos
+
+\begin{longtable}[t]{ccccc}
+\caption{\label{tab:asimetria2}Yule Bowley en datos tabulados en intervalos}\\
+\toprule
+Clase & $y_i$ & ${f}_i$ & $y_i*f_i$ & $F_i$\\
+\midrule
+$[5,10)$ & 7.5 & 1.00 & 7.5 & 1.00\\
+$[10,15)$ & 12.5 & 2.00 & 25 & 3.00\\
+$[15,20)$ & 17.5 & 7.00 & 122.5 & 10.00\\
+$[20,25)$ & 22.5 & 10.00 & 225 & 20.00\\
+$[25,30]$ & 27.5 & 12.00 & 330 & 32.00\\
+$[30,35]$ & 32.5 & 8.00 & 260 & 40.00\\
+$\sum$ &  & 40.00 & 970 & \\
+ &  &  & $Me=Q_2$ & 25.00\\
+ &  &  & $Q_1$ & 20.00\\
+ & As & -0.09 & $Q_3$ & 29.17\\
+\bottomrule
+\end{longtable}
+
+\end{example}
+
+\hypertarget{uxedndice-de-simetruxeda-de-fisher}{%
+\section{\texorpdfstring{Índice de simetría de \textbf{Fisher}:}{Índice de simetría de Fisher:}}\label{uxedndice-de-simetruxeda-de-fisher}}
+
 \begin{itemize}
 \item
-  Índice de simetría de \textbf{Fisher}:
-
-  \begin{itemize}
-  \item
-    Datos no agrupados
-    \[
-    A_s=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^3}{n\sigma^3}
-    \]
-  \item
-    Datos agrupados
-    \[
-    A_s=\frac{\sum_{i=1}^{n}f_i\left( x_i-\overline{x}\right)^3}{n\sigma^3}
-    \]
-  \item
-    Datos agrupados en intervalos
-    \[
-    A_s=\frac{\sum_{i=1}^{n}f_i\left( y_i-\overline{x}\right)^3}{n\sigma^3}
-    \]
-  \end{itemize}
+  Datos no agrupados
+  \[
+  A_s=\frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^3}{n\sigma^3}
+  \]
+\item
+  Datos agrupados
+  \[
+  A_s=\frac{\sum_{i=1}^{n}f_i\left( x_i-\overline{x}\right)^3}{n\sigma^3}
+  \]
+\item
+  Datos agrupados en intervalos
+  \[
+  A_s=\frac{\sum_{i=1}^{n}f_i\left( y_i-\overline{x}\right)^3}{n\sigma^3}
+  \]
 \end{itemize}
 
 \begin{example}
 
-www - wwwwwwwwww
+Sea la tabla con intervalos
 
-\begin{longtable}[]{@{}cccc@{}}
+\begin{longtable}[t]{cccccc}
+\caption{\label{tab:asimetria3}Fisher en datos tabulados en intervalos}\\
 \toprule
-Clase & \(Y_i\) & \(f_i\) & \(Y_i*f_i\) \\
+Clase & $y_i$ & ${f}_i$ & $y_i*f_i$ & $f_i(y_i-\overline{x})^3.$ & $f_i(y_i-\overline{x})^2$\\
 \midrule
-\endhead
-\([5,10)\) & 7.5 & 2 & 7.5 \\
-\([10,15)\) & 12.5 & 3 & 25 \\
-\([15,20)\) & & 4 & 87.5 \\
-\([20,25)\) & 22.5 & 7 & 157.5 \\
-\([25,30]\) & 27.5 & 10 & 275 \\
-\([30,35]\) & & 8 & 195 \\
-\(\sum\) & & & \\
+$[5,10)$ & 7.5 & 1 & 7.50 & -4699.42 & 280.56\\
+$[10,15)$ & 12.5 & 2 & 25.00 & -3244.47 & 276.12\\
+$[15,20)$ & 17.5 & 7 & 122.50 & -2152.83 & 318.94\\
+$[20,25)$ & 22.5 & 10 & 225.00 & -53.59 & 30.62\\
+$[25,30]$ & 27.5 & 12 & 330.00 & 411.94 & 126.75\\
+$[30,35]$ & 32.5 & 8 & 260.00 & 4492.12 & 544.50\\
+$\sum$ &  & 40 & 970.00 & -5246.25 & 1577.50\\
+ &  & $\overline{x}$ & 24.25 &  & \\
+ &  & $s$ & 6.36 &  & \\
+ &  & As & -0.85 &  & \\
 \bottomrule
 \end{longtable}
 
@@ -1361,40 +1374,127 @@ En estadística, usamos la medida de curtosis para describir la ``cola'' de la d
 \begin{figure}
 \centering
 \includegraphics{curtosis.jpg}
-\caption{wwwwwwwwwwwwwwww}
+\caption{Medidas de curtosis}
 \end{figure}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\tightlist
 \item
   \textbf{Mesocurtica} : esta es la distribución normal
 \item
-  \textbf{Leptocurtica} : esta distribución tiene colas más gruesas y un pico más afilado. La curtosis es ``positiva'' con un valor superior a 3
+  \textbf{Leptocurtica} : esta distribución tiene colas más gruesas y un pico más afilado. La curtosis es ``positiva''
 \item
-  \textbf{Platicurtica} : La distribución tiene un pico más bajo y más ancho y colas más delgadas. La curtosis es ``negativa'' con un valor superior a 30.263
+  \textbf{Platicurtica} : La distribución tiene un pico más bajo y más ancho y colas más delgadas. La curtosis es ``negativa''
 \end{enumerate}
 
-\begin{itemize}
-\tightlist
+\hypertarget{en-base-a-la-media-y-desviaciuxf3n-tuxedpica}{%
+\section{En base a la media y desviación típica}\label{en-base-a-la-media-y-desviaciuxf3n-tuxedpica}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \item
-  En base a la media y desviación típica
-\end{itemize}
-
-\[k= \frac{\sum_{i=1}^{n}\left( x_i-\overline{x}\right)^4 }{ns^4};\] Si \(k=3\) además \(k\geq 3\)
-
-\begin{itemize}
-\tightlist
+  Datos no agrupados
+  \[k= \frac{\sum_{i=1}^{n}\left(x_i-\overline{x}\right)^4 }{ns^4};\]
 \item
-  En base a percentiles
-  \[k= \frac{P_{75}-P_{25}}{2\left( P_{90}-P_{10} \right) }\] Si \(k<3\) y si \(k=3\) ademas \(k\geq 0.263\)
-\end{itemize}
+  Datos agrupados
+  \[k= \frac{\sum_{i=1}^{n}f_i\left(x_i-\overline{x}\right)^4 }{ns^4};\]
+\item
+  Datos agrupados en intervalos
+  \[k= \frac{\sum_{i=1}^{n}f_i\left(y_i-\overline{x}\right)^4 }{ns^4};\]
+\end{enumerate}
 
-Si este coeficiente es nulo, la distribución se dice normal (similar a la distribución normal de Gauss) y recibe el nombre de mesocúrtica.
+si \(k=3\) mesocúrtica, \(k>3\) leptocúrtica, además si \(k<3\) platicúrtica
 
-Si el coeficiente es positivo, la distribución se llama leptocúrtica, más puntiaguda que la anterior. Hay una mayor concentración de los datos en torno a la media.
+\begin{example}
 
-Si el coeficiente es negativo, la distribución se llama platicúrtica y hay una menor concentración de datos en torno a la media. sería más achatada que la primera.
+Sea la tabla con intervalos
+
+\begin{longtable}[t]{cccccc}
+\caption{\label{tab:curtosis1}Curtosis en base a la media y desviación típica en datos tabulados en intervalos}\\
+\toprule
+Clase & $y_i$ & ${f}_i$ & $y_i*f_i$ & $f_i(y_i-\overline{x}).^4.$ & $f_i(y_i-\overline{x})^2$\\
+\midrule
+$[5,10)$ & 7.5 & 1 & 7.50 & 78715.32 & 280.56\\
+$[10,15)$ & 12.5 & 2 & 25.00 & 38122.51 & 276.12\\
+$[15,20)$ & 17.5 & 7 & 122.50 & 14531.59 & 318.94\\
+$[20,25)$ & 22.5 & 10 & 225.00 & 93.79 & 30.62\\
+$[25,30]$ & 27.5 & 12 & 330.00 & 1338.80 & 126.75\\
+$[30,35]$ & 32.5 & 8 & 260.00 & 37060.03 & 544.50\\
+$\sum$ &  & 40 & 970.00 & 169862.03 & 1577.50\\
+ &  & $\overline{x}$ & 24.25 &  & \\
+ &  & $s$ & 6.36 &  & \\
+ &  & k & 4.28 &  & \\
+\bottomrule
+\end{longtable}
+
+\end{example}
+
+\hypertarget{en-base-a-percentiles}{%
+\section{En base a percentiles}\label{en-base-a-percentiles}}
+
+\[k= \frac{P_{75}-P_{25}}{2\left( P_{90}-P_{10} \right) }\]
+si \(k < 0.263\) platicúrtica y si \(k=0.263\) mesocúrtica, ademas \(k > 0.263\) leptocúrtica
+
+\begin{example}
+
+Sea la tabla con intervalos
+
+\begin{longtable}[t]{ccccccc}
+\caption{\label{tab:curtosis2}Curtosis en base a percentiles en datos tabulados en intervalos}\\
+\toprule
+Clase & $y_i$ & ${f}_i$ & $y_i*f_i$ & $F_i$ & X6 & X7\\
+\midrule
+$[5,10)$ & 7.5 & 1.00 &  & 1.00 & 37.8 & p90\\
+$[10,15)$ & 12.5 & 3.00 &  & 4.00 & 4.2 & p10\\
+$[15,20)$ & 17.5 & 8.00 &  & 12.00 & 10.5 & q1\\
+$[20,25)$ & 22.5 & 10.00 &  & 22.00 & 31.5 & q3\\
+$[25,30]$ & 27.5 & 12.00 &  & 34.00 &  & \\
+$[30,35]$ & 32.5 & 8.00 &  & 42.00 &  & \\
+$\sum$ &  & 42.00 &  &  &  & \\
+ &  &  & $P_{90}$ & 32.38 &  & \\
+ &  &  & $Q_1$ & 19.06 &  & \\
+ & As & 0.29 & $Q_3$ & 28.96 &  & \\
+ &  &  & $P_{10}$ & 15.12 &  & \\
+\bottomrule
+\end{longtable}
+
+\end{example}
+
+\hypertarget{variables-estaduxedsticas-bidimensionales}{%
+\chapter{Variables estadísticas bidimensionales}\label{variables-estaduxedsticas-bidimensionales}}
+
+\begin{definition}
+
+Sea \((X,Y)\) una variable estadistica bidimensional tal que los disitnos valores que toman \(x\) e \(y\) son
+\[X:x_1,x_2,\ldots, x_n\]
+\[Y:y_1,y_2,\ldots, y_m.\]
+
+Una dsitubicuion bidimensional de frecuencias es un arreglo de los valores observados \((x_1,y_1); (x_1,y_2); \ldots, (x_k,y_1), \ldots, (x_n,y_m),\) de la variable bidimensional \((X,Y)\), con sus respectivas frecuencias, en una tabla de doble entrada de la forma
+
+\begin{longtable}[]{@{}cccccc@{}}
+\toprule
+Clases & \(y_1\) & \(y_2\) & \(\ldots\) & \(y_n\) & TOTAL\tabularnewline
+\midrule
+\endhead
+\(x_1\) & \(f_{11}\) & \(f_{12}\) & \(\ldots\) & \(f_{1n}\) & \(f_{1.}\)\tabularnewline
+\(x_2\) & \(f_{21}\) & \(f_{22}\) & \(\ldots\) & \(f_{2n}\) & \(f_{2.}\)\tabularnewline
+\(\ldots\) & \(\ldots\) & \(\ldots\) & \(\ldots\) & \(\ldots\) & \(\ldots\)\tabularnewline
+\(x_m\) & \(f_{m1}\) & \(f_{m2}\) & \(\ldots\) & \(f_{mn}\) & \(f_{m.}\)\tabularnewline
+TOTAL & \(f_{.1}\) & \(f_{.2}\) & \(\ldots\) & \(f_{.n}\) & \(n=\sum_{i=1}^m\sum_{j=1}^n\)\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{definition}
+
+\hypertarget{regresiuxf3n-y-correlaciuxf3n-lineal}{%
+\section{Regresión y correlación lineal}\label{regresiuxf3n-y-correlaciuxf3n-lineal}}
+
+\begin{definition}[Coeficiente de correlacion muestral]
+Sean \((x_1,y_1); (x_2,y_2);\ldots, (x_k,y_k)\) valores de la variable estadsitica bidimensional \((X,Y)\) cuyas frecuencias realtivas son \(f_1, f_1, \ldots, f_k\) respectivamente. El coeficiente de correlacion muestral entre las variables \(X\) e \(Y\) es:
+\[Corr(X,Y)=r=\frac{s_{XY}}{s_{X}s_{Y}}=\frac{Cov(X,Y)}{\sqrt{s_{X}^2}\sqrt{s_{Y}^2}}=\frac{\sum_{i=1}^kf_i(x_i-\overline{X})(y_i-\overline{Y})}{\sqrt{\sum_{i=1}^kf_i(x_i-\overline{X})^2}\sqrt{\sum_{i=1}^kf_i(x_i-\overline{Y})^2}}.\]
+
+Donde
+\end{definition}
 
 \hypertarget{part-probabilidades}{%
 \part{Probabilidades}\label{part-probabilidades}}
@@ -1489,7 +1589,10 @@ El número de elementos de un conjunto potencia es \(2^n\) donde \(n=\left\vert 
 \hypertarget{uxe1lgebra-de-eventos}{%
 \chapter{Álgebra de eventos}\label{uxe1lgebra-de-eventos}}
 
-Sean \(A\), \(B\) y \(C\) eventos entonces 1. e 2. wwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+\hypertarget{operaciones-con-eventos}{%
+\section{Operaciones con eventos}\label{operaciones-con-eventos}}
+
+Sean \(A\), \(B\) y \(C\) eventos entonces
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1497,40 +1600,214 @@ Sean \(A\), \(B\) y \(C\) eventos entonces 1. e 2. wwwwwwwwwwwwwwwwwwwwwwwwwwwww
 \item
   Sub eventos
 \item
-  Igualdad de eventos
+  Inclusion de eventos \(A\subset B\), si \(\omega\in A \leftrightarrow \omega\in B\)
 \item
-  Unión de eventos
+  Igualdad de eventos ocurre si \(A\subset B\) y \(B\subset A\)
 \item
-  Intersección de eventos
+  Unión de eventos: \(A\cup B=\left\{\omega\in \Omega : \omega\in A \vee \omega\in B\right\}\)
 \item
-  Diferencia de eventos
+  Intersección de eventos: \(AB=A\cap B=\left\{\omega\in \Omega : \omega\in A \wedge \omega\in B\right\}\)
 \item
-  Complento de un evento
+  Diferencia de eventos: \(A-B=\left\{\omega\in \Omega : \omega\in A \wedge \omega\notin B\right\}\)
 \item
-  Leyes distributivas \(A\cup (B\cap C)=(A\cup B)\cap (A\cup C)\).
+  Complento de un evento: \(A'=\Omega-A=\left\{\omega\in \Omega:\omega\notin A\right\}\)
 \item
-  Leyes de Morgan
+  Leyes distributivas \(A\cup (B\cap C)=(A\cup B)\cap (A\cup C)\) y \(A\cap (B\cup C)=(A\cap B)\cup (A\cap C)\).
 \item
-  Producto cartesiano
+  Leyes de Morgan: \(\overline{A\cup B}=\overline{A}\cup \overline{B}\) y \(\overline{A\cap B}=\overline{A}\cap \overline{B}\)
+\item
+  Producto cartesiano: \(A\times B=\left\{(\omega_1, \omega_2): \omega_1\in A \text{ y } \omega_2\in B\right\}\) (refiérase además a experimentos compuestos inclusivos)
 \end{enumerate}
 
-\[ \int_{1}^{2}=\sum_{2}^{2}x_1 \]
+\hypertarget{eventos-mutuamente-excluyentes-y-colectivamente-exhaustivos}{%
+\section{Eventos mutuamente excluyentes y colectivamente exhaustivos}\label{eventos-mutuamente-excluyentes-y-colectivamente-exhaustivos}}
+
+\begin{definition}[Eventos mutuamente excluyentes]
+\protect\hypertarget{def:excluyentesexahustivos}{}\label{def:excluyentesexahustivos}Dos eventos \(A\) y \(B\) definidos en el mismo espacio muestral,
+se dice que son mutuamente. excluyentes si no pueden ocurrir juntos. Es decir
+la ocurrencia de uno excluye la ocurrencia del otro. En símbolos,
+si \(A\cap B=\emptyset\)
+\end{definition}
+
+\begin{definition}[Eventos colectivamente exhaustivos]
+\protect\hypertarget{def:excluyentesexahustivos}{}\label{def:excluyentesexahustivos}Se dice que una colección de \(n\) eventos \(A_1, A_2 , \ldots, A_n\) definidos sobre el mismo espacio muestral son colectivamente exhaustivos, si la
+unión es igual al espacio muestral. es decir \[\bigcup_{i=1}^n A_i=A_1\cup A_2 \cup \ldots \cup A_n= \Omega\]
+\end{definition}
+
+\begin{remark}
+
+Algunas observaciones con respecto a eventos mutuamente excluyentes y colectivamente exhaustivos
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Si \(A\) y \(B\) son eventos mutuamente excluyentes y colectivamente exhaustivos ¿son los eventos \(A\) y \(B\) mutuamente excluyente? ¿Son colectivamente exahustivos?
+\item
+  Si \(A\) y \(B\) son eventos mutuamente excluyentes pero no colectivamente exha­ustivos, ¿son los eventos \(A\) y \(B\) colectivamente exhaustivos?
+\end{enumerate}
+
+\end{remark}
 
 \hypertarget{tuxe9cnicas-de-conteo}{%
 \chapter{Técnicas de conteo}\label{tuxe9cnicas-de-conteo}}
 
-\(P_n^m\) \(C_n^m\)
+\hypertarget{principio-de-multiplicaciuxf3n}{%
+\section{Principio de multiplicación}\label{principio-de-multiplicaciuxf3n}}
 
-\[\binom{m}{n}=\frac{m}{n!(n-m)}\]
+\begin{theorem}
+Si un experimento aleatorio (u operación) \(\epsilon_1\) ocurre de \(n_1\) formas y si para cada una de estas, un experimento (u operación) \(\epsilon_2\) ocurre de \(n_2\) formas, entonces los dos experimentos juntos ocurren de
+\(n_1n_2\) formas.
+\end{theorem}
+
+\begin{remark}
+Entonces, condición necesaria y suficiente para que se
+aplique el principio de multiplicación es que se realizan ambos experimentos
+(u operaciones) uno seguido del otro o simultáneamente.
+\end{remark}
+
+\begin{example}
+El experimento aleatorio del lanzamiento de un dado y una moneda
+\end{example}
+
+\hypertarget{principio-de-la-adiciuxf3n}{%
+\section{Principio de la adición}\label{principio-de-la-adiciuxf3n}}
+
+\begin{theorem}
+Si un experimento aleatorio (u operación) \(\epsilon_1\) ocurre de \(n_1\) formas y un segundo experimento (u operación) \(\epsilon_2\) ocurre de \(n_2\) formas, entonces el experimento \(\epsilon\) que consiste en realizar \(\epsilon_1\) o \(\epsilon_2\), ocurre de
+\(n_1+n_2\) formas, siempre que los espacios muestrales \(\Omega_1\) y \(\Omega_2\) asociados a los experimentos \(\epsilon_1\) y \(\epsilon_2\) sean disjuntos.
+\end{theorem}
+
+\hypertarget{permutaciuxf3n}{%
+\section{Permutación}\label{permutaciuxf3n}}
+
+\begin{definition}[Permutación]
+Una disposición de sus miembros en una secuencia u orden lineal, o si el conjunto ya está ordenado, una variación del orden o posición de los elementos de un conjunto ordenado o una tupla
+\end{definition}
+
+\begin{example}
+Sean \(\left\{a,b,c\right\}\) entonces las posibles permutaciones son \(abc\), \(acb\), \(bac\), \(bca\), \(cab\) y \(cba\)
+\end{example}
+
+\begin{theorem}
+\protect\hypertarget{thm:theorem1}{}\label{thm:theorem1}El número de permutaciones de \(n\) objetos diferentes es \[P_n^n=n!=n(n-1)(n-2)\ldots 1\]
+\end{theorem}
+
+\begin{theorem}
+\protect\hypertarget{thm:theorem1}{}\label{thm:theorem1}El número de permutaciones de \(n\) objetos tomados \(s\) a \(s\) es \[P_n^s=\frac{n!}{(n-s)!}=n(n-1)(n-2)\ldots (n-s+1)\]
+\end{theorem}
+
+\begin{example}
+Sea \(a,b,c,d,e\) elementos cualesquiera, el numero de permutaciones de 2 a 2 es \(P_5^2=\frac{5!}{(5-2)!}=20\) pues los pares ordenados que se pueden formar con los elementos sin repetición son
+
+\[(a, b); (a, c); (a, d) \text{ y } (a, e)\]
+\[(b, a); (b, c); (b, d) \text{ y } (b, e)\]
+\[(c, a); (c, b); (c, d) \text{ y } (c, e)\]
+\[(d, a); (d, b); (d, c) \text{ y } (d, e)\]
+\[(e, a); (e, b); (e, c) \text{ y } (e, d)\]
+\end{example}
+
+\begin{remark}
+Del teorema \ref{thm:theorem1} se deduce que en el resultado esta implicito el \textbf{principio de la multiplicacion}
+\end{remark}
+
+\begin{theorem}
+\protect\hypertarget{thm:theorem1}{}\label{thm:theorem1}El numero de permutaciones de n objetos distintos alrededor de un circulo es \[P_c^n=(n-1)\]
+\end{theorem}
+
+\begin{example}
+
+¿De cuántas formas diferentes pudieron sentarse, en la última cena, alrededor de la mesa, Jesucristo y los 12 apóstoles?
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Si la mesa fuera circular, tendremos la permutación circular. El número de formas es \(P_c^{13}=(13-1)!=12!\)
+\item
+  Si la mesa no es circular, se tendrá una permutación de las 13 personas. El número de formas es \(P_{}^{}=\)
+\end{enumerate}
+
+\end{example}
+
+\hypertarget{premutaciuxf3n-con-repeticiuxf3n}{%
+\section{Premutación con repetición}\label{premutaciuxf3n-con-repeticiuxf3n}}
+
+\begin{definition}
+El numero de permutaciones de \(n\) objetos de los cuales \(k\) objetos son de clase \(n_1, n_2, \ldots, n_k\) respectivamente y los demas objetos de clase 1 es \[P_n^{n_1, n_2, \ldots, n_k}=\frac{n!}{n_1!n_2!\ldots n_k!}\]
+\end{definition}
+
+\hypertarget{particiuxf3n-de-un-conjunto}{%
+\section{Partición de un conjunto}\label{particiuxf3n-de-un-conjunto}}
+
+\begin{definition}
+El número de formas posibles, que \(n\) objetos diferentes en que puedan dividirse en \(k\) grupos distinguibles conteniendo \(n_1, n_2, \ldots, n_k\) objetos respectivamente, \(n_1+n_2+\ldots+n_k=n\) es \[\binom{n}{n_1, n_2, \ldots, n_k}=P_n^{n_1, n_2, \ldots, n_k}=\frac{n!}{n_1!n_2!\ldots n_k!}\]
+\end{definition}
+
+\hypertarget{combinaciuxf3n}{%
+\section{Combinación}\label{combinaciuxf3n}}
+
+En muchos casos estaremos interesado en el número de formas de seleccianar \(r\) objetos de \(n\). sin importar el orden. Estas selecciones se llaman \textbf{combinaciones}
+
+\begin{definition}
+Un subconjunto de \(r\) elementos de un conjunto que tiene \(n\)
+elementos diferentes, se llama una \textbf{combinacion de n elementos tomados de \(r\) a \(r\)}.
+\end{definition}
+
+\[\binom{r}{n}=C_n^r=\frac{n!}{r!(n-r)}\]
+
+\begin{remark}
+El número de combinaciones por el número de permutaciones de los elementos de la clase \(P_r^r\) (numero delementos de tomados de \(r\) a \(r\)) es igual al numero de permutaciones de los objetos tomados \(r\) a \(r\) de \(P_n^r\), es decir
+
+\[C_n^rP_r^r=P_n^r\]
+entonces
+\[C_n^r=\frac{P_n^r}{P_r^r}=\frac{\frac{n!}{(n-r)!}}{r!}=\frac{n!}{r!(n-r)!}\]
+\end{remark}
+
+\begin{remark}
+Una combinación de \(n\) elementos distintos tomados de a \(r\),
+en realidad es una partición del conjunto en dos subconjuntos (o celdas), donde una de ellas
+contiene \(r\) objetos y la otra las \(n - r\) restantes. Por lo tanto, el número de
+tales combinaciones será el número de particiones, es decir
+\[\binom{n}{r, n-r}=P_n^{r, n-r}=\frac{n!}{r!(n-r)!}\]
+\end{remark}
 
 \hypertarget{definiciuxf3n-de-probabilidad}{%
 \chapter{Definición de probabilidad}\label{definiciuxf3n-de-probabilidad}}
+
+Se define de dos maneras
+
+\hypertarget{probabilidad-cluxe1sica}{%
+\section{Probabilidad clásica}\label{probabilidad-cluxe1sica}}
+
+\begin{definition}[Probabilidad clásica]
+Si \(n(\Omega)=n\), número de sucesos posibles de un espacio muestral y \(n(A)=n_A\) el número de suscesos del evento \(A\). La probabiilidad del evento \(A\) es \[P(A)=\frac{n(\Omega)}{n(A)}=\frac{n}{n_A}\]
+\end{definition}
+
+\begin{remark}
+
+Sea \(A\) es un evento entonces se verifica:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  La probabilidad de un evento A verifica \(0\leq P(A)\leq 1\), pues \(0\leq n_A\leq n\).
+\item
+  \(A\) es un evento imposible si \(P(A)=0\). en particular \(A=\emptyset\).
+\item
+  \(A\) es un evento seguro si \(P(A)=1\). en particular \(A=\Omega\).
+\item
+  Los eventos elementales son equiprobables, es decir \(P(\left\{\omega_1\right\})=\frac{1}{n}\), \(i=1,2, \ldots, n\). Si \(A\) es un evento en \(\Omega\) entonces \[P(A)=\sum_{w_i\in A} P(\left\{\omega_i\right\})\]
+\end{enumerate}
+
+\end{remark}
 
 \hypertarget{probabilidad-condicional}{%
 \chapter{Probabilidad condicional}\label{probabilidad-condicional}}
 
 \leavevmode\hypertarget{wwwwwwww}{}%
-wwwwwwwwwwwwwwwwww\[P(A|B)= \frac{P(B\cap A)}{P(B)}\]
+\[P(A|B)= \frac{P(B\cap A)}{P(B)}\]
 
 \hypertarget{teorema-de-bayes}{%
 \chapter{Teorema de Bayes}\label{teorema-de-bayes}}
@@ -1763,8 +2040,8 @@ además si \(a_{11}= a_{22}= \ldots = a_{nn}=k\) la matriz recibe el nombre de \
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{xw }\OtherTok{=} \StringTok{\textquotesingle{}Es decir los elementos son demagogos y déspotas\textquotesingle{}}
-\NormalTok{x1 }\OtherTok{=} \StringTok{\textquotesingle{}Es decir los elementos son demagogos y déspotas\textquotesingle{}}
+\NormalTok{xw =}\StringTok{ 'Es decir los elementos son demagogos y déspotas'}
+\NormalTok{x1 =}\StringTok{ 'Es decir los elementos son demagogos y déspotas'}
 \end{Highlighting}
 \end{Shaded}
 
@@ -1789,24 +2066,69 @@ además si \(a_{11}= a_{22}= \ldots = a_{nn}=k\) la matriz recibe el nombre de \
 
 Tabla \ref{tab:ww1}
 
-\begin{longtable}[]{@{}
-  >{\raggedleft\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.11}}
-  >{\centering\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.04}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.02}}
-  >{\raggedleft\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.25}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.57}}@{}}
+\begin{longtable}[]{@{}rclrl@{}}
 \caption{\label{tab:ww1} Caption}\tabularnewline
 \toprule
-Option & N & w & Observation & Description \\
+\begin{minipage}[b]{0.10\columnwidth}\raggedleft
+Option\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\centering
+N\strut
+\end{minipage} & \begin{minipage}[b]{0.02\columnwidth}\raggedright
+w\strut
+\end{minipage} & \begin{minipage}[b]{0.21\columnwidth}\raggedleft
+Observation\strut
+\end{minipage} & \begin{minipage}[b]{0.49\columnwidth}\raggedright
+Description\strut
+\end{minipage}\tabularnewline
 \midrule
 \endfirsthead
 \toprule
-Option & N & w & Observation & Description \\
+\begin{minipage}[b]{0.10\columnwidth}\raggedleft
+Option\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\centering
+N\strut
+\end{minipage} & \begin{minipage}[b]{0.02\columnwidth}\raggedright
+w\strut
+\end{minipage} & \begin{minipage}[b]{0.21\columnwidth}\raggedleft
+Observation\strut
+\end{minipage} & \begin{minipage}[b]{0.49\columnwidth}\raggedright
+Description\strut
+\end{minipage}\tabularnewline
 \midrule
 \endhead
-Es decir los elementos son demagogos y déspotas Es decir los elementos son demagogos y déspotas & 1 & w & Es decir los elementos son demagogos y déspotas & Es decir los elementos son demagogos y déspotas Es decir los elementos son demagogos y déspotas \\
-Engine & 2 & w & Es decir los elementos son demagogos y déspotas \(\sum^{n}_{i=1}{f_i}\) & Engine to be used for processing templates. Handlebars is the default. \\
-Es decir los elementos son demagogos y déspotas & 3 & w & \(\sum^{n}_{i=1}{f_i}\) & extension to be used for dest files. \\
+\begin{minipage}[t]{0.10\columnwidth}\raggedleft
+Es decir los elementos son demagogos y déspotas Es decir los elementos son demagogos y déspotas\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\centering
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+w\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedleft
+Es decir los elementos son demagogos y déspotas\strut
+\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright
+Es decir los elementos son demagogos y déspotas Es decir los elementos son demagogos y déspotas\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.10\columnwidth}\raggedleft
+Engine\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\centering
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+w\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedleft
+Es decir los elementos son demagogos y déspotas \(\sum^{n}_{i=1}{f_i}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright
+Engine to be used for processing templates. Handlebars is the default.\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.10\columnwidth}\raggedleft
+Es decir los elementos son demagogos y déspotas\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\centering
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+w\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedleft
+\(\sum^{n}_{i=1}{f_i}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.49\columnwidth}\raggedright
+extension to be used for dest files.\strut
+\end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -1833,7 +2155,7 @@ It is not the same \texttt{x} as the one in R.
 ##    12917.13
 \end{verbatim}
 
-  \bibliography{book.bib,packages.bib}
+\bibliography{book.bib,packages.bib}
 
 \printindex
 

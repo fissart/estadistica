@@ -10,7 +10,7 @@ Podemos decir que la asimetría indica cuánto se desvía nuestra distribución 
 
 ![Medidas de asimetría](simetria.png)
 
-- Índice de simetría de **Pearson**:
+## Índice de simetría de **Pearson**:
 
 $$
 A_s=\frac{3(\overline{x}-Me)}{s}
@@ -24,7 +24,20 @@ $$
 
 $-3<A_s<3$
 
-- Índice de simetría de **Yule Bowley**:
+:::{.example}
+Sea la tabla con intervalos
+
+
+```{r asimetria1, echo=FALSE, warning = FALSE, message = FALSE, tidy=FALSE}
+library(openxlsx)
+opts <- options(knitr.kable.NA = "",ggrepel.max.overlaps = Inf)
+new <-read.xlsx(xlsxFile="levene.xlsx", sheet=1, cols=c(5:14), rows=c(42:53), colNames=T)
+knitr::kable(new, escape = FALSE, digits = 2, booktabs=T, caption='Pearson en datos tabulados en intervalos', linesep = "", longtable=T, align = "c")
+```
+:::
+
+
+## Índice de simetría de **Yule Bowley**:
 
 $$
 A_s=\frac{Q_1+Q_3-2Q_2}{Q_3-Q_1}
@@ -33,7 +46,20 @@ $$
 $-1<A_s<1$
 
 
-- Índice de simetría de **Fisher**:
+:::{.example}
+Sea la tabla con intervalos
+
+
+```{r asimetria2, echo=FALSE, warning = FALSE, message = FALSE, tidy=FALSE}
+library(openxlsx)
+opts <- options(knitr.kable.NA = "",ggrepel.max.overlaps = Inf)
+new <-read.xlsx(xlsxFile="levene.xlsx", sheet=1, cols=c(5:14), rows=c(55:65), colNames=T)
+knitr::kable(new, escape = FALSE, digits = 2, booktabs=T, caption='Yule Bowley en datos tabulados en intervalos', linesep = "", longtable=T, align = "c")
+```
+:::
+
+
+## Índice de simetría de **Fisher**:
 
   * Datos no agrupados
 $$
@@ -51,6 +77,17 @@ $$
 A_s=\frac{\sum_{i=1}^{n}f_i\left( y_i-\overline{x}\right)^3}{n\sigma^3}
 $$
 
+:::{.example}
+Sea la tabla con intervalos
+
+
+```{r asimetria3, echo=FALSE, warning = FALSE, message = FALSE, tidy=FALSE}
+library(openxlsx)
+opts <- options(knitr.kable.NA = "",ggrepel.max.overlaps = Inf)
+new <-read.xlsx(xlsxFile="levene.xlsx", sheet=1, cols=c(5:14), rows=c(67:77), colNames=T)
+knitr::kable(new, escape = FALSE, digits = 2, booktabs=T, caption='Fisher en datos tabulados en intervalos', linesep = "", longtable=T, align = "c")
+```
+:::
 
 <!--
 ## Normal: Simétrica
@@ -100,23 +137,6 @@ print(sum((x-mean(x))^3)/((length(x)-1)*sd(x)^3))
 ```
 -->
 
-:::{.example}
-
-www - wwwwwwwwww
-
-|   Clase   | $Y_i$ | $f_i$ | $Y_i*f_i$ |
-|:---------:|:-----:|:-----:|:---------:|
-| $[5,10)$  |  7.5  |   2   |    7.5    |
-| $[10,15)$ | 12.5  |   3   |    25     |
-| $[15,20)$ |       |   4   |   87.5    |
-| $[20,25)$ | 22.5  |   7   |   157.5   |
-| $[25,30]$ | 27.5  |  10   |    275    |
-| $[30,35]$ |       |   8   |    195    |
-|  $\sum$   |       |       |           |
-
-
-
-:::
 
 
 
