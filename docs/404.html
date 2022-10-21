@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Page not found | Elementos de la estadística</title>
   <meta name="description" content="Page not found | Elementos de la estadística" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Page not found | Elementos de la estadística" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Ricardo Michel MALLQUI BAÑOS" />
 
 
-<meta name="date" content="2022-10-17" />
+<meta name="date" content="2022-10-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -49,29 +49,31 @@
 
 
 
- <link rel="icon" type="image/x-icon" href="favicon.ico">
+ <link rel="icon" type="image/x-icon" href="favicon.ico"> 
 
 
 <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -80,9 +82,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -115,6 +117,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -131,113 +155,111 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul class="summary">
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Resumen</a></li>
 <li class="part"><span><b>I Estadística descriptiva</b></span></li>
-<li class="chapter" data-level="1" data-path="preliminares.html"><a href="preliminares.html"><i class="fa fa-check"></i><b>1</b> Preliminares</a><ul>
+<li class="chapter" data-level="1" data-path="preliminares.html"><a href="preliminares.html"><i class="fa fa-check"></i><b>1</b> Preliminares</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="preliminares.html"><a href="preliminares.html#pre-requisitos"><i class="fa fa-check"></i><b>1.1</b> Pre requisitos</a></li>
 <li class="chapter" data-level="1.2" data-path="preliminares.html"><a href="preliminares.html#definiciones-básicas"><i class="fa fa-check"></i><b>1.2</b> Definiciones básicas</a></li>
 <li class="chapter" data-level="1.3" data-path="preliminares.html"><a href="preliminares.html#elementos-fundamentales-de-la-estadística"><i class="fa fa-check"></i><b>1.3</b> Elementos fundamentales de la estadística</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html"><i class="fa fa-check"></i><b>2</b> Organización de datos en tablas de frecuencias</a><ul>
+<li class="chapter" data-level="2" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html"><i class="fa fa-check"></i><b>2</b> Organización de datos en tablas de frecuencias</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="organización-de-datos-en-tablas-de-frecuencias.html"><a href="organización-de-datos-en-tablas-de-frecuencias.html#distribución-de-frecuencias"><i class="fa fa-check"></i><b>2.1</b> Distribución de frecuencias</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="gráficos-estadísticos.html"><a href="gráficos-estadísticos.html"><i class="fa fa-check"></i><b>3</b> Gráficos estadísticos</a><ul>
+<li class="chapter" data-level="3" data-path="gráficos-estadísticos.html"><a href="gráficos-estadísticos.html"><i class="fa fa-check"></i><b>3</b> Gráficos estadísticos</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="gráficos-estadísticos.html"><a href="gráficos-estadísticos.html#histograma-de-frecuencias"><i class="fa fa-check"></i><b>3.1</b> Histograma de frecuencias</a></li>
 <li class="chapter" data-level="3.2" data-path="gráficos-estadísticos.html"><a href="gráficos-estadísticos.html#circulares"><i class="fa fa-check"></i><b>3.2</b> Circulares</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html"><i class="fa fa-check"></i><b>4</b> Medidas de tendencia central</a><ul>
-<li class="chapter" data-level="4.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#la-media"><i class="fa fa-check"></i><b>4.1</b> La media</a><ul>
+<li class="chapter" data-level="4" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html"><i class="fa fa-check"></i><b>4</b> Medidas de tendencia central</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#la-media"><i class="fa fa-check"></i><b>4.1</b> La media</a>
+<ul>
 <li class="chapter" data-level="4.1.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#media-de-datos-no-agrupados"><i class="fa fa-check"></i><b>4.1.1</b> Media de datos no agrupados</a></li>
 <li class="chapter" data-level="4.1.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#media-de-datos-agrupados"><i class="fa fa-check"></i><b>4.1.2</b> Media de datos agrupados</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#la-moda-mo"><i class="fa fa-check"></i><b>4.2</b> La moda (Mo)</a><ul>
+<li class="chapter" data-level="4.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#la-moda-mo"><i class="fa fa-check"></i><b>4.2</b> La moda (Mo)</a>
+<ul>
 <li class="chapter" data-level="4.2.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#moda-de-datos-no-tabulados"><i class="fa fa-check"></i><b>4.2.1</b> Moda de datos no tabulados</a></li>
 <li class="chapter" data-level="4.2.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#moda-de-datos-tabulados"><i class="fa fa-check"></i><b>4.2.2</b> Moda de datos tabulados</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#la-mediana-me"><i class="fa fa-check"></i><b>4.3</b> La mediana (Me)</a><ul>
+<li class="chapter" data-level="4.3" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#la-mediana-me"><i class="fa fa-check"></i><b>4.3</b> La mediana (Me)</a>
+<ul>
 <li class="chapter" data-level="4.3.1" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#mediana-de-datos-no-tabulados"><i class="fa fa-check"></i><b>4.3.1</b> Mediana de datos no tabulados</a></li>
 <li class="chapter" data-level="4.3.2" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#mediana-de-datos-tabulados"><i class="fa fa-check"></i><b>4.3.2</b> Mediana de datos tabulados</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="medidas-de-tendencia-central.html"><a href="medidas-de-tendencia-central.html#asignación"><i class="fa fa-check"></i><b>4.4</b> Asignación</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html"><i class="fa fa-check"></i><b>5</b> Medidas de dispersión</a><ul>
+<li class="chapter" data-level="5" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html"><i class="fa fa-check"></i><b>5</b> Medidas de dispersión</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#rango"><i class="fa fa-check"></i><b>5.1</b> Rango</a></li>
-<li class="chapter" data-level="5.2" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#varianza"><i class="fa fa-check"></i><b>5.2</b> Varianza</a><ul>
+<li class="chapter" data-level="5.2" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#varianza"><i class="fa fa-check"></i><b>5.2</b> Varianza</a>
+<ul>
 <li class="chapter" data-level="5.2.1" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#datos-no-tabulados"><i class="fa fa-check"></i><b>5.2.1</b> Datos no tabulados</a></li>
 <li class="chapter" data-level="5.2.2" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#datos-tabulados"><i class="fa fa-check"></i><b>5.2.2</b> Datos tabulados</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#desviación-típica"><i class="fa fa-check"></i><b>5.3</b> Desviación típica</a></li>
-<li class="chapter" data-level="5.4" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#desviación-media-absoluta"><i class="fa fa-check"></i><b>5.4</b> Desviación media absoluta</a><ul>
+<li class="chapter" data-level="5.4" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#desviación-media-absoluta"><i class="fa fa-check"></i><b>5.4</b> Desviación media absoluta</a>
+<ul>
 <li class="chapter" data-level="5.4.1" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#datos-no-tabulados-1"><i class="fa fa-check"></i><b>5.4.1</b> Datos no tabulados</a></li>
 <li class="chapter" data-level="5.4.2" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#datos-tabulados-1"><i class="fa fa-check"></i><b>5.4.2</b> Datos tabulados</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#desviación-mediana-absoluta"><i class="fa fa-check"></i><b>5.5</b> Desviación mediana absoluta</a><ul>
+<li class="chapter" data-level="5.5" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#desviación-mediana-absoluta"><i class="fa fa-check"></i><b>5.5</b> Desviación mediana absoluta</a>
+<ul>
 <li class="chapter" data-level="5.5.1" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#datos-no-tabulados-2"><i class="fa fa-check"></i><b>5.5.1</b> Datos no tabulados</a></li>
 <li class="chapter" data-level="5.5.2" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#datos-tabulados-2"><i class="fa fa-check"></i><b>5.5.2</b> Datos tabulados</a></li>
 </ul></li>
 <li class="chapter" data-level="5.6" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#coeficiente-de-variacion"><i class="fa fa-check"></i><b>5.6</b> Coeficiente de variacion</a></li>
 <li class="chapter" data-level="5.7" data-path="medidas-de-dispersión.html"><a href="medidas-de-dispersión.html#asignación-1"><i class="fa fa-check"></i><b>5.7</b> Asignación</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html"><i class="fa fa-check"></i><b>6</b> Medidas de posición (cuantiles)</a><ul>
-<li class="chapter" data-level="6.1" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html#cuartiles"><i class="fa fa-check"></i><b>6.1</b> Cuartiles</a><ul>
+<li class="chapter" data-level="6" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html"><i class="fa fa-check"></i><b>6</b> Medidas de posición (cuantiles)</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html#cuartiles"><i class="fa fa-check"></i><b>6.1</b> Cuartiles</a>
+<ul>
 <li class="chapter" data-level="6.1.1" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html#datos-no-agrupados"><i class="fa fa-check"></i><b>6.1.1</b> Datos no agrupados</a></li>
 <li class="chapter" data-level="6.1.2" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html#datos-agrupados"><i class="fa fa-check"></i><b>6.1.2</b> Datos agrupados</a></li>
 </ul></li>
 <li class="chapter" data-level="6.2" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html#quintiles"><i class="fa fa-check"></i><b>6.2</b> Quintiles</a></li>
-<li class="chapter" data-level="6.3" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html#deciles"><i class="fa fa-check"></i><b>6.3</b> Deciles</a><ul>
+<li class="chapter" data-level="6.3" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html#deciles"><i class="fa fa-check"></i><b>6.3</b> Deciles</a>
+<ul>
 <li class="chapter" data-level="6.3.1" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html#datos-no-agrupados-1"><i class="fa fa-check"></i><b>6.3.1</b> Datos no agrupados</a></li>
 <li class="chapter" data-level="6.3.2" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html#datos-agrupados-1"><i class="fa fa-check"></i><b>6.3.2</b> Datos agrupados</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html#percentiles"><i class="fa fa-check"></i><b>6.4</b> Percentiles</a><ul>
+<li class="chapter" data-level="6.4" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html#percentiles"><i class="fa fa-check"></i><b>6.4</b> Percentiles</a>
+<ul>
 <li class="chapter" data-level="6.4.1" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html#datos-no-agrupados-2"><i class="fa fa-check"></i><b>6.4.1</b> Datos no agrupados</a></li>
 <li class="chapter" data-level="6.4.2" data-path="medidas-de-posición-cuantiles.html"><a href="medidas-de-posición-cuantiles.html#datos-agrupados-2"><i class="fa fa-check"></i><b>6.4.2</b> Datos agrupados</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html"><i class="fa fa-check"></i><b>7</b> Medidas de asimetría</a><ul>
-<li class="chapter" data-level="7.1" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html#índice-de-simetría-de-pearson"><i class="fa fa-check"></i><b>7.1</b> Índice de simetría de <strong>Pearson</strong>:</a></li>
-<li class="chapter" data-level="7.2" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html#índice-de-simetría-de-yule-bowley"><i class="fa fa-check"></i><b>7.2</b> Índice de simetría de <strong>Yule Bowley</strong>:</a></li>
-<li class="chapter" data-level="7.3" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html#índice-de-simetría-de-fisher"><i class="fa fa-check"></i><b>7.3</b> Índice de simetría de <strong>Fisher</strong>:</a></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="medidas-de-curtosis-o-apuntamiento.html"><a href="medidas-de-curtosis-o-apuntamiento.html"><i class="fa fa-check"></i><b>8</b> Medidas de curtosis o apuntamiento</a><ul>
-<li class="chapter" data-level="8.1" data-path="medidas-de-curtosis-o-apuntamiento.html"><a href="medidas-de-curtosis-o-apuntamiento.html#en-base-a-la-media-y-desviación-típica"><i class="fa fa-check"></i><b>8.1</b> En base a la media y desviación típica</a></li>
-<li class="chapter" data-level="8.2" data-path="medidas-de-curtosis-o-apuntamiento.html"><a href="medidas-de-curtosis-o-apuntamiento.html#en-base-a-percentiles"><i class="fa fa-check"></i><b>8.2</b> En base a percentiles</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="variables-estadísticas-bidimensionales.html"><a href="variables-estadísticas-bidimensionales.html"><i class="fa fa-check"></i><b>9</b> Variables estadísticas bidimensionales</a><ul>
-<li class="chapter" data-level="9.1" data-path="variables-estadísticas-bidimensionales.html"><a href="variables-estadísticas-bidimensionales.html#regresión-y-correlación-lineal"><i class="fa fa-check"></i><b>9.1</b> Regresión y correlación lineal</a></li>
-</ul></li>
+<li class="chapter" data-level="7" data-path="medidas-de-asimetría.html"><a href="medidas-de-asimetría.html"><i class="fa fa-check"></i><b>7</b> Medidas de asimetría</a></li>
+<li class="chapter" data-level="8" data-path="medidas-de-curtosis-o-apuntamiento.html"><a href="medidas-de-curtosis-o-apuntamiento.html"><i class="fa fa-check"></i><b>8</b> Medidas de curtosis o apuntamiento</a></li>
 <li class="part"><span><b>II Probabilidades</b></span></li>
-<li class="chapter" data-level="10" data-path="experimento-aleatorio-espacio-muestral-y-eventos.html"><a href="experimento-aleatorio-espacio-muestral-y-eventos.html"><i class="fa fa-check"></i><b>10</b> Experimento aleatorio, espacio muestral y eventos</a><ul>
-<li class="chapter" data-level="10.1" data-path="experimento-aleatorio-espacio-muestral-y-eventos.html"><a href="experimento-aleatorio-espacio-muestral-y-eventos.html#experimento-aleatorio"><i class="fa fa-check"></i><b>10.1</b> Experimento aleatorio</a></li>
-<li class="chapter" data-level="10.2" data-path="experimento-aleatorio-espacio-muestral-y-eventos.html"><a href="experimento-aleatorio-espacio-muestral-y-eventos.html#espacio-muestral"><i class="fa fa-check"></i><b>10.2</b> Espacio muestral</a></li>
+<li class="chapter" data-level="9" data-path="experimento-aleatorio-espacio-muestral-y-eventos.html"><a href="experimento-aleatorio-espacio-muestral-y-eventos.html"><i class="fa fa-check"></i><b>9</b> Experimento aleatorio, espacio muestral y eventos</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="experimento-aleatorio-espacio-muestral-y-eventos.html"><a href="experimento-aleatorio-espacio-muestral-y-eventos.html#experimento-aleatorio"><i class="fa fa-check"></i><b>9.1</b> Experimento aleatorio</a></li>
+<li class="chapter" data-level="9.2" data-path="experimento-aleatorio-espacio-muestral-y-eventos.html"><a href="experimento-aleatorio-espacio-muestral-y-eventos.html#espacio-muestral"><i class="fa fa-check"></i><b>9.2</b> Espacio muestral</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="álgebra-de-eventos.html"><a href="álgebra-de-eventos.html"><i class="fa fa-check"></i><b>11</b> Álgebra de eventos</a><ul>
-<li class="chapter" data-level="11.1" data-path="álgebra-de-eventos.html"><a href="álgebra-de-eventos.html#operaciones-con-eventos"><i class="fa fa-check"></i><b>11.1</b> Operaciones con eventos</a></li>
-<li class="chapter" data-level="11.2" data-path="álgebra-de-eventos.html"><a href="álgebra-de-eventos.html#eventos-mutuamente-excluyentes-y-colectivamente-exhaustivos"><i class="fa fa-check"></i><b>11.2</b> Eventos mutuamente excluyentes y colectivamente exhaustivos</a></li>
-</ul></li>
-<li class="chapter" data-level="12" data-path="técnicas-de-conteo.html"><a href="técnicas-de-conteo.html"><i class="fa fa-check"></i><b>12</b> Técnicas de conteo</a><ul>
-<li class="chapter" data-level="12.1" data-path="técnicas-de-conteo.html"><a href="técnicas-de-conteo.html#principio-de-multiplicación"><i class="fa fa-check"></i><b>12.1</b> Principio de multiplicación</a></li>
-<li class="chapter" data-level="12.2" data-path="técnicas-de-conteo.html"><a href="técnicas-de-conteo.html#principio-de-la-adición"><i class="fa fa-check"></i><b>12.2</b> Principio de la adición</a></li>
-<li class="chapter" data-level="12.3" data-path="técnicas-de-conteo.html"><a href="técnicas-de-conteo.html#permutación"><i class="fa fa-check"></i><b>12.3</b> Permutación</a></li>
-<li class="chapter" data-level="12.4" data-path="técnicas-de-conteo.html"><a href="técnicas-de-conteo.html#premutación-con-repetición"><i class="fa fa-check"></i><b>12.4</b> Premutación con repetición</a></li>
-<li class="chapter" data-level="12.5" data-path="técnicas-de-conteo.html"><a href="técnicas-de-conteo.html#partición-de-un-conjunto"><i class="fa fa-check"></i><b>12.5</b> Partición de un conjunto</a></li>
-<li class="chapter" data-level="12.6" data-path="técnicas-de-conteo.html"><a href="técnicas-de-conteo.html#combinación"><i class="fa fa-check"></i><b>12.6</b> Combinación</a></li>
-</ul></li>
-<li class="chapter" data-level="13" data-path="definición-de-probabilidad.html"><a href="definición-de-probabilidad.html"><i class="fa fa-check"></i><b>13</b> Definición de probabilidad</a><ul>
-<li class="chapter" data-level="13.1" data-path="definición-de-probabilidad.html"><a href="definición-de-probabilidad.html#probabilidad-clásica"><i class="fa fa-check"></i><b>13.1</b> Probabilidad clásica</a></li>
-</ul></li>
-<li class="chapter" data-level="14" data-path="probabilidad-condicional.html"><a href="probabilidad-condicional.html"><i class="fa fa-check"></i><b>14</b> Probabilidad condicional</a></li>
-<li class="chapter" data-level="15" data-path="teorema-de-bayes.html"><a href="teorema-de-bayes.html"><i class="fa fa-check"></i><b>15</b> Teorema de Bayes</a></li>
-<li class="chapter" data-level="16" data-path="eventos-independientes-y-secuencias-de-experimentos.html"><a href="eventos-independientes-y-secuencias-de-experimentos.html"><i class="fa fa-check"></i><b>16</b> Eventos independientes y secuencias de experimentos</a></li>
-<li class="chapter" data-level="17" data-path="probabilidad-en-espacio.html"><a href="probabilidad-en-espacio.html"><i class="fa fa-check"></i><b>17</b> Probabilidad en espacio</a></li>
+<li class="chapter" data-level="10" data-path="álgebra-de-eventos.html"><a href="álgebra-de-eventos.html"><i class="fa fa-check"></i><b>10</b> Álgebra de eventos</a></li>
+<li class="chapter" data-level="11" data-path="técnicas-de-conteo.html"><a href="técnicas-de-conteo.html"><i class="fa fa-check"></i><b>11</b> Técnicas de conteo</a></li>
+<li class="chapter" data-level="12" data-path="definición-de-probabilidad.html"><a href="definición-de-probabilidad.html"><i class="fa fa-check"></i><b>12</b> Definición de probabilidad</a></li>
+<li class="chapter" data-level="13" data-path="probabilidad-condicional.html"><a href="probabilidad-condicional.html"><i class="fa fa-check"></i><b>13</b> Probabilidad condicional</a></li>
+<li class="chapter" data-level="14" data-path="teorema-de-bayes.html"><a href="teorema-de-bayes.html"><i class="fa fa-check"></i><b>14</b> Teorema de Bayes</a></li>
+<li class="chapter" data-level="15" data-path="eventos-independientes-y-secuencias-de-experimentos.html"><a href="eventos-independientes-y-secuencias-de-experimentos.html"><i class="fa fa-check"></i><b>15</b> Eventos independientes y secuencias de experimentos</a></li>
+<li class="chapter" data-level="16" data-path="probabilidad-en-espacio.html"><a href="probabilidad-en-espacio.html"><i class="fa fa-check"></i><b>16</b> Probabilidad en espacio</a></li>
 <li class="part"><span><b>III Inferencia estadística</b></span></li>
-<li class="chapter" data-level="18" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html"><i class="fa fa-check"></i><b>18</b> Variables aleatorias</a></li>
+<li class="chapter" data-level="17" data-path="variables-aleatorias.html"><a href="variables-aleatorias.html"><i class="fa fa-check"></i><b>17</b> Variables aleatorias</a></li>
 <li class="appendix"><span><b>Apendice</b></span></li>
-<li class="chapter" data-level="A" data-path="sumatorias.html"><a href="sumatorias.html"><i class="fa fa-check"></i><b>A</b> Sumatorias</a><ul>
-<li class="chapter" data-level="A.1" data-path="sumatorias.html"><a href="sumatorias.html#ee"><i class="fa fa-check"></i><b>A.1</b> ee</a><ul>
+<li class="chapter" data-level="A" data-path="sumatorias.html"><a href="sumatorias.html"><i class="fa fa-check"></i><b>A</b> Sumatorias</a>
+<ul>
+<li class="chapter" data-level="A.1" data-path="sumatorias.html"><a href="sumatorias.html#ee"><i class="fa fa-check"></i><b>A.1</b> ee</a>
+<ul>
 <li class="chapter" data-level="A.1.1" data-path="sumatorias.html"><a href="sumatorias.html#eeeee"><i class="fa fa-check"></i><b>A.1.1</b> eeeee</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="B" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>B</b> Matrices</a><ul>
+<li class="chapter" data-level="B" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>B</b> Matrices</a>
+<ul>
 <li class="chapter" data-level="B.1" data-path="matrices.html"><a href="matrices.html#algebra-de-matrices"><i class="fa fa-check"></i><b>B.1</b> Algebra de matrices</a></li>
-<li class="chapter" data-level="B.2" data-path="matrices.html"><a href="matrices.html#matrices-particulares"><i class="fa fa-check"></i><b>B.2</b> Matrices particulares</a><ul>
+<li class="chapter" data-level="B.2" data-path="matrices.html"><a href="matrices.html#matrices-particulares"><i class="fa fa-check"></i><b>B.2</b> Matrices particulares</a>
+<ul>
 <li class="chapter" data-level="B.2.1" data-path="matrices.html"><a href="matrices.html#matriz-triangular"><i class="fa fa-check"></i><b>B.2.1</b> Matriz triangular</a></li>
 <li class="chapter" data-level="B.2.2" data-path="matrices.html"><a href="matrices.html#matriz-particular-de-una-matriz-cuadrada"><i class="fa fa-check"></i><b>B.2.2</b> Matriz particular de una matriz cuadrada</a></li>
 <li class="chapter" data-level="B.2.3" data-path="matrices.html"><a href="matrices.html#matriz-transpuesta"><i class="fa fa-check"></i><b>B.2.3</b> Matriz transpuesta</a></li>
@@ -338,7 +360,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -93,197 +93,34 @@ El número de elementos de un conjunto potencia es $2^n$ donde $n=\left\vert S\r
 # Álgebra de eventos
 
 
-## Operaciones con eventos
 
-Sean $A$, $B$ y $C$ eventos entonces 
+Sean $A$, $B$ y $C$ eventos entonces 1. e 2. wwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 
 1. Sub eventos
-1. Inclusion de eventos $A\subset B$, si $\omega\in A \leftrightarrow \omega\in B$
-1. Igualdad de eventos ocurre si $A\subset B$ y $B\subset A$ 
-2. Unión de eventos: $A\cup B=\left\{\omega\in \Omega : \omega\in A \vee  \omega\in B\right\}$
-3. Intersección de eventos: $AB=A\cap B=\left\{\omega\in \Omega : \omega\in A \wedge  \omega\in B\right\}$
-5. Diferencia de eventos: $A-B=\left\{\omega\in \Omega : \omega\in A \wedge  \omega\notin B\right\}$
-6. Complento de un evento: $A'=\Omega-A=\left\{\omega\in \Omega:\omega\notin A\right\}$
-7. Leyes distributivas $A\cup (B\cap C)=(A\cup B)\cap (A\cup C)$ y $A\cap (B\cup C)=(A\cap B)\cup (A\cap C)$.
-7. Leyes de Morgan: $\overline{A\cup B}=\overline{A}\cup \overline{B}$ y $\overline{A\cap B}=\overline{A}\cap \overline{B}$ 
-7. Producto cartesiano: $A\times B=\left\{(\omega_1, \omega_2): \omega_1\in A \text{ y }  \omega_2\in B\right\}$ (refiérase además a experimentos compuestos inclusivos)
+1. Igualdad de eventos
+2. Unión de eventos
+3. Intersección de eventos
+5. Diferencia de eventos
+6. Complento de un evento
+7. Leyes distributivas $A\cup (B\cap C)=(A\cup B)\cap (A\cup C)$.
+7. Leyes de Morgan
+7. Producto cartesiano
 
 
-## Eventos mutuamente excluyentes y colectivamente exhaustivos
-
-:::{.definition #excluyentesexahustivos name='Eventos mutuamente excluyentes'}
-Dos eventos $A$ y $B$ definidos en el mismo espacio muestral,
-se dice que son mutuamente. excluyentes si no pueden ocurrir juntos. Es decir
-la ocurrencia de uno excluye la ocurrencia del otro. En símbolos,
-si $A\cap B=\emptyset$
-:::
-:::{.definition #excluyentesexahustivos name='Eventos colectivamente exhaustivos'}
-Se dice que una colección de $n$ eventos $A_1, A_2 , \ldots, A_n$ definidos sobre el mismo espacio muestral son colectivamente exhaustivos, si la
-unión es igual al espacio muestral. es decir $$\bigcup_{i=1}^n A_i=A_1\cup A_2 \cup \ldots \cup A_n= \Omega$$
-
-:::
-
-
-:::{.remark}
-Algunas observaciones con respecto a eventos mutuamente excluyentes y colectivamente exhaustivos
-
-1. Si $A$ y $B$ son eventos mutuamente excluyentes y colectivamente exhaustivos ¿son los eventos $A$ y $B$ mutuamente excluyente? ¿Son colectivamente exahustivos?
-2. Si $A$ y $B$ son eventos mutuamente excluyentes pero no colectivamente exha­ustivos, ¿son los eventos $A$ y $B$ colectivamente exhaustivos?
-:::
-
+$$ \int_{1}^{2}=\sum_{2}^{2}x_1 $$
 
 # Técnicas de conteo
 
-## Principio de multiplicación
-    
-:::{.theorem}
-Si un experimento aleatorio (u operación) $\epsilon_1$ ocurre de $n_1$ formas y si para cada una de estas, un experimento (u operación) $\epsilon_2$ ocurre de $n_2$ formas, entonces los dos experimentos juntos ocurren de
-$n_1n_2$ formas.
-:::
+$P_n^m$ $C_n^m$
 
-:::{.remark}
-Entonces, condición necesaria y suficiente para que se
-aplique el principio de multiplicación es que se realizan ambos experimentos
-(u operaciones) uno seguido del otro o simultáneamente.
-:::
-
-:::{.example}
-El experimento aleatorio del lanzamiento de un dado y una moneda
-:::
-
-## Principio de la adición
-
-:::{.theorem}
-Si un experimento aleatorio (u operación) $\epsilon_1$ ocurre de $n_1$ formas y un segundo experimento (u operación) $\epsilon_2$ ocurre de $n_2$ formas, entonces el experimento $\epsilon$ que consiste en realizar $\epsilon_1$ o $\epsilon_2$, ocurre de
-$n_1+n_2$ formas, siempre que los espacios muestrales $\Omega_1$ y $\Omega_2$ asociados a los experimentos $\epsilon_1$ y $\epsilon_2$ sean disjuntos.
-:::
-
-## Permutación
-
-:::{.definition name='Permutación'}
-Una disposición de sus miembros en una secuencia u orden lineal, o si el conjunto ya está ordenado, una variación del orden o posición de los elementos de un conjunto ordenado o una tupla
-:::
-
-:::{.example}
-Sean $\left\{a,b,c\right\}$ entonces las posibles permutaciones son $abc$, $acb$, $bac$, $bca$, $cab$ y $cba$
-:::
-
-:::{.theorem #theorem1}
-El número de permutaciones de $n$ objetos diferentes  es $$P_n^n=n!=n(n-1)(n-2)\ldots 1$$ 
-:::
-
-:::{.theorem #theorem1}
-El número de permutaciones de $n$ objetos tomados  $s$ a $s$ es $$P_n^s=\frac{n!}{(n-s)!}=n(n-1)(n-2)\ldots (n-s+1)$$ 
-:::
-
-
-:::{.example}
-Sea $a,b,c,d,e$ elementos cualesquiera, el numero de permutaciones de 2 a 2 es $P_5^2=\frac{5!}{(5-2)!}=20$ pues los pares ordenados que se pueden formar con los elementos sin repetición son
-
-$$(a, b); (a, c); (a, d) \text{ y } (a, e)$$
-$$(b, a); (b, c); (b, d) \text{ y } (b, e)$$
-$$(c, a); (c, b); (c, d) \text{ y } (c, e)$$
-$$(d, a); (d, b); (d, c) \text{ y } (d, e)$$
-$$(e, a); (e, b); (e, c) \text{ y } (e, d)$$
-
-:::
-
-:::{.remark}
-Del teorema \@ref(thm:theorem1) se deduce que en el resultado esta implicito el **principio de la multiplicacion** 
-:::
-
-
-
-:::{.theorem #theorem1}
-El numero de permutaciones de n objetos distintos alrededor de un circulo es $$P_c^n=(n-1)$$ 
-:::
-
-
-:::{.example}
-¿De cuántas formas diferentes pudieron sentarse, en la última cena, alrededor de la mesa, Jesucristo y los 12 apóstoles?
-
-1. Si la mesa fuera circular, tendremos la permutación circular. El número de formas es $P_c^{13}=(13-1)!=12!$
-2. Si la mesa no es circular, se tendrá una permutación de las 13 personas. El número de formas es $P_{}^{}=$
-:::
-
-## Premutación con repetición
-
-:::{.definition}
-El numero de permutaciones de $n$ objetos de los cuales $k$ objetos son de clase $n_1, n_2, \ldots, n_k$  respectivamente y los demas objetos de clase 1 es $$P_n^{n_1, n_2, \ldots, n_k}=\frac{n!}{n_1!n_2!\ldots n_k!}$$
-:::
-
-## Partición de un conjunto
- 
-:::{.definition}
-El número de formas posibles, que $n$ objetos diferentes en que puedan dividirse en $k$ grupos distinguibles conteniendo $n_1, n_2, \ldots, n_k$ objetos respectivamente, $n_1+n_2+\ldots+n_k=n$ es $$\binom{n}{n_1, n_2, \ldots, n_k}=P_n^{n_1, n_2, \ldots, n_k}=\frac{n!}{n_1!n_2!\ldots n_k!}$$
-:::
-
-## Combinación 
-
-En muchos casos estaremos interesado en el número de formas de seleccianar $r$ objetos de $n$. sin importar el orden. Estas selecciones se llaman **combinaciones**
-
-:::{.definition}
-Un subconjunto de $r$ elementos de un conjunto que tiene $n$ 
-elementos diferentes, se llama una **combinacion de n elementos tomados de $r$ a $r$**.
-:::
-
-$$\binom{r}{n}=C_n^r=\frac{n!}{r!(n-r)}$$
-
-
-:::{.remark}
-El número de combinaciones por el número de permutaciones de los elementos de la clase $P_r^r$ (numero delementos de tomados de $r$ a $r$) es igual al numero de permutaciones de los objetos tomados $r$ a $r$ de $P_n^r$, es decir
-
-$$C_n^rP_r^r=P_n^r$$
-entonces
-$$C_n^r=\frac{P_n^r}{P_r^r}=\frac{\frac{n!}{(n-r)!}}{r!}=\frac{n!}{r!(n-r)!}$$
-:::
-
-:::{.remark}
-Una combinación de $n$ elementos distintos tomados de a $r$,
-en realidad es una partición del conjunto en dos subconjuntos (o celdas), donde una de ellas
-contiene $r$ objetos y la otra las $n - r$ restantes. Por lo tanto, el número de
-tales combinaciones será el número de particiones, es decir
-$$\binom{n}{r, n-r}=P_n^{r, n-r}=\frac{n!}{r!(n-r)!}$$
-:::
+$$\binom{m}{n}=\frac{m}{n!(n-m)}$$
 
 # Definición de probabilidad
 
-Se define de dos maneras 
-
-## Probabilidad clásica
-
-:::{.definition name='Probabilidad clásica'}
-Si $n(\Omega)=n$, número de sucesos posibles de un espacio muestral y $n(A)=n_A$ el número de suscesos del evento $A$. La probabiilidad del evento $A$ es $$P(A)=\frac{n(\Omega)}{n(A)}=\frac{n}{n_A}$$
-:::
-
-:::{.remark}
-Sea $A$ es un evento entonces se verifica:
-
-1. La probabilidad de un evento A verifica $0\leq P(A)\leq 1$, pues $0\leq n_A\leq n$.
-2. $A$ es un evento imposible si $P(A)=0$. en particular $A=\emptyset$.
-3. $A$ es un evento seguro si $P(A)=1$. en particular $A=\Omega$.
-3. Los eventos elementales son equiprobables, es decir $P(\left\{\omega_1\right\})=\frac{1}{n}$, $i=1,2, \ldots, n$. Si $A$ es un evento en $\Omega$ entonces $$P(A)=\sum_{w_i\in A} P(\left\{\omega_i\right\})$$
-
-:::
-
-<!--
-## Probabilidad como frecuencia relativa
-
-
-
-## Probabilidad subjetiva
-
--->
-
-
-
 # Probabilidad condicional
 
-
-
 ::: {#wwwwwwww .excercise}
-
-$$P(A|B)= \frac{P(B\cap A)}{P(B)}$$
+wwwwwwwwwwwwwwwwww$$P(A|B)= \frac{P(B\cap A)}{P(B)}$$
 :::
 
 # Teorema de Bayes

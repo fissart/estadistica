@@ -2,7 +2,6 @@
 
 # (PART) Estadística descriptiva {.unnumbered}
 
-
 # Preliminares
 
 ## Pre requisitos
@@ -22,27 +21,30 @@ La estadística es comúnmente aplicada a dos tipos de problemas:
 2. Usando muestra de datos para inferir la naturaleza de un conjunto de datos del cual se extrajo la muestra seleccionada.
 
 :::{.definition #descriptiva name='Estadística descriptiva'}
-Es la rama de la estadística dedicado a la oganizacion, descripicion de un conjunto de datos
+The branch of statistics devoted to the organization, summarization, and description of data sets is
+called descriptive statistics.
 :::
 
 :::{.definition #inferencial name='Estadística inferencial'}
-Es la rama de la estidistica que usa una muestra de datos para realizar inferencias acerca de una población
+The branch of statistics concerned with using sample data to make an inference about a large set of
+data is called inferential statistics.
 :::
-
 :::{.definition #muestra name='Muestra'}
-Es un subconjunto de datos seleccionados de una poblacion, usando algún método de muestreo
+A sample is a subset of data selected from the target population.
 :::
 
 
-:::{.definition #unidad name='Unidad experimental'}
-El objeto (persona, cosa, especimen o evento) sobre los cuales se miden son llmados **unidades experimentales**.
+:::{.definition #unidad name='Unidad'}
+The object (e.g., person, thing, transaction, specimen, or event) upon which measurements are
+collected is called the experimental unit. (Note: A population consists of data collected on many
+experimental units.)
 :::
 
 
 ## Elementos fundamentales de la estadística
 
 :::{.definition #poblacion name='Poblacion'}
- Es un conjunto de datos (usualmente grande, algunas veces conceptual) del cual se desea obtener datos de interés
+  A statistical population is a data set (usually large, sometimes conceptual) that is our target of interest.
 :::
 
 ::: {.definition #variable2 name="Variables cuantitativas"}
@@ -614,8 +616,8 @@ Halle el rango, la varianza, la desviación típica, desviación media, desviaci
 
 |    Clase    | $y_i$ | $f_i$ | $F_i$ |
 |:-----------:|:-----:|:-----:|:-----:|
-| $[50,100)$  |  75   |   8   |   8   |
-| $[100,150)$ |       |  20   |   28   |
+| $[50,100)$  |  75   |   8   |   1   |
+| $[100,150)$ |       |  20   |   3   |
 | $[150,200)$ |       |  50   |       |
 | $[200,250)$ |       |  70   |       |
 | $[250,300)$ |       |  100  |       |
@@ -635,7 +637,7 @@ Halle el rango, la varianza, la desviación típica, desviación media, desviaci
 
 Estos estadigrafos dividen al conjunto de datos en un número determinado.
 
-      
+
 
 ## Cuartiles
 
